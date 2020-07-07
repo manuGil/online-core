@@ -24,7 +24,7 @@ Geographic Phenomena can be divided into  Geographic Objects  and Geographic Fie
  
 .. admonition:: LTB
 
-  You can read more on this:
+  Lean about:
   
   * `Geographic phenomena. <https://ltb.itc.utwente.nl/page/179/concept/11894>`_
   * `Geographic field <https://ltb.itc.utwente.nl/page/179/concept/11833>`_
