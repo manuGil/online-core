@@ -53,6 +53,11 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry.
 | \          | <-empty cell | column 3  |
 +------------+--------------+-----------+
 
+Heperlinks
+----------
+
+This is a hyperlink to `QGIS Home Page. <https://qgis.org/en/site/>`_
+
 
 Especial Content
 ----------------
@@ -63,7 +68,7 @@ Especial Content
 
 .. admonition:: LTB
 
-   Reference to the Living Textbook.
+   Reference to the `Living Textbook. <https://ltb.itc.utwente.nl/>`_
 
 .. admonition:: Resources
 
