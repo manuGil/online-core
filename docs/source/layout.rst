@@ -37,7 +37,21 @@ This is a figure: an image plus a caption.
    This the caption for this figure.
     
 
-Special Content
+Tables
+------
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+
++------------+--------------+-----------+
+| Header 1   | Header 2     | Header 3  |
++============+==============+===========+
+| body row 1 | column 2     | column 3  |
++------------+--------------+-----------+
+| \          | <-empty cell | column 3  |
++------------+--------------+-----------+
+
+
+Especial Content
 ---------------
 
 .. admonition:: Question
