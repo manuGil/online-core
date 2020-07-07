@@ -4,18 +4,13 @@
    contain the root `toctree` directive.
 
 Distance Education Core Exercises 
-=======================================
+#################################
 
-Another simple header
-^^^^^^^^^^^^^^^^^^^^^
+This is a Chapter
+*****************
 
-Here goes some text.::
-
-    print 'hello'
-    >>>'hello'
-
-Guide
-^^^^^
+This is Section
+===============
 
 .. toctree::
    :maxdepth: 2
