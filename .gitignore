@@ -6,6 +6,9 @@ __pycache__/
 # C extensions
 *.so
 
+# RST Preview
+docs/source/_build/
+
 # Distribution / packaging
 .Python
 build/
