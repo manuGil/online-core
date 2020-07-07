@@ -75,15 +75,15 @@ Especial Content
    A short description of the datasets needed to complete the exercise. 
 
 .. important:: 
-   **QGIS:**
+   **QGIS.**
    Specific functionality or info about QGIS.
 
 .. important:: 
-   **Reflection:**
+   **Reflection.**
    Important concept or question, take some time to think about it.
 
 .. attention:: 
-   **Discussion:**
+   **Discussion.**
    Topic for the discussion board. 
 
 
