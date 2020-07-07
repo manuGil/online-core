@@ -9,7 +9,7 @@ Distance Education Core Exercises
 This is a Chapter
 *****************
 
-This is Section
+GI Science
 ===============
 
 .. toctree::
@@ -19,7 +19,14 @@ This is Section
    data-modeling
 
    
+Earth Observations
+==================
 
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+   er
     
 
 
