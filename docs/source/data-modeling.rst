@@ -63,7 +63,7 @@ Task
     Which of the locational parameters are important for the objects below? 
 
     +---------------------+----------------+---------------+----------------+--------------+
-    | Object              | Parameter 1    | Parameter 2   | Parameter 3    |  Parameter 1 |
+    | Object              | Parameter 1    | Parameter 2   | Parameter 3    |  Parameter n |
     +=====================+================+===============+================+==============+
     | House               | \              | \             |  \             |  \           |
     +---------------------+----------------+---------------+----------------+--------------+
