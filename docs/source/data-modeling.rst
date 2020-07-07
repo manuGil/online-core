@@ -1,12 +1,19 @@
-Section: Data Modeling Exercise 
-===============================
+Spatial Data Models
+===================
 
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+Resources
+---------
 
-Subsection First Task
-^^^^^^^^^^^^^^^^^^^^^
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+This exercise requires no software or auxiliary datasets. 
 
-Subsection Second Task
-^^^^^^^^^^^^^^^^^^^^^^
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+
+Geographic Phenomena
+--------------------
+
+Geographic Phenomena is a term for all phenomena with a spatial dimension, such as landcover or air pollution. Phenomena are geo-graphic (spatial) when they: 
+
+* Can be named or described; 
+* Can be georeferenced (have a location on the Earth’s surface); 
+* Can be assigned a time interval. 
+
+ 

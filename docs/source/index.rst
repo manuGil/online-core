@@ -6,27 +6,25 @@
 Distance Education Core Exercises 
 #################################
 
-This is a Chapter
-*****************
+.. toctree::
+   :maxdepth: 2
+   :caption: Doc Layout
 
-GI Science
-===============
+   layout
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: GI Science
 
    data-modeling
-
-   
-Earth Observations
-==================
+   databases
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Earth Observation
 
    er
+   sensors-img
     
 
 
