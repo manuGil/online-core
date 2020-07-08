@@ -108,7 +108,7 @@ Task 2.1
     .. raw:: html
 
        <iframe width="560" height="315" 
-       src="https://vod-progressive.akamaized.net/exp=1594222834~acl=%2A%2F1225616998.mp4%2A~hmac=65a57eed898aa979138279196902179be97313024302863813dc3d23ffaa7526/vimeo-prod-skyfire-std-us/01/3345/12/316725601/1225616998.mp4?
+       src="https://player.vimeo.com/external/316725601.hd.mp4?s=c6af68bb5180619816eb0b847933d22d0f2972f2&profile_id=175
        filename=Basic_Digitizing.mp4" frameborder="1em" 
        title="Basic Digitizing" 
        allowfullscreen></iframe>
@@ -143,6 +143,7 @@ In the previous task, for the layer of geometry type ‘Line’ you probably dig
 
 To ensure that line segments get connected while digitizing, we have to set a snapping tolerance, which tells the GIS software to automatically connect lines that are within certain distance. Otherwise, it will be very difficult to ensure that our lines are connected.  
 
+
 .. admonition:: LTB
 
    Learn about: 
@@ -159,10 +160,7 @@ Task 2.3
 
     .. raw:: html
 
-       <iframe width="560" height="315" 
-       src="https://vod-progressive.akamaized.net/exp=1594226749~acl=%2A%2F1225616990.mp4%2A~hmac=49af46081efd37aee1a76417125f5b9a064581a8da069442d000d39104587cbd/vimeo-prod-skyfire-std-us/01/3345/12/316725579/1225616990.mp4?filename=Advanced_Digitizing.mp4" frameborder="1em" 
-       title="Advance editing" 
-       allowfullscreen></iframe>
+       <iframe width="560" height="315" src="https://player.vimeo.com/external/316725579.hd.mp4?s=191d661ef5758730a50d4a5a2a6567fa2f70d148&profile_id=175" frameborder="1em" title="Advance editing" webkitallowfullscreen allowfullscreen></iframe>
 
 Task 2.4  
     Digitize some new lines making sure they are topologically connected.  You will notice that, while digitizing, if you go closer than a certain distance of an existing feature the line will be automatically ‘pulled’ towards the nearest vertex or segment of the closest feature thus ensuring connectivity. 
@@ -197,7 +195,11 @@ You can spatialise your data in two ways. By means of a *join* (a concept that w
 Task 2.6 
     Spatialising data. Open the *data_entry.qgs* project and create a point layer using the *educational_facilities.csv* file. Follow the steps  depicted in the screenshot below.
 
-    .. image:: _static/img/spacialising.png
+    .. figure:: _static/img/spacialising.png
+       :alt: Create new point layer
+       :figclass: align-center
+
+       Step to create a point layer from the educational_facilities.csv file
 
 
 .. attention:: 

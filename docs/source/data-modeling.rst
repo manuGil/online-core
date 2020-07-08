@@ -178,7 +178,7 @@ Task 2.3
    (Hint: from the layers panel, right click on the layer to access its properties. Once in the properties dialog look into the ‘Information’ dialog.) 
 
    .. image:: _static/img/layer-properties.png 
-      :aling: center
+      :align: center
 
 .. attention:: 
    **Discussion.**
@@ -227,7 +227,7 @@ Task 2.6
    From the picture below, manually create a TIN from the given input points.
 
    .. image:: _static/img/make-tin.png 
-      :aling: center
+      :align: center
 
 
 .. attention:: 
@@ -286,7 +286,11 @@ We can, however, explore the concept of ‘on the fly interpolation with a simpl
 Task 2.10 
    In your data you find a table Cities2.csv. Try to use this table to create a point layer in QGIS. Start a new QGIS project and add the layer to QGIS using the “Delimited Text” option. 
 
-   **picture goes here**
+   .. figure:: _static/img/layer-from-csv.png
+      :alt: Create layer from csv QGIS
+      :figclass: align-center
+      
+      Steps to create a point layer using a CSV file in QGIS
 
 From the previous task you should have become clear that **points** are the simplest of geometries – they have an Y and X coordinates that anchors them to the spatial frame you are working on. 
 

@@ -30,14 +30,15 @@ Images and Figures
 This is an image with no caption.
 
 .. image:: _static/img/qgis310.png 
+   :align: center
 
-
-This is a figure: an image plus a caption.
+This is a figure: an image plus a caption. Use always with images describing processing steps or activities and add a meaningful caption.
 
 .. figure:: _static/img/fig1.png
    :alt: map to buried treasure
+   :figclass: align-center
 
-   This the caption for this figure.
+   This the caption for this figure without a period
     
 
 Tables
