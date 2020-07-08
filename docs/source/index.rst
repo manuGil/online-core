@@ -26,7 +26,11 @@ Distance Education Core Exercises
    er
    sensors-img
     
+.. toctree::
+   :maxdepth: 2
+   :caption: Appendices
 
+   apendices/gis-formats
 
 
 Indices and tables
