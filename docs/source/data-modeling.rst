@@ -103,6 +103,7 @@ Although all computer representations store data as finite representations, it i
    Give one example of a crisp boundary and one of a fuzzy boundary for any geographic phenomena. 
 
 .. admonition:: LTB
+
    Learn about: 
    `Spatial autocorrelation. <https://ltb.itc.utwente.nl/page/179/concept/11921>`_
 
