@@ -299,3 +299,117 @@ Task 2.11
    * `Line representation. <https://ltb.itc.utwente.nl/page/179/concept/11777>`_
    * `Area representation. <https://ltb.itc.utwente.nl/page/179/concept/11980>`_
 
+
+
+Topology 
+^^^^^^^^
+
+The third topic in this exercise is topology. You will first have to understand what topology is before learning different ways to use it. Topological properties are geometric properties and spatial relations that are not affected by the continuous change of shape and size  of a vector data layer (points, lines, or polygons).   
+
+Task 3.1 
+   Imagine you are looking at a map (take any map you like). Make a small list containing at least five examples of spatial topology that are visible in your map and five examples of properties that are not topological (use the table below).
+
+
+   ===============  ===============  ==================
+   Example             Topological     Non-topological 
+   ===============  ===============  ==================                 
+   1                 \                  \                           
+   2                 \                  \
+   3                 \                  \
+   4                 \                  \
+   5                 \                  \
+   ===============  ===============  ==================
+
+When looking at two polygons, we can  define all their possible topological relationships. To do so, we must describe each polygon in terms of its boundary and its interior (area inside  the boundary). 
+
+.. figure:: _static/img/topo-fundamentals.png
+   :alt: topology fundamental concepts
+   :scale: 30 %
+   :figclass: align-center
+
+   The boundary, interior and exterior of polygons, lines and points.
+
+.. attention:: 
+   **Discussion.**
+   What is the correct mathematical (set theory) expression that describes the covers relationship? How does this expression differ from the covered by relationship?
+
+By now, you should understand what topology is, but you may wonder how it can be used. During the coming exercises you will see many different uses, but for now focus on a example given in  the  Topological Data Model
+
+
+.. attention:: 
+   **Discussion.**
+   You are going to draw a map and the corresponding attribute table, following the topological data structure. The map below shows a polygon layer based on administrative units  (municipalities). Focus your attention on the **Geldrop-Mierlo** municipality and its adjacent municipalities. The table below shows as example the topological data structure for Geldrop-Mierlo. 
+
+   .. image:: _static/img/geldrop-mierlo.png
+      :align: center
+   
+   \
+
+   .. image:: _static/img/geldrop-table.png
+      :align: center
+
+
+
+.. admonition:: LTB
+
+   Learn about: 
+   
+   * `Topological relationship. <https://ltb.itc.utwente.nl/page/179/concept/12044>`_
+   * `Topological data model. <https://ltb.itc.utwente.nl/page/179/concept/11802>`_
+   * `Topological consistency. <https://ltb.itc.utwente.nl/page/179/concept/12043>`_
+  
+
+Task 3.2 
+   Identify for every example below which rule of topological consistency is violated. 
+
+   ====================================================  =========
+   Example                                               Rule(s) 
+   ====================================================  =========
+   The boundary of a polygon is not closed.              \
+   Two lines cross each other without an intersection.   \
+   There is a gap between two polygons.                  \
+   Two polygons overlap.                                 \
+   ====================================================  =========
+
+   *Additional uses of topology will be discussed in the sections: Data Entry, Queries and Networks. Note: Topology is only required at the conceptual level (no practical component)*
+
+.. attention:: 
+   **Discussion.**
+   The following statements are made about time. What is your opinion on them? Are they true or false?
+
+
+Temporal Dimension 
+^^^^^^^^^^^^^^^^^^
+
+In many situations it is not enough to describe geographic phenomena only in terms of  space, but also in terms of time because such phenomena change over time. The change may be relatively fast (like the clouds in the sky, hurricanes, and traffic) or slow (like the movement of glacier). 
+
+To represent time when modelling spatial data, we define different types of change:  change in attributes, change in location (movement) and change in shape (growth) or combinations of these three. 
+
+Task 4.1 
+   Below you see a list of different types of change and some combinations. Can you write down an example for each type? 
+
+
+   =============================   ========
+   Type of Change                  Examples
+   =============================   ========
+   Attribute                           \
+   Attribute and Location              \
+   Attribute and Shape                 \
+   Location                            \
+   Location and Shape                  \
+   Attribute, Location and Shape       \
+   =============================   ========
+
+
+.. attention:: 
+   **Discussion.**
+   The following statements are made about time. What is your opinion on them? Are they true or false? 
+
+   + Although time is continuous in nature, in a GIS it is always represented in a discrete manner. 
+   + There are many examples of spatial phenomena for which valid time is simply unknown. 
+   + Branching time should be looked at into the future, as the past is already known and has only one branch. 
+   + Time granularity is comparable to the spatial concept of resolution. 
+
+.. admonition:: LTB
+
+   Learn about `Spatial-temporal data model . <https://ltb.itc.utwente.nl/page/179/concept/12018>`_
