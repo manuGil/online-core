@@ -71,7 +71,10 @@ Especial Content
 
 .. admonition:: LTB
 
-   Reference to the `Living Textbook. <https://ltb.itc.utwente.nl/>`_
+   References to the 
+   `Living Textbook. <https://ltb.itc.utwente.nl/>`_ 
+   `Another reference. <https://ltb.itc.utwente.nl/>`_
+   `Yet another. <https://ltb.itc.utwente.nl/>`_
 
 .. admonition:: Resources
 
