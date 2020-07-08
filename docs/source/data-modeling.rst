@@ -177,6 +177,9 @@ Task 2.3
 
    (Hint: from the layers panel, right click on the layer to access its properties. Once in the properties dialog look into the ‘Information’ dialog.) 
 
+   .. image:: _static/img/layer-properties.png 
+      :aling: center
+
 .. attention:: 
    **Discussion.**
    What is the difference between a raster and a grid?    
@@ -219,10 +222,13 @@ We start with the Triangulated Irregular Networks (TINs) because they have some 
 
    Which characteristics have in common TINs and tessellations?
 
- Task 2.6 
+
+Task 2.6 
    From the picture below, manually create a TIN from the given input points.
 
-**picture goes here**
+   .. image:: _static/img/make-tin.png 
+      :aling: center
+
 
 .. attention:: 
    **Discussion.**
@@ -236,7 +242,13 @@ We start with the Triangulated Irregular Networks (TINs) because they have some 
 Task 2.7 
    In your QGIS project you find a layer with points. Generate a Delaunay triangulation and compare the result with the tessellation you made.    
 
-**picture goes here**
+   .. figure:: _static/img/create-tin.png
+      :alt: Create triangulation QGIS
+      :figclass: align-center
+      
+      Steps to create a Delaunay triangulation in QGIS
+
+
 
 A triangulation can also be used to generate a continuous tessellated surface by means of interpolation. In those cases, each cell is assigned the value that is related to how far that cell is from the anchor points. 
 
@@ -248,7 +260,11 @@ A triangulation can also be used to generate a continuous tessellated surface by
 Task 2.8 
    Create a tessellation using the TIN interpolation tool using as input the anchor points you have in your QGIS project. Then, use the Identify tool to inspect the cell values. 
 
-**picture goes here**
+   .. figure:: _static/img/create-tessellation.png
+      :alt: Create tessellation QGIS
+      :figclass: align-center
+      
+      Steps to create a tessellation from a TIN in QGIS
 
 .. important:: 
    **QGIS.**
@@ -256,13 +272,11 @@ Task 2.8
 
 We can, however, explore the concept of ‘on the fly interpolation with a simple paper and pencil exercise. 
 
-Task 2.9 
+
+.. Task 2.9 
    Place a point on the TIN (on one of the triangles) below and manually calculate the value at this point. What you are performing is and “On the Fly Interpolation”. 
-
    **picture goes here**
-
    The best way of doing this is to draw a line through one of your anchor points and the point you selected. You first identify the value at which the line crosses the edge of your triangle. You can do this by measuring along the edge.  
-
    **picture goes here**
 
 .. attention:: 
