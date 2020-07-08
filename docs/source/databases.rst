@@ -169,23 +169,37 @@ Task 2.4
 
     In the case of polygons it is also possible to ensure that adjacent polygons do not overlap. 
 
-.. attention:: 
-    **Discussion.**
-    How to define a snapping tolerance? What do the options ‘Enable topological editing’ and  ‘Enable snapping on intersection’ allow you to do? Try to think of situations where these options might be useful. 
+snapping tolerance? What do the options ‘Enable topological editing’ and  ‘Enable snapping on intersection’ allow you to do? Try to think of situations where these options might be useful. 
 
  
- .. important:: 
+.. important:: 
     **Reflection.**
     Ensuring the topological consistency of your vector data is usually not that difficult if you are in control of the data acquisition technique (vectorization) from the moment the dataset is created. Problems often arise when you receive datasets from third parties. When that happens you should always do check to make sure the dataset maintain the basic topological relations. 
 
 Task 2.5  
     Start QGIS and open the *checking_errors.qgs* project. You will see one layer (polygons). Find a way to automatically check if there are overlapping or adjacency errors. Tip: you may want to install and activate the **Geometry Checker** plugin. Once it is activated,  it should be reachable from the Vector menu.
 
-    .. image:: _static/img/geometry-checker.png 
-
-    In some cases detecting and fixing topological errors is not that simple. Just keep in mind you should always check the integrity of the data you receive, especially if you do not know the source and lineage of the data.  
+    .. image:: _static/img/geometry-checker.png
 
 
 
+In some cases detecting and fixing topological errors is not that simple. Just keep in mind you should always check the integrity of the data you receive, especially if you do not know the source and lineage of the data.  
 
 
+Spatialising data
+^^^^^^^^^^^^^^^^^ 
+
+Another way to acquire spatial data is by means of spatialising data. In other words associate a geographic location with objects. This is a very common procedure when you get for example a spreadsheet or some sort of tabular data. 
+ 
+You can spatialise your data in two ways. By beans of a join (a concept that will be explored later ahead in the course), or by means of building point geometries given that the tabular data contains X and Y coordinates.  
+
+
+Task 2.6 
+    Spatialising data. Open the *data_entry.qgs* project and create a point layer using the *educational_facilities.csv* file. Follow the steps  depicted in the screenshot below.
+
+    .. image:: _static/img/spacialising.png
+
+
+.. attention:: 
+    **Discussion.**
+    If all went well you should have ended up with a layer of points in your project. Does that mean that the *educational_facilities.csv* is spatial data?
