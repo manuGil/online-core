@@ -191,7 +191,7 @@ Spatialising data
 
 Another way to acquire spatial data is by means of spatialising data. In other words associate a geographic location with objects. This is a very common procedure when you get for example a spreadsheet or some sort of tabular data. 
  
-You can spatialise your data in two ways. By beans of a join (a concept that will be explored later ahead in the course), or by means of building point geometries given that the tabular data contains X and Y coordinates.  
+You can spatialise your data in two ways. By means of a *join* (a concept that will be explored later ahead in the course), or by means of building point geometries given that the tabular data contains X and Y coordinates.  
 
 
 Task 2.6 
@@ -203,3 +203,5 @@ Task 2.6
 .. attention:: 
     **Discussion.**
     If all went well you should have ended up with a layer of points in your project. Does that mean that the *educational_facilities.csv* is spatial data?
+
+**ADD reference to appendix**

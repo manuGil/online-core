@@ -69,7 +69,7 @@ Raster GIS file extensions
 --------------------------
 
 *Tagged Image File Format (.tif)* 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
  
 Although not the most efficient, Tagged Image File Format (``.tif``), is one of the most widespread raster formats. The TIFF specification is public and therefore largely supported by every software package. The latest version was released in 1992 and maintained by Adobe. What makes TIFF so popular to distribute GIS data is its flexibility. It is not in the scope of this exercise to cover technical details, but here is quick overview of TIFF capabilities: 
 
@@ -79,3 +79,22 @@ Although not the most efficient, Tagged Image File Format (``.tif``), is one of 
 + Supports loss and lossless compression. 
 + Can store tags with alphanumeric information. 
 + The tags can be used to store georeferencing information. When that happens the TIFF is called GeoTIFF.  
+
+
+*Other raster and vector formats*
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The list of GIS formats is very extensive. The formats we covered so far are the ones that you are more likely to encounter. In the case of QGIS, the complete list of supported formats depends on the formats supported by the GDAL library. You can check the complete list of supported formats in the links below: 
+
++ Raster formats - http://www.gdal.org/formats_list.html  
++ Vector formats - http://www.gdal.org/ogr_formats.html  
+
+In addition there are closed proprietary formats that are also fairly common, however because they are closed they do not ensure data interoperability. If you come across these formats you might need a special license to read them or convert them to one of the GDAL supported formats. The most important formats among these include: 
+
++ DGW (drawing) – a proprietary vector format native of AutoCAD 
++ .MrSID (Multiresolution Seamless Image Database) – a proprietary raster format owned by LizTech, possibly the most efficient format to store raster data; 
++ ECW (Enhanced Compression Wavelet) – another proprietary format for rasters developed by Hexagon Geospatial. 
+
+
+.. caution:: 
+    **Do not overload yourself in knowing all these formats and their details.** The main point here is to understand that different file formats provide different possibilities. Whenever you come across a data format you are not familiar with, do a little research on it to know if that format is adequate for your analysis needs. 
