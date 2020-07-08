@@ -126,6 +126,7 @@ Topology can be a complex subject but we will take a very pragmatic approach and
 
 .. figure:: _static/img/common-topo-rel.png
    :alt: topological relations
+   :figclass: align-center
 
    Common topological relations on polygons, lines, and points.
 
@@ -136,6 +137,7 @@ In the previous task, for the layer of geometry type ‘Line’ you probably dig
 
 .. figure:: _static/img/under-shoot.png
    :alt: undershoot
+   :figclass: align-center
 
    Connectivity issues between lines. The case of undershoot.
 
@@ -183,7 +185,7 @@ Task 2.5
 
     In some cases detecting and fixing topological errors is not that simple. Just keep in mind you should always check the integrity of the data you receive, especially if you do not know the source and lineage of the data.  
 
-    
+
 
 
 
