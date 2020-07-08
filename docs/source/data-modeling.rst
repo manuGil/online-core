@@ -413,3 +413,19 @@ Task 4.1
 .. admonition:: LTB
 
    Learn about `Spatial-temporal data model . <https://ltb.itc.utwente.nl/page/179/concept/12018>`_
+
+
+Reflection
+^^^^^^^^^^
+
+.. admonition:: Question
+
+   1. So far, you used vector representation of area features stored as Shapefiles. Are these shapefiles storing topology? In other words, do Shapefiles use a topological data model? 
+
+   2. In this exercise we have mainly focussed on 2-D data modelling examples. Yet, the real world is 3D. Do you know any examples in which a real 3-D data model would be needed? Is there also a 3-D topology? 
+
+   3. Which other compression techniques exist besides Quad trees? 
+   
+   4. Besides rectangular cells, other shapes can be used. What is the advantages of using Hexagonal cells? 
+   
+   5. Make a comparison between raster and vector data models and list the advantages and disadvantages of each one. 
