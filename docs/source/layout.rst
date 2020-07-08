@@ -62,6 +62,17 @@ Heperlinks
 This is a hyperlink to `QGIS Home Page. <https://qgis.org/en/site/>`_
 
 
+Embedde Content
+---------------
+
+YouTube Video
+^^^^^^^^^^^^^
+
+
+Vimeo Video
+^^^^^^^^^^^
+
+
 Especial Content
 ----------------
 
