@@ -50,6 +50,13 @@ Although spatial data can be acquired from third-party sources like government a
    Observe the relation between **Digitizing** and **Scanning**. Is Digitizing the only way to turn a scanning into Spatial data?
 
 
+.. admonition:: LTB
+
+   Learn about: 
+   `Digitizing. <https://ltb.itc.utwente.nl/page/179/concept/11865>`_
+   `Scanning. <https://ltb.itc.utwente.nl/page/179/concept/12006>`_
+
+
 .. admonition:: Resources
 
    You will require the latest LTR version of `QGIS (A Coruna 3.10) <https://qgis.org/en/site/forusers/download.html>`_, plus the dataset **data_entry.zip** which you can download from CANVAS.  When you unzip the dataset, you will find the following files inside it: 
@@ -60,14 +67,6 @@ Although spatial data can be acquired from third-party sources like government a
    + **Educational_facilities.csv** – tabular data; 
    + **Polygons.gpk** – a polygon vector layer. 
    
-
-.. admonition:: LTB
-
-   Learn about: 
-   `Digitizing. <https://ltb.itc.utwente.nl/page/179/concept/11865>`_
-   `Scanning. <https://ltb.itc.utwente.nl/page/179/concept/12006>`_
-
-
 Digitizing 
 ^^^^^^^^^^
 
