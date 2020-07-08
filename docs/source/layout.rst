@@ -54,8 +54,6 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry.
 +------------+--------------+-----------+
 
 
-
-
 Heperlinks
 ----------
 
@@ -65,12 +63,19 @@ This is a hyperlink to `QGIS Home Page. <https://qgis.org/en/site/>`_
 Embedde Content
 ---------------
 
-YouTube Video
-^^^^^^^^^^^^^
+Video
+^^^^^
 
+*A short sentence introducing the video (if needed).*
 
-Vimeo Video
-^^^^^^^^^^^
+.. raw:: html
+
+   <iframe width="560" height="315" 
+   src="https://vod-progressive.akamaized.net/exp=1594222834~acl=%2A%2F1225616998.mp4%2A~hmac=65a57eed898aa979138279196902179be97313024302863813dc3d23ffaa7526/vimeo-prod-skyfire-std-us/01/3345/12/316725601/1225616998.mp4?
+   filename=Basic_Digitizing.mp4" frameborder="1em" 
+   title="Digitizing" 
+   allowfullscreen></iframe>
+
 
 
 Especial Content

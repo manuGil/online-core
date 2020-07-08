@@ -87,3 +87,103 @@ Task 2.1
     + Think of at least three vector layers that can be acquired from the raster base map;  
     + Make sure all geometric types – Polygon, Line, Point are represented;  
     + For each layer think of at least two attributes. 
+
+    ===========     ===============   ===========     ===========
+    LayerName       Geometric Type    Attribute 1     Attribute 2 
+    ===========     ===============   ===========     ===========
+    water_lines     line                Id              length 
+    \               \                   \               \
+    \               \                   \               \
+    \               \                   \               \
+    \               \                   \               \
+    \               \                   \               \
+    \               \                   \               \
+    ===========     ===============   ===========     ===========
+
+ Task 2.2 
+    Now that you know what you want to extract and how are you are going to abstract it, proceed with the creation of the new layers. Digitize at least three features per layer. 
+
+    *For this task,you may want to watch this video tutorial.*
+
+    .. raw:: html
+
+       <iframe width="560" height="315" 
+       src="https://vod-progressive.akamaized.net/exp=1594222834~acl=%2A%2F1225616998.mp4%2A~hmac=65a57eed898aa979138279196902179be97313024302863813dc3d23ffaa7526/vimeo-prod-skyfire-std-us/01/3345/12/316725601/1225616998.mp4?
+       filename=Basic_Digitizing.mp4" frameborder="1em" 
+       title="Basic Digitizing" 
+       allowfullscreen></iframe>
+
+
+.. important:: 
+   **QGIS.**
+   Refer to `Editing <https://docs.qgis.org/3.10/en/docs/user_manual/working_with_vector/editing_geometry_attributes.html>`_ for a detailed description of vector editing with QGIS.
+
+
+Topology 
+^^^^^^^^
+
+Topology can be a complex subject but we will take a very pragmatic approach and show you how to maintain the most common topological relations – adjacency in polygons and connectivity of lines –.  
+
+.. figure:: _static/img/common-topo-rel.png
+   :alt: topological relations
+
+   Common topological relations on polygons, lines, and points.
+
+
+In the previous task, for the layer of geometry type ‘Line’ you probably digitized something that is supposed to be a network like roads or water lines. The key characteristic of a network is *connectivity*, however if you happen to have digitized lines that are supposed to be connected and you zoom in to the point where the intersection is supposed to be, you will see that lines are not connected. Instead, you will see connectivity issues either by excess or by insufficiency (also known as *overshoots* and *undershoots* respectively). 
+
+
+
+.. figure:: _static/img/under-shoot.png
+   :alt: undershoot
+
+   Connectivity issues between lines. The case of undershoot.
+
+To ensure that line segments get connected while digitizing, we have to set a snapping tolerance, which tells the GIS software to automatically connect lines that are within certain distance. Otherwise, it will be very difficult to ensure that our lines are connected.  
+
+.. admonition:: LTB
+
+   Learn about: 
+   `Topology. <https://ltb.itc.utwente.nl/page/179/concept/12045>`_
+   `Topology consistency. <https://ltb.itc.utwente.nl/page/179/concept/12043>`_
+   `Topological data model. <https://ltb.itc.utwente.nl/page/179/concept/11802>`_
+   `Topological relationship. <https://ltb.itc.utwente.nl/page/179/concept/12044>`_
+
+
+Task 2.3  
+    In QGIS, go to Project > Snapping Options  and enable Snapping mode. Enter a tolerance of 20px for every layer of lines that you may have. Refer to ‘Topological editing’ 
+
+    *For this task,you may want to watch this video tutorial.*
+
+    .. raw:: html
+
+       <iframe width="560" height="315" 
+       src="https://vod-progressive.akamaized.net/exp=1594226749~acl=%2A%2F1225616990.mp4%2A~hmac=49af46081efd37aee1a76417125f5b9a064581a8da069442d000d39104587cbd/vimeo-prod-skyfire-std-us/01/3345/12/316725579/1225616990.mp4?filename=Advanced_Digitizing.mp4" frameborder="1em" 
+       title="Advance editing" 
+       allowfullscreen></iframe>
+
+Task 2.4  
+    Digitize some new lines making sure they are topologically connected.  You will notice that, while digitizing, if you go closer than a certain distance of an existing feature the line will be automatically ‘pulled’ towards the nearest vertex or segment of the closest feature thus ensuring connectivity. 
+
+    In the case of polygons it is also possible to ensure that adjacent polygons do not overlap. 
+
+.. attention:: 
+    **Discussion.**
+    How to define a snapping tolerance? What do the options ‘Enable topological editing’ and  ‘Enable snapping on intersection’ allow you to do? Try to think of situations where these options might be useful. 
+
+ 
+ .. important:: 
+    **Reflection.**
+    Ensuring the topological consistency of your vector data is usually not that difficult if you are in control of the data acquisition technique (vectorization) from the moment the dataset is created. Problems often arise when you receive datasets from third parties. When that happens you should always do check to make sure the dataset maintain the basic topological relations. 
+
+Task 2.5  
+    Start QGIS and open the *checking_errors.qgs* project. You will see one layer (polygons). Find a way to automatically check if there are overlapping or adjacency errors. Tip: you may want to install and activate the **Geometry Checker** plugin. Once it is activated,  it should be reachable from the Vector menu.
+
+    .. image:: _static/img/geometry-checker.png 
+
+    In some cases detecting and fixing topological errors is not that simple. Just keep in mind you should always check the integrity of the data you receive, especially if you do not know the source and lineage of the data.  
+
+    
+
+
+
