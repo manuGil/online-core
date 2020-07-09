@@ -69,13 +69,13 @@ Video
 
 *A short sentence introducing the video (if needed).*
 
-.. raw:: html
+    .. raw:: html
 
-   <iframe width="560" height="315" 
-   src="https://vod-progressive.akamaized.net/exp=1594222834~acl=%2A%2F1225616998.mp4%2A~hmac=65a57eed898aa979138279196902179be97313024302863813dc3d23ffaa7526/vimeo-prod-skyfire-std-us/01/3345/12/316725601/1225616998.mp4?
-   filename=Basic_Digitizing.mp4" frameborder="1em" 
-   title="Digitizing" 
-   allowfullscreen></iframe>
+       <iframe width="560" height="315" 
+       src="https://player.vimeo.com/external/316725601.hd.mp4?s=c6af68bb5180619816eb0b847933d22d0f2972f2&profile_id=175
+       filename=Basic_Digitizing.mp4" frameborder="1em" 
+       title="Basic Digitizing" 
+       allowfullscreen></iframe>
 
 
 
