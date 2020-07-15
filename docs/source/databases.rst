@@ -15,8 +15,8 @@ Spatial data can be obtained from several sources  There has been an increase of
 Other sources of spatial data include aerial photographs, traditional surveying and crowdsourcing. Different spatial data sources imply that what can be expected depends on the strengths and weaknesses of each particular source and associated acquisition methods. 
 
 .. attention:: 
-   **Discussion.**
-   Fill in the table below entering at least one possible advantage and one possible disadvantage for each data source.
+   **Question.**
+   What are possible the advantages and disadvantage of using the data sources listed in the table below? Fill in at least one advantage and one disadvantage.
 
     ==================      =========   ============
     Data Source             Advantage   Disadvantage 
@@ -45,8 +45,8 @@ Indirect (or secondary) spatial data acquisition
 Although spatial data can be acquired from third-party sources like government agencies or specialized companies. There will always be the need to acquire your own data. This usually means ‘digitizing’ also known as ‘vectorization’ – the process of capturing objects from a raster base layer like a map or an aerial photograph as points, lines and polygons . In this section, we will cover the main techniques used for vectorization. 
 
 
-.. admonition:: Question
-
+.. attention:: 
+   **Question.**
    Observe the relation between **Digitizing** and **Scanning**. Is Digitizing the only way to turn a scanning into Spatial data?
 
 
@@ -204,7 +204,7 @@ Task 2.6
 
 
 .. attention:: 
-    **Discussion.**
+   **Question.**
     If all went well you should have ended up with a layer of points in your project. Does that mean that the *educational_facilities.csv* is spatial data?
 
 
