@@ -1,3 +1,6 @@
+.. Links to the LTB are defined in in assets/ltb-links-gis.rst
+
+
 Spatial Data Models
 ===================
 
@@ -23,9 +26,9 @@ Geographic Phenomena can be divided into  Geographic Objects and Geographic Fiel
 .. admonition:: LTB
 
   Learn about:
-  `Geographic phenomena. <https://ltb.itc.utwente.nl/page/179/concept/11894>`_
-  `Geographic field. <https://ltb.itc.utwente.nl/page/179/concept/11833>`_
-  `Geographic object. <https://ltb.itc.utwente.nl/page/179/concept/11801>`_
+  `Geographic phenomena`_.
+  `Geographic field`_.
+  `Geographic object`_.
 
 Objects or Fields
 ^^^^^^^^^^^^^^^^^
@@ -84,7 +87,7 @@ Another notion that is important for describing Geographic Phenomena is boundari
 .. admonition:: LTB
 
    Learn about: 
-   `Boundaries. <https://ltb.itc.utwente.nl/page/179/concept/11799>`_
+   `Boundaries`_.
 
 .. attention:: 
    **Question.**
@@ -103,7 +106,7 @@ Although all computer representations store data as finite representations, it i
 .. admonition:: LTB
 
    Learn about: 
-   `Spatial autocorrelation. <https://ltb.itc.utwente.nl/page/179/concept/11921>`_
+   `Spatial autocorrelation`_.
 
 
 
@@ -191,8 +194,8 @@ There are also have Irregular tessellations. In irregular tessellations a geogra
 .. admonition:: LTB
 
    Learn about:
-   `Regular tesselation. <https://ltb.itc.utwente.nl/page/179/concept/11835>`_
-   `Irregular tesselation. <https://ltb.itc.utwente.nl/page/179/concept/11926>`_
+   `Regular tesselation`_.
+   `Irregular tesselation`_.
 
 
 Task 2.4 
@@ -251,7 +254,7 @@ A triangulation can also be used to generate a continuous tessellated surface by
 .. admonition:: LTB
 
    Learn about: 
-   `TINs <https://ltb.itc.utwente.nl/page/179/concept/12038>`_
+   `TINs`_.
 
 Task 2.8 
    Create a tessellation using the TIN interpolation tool using as input the anchor points you have in your QGIS project. Then, use the Identify tool to inspect the cell values. 
@@ -308,8 +311,8 @@ Task 2.11
 .. admonition:: LTB
 
    Learn about: 
-   `Line representation. <https://ltb.itc.utwente.nl/page/179/concept/11777>`_
-   `Area representation. <https://ltb.itc.utwente.nl/page/179/concept/11980>`_
+   `Line representation`_.
+   `Area representation`_.
 
 
 
@@ -365,9 +368,9 @@ By now, you should understand what topology is, but you may wonder how it can be
 .. admonition:: LTB
 
    Learn about:
-   `Topological relationship. <https://ltb.itc.utwente.nl/page/179/concept/12044>`_
-   `Topological data model. <https://ltb.itc.utwente.nl/page/179/concept/11802>`_
-   `Topological consistency. <https://ltb.itc.utwente.nl/page/179/concept/12043>`_
+   `Topological relationship`_.
+   `Topological data model`_.
+   `Topological consistency`_.
   
 
 Task 3.2 
@@ -424,7 +427,7 @@ Task 4.1
 .. admonition:: LTB
 
    Learn about: 
-   `Spatial-temporal data model . <https://ltb.itc.utwente.nl/page/179/concept/12018>`_
+   `Spatial-temporal data model`_.
 
 
 Reflection
