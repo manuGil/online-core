@@ -353,7 +353,8 @@ By now, you should understand what topology is, but you may wonder how it can be
 
 .. attention:: 
    **Question.**
-   You are going to draw a map and the corresponding attribute table, following the topological data structure. The map below shows a polygon layer based on administrative units  (municipalities). Focus your attention on the **Geldrop-Mierlo** municipality and its adjacent municipalities. The table below shows an example of the topological data structure for Geldrop-Mierlo. 
+   For the map below, can you complete its corresponding attribute table following the topological data structure? 
+   The map below shows a polygon layer based on administrative units  (municipalities). Focus your attention on the **Geldrop-Mierlo** municipality and its adjacent municipalities. The table below shows an example of the topological data structure for Geldrop-Mierlo. 
 
    .. image:: _static/img/geldrop-mierlo.png
       :align: center

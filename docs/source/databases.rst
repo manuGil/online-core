@@ -107,11 +107,9 @@ Task 2.1
 
     .. raw:: html
 
-       <iframe width="560" height="315" 
-       src="https://player.vimeo.com/external/316725601.hd.mp4?s=c6af68bb5180619816eb0b847933d22d0f2972f2&profile_id=175
-       filename=Basic_Digitizing.mp4" frameborder="1em" 
-       title="Basic Digitizing" 
-       allowfullscreen></iframe>
+       <video width="560" height="315" controls>
+         <source src="https://player.vimeo.com/external/316725601.hd.mp4?s=c6af68bb5180619816eb0b847933d22d0f2972f2&profile_id=175filename=Basic_Digitizing.mp4>
+       </video>
 
 
 .. important:: 
@@ -160,7 +158,10 @@ Task 2.3
 
     .. raw:: html
 
-       <iframe width="560" height="315" src="https://player.vimeo.com/external/316725579.hd.mp4?s=191d661ef5758730a50d4a5a2a6567fa2f70d148&profile_id=175" frameborder="1em" title="Advance editing" webkitallowfullscreen allowfullscreen></iframe>
+       <video width="560" height="315" controls>
+         <source src="https://player.vimeo.com/external/316725579.hd.mp4?s=191d661ef5758730a50d4a5a2a6567fa2f70d148&profile_id=175">
+       </video>
+
 
 Task 2.4  
     Digitize some new lines making sure they are topologically connected.  You will notice that, while digitizing, if you go closer than a certain distance of an existing feature the line will be automatically ‘pulled’ towards the nearest vertex or segment of the closest feature thus ensuring connectivity. 
