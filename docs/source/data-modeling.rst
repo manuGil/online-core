@@ -17,15 +17,15 @@ Geographic Phenomena is a term for all phenomena with a spatial dimension, such 
 Geographic Phenomena can be divided into  Geographic Objects and Geographic Fields, and  Geographic Fields can represent geographic phenomena as discrete fields or continuous fields.
 
 .. attention:: 
-   **Discussion.**
+   **Question.**
    Give some examples of phenomena for which one of the three elements above is missing. Can they be used in a GIS? 
  
 .. admonition:: LTB
 
   Learn about:
   `Geographic phenomena. <https://ltb.itc.utwente.nl/page/179/concept/11894>`_
-  `Geographic field <https://ltb.itc.utwente.nl/page/179/concept/11833>`_
-  `Geographic object <https://ltb.itc.utwente.nl/page/179/concept/11801>`_
+  `Geographic field. <https://ltb.itc.utwente.nl/page/179/concept/11833>`_
+  `Geographic object. <https://ltb.itc.utwente.nl/page/179/concept/11801>`_
 
 Objects or Fields
 ^^^^^^^^^^^^^^^^^
@@ -79,15 +79,16 @@ Crispy or Fuzzy Boundaries
   
 Another notion that is important for describing Geographic Phenomena is boundaries. We distinguish two types of boundaries: Crisp and Fuzzy.  
 
-.. attention:: 
-   **Discussion.**
-   Give one example of a crisp boundary and one of a fuzzy boundary for any geographic phenomena. 
+
 
 .. admonition:: LTB
 
    Learn about: 
    `Boundaries. <https://ltb.itc.utwente.nl/page/179/concept/11799>`_
 
+.. attention:: 
+   **Question.**
+   Can you give one example of a crisp boundary and one of a fuzzy boundary for any geographic phenomena? 
 
 Autocorrelation 
 ^^^^^^^^^^^^^^^
@@ -98,9 +99,6 @@ Task
 
 Although all computer representations store data as finite representations, it is important that you realise that some phenomena show autocorrelation. 
 
-.. attention:: 
-   **Discussion.**
-   Give one example of a crisp boundary and one of a fuzzy boundary for any geographic phenomena. 
 
 .. admonition:: LTB
 
@@ -120,8 +118,8 @@ In this exercise, you will explore different types of computer representations f
 To get an overview of the different ways we can store geographic phenomena in a GIS, we are going to use the concept map of your Living textbook. 
 
 .. attention:: 
-   **Discussion.**
-   Look for the term “Geographical Representation” in the Living textbook, and explore all related concepts two links apart. Make a screenshot of the concept map showing your result and upload it to the discussion board. How many different types of representations of spatial data did you find? 
+   **Question.**
+   Look for the term “Geographical Representation” in the Living textbook, and explore all related concepts two links apart. How many different types of representations of spatial data did you find? 
    
 
 .. admonition:: Resources
@@ -181,13 +179,13 @@ Task 2.3
       :align: center
 
 .. attention:: 
-   **Discussion.**
+   **Question.**
    What is the difference between a raster and a grid?    
 
 There are also have Irregular tessellations. In irregular tessellations a geographic area is partitioned into cells which are **not equal in size.** 
 
 .. attention:: 
-   **Discussion.**
+   **Question.**
    It is often stated that irregular tessellations are more adaptive compared to regular tessellations. What exactly is meant by this?
    
 .. admonition:: LTB
@@ -204,8 +202,8 @@ Task 2.4
 
    .. image:: _static/img/quad-tree.png 
 
-.. admonition:: Question
-
+.. attention:: 
+   **Question.**
    Using a Quadtree to represent a geographic phenomenon improves computation performance (computations are faster). Do you understand how this works?
 
 
@@ -218,8 +216,8 @@ The main difference between our first data model (tessellation) and the vector d
 
 We start with the Triangulated Irregular Networks (TINs) because they have some characteristics in common with tessellations. 
 
-.. admonition:: Question
-
+.. attention:: 
+   **Question.**
    Which characteristics have in common TINs and tessellations?
 
 
@@ -230,12 +228,10 @@ Task 2.6
       :align: center
 
 
+
+
 .. attention:: 
-   **Discussion.**
-   Take a picture of your triangulation and upload it in the discussion board to compare your result with the results of your classmates. How many different solutions are there?
-
-.. admonition:: Question
-
+   **Question.**
    You may be surprised, but not all triangulations are equally good. The standard triangulation is a Delaunay triangulation. Was your triangulation Delaunay? 
 
 
@@ -280,7 +276,7 @@ We can, however, explore the concept of ‘on the fly interpolation with a simpl
    **picture goes here**
 
 .. attention:: 
-   **Discussion.**
+   **Question.**
    What exactly are the advantages of a TIN over a tessellation?  
 
 Task 2.10 
@@ -297,7 +293,7 @@ From the previous task, you should have become clear that **points** are the sim
 Another way of representing geographic phenomenon suing the vector data model is using  **lines**. A line is nothing more than two or more connected points.  
 
 .. attention:: 
-   **Discussion.**
+   **Question.**
    What is the difference between nodes and vertices, and how can we know the direction of a line? 
 
 The last type of vector data model is  **polygons**. Polygons are one of the most well-known and commonly used vector data models. There are two important parts when using a polygon data model: the boundary model and the Topological model.  
@@ -346,14 +342,14 @@ When looking at two polygons, we can define all their possible topological relat
    The boundary, interior and exterior of polygons, lines and points.
 
 .. attention:: 
-   **Discussion.**
+   **Question.**
    What is the correct mathematical (set theory) expression that describes the covers relationship? How does this expression differ from the covered by relationship?
 
 By now, you should understand what topology is, but you may wonder how it can be used. During the coming exercises you will see many different uses, but for now, focus on an example given in  the  Topological Data Model.
 
 
 .. attention:: 
-   **Discussion.**
+   **Question.**
    You are going to draw a map and the corresponding attribute table, following the topological data structure. The map below shows a polygon layer based on administrative units  (municipalities). Focus your attention on the **Geldrop-Mierlo** municipality and its adjacent municipalities. The table below shows an example of the topological data structure for Geldrop-Mierlo. 
 
    .. image:: _static/img/geldrop-mierlo.png
@@ -389,7 +385,7 @@ Task 3.2
    *Additional uses of topology will be discussed in the sections: Data Entry, Queries and Networks. Note: Topology is only required at the conceptual level (no practical component)*
 
 .. attention:: 
-   **Discussion.**
+   **Question.**
    The following statements are made about time. What is your opinion on them? Are they true or false?
 
 
@@ -417,7 +413,7 @@ Task 4.1
 
 
 .. attention:: 
-   **Discussion.**
+   **Question.**
    The following statements are made about time. What is your opinion on them? Are they true or false? 
 
    + Although time is continuous in nature, in a GIS it is always represented in a discrete manner. 
@@ -434,7 +430,8 @@ Task 4.1
 Reflection
 ^^^^^^^^^^
 
-.. admonition:: Question
+.. attention:: 
+   **Question.**
 
    1. So far, you used vector representation of area features stored as Shapefiles. Are these shapefiles storing topology? In other words, do Shapefiles use a topological data model? 
 
