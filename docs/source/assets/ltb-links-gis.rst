@@ -18,3 +18,16 @@
 .. _Topological consistency:        https://ltb.itc.utwente.nl/page/481/concept/78798
 .. _Spatial-temporal data model:    https://ltb.itc.utwente.nl/page/481/concept/78775
 
+.. _Spatial data acquisition:       https://ltb.itc.utwente.nl/page/481/concept/78549
+.. _Remote sensing:                 https://ltb.itc.utwente.nl/page/481/concept/78759
+.. _Aerial survey:                  https://ltb.itc.utwente.nl/page/481/concept/78839
+.. _Terrestrial survey:             https://ltb.itc.utwente.nl/page/481/concept/78652
+.. _Crowdsourcing:                  https://ltb.itc.utwente.nl/page/481/concept/78615
+.. _Digitizing:                     https://ltb.itc.utwente.nl/page/481/concept/78631
+.. _Scanning:                       https://ltb.itc.utwente.nl/page/481/concept/78763
+.. _Associating attributes:         https://ltb.itc.utwente.nl/page/481/concept/78849
+.. _Topology:                       https://ltb.itc.utwente.nl/page/481/concept/78800
+.. _Topology consistency:           https://ltb.itc.utwente.nl/page/481/concept/78798
+.. _Topological data model:         https://ltb.itc.utwente.nl/page/481/concept/78572
+.. _Topological relationship:       https://ltb.itc.utwente.nl/page/481/concept/78799
+

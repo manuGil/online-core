@@ -32,11 +32,11 @@ Other sources of spatial data include aerial photographs, traditional surveying 
 .. admonition:: LTB
 
    Learn about: 
-   `Spatial data acquisition. <https://ltb.itc.utwente.nl/page/179/concept/11776>`_
-   `Remote sensing. <https://ltb.itc.utwente.nl/page/179/concept/12002>`_
-   `Aerial survey. <https://ltb.itc.utwente.nl/page/179/concept/12084>`_
-   `Terrestrial survey. <https://ltb.itc.utwente.nl/page/179/concept/11888>`_
-   `Crowdsourcing. <https://ltb.itc.utwente.nl/page/179/concept/11847>`_
+   `Spatial data acquisition`_.
+   `Remote sensing`_.
+   `Aerial survey`_.
+   `Terrestrial survey`_.
+   `Crowdsourcing`_.
 
 
 Indirect (or secondary) spatial data acquisition 
@@ -53,8 +53,8 @@ Although spatial data can be acquired from third-party sources like government a
 .. admonition:: LTB
 
    Learn about: 
-   `Digitizing. <https://ltb.itc.utwente.nl/page/179/concept/11865>`_
-   `Scanning. <https://ltb.itc.utwente.nl/page/179/concept/12006>`_
+   `Digitizing`_.
+   `Scanning`_.
 
 
 .. admonition:: Resources
@@ -79,7 +79,7 @@ The attributes associated with the geometries are another important aspect to co
 .. admonition:: LTB
 
    Learn about: 
-   `Associating attributes. <https://ltb.itc.utwente.nl/page/179/concept/12094>`_
+   `Associating attributes`_.
 
 Task 2.1 
     Start QGIS and open the *data_entry.qgs project*. Among others, you will see a layer named *Pearl_Harbour_topographic_map_(1999).tif* Observe the map and complete the table below considering the following requirements: 
@@ -145,10 +145,10 @@ To ensure that line segments get connected while digitizing, we have to set a sn
 .. admonition:: LTB
 
    Learn about: 
-   `Topology. <https://ltb.itc.utwente.nl/page/179/concept/12045>`_
-   `Topology consistency. <https://ltb.itc.utwente.nl/page/179/concept/12043>`_
-   `Topological data model. <https://ltb.itc.utwente.nl/page/179/concept/11802>`_
-   `Topological relationship. <https://ltb.itc.utwente.nl/page/179/concept/12044>`_
+   `Topology`_.
+   `Topology`_.
+   `Topological data model`_.
+   `Topological relationship`_.
 
 
 Task 2.3  
