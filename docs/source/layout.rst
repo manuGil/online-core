@@ -6,8 +6,6 @@ Exercise Title
 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
 
 
-
-
 Exercise subsection
 ^^^^^^^^^^^^^^^^^^^
 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
@@ -55,6 +53,7 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry.
 +------------+--------------+-----------+
 
 
+
 Heperlinks
 ----------
 
@@ -82,10 +81,6 @@ Video
 Especial Content
 ----------------
 
-.. admonition:: Question
-
-   Answer the question, do not submit answer.
-
 .. admonition:: LTB
 
    References to the 
@@ -106,9 +101,9 @@ Especial Content
    Important concept or question, take some time to think about it.
 
 .. attention:: 
-   **Discussion.**
-   Topic for the discussion board. 
+   **Question.**
+   Ask students to answer questions. Question will become pointers to the virtual discussion session.
 
 
-*Conitnue with a new parrapgrah.* Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+*Continue with a new parrapgrah.* Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
