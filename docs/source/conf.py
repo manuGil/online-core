@@ -19,7 +19,7 @@ import sphinx_rtd_theme
 # -- Project information -----------------------------------------------------
 
 project = 'online-core'
-copyright = '2020, Manuel G. Garcia'
+copyright = '2020, University of Twente'
 author = 'Manuel G. Garcia'
 
 # The full version, including alpha/beta/rc tags
@@ -43,7 +43,13 @@ templates_path = ['_templates']
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = []
+exclude_patterns = ['assets/ltb-links.rst']
+
+# Allows storing external links in separated rst
+rst_epilog=""
+# Read links in the from the target file
+with open('assets/ltb-links.rst') as f:
+    rst_epilog += f.read()
 
 
 # -- Options for HTML output -------------------------------------------------
