@@ -31,3 +31,7 @@
 .. _Topological data model:         https://ltb.itc.utwente.nl/page/481/concept/78572
 .. _Topological relationship:       https://ltb.itc.utwente.nl/page/481/concept/78799
 
+.. _Reference surface:              https://ltb.itc.utwente.nl/page/481/concept/78641
+.. _Geoid:                          https://ltb.itc.utwente.nl/page/481/concept/78663
+.. _Vertical datum:                 https://ltb.itc.utwente.nl/page/481/concept/78669
+

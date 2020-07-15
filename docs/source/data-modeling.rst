@@ -11,25 +11,18 @@ Geographic Phenomena
 
    This exercise requires no software or auxiliary datasets. 
 
-Geographic Phenomena is a term for all phenomena with a spatial dimension, such as landcover or air pollution. Phenomena are geographic (spatial) when they: 
+`Geographic phenomena`_ is a term for all phenomena with a spatial dimension, such as landcover or air pollution. Phenomena are geographic (spatial) when they: 
 
 * Can be named or described; 
 * Can be georeferenced (have a location on the Earth’s surface); 
 * Can be assigned a time interval. 
 
-Geographic Phenomena can be divided into  Geographic Objects and Geographic Fields, and  Geographic Fields can represent geographic phenomena as discrete fields or continuous fields.
+Geographic Phenomena can be divided into  `geographic objects <Geographic object_>`_ and  `geographic fields <Geographic field_>`_, and  Geographic Fields can represent geographic phenomena as discrete fields or continuous fields.
 
 .. attention:: 
    **Question.**
    Give some examples of phenomena for which one of the three elements above is missing. Can they be used in a GIS? 
  
-.. admonition:: LTB
-
-  Learn about:
-  `Geographic phenomena`_.
-  `Geographic field`_.
-  `Geographic object`_.
-
 Objects or Fields
 ^^^^^^^^^^^^^^^^^
 

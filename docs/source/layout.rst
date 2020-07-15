@@ -60,47 +60,39 @@ Hyperlinks
 This is a hyperlink to `QGIS Home Page. <https://qgis.org/en/site/>`_
 
 
-Embedde Content
----------------
-
-Video
-^^^^^
-
-*A short sentence introducing the video (if needed).*
-
-    .. raw:: html
-
-       <video width="560" height="315" controls>
-         <source src="https://player.vimeo.com/external/316725601.hd.mp4?s=c6af68bb5180619816eb0b847933d22d0f2972f2&profile_id=175filename=Basic_Digitizing.mp4>
-       </video>
-
-
 Especial Content
 ----------------
 
-.. admonition:: LTB
++ Reference to the `Living Textbook <https://ltb.itc.utwente.nl/>`_ as inline text.
 
-   References to the 
-   `Living Textbook. <https://ltb.itc.utwente.nl/>`_ 
-   `Another reference. <https://ltb.itc.utwente.nl/>`_
-   `Yet another. <https://ltb.itc.utwente.nl/>`_
-
-.. admonition:: Resources
-
-   A short description of the datasets needed to complete the exercise. 
-
-.. important:: 
+.. note:: 
    **QGIS.**
    Specific functionality or info about QGIS.
 
-.. important:: 
+.. note:: 
    **Reflection.**
-   Important concept or question, take some time to think about it.
+   Important concept or question, take some time to think about it.  
+
+.. important:: 
+   **Resources.**
+   Description to the dataset (optional). A link to the exercise dataset: :download:`exercise.zip <https://drive.google.com/file/d/1lbvEWTukZrLD5Omz_sJ4Ebgzjhtw2oqO/view?usp=sharing>`  Followed by a list of datasets required for the exercise. 
+
 
 .. attention:: 
    **Question.**
    Ask students to answer questions. Question will become pointers to the virtual discussion session.
 
 
-*Continue with a new parrapgrah.* Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+Embedde Content
+---------------
+
+Video
+^^^^^
+
+*A short sentence introducing the video below and including a* `hyperlink. <https://player.vimeo.com/external/316725601.hd.mp4?s=c6af68bb5180619816eb0b847933d22d0f2972f2&profile_id=175filename=Basic_Digitizing.mp4>`_
+
+   .. raw:: html
+
+      <video width="560" height="315" controls>
+         <source src="https://player.vimeo.com/external/316725601.hd.mp4?s=c6af68bb5180619816eb0b847933d22d0f2972f2&profile_id=175filename=Basic_Digitizing.mp4>
+      </video>

@@ -18,6 +18,7 @@ Distance Education Core Exercises
 
    data-modeling
    databases
+   georeferencing
 
 .. toctree::
    :maxdepth: 2
