@@ -8,13 +8,13 @@ Geographic Phenomena
 
    This exercise requires no software or auxiliary datasets. 
 
-Geographic Phenomena is a term for all phenomena with a spatial dimension, such as landcover or air pollution. Phenomena are geo-graphic (spatial) when they: 
+Geographic Phenomena is a term for all phenomena with a spatial dimension, such as landcover or air pollution. Phenomena are geographic (spatial) when they: 
 
 * Can be named or described; 
 * Can be georeferenced (have a location on the Earth’s surface); 
 * Can be assigned a time interval. 
 
-Geographic Phenomena can be divided into  Geographic Objects  and Geographic Fields, and  Geographic Fields can represent geographic phenomena as discrete fields or continuous fields.
+Geographic Phenomena can be divided into  Geographic Objects and Geographic Fields, and  Geographic Fields can represent geographic phenomena as discrete fields or continuous fields.
 
 .. attention:: 
    **Discussion.**
@@ -22,7 +22,7 @@ Geographic Phenomena can be divided into  Geographic Objects  and Geographic Fie
  
 .. admonition:: LTB
 
-  Lean about:
+  Learn about:
   `Geographic phenomena. <https://ltb.itc.utwente.nl/page/179/concept/11894>`_
   `Geographic field <https://ltb.itc.utwente.nl/page/179/concept/11833>`_
   `Geographic object <https://ltb.itc.utwente.nl/page/179/concept/11801>`_
@@ -31,7 +31,7 @@ Objects or Fields
 ^^^^^^^^^^^^^^^^^
 
 Task
-    Complete the table below by indicating if the phenomenon on the left is an object or field, and if it is discrete or continuous.
+    Complete the table below by indicating if the phenomenon on the left is an object or field and if it is discrete or continuous.
 
     +---------------------+------------------+-------------------------+
     | Phenomena           | Field of Object  | Discrete or Continuous  |
@@ -77,7 +77,7 @@ Task
 Crispy or Fuzzy Boundaries
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
   
-Another notion that is important for describing Geographic Phenomena are boundaries. We distinguish two types of boundaries: Crisp and Fuzzy.  
+Another notion that is important for describing Geographic Phenomena is boundaries. We distinguish two types of boundaries: Crisp and Fuzzy.  
 
 .. attention:: 
    **Discussion.**
@@ -113,15 +113,15 @@ Although all computer representations store data as finite representations, it i
 Computer representations 
 ------------------------
 
-The previous exercise did not contain any software tasks. This should not have surprised you because the folcus of that exercise was to understand  geographic phenomena and their characteristics, and not to show the way we  represent phenomena.  In this exercise we will focus on the latter. However, a good understanding of geographic phenomena will help you in choosing a suitable computer representation.  
+The previous exercise did not contain any software tasks. This should not have surprised you because the focus of that exercise was to understand geographic phenomena and their characteristics, and not to show the way we represent phenomena.  In this exercise, we will focus on the latter. However, a good understanding of geographic phenomena will help you in choosing a suitable computer representation.  
 
-In this exercise, you will explore  different types of computer representations for geographic phenomena available in a  GIS,  and how to select the most suitable computer representation for a specific phenomenon.   
+In this exercise, you will explore different types of computer representations for geographic phenomena available in a  GIS,  and how to select the most suitable computer representation for a specific phenomenon.   
 
 To get an overview of the different ways we can store geographic phenomena in a GIS, we are going to use the concept map of your Living textbook. 
 
 .. attention:: 
    **Discussion.**
-   Look for the term “Geographical Representation” in the Living textbook, and explore all related concepts two links apart. Make a screendump of the concept map showing your result and upload it to the discussion board. How many different types of representations of spatial data did you find? 
+   Look for the term “Geographical Representation” in the Living textbook, and explore all related concepts two links apart. Make a screenshot of the concept map showing your result and upload it to the discussion board. How many different types of representations of spatial data did you find? 
    
 
 .. admonition:: Resources
@@ -140,11 +140,11 @@ To get an overview of the different ways we can store geographic phenomena in a 
 Tesselations 
 ^^^^^^^^^^^^
 
-Tessellations are a way to represent geographic phenomena in a GIS. A tessellation splits the geographic space in small cells in such a way that the complete area is covered by them. They are like tiles on a floor or a wall. In most cases such tiles are square cells and when all cells are equal in size, we call this a regular tessellation. 
+Tessellations are a way to represent geographic phenomena in a GIS. A tessellation splits the geographic space into small cells in such a way that the complete area is covered by them. They are like tiles on a floor or a wall. In most cases, such tiles are square cells, and when all cells are equal in size, we call this a regular tessellation. 
 
-In a regular tessellation each cell is associated to a value (cell value). This value has a data type, such as integer or floating-point. 
+In a regular tessellation, each cell is associated with a value (cell value). This value has a data type, such as integer or floating-point. 
 
-An integer datatype is a number that does not contain any decimals. They are often used to indicate codes in a discrete field (e.g. a landuse class). A float or floating-point datatype is a number  that may contain decimals. A floating-point data type that can store very big numbers (64bit) is  known to have ‘double precision’ and it is oftencalled “Double”. The table below shows a list of very common data types used in a GIS. 
+An integer data type is a number that does not contain any decimals. They are often used to indicate codes in a discrete field (e.g. a land use class). A float or floating-point data type is a number that may contain decimals. A floating-point data type that can store very big numbers (64bit) is known to have ‘double precision’ and it is often called “Double”. The table below shows a list of very common data types used in a GIS. 
 
 ===============   =============================================================
  SHORT INTEGER    Numeric values without decimals within a specific range. 
@@ -168,14 +168,14 @@ Task 2.1
    What data type would you use to represent a discrete field when you store it as a tessellation? And for a continuous field? 
 
 Task 2.2 
-   Boundaries in raster layers are both artificial and fixed. This has  advantages and  disadvantages. Can you give some examples of the advantages and disadvantages of artificial and fixed boundaries in raster layers?
+   Boundaries in raster layers are both artificial and fixed. This has advantages and disadvantages. Can you give some examples of the advantages and disadvantages of artificial and fixed boundaries in raster layers?
 
 Task 2.3 
-   Open the ’spatial_data_modelling’ QGIS project we provided in thedataset, and explore the properties of the tessellation representing elevation (elevation.tif)
+   Open the ’spatial_data_modelling’ QGIS project we provided in the dataset, and explore the properties of the tessellation representing elevation (elevation.tif)
 
-   How many rows/columns do the elevation.tif data has?. Are the values  o type integer or floating point? What are the minimum and maximum values? 
+   How many rows/columns do the elevation.tif data has?. Are the values of type integer or floating-point? What are the minimum and maximum values? 
 
-   (Hint: from the layers panel, right click on the layer to access its properties. Once in the properties dialog look into the ‘Information’ dialog.) 
+   (Hint: from the layers panel, right-click on the layer to access its properties. Once in the properties dialog look into the ‘Information’ dialog.) 
 
    .. image:: _static/img/layer-properties.png 
       :align: center
@@ -198,7 +198,7 @@ There are also have Irregular tessellations. In irregular tessellations a geogra
 
 
 Task 2.4 
-   Although there are multiple examples of irregular tessellations, you only have to study one example: “the Quadtree”. When you are not familiar with Quadtrees yet, refer to your Living Textbook for more information. The best way to learn how Quadtrees work is to manually construct one. 
+   Although there are multiple examples of irregular tessellations, you only have to study one example: “the Quadtree”. When you are not familiar with Quadtrees yet, refer to your Living Textbook for more information. The best way to learn how Quadtrees work is to construct one manually. 
 
    Construct the Quadtree for the raster layer shown below. Upload a picture of your Quadtree in the discussion board. 
 
@@ -214,7 +214,7 @@ Task 2.5
 
 Vector Data Model 
 ^^^^^^^^^^^^^^^^^
-The main difference between our first data model (tessellation) and the vector data model is that tessellations do not explicitly store the geo-reference of the phenomena, but the vector data model does. This means that with every feature, coordinates are stored. In this section we will discuss four examples of vector data representations: Triangulated Irregular Networks (TIN), Polygons, Lines and Points. 
+The main difference between our first data model (tessellation) and the vector data model is that tessellations do not explicitly store the georeference of the phenomena, but the vector data model does. This means that with every feature, coordinates are stored. In this section, we will discuss four examples of vector data representations: Triangulated Irregular Networks (TIN), Polygons, Lines and Points. 
 
 We start with the Triangulated Irregular Networks (TINs) because they have some characteristics in common with tessellations. 
 
@@ -232,15 +232,15 @@ Task 2.6
 
 .. attention:: 
    **Discussion.**
-   Take a picture of your Triangulation and upload it in the discussion board to compare your result with the results of your classmates. How many different solutions are there?
+   Take a picture of your triangulation and upload it in the discussion board to compare your result with the results of your classmates. How many different solutions are there?
 
 .. admonition:: Question
 
-   You may be surprised but not all triangulations are equally good. The standard triangulation is a Delaunay triangulation. Was your triangulation Delaunay? 
+   You may be surprised, but not all triangulations are equally good. The standard triangulation is a Delaunay triangulation. Was your triangulation Delaunay? 
 
 
 Task 2.7 
-   In your QGIS project you find a layer with points. Generate a Delaunay triangulation and compare the result with the tessellation you made.    
+   In your QGIS project, you find a layer with points. Generate a Delaunay triangulation and compare the result with the tessellation you made.    
 
    .. figure:: _static/img/create-tin.png
       :alt: Create triangulation QGIS
@@ -268,7 +268,7 @@ Task 2.8
 
 .. important:: 
    **QGIS.**
-   QGIS does not perform ‘on the fly interpolation’ – meaning that any point you click within your interpolated surface will have its value calculated on the spot. Instead what QGIS does is to generate a tessellation of predefined cell size where each cell as a fixed value. ‘On the fly’ interpolations are supported in ArcGiS, for example, however it is a functionality that will only exist within ArcGIS – the resulting data structure cannot be exported and used in other software packages.
+   QGIS does not perform ‘on the fly interpolation’ – meaning that any point you click within your interpolated surface will have its value calculated on the spot. Instead, what QGIS does is to generate a tessellation of predefined cell size where each cell as a fixed value. ‘On the fly’ interpolations are supported in ArcGIS, for example; however, it is a functionality that will only exist within ArcGIS – the resulting data structure cannot be exported and used in other software packages.
 
 We can, however, explore the concept of ‘on the fly interpolation with a simple paper and pencil exercise. 
 
@@ -284,7 +284,7 @@ We can, however, explore the concept of ‘on the fly interpolation with a simpl
    What exactly are the advantages of a TIN over a tessellation?  
 
 Task 2.10 
-   In your data you find a table Cities2.csv. Try to use this table to create a point layer in QGIS. Start a new QGIS project and add the layer to QGIS using the “Delimited Text” option. 
+   In your data, you find a table Cities2.csv. Try to use this table to create a point layer in QGIS. Start a new QGIS project and add the layer to QGIS using the “Delimited Text” option. 
 
    .. figure:: _static/img/layer-from-csv.png
       :alt: Create layer from csv QGIS
@@ -292,15 +292,15 @@ Task 2.10
       
       Steps to create a point layer using a CSV file in QGIS
 
-From the previous task you should have become clear that **points** are the simplest of geometries – they have an Y and X coordinates that anchors them to the spatial frame you are working on. 
+From the previous task, you should have become clear that **points** are the simplest of geometries – they have a Y and X coordinates that anchors them to the spatial frame you are working on. 
 
 Another way of representing geographic phenomenon suing the vector data model is using  **lines**. A line is nothing more than two or more connected points.  
 
 .. attention:: 
    **Discussion.**
-   What is the difference between nodes and vertices and how can we know the direction of a line? 
+   What is the difference between nodes and vertices, and how can we know the direction of a line? 
 
-A last type of vector data model is  **polygons**. Polygons are one of the most well-known and commonly used vector data models. The are two important parts when using a polygon data model: the boundary model and the Topological model.  
+The last type of vector data model is  **polygons**. Polygons are one of the most well-known and commonly used vector data models. There are two important parts when using a polygon data model: the boundary model and the Topological model.  
 
 The boundary model explains how areas are represented and by storing the closed boundary that defines an area. A closed boundary is defined by a closed line (consisting of nodes and vertices, where the start and end vertices intersect). When representing the footprints of houses or the borders between countries, the boundary of each feature (house/country) is stored individually. 
 
@@ -336,7 +336,7 @@ Task 3.1
    5                 \                  \
    ===============  ===============  ==================
 
-When looking at two polygons, we can  define all their possible topological relationships. To do so, we must describe each polygon in terms of its boundary and its interior (area inside  the boundary). 
+When looking at two polygons, we can define all their possible topological relationships. To do so, we must describe each polygon in terms of its boundary and its interior (area inside the boundary). 
 
 .. figure:: _static/img/topo-fundamentals.png
    :alt: topology fundamental concepts
@@ -349,12 +349,12 @@ When looking at two polygons, we can  define all their possible topological rela
    **Discussion.**
    What is the correct mathematical (set theory) expression that describes the covers relationship? How does this expression differ from the covered by relationship?
 
-By now, you should understand what topology is, but you may wonder how it can be used. During the coming exercises you will see many different uses, but for now focus on a example given in  the  Topological Data Model
+By now, you should understand what topology is, but you may wonder how it can be used. During the coming exercises you will see many different uses, but for now, focus on an example given in  the  Topological Data Model.
 
 
 .. attention:: 
    **Discussion.**
-   You are going to draw a map and the corresponding attribute table, following the topological data structure. The map below shows a polygon layer based on administrative units  (municipalities). Focus your attention on the **Geldrop-Mierlo** municipality and its adjacent municipalities. The table below shows as example the topological data structure for Geldrop-Mierlo. 
+   You are going to draw a map and the corresponding attribute table, following the topological data structure. The map below shows a polygon layer based on administrative units  (municipalities). Focus your attention on the **Geldrop-Mierlo** municipality and its adjacent municipalities. The table below shows an example of the topological data structure for Geldrop-Mierlo. 
 
    .. image:: _static/img/geldrop-mierlo.png
       :align: center
@@ -396,9 +396,9 @@ Task 3.2
 Temporal Dimension 
 ^^^^^^^^^^^^^^^^^^
 
-In many situations it is not enough to describe geographic phenomena only in terms of  space, but also in terms of time because such phenomena change over time. The change may be relatively fast (like the clouds in the sky, hurricanes, and traffic) or slow (like the movement of glacier). 
+In many situations, it is not enough to describe geographic phenomena only in terms of space, but also in terms of time because such phenomena change over time. The change may be relatively fast (like the clouds in the sky, hurricanes, and traffic) or slow (like the movement of a glacier). 
 
-To represent time when modelling spatial data, we define different types of change:  change in attributes, change in location (movement) and change in shape (growth) or combinations of these three. 
+To represent the time when modelling spatial data, we define different types of change:  change in attributes, change in location (movement) and change in shape (growth) or combinations of these three. 
 
 Task 4.1 
    Below you see a list of different types of change and some combinations. Can you write down an example for each type? 
@@ -438,10 +438,10 @@ Reflection
 
    1. So far, you used vector representation of area features stored as Shapefiles. Are these shapefiles storing topology? In other words, do Shapefiles use a topological data model? 
 
-   2. In this exercise we have mainly focussed on 2-D data modelling examples. Yet, the real world is 3D. Do you know any examples in which a real 3-D data model would be needed? Is there also a 3-D topology? 
+   2. In this exercise, we have mainly focussed on 2-D data modelling examples. Yet, the real world is 3D. Do you know any examples in which a real 3-D data model would be needed? Is there also a 3-D topology? 
 
-   3. Which other compression techniques exist besides Quad trees? 
+   3. Which other compression techniques exist besides Quadtrees? 
    
-   4. Besides rectangular cells, other shapes can be used. What is the advantages of using Hexagonal cells? 
+   4. Besides rectangular cells, other shapes can be used. What are the advantages of using Hexagonal cells? 
    
    5. Make a comparison between raster and vector data models and list the advantages and disadvantages of each one. 
