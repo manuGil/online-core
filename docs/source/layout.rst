@@ -54,7 +54,7 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry.
 
 
 
-Heperlinks
+Hyperlinks
 ----------
 
 This is a hyperlink to `QGIS Home Page. <https://qgis.org/en/site/>`_

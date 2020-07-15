@@ -10,7 +10,7 @@ Direct (or primary) spatial data acquisition
    This exercise requires no data and no specific software. 
 
 
-Spatial data can be obtained from several sources  There has been an increase of data acquired (or produced) using remote sensed sources, such as satellite imagery. 
+Spatial data can be obtained from several sources. There has been an increase in data acquired (or produced) using remotely sensed sources, such as satellite imagery. 
 
 Other sources of spatial data include aerial photographs, traditional surveying and crowdsourcing. Different spatial data sources imply that what can be expected depends on the strengths and weaknesses of each particular source and associated acquisition methods. 
 
@@ -42,12 +42,12 @@ Other sources of spatial data include aerial photographs, traditional surveying 
 Indirect (or secondary) spatial data acquisition 
 ------------------------------------------------
 
-Although spatial data can be acquired from third-party sources like government agencies or specialized companies. There will always be the need to acquire your own data. This usually means ‘digitizing’ also known as ‘vectorization’ – the process of capturing objects from a raster base layer like a map or an aerial photograph as points, lines and polygons . In this section, we will cover the main techniques used for vectorization. 
+Although spatial data can be acquired from third-party sources like government agencies or specialised companies, there will always be the need to acquire your own data. This usually means ‘digitising’ also known as ‘vectorisation’ – the process of capturing objects from a raster base layer like a map or an aerial photograph as points, lines and polygons. In this section, we will cover the main techniques used for vectorisation. 
 
 
 .. attention:: 
    **Question.**
-   Observe the relation between **Digitizing** and **Scanning**. Is Digitizing the only way to turn a scanning into Spatial data?
+   Observe the relation between **Digitising** and **Scanning**. Is Digitising the only way to turn a scanning into Spatial data?
 
 
 .. admonition:: LTB
@@ -67,14 +67,14 @@ Although spatial data can be acquired from third-party sources like government a
    + **Educational_facilities.csv** – tabular data; 
    + **Polygons.gpk** – a polygon vector layer. 
    
-Digitizing 
+Digitising 
 ^^^^^^^^^^
 
-Extracting the data you need from a raster base map to a vector layer starts with creating a new dataset (i.e. layer), where the features that are about to be created will be stored. Technically speaking, it is a simple task however you should always take a moment to assess the requirements before proceeding with the actual software operation. 
+Extracting the data, you need from a raster base map to a vector layer starts with creating a new dataset (i.e. layer), where the features that are about to be created will be stored. Technically speaking, it is a simple task; however, you should always take a moment to assess the requirements before proceeding with the actual software operation. 
 
-Capturing elements from a base map is an abstraction exercise; this abstraction depends on the scale and purpose for which the data will be used. For example, think of airports; will you represent them (abstract them) as points or as polygons? The answer to this question will depend on how you are going to use the data. If you want to publish a world map of the major airports, probably you can depict them as points, but if you want to map the accessibilities to a given airport, a larger scale will be needed; therefore polygons might be better.  
+Capturing elements from a base map is an abstraction exercise; this abstraction depends on the scale and purpose for which the data will be used. For example, think of airports; will you represent them (abstract them) as points or as polygons? The answer to this question will depend on how you are going to use the data. If you want to publish a world map of the major airports, probably you could depict them as points. But if you're going to map the accessibilities to a given airport, a larger scale will be needed; therefore, polygons might be better.  
 
-The attributes associated with the geometries are another important aspect to consider. The choice of attributes depends on not only the scale and intended use but also of the availability of the data (e.g. what is the capacity of the airport? How does it rank on security? How many international connections does it serve? – would these be information you need to have? And if so, do you have access to this data?) 
+The attributes associated with the geometries are another important aspect to consider. The choice of attributes depends not only on the scale and intended use, but it also depends on the availability of the data (e.g. what is the capacity of the airport? How does it rank on security? How many international connections does it serve? – would these be information you need to have? And if so, do you have access to this data?) 
 
 .. admonition:: LTB
 
@@ -82,7 +82,7 @@ The attributes associated with the geometries are another important aspect to co
    `Associating attributes`_.
 
 Task 2.1 
-    Start QGIS and open the *data_entry.qgs project*. Among others, you will see a layer named *Pearl_Harbour_topographic_map_(1999).tif* Observe the map and complete the table below considering the following requirements: 
+    Start QGIS and open the *data_entry.qgs project*. Among others, you will see a layer named *Pearl_Harbour_topographic_map_(1999).tif* Observe the map and complete the table below, considering the following requirements: 
 
     + Think of at least three vector layers that can be acquired from the raster base map;  
     + Make sure all geometric types – Polygon, Line, Point are represented;  
@@ -101,9 +101,9 @@ Task 2.1
     ===========     ===============   ===========     ===========
 
  Task 2.2 
-    Now that you know what you want to extract and how are you are going to abstract it, proceed with the creation of the new layers. Digitize at least three features per layer. 
+    Now that you know what you want to extract and how are you are going to abstract it, proceed with the creation of the new layers. Digitise at least three features per layer. 
 
-    *For this task,you may want to watch this video tutorial.*
+    *For this task, you may want to watch this video tutorial.*
 
     .. raw:: html
 
@@ -120,7 +120,7 @@ Task 2.1
 Topology 
 ^^^^^^^^
 
-Topology can be a complex subject but we will take a very pragmatic approach and show you how to maintain the most common topological relations – adjacency in polygons and connectivity of lines –.  
+Topology can be a complex subject, but we will take a very pragmatic approach and show you how to maintain the most common topological relations – adjacency in polygons and connectivity of lines –.  
 
 .. figure:: _static/img/common-topo-rel.png
    :alt: topological relations
@@ -129,7 +129,7 @@ Topology can be a complex subject but we will take a very pragmatic approach and
    Common topological relations on polygons, lines, and points.
 
 
-In the previous task, for the layer of geometry type ‘Line’ you probably digitized something that is supposed to be a network like roads or water lines. The key characteristic of a network is *connectivity*, however if you happen to have digitized lines that are supposed to be connected and you zoom in to the point where the intersection is supposed to be, you will see that lines are not connected. Instead, you will see connectivity issues either by excess or by insufficiency (also known as *overshoots* and *undershoots* respectively). 
+In the previous task, for the layer of geometry type ‘Line’ you probably digitised something that is supposed to be a network like roads or water lines. The key characteristic of a network is *connectivity*. However, if you happen to have digitised lines that are supposed to be connected and you zoom in to the point where the intersection is supposed to be, you will see that lines are not connected. Instead, you will see connectivity issues either by excess or by insufficiency (also known as *overshoots* and *undershoots* respectively). 
 
 
 
@@ -137,9 +137,9 @@ In the previous task, for the layer of geometry type ‘Line’ you probably dig
    :alt: undershoot
    :figclass: align-center
 
-   Connectivity issues between lines. The case of undershoot.
+   Connectivity issues between lines. The case of undershooting.
 
-To ensure that line segments get connected while digitizing, we have to set a snapping tolerance, which tells the GIS software to automatically connect lines that are within certain distance. Otherwise, it will be very difficult to ensure that our lines are connected.  
+To ensure that line segments get connected while digitising, we have to set a snapping tolerance, which tells the GIS software to connect lines that are within certain distance automatically. Otherwise, it will be challenging to ensure that our lines are connected.  
 
 
 .. admonition:: LTB
@@ -152,9 +152,9 @@ To ensure that line segments get connected while digitizing, we have to set a sn
 
 
 Task 2.3  
-    In QGIS, go to Project > Snapping Options  and enable Snapping mode. Enter a tolerance of 20px for every layer of lines that you may have. Refer to ‘Topological editing’ 
+    In QGIS, go to Project > Snapping Options and enable Snapping mode. Enter a tolerance of 20px for every layer of lines that you may have. Refer to ‘Topological editing’ 
 
-    *For this task,you may want to watch this video tutorial.*
+    *For this task, you may want to watch this video tutorial.*
 
     .. raw:: html
 
@@ -164,48 +164,50 @@ Task 2.3
 
 
 Task 2.4  
-    Digitize some new lines making sure they are topologically connected.  You will notice that, while digitizing, if you go closer than a certain distance of an existing feature the line will be automatically ‘pulled’ towards the nearest vertex or segment of the closest feature thus ensuring connectivity. 
+    Digitise some new lines making sure they are topologically connected.  You will notice during digitising; if you go closer than a certain distance of an existing feature; the line would be automatically ‘pulled’ towards the nearest vertex or segment of the closest feature. You are thus ensuring connectivity. 
 
-    In the case of polygons it is also possible to ensure that adjacent polygons do not overlap. 
+    In the case of polygons, it is also possible to ensure that adjacent polygons do not overlap. 
 
-snapping tolerance? What do the options ‘Enable topological editing’ and  ‘Enable snapping on intersection’ allow you to do? Try to think of situations where these options might be useful. 
+.. attention:: 
+   **Question.**
+   How to define a snapping tolerance? What do the options ‘Enable topological editing’ and  ‘Enable snapping on intersection’ allow you to do? Try to think of situations where these options might be useful. 
 
  
 .. important:: 
     **Reflection.**
-    Ensuring the topological consistency of your vector data is usually not that difficult if you are in control of the data acquisition technique (vectorization) from the moment the dataset is created. Problems often arise when you receive datasets from third parties. When that happens you should always do check to make sure the dataset maintain the basic topological relations. 
+    Ensuring the topological consistency of your vector data is usually not that difficult if you are in control of the data acquisition technique (vectorisation) from the moment the dataset is created. Problems often arise when you receive datasets from third parties. When that happens, you should always do check to make sure the dataset maintains the basic topological relations. 
 
 Task 2.5  
-    Start QGIS and open the *checking_errors.qgs* project. You will see one layer (polygons). Find a way to automatically check if there are overlapping or adjacency errors. Tip: you may want to install and activate the **Geometry Checker** plugin. Once it is activated,  it should be reachable from the Vector menu.
+    Start QGIS and open the *checking_errors.qgs* project. You will see one layer (polygons). Find a way to check if there are overlapping or adjacency errors automatically. Tip: you may want to install and activate the **Geometry Checker** plugin. Once it is activated,  it should be reachable from the Vector menu.
 
     .. image:: _static/img/geometry-checker.png
 
 
 
-In some cases detecting and fixing topological errors is not that simple. Just keep in mind you should always check the integrity of the data you receive, especially if you do not know the source and lineage of the data.  
+In some cases, detecting and fixing topological errors is not that simple. Just keep in mind that you should always check the integrity of the data you receive, especially if you do not know the source and lineage of the data.  
 
 
 Spatialising data
 ^^^^^^^^^^^^^^^^^ 
 
-Another way to acquire spatial data is by means of spatialising data. In other words associate a geographic location with objects. This is a very common procedure when you get for example a spreadsheet or some sort of tabular data. 
+Another way to acquire spatial data is by means of spatialising data. In other words, associate a geographic location with objects. This is a very common procedure when you get, for example, a spreadsheet or some sort of tabular data. 
  
 You can spatialise your data in two ways. By means of a *join* (a concept that will be explored later ahead in the course), or by means of building point geometries given that the tabular data contains X and Y coordinates.  
 
 
 Task 2.6 
-    Spatialising data. Open the *data_entry.qgs* project and create a point layer using the *educational_facilities.csv* file. Follow the steps  depicted in the screenshot below.
+    Spatialising data. Open the *data_entry.qgs* project and create a point layer using the *educational_facilities.csv* file. Follow the steps depicted in the screenshot below.
 
     .. figure:: _static/img/spacialising.png
        :alt: Create new point layer
        :figclass: align-center
 
-       Step to create a point layer from the educational_facilities.csv file
+       Step to create a point layer from the educational_facilities.csv file.
 
 
 .. attention:: 
    **Question.**
-    If all went well you should have ended up with a layer of points in your project. Does that mean that the *educational_facilities.csv* is spatial data?
+   If all went well, you should have ended up with a layer of points in your project. Does that mean that the *educational_facilities.csv* is spatial data?
 
 
-In the Appendices section you find a list of :ref:`rst_formats`. 
+In the Appendices section, you find a list of :ref:`rst_formats`. 
