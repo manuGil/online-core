@@ -1,4 +1,4 @@
 {
-    "python.pythonPath": "/home/manuel/Core-docs/venv/bin/python3.8",
-    "restructuredtext.confPath": "${workspaceFolder}/docs/source"
+    "python.pythonPath": "venv38\\Scripts\\python.exe",
+    "restructuredtext.confPath": "${workspaceFolder}\\docs\\source"
 }
