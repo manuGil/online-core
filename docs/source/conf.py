@@ -69,3 +69,10 @@ html_static_path = ['_static']
 html_css_files = [
     'css/core.css',
 ]
+
+# Latex Costume configurations
+# Configure paper size, font size, preamble options, etc.
+latex_elements = {
+    'figure_align': 'H',
+
+}
