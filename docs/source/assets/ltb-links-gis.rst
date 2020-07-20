@@ -6,6 +6,8 @@
 .. _Geographic phenomena:           https://ltb.itc.utwente.nl/page/481/concept/78658
 .. _Geographic field:               https://ltb.itc.utwente.nl/page/481/concept/78601
 .. _Geographic object:              https://ltb.itc.utwente.nl/page/481/concept/78571
+.. _Continuous field:               https://ltb.itc.utwente.nl/page/481/concept/78600
+.. _Discrete field:                 https://ltb.itc.utwente.nl/page/481/concept/78570
 .. _Boundaries:                     https://ltb.itc.utwente.nl/page/481/concept/78569
 .. _Spatial autocorrelation:        https://ltb.itc.utwente.nl/page/481/concept/78682
 .. _Regular tesselation:            https://ltb.itc.utwente.nl/page/481/concept/78603
@@ -13,11 +15,11 @@
 .. _TINs:                           https://ltb.itc.utwente.nl/page/481/concept/78793
 .. _Line representation:            https://ltb.itc.utwente.nl/page/481/concept/78550
 .. _Area representation:            https://ltb.itc.utwente.nl/page/481/concept/78738
+.. _Topology:                       https://ltb.itc.utwente.nl/page/481/concept/78800
 .. _Topological relationship:       https://ltb.itc.utwente.nl/page/481/concept/78799
 .. _Topological data model:         https://ltb.itc.utwente.nl/page/481/concept/78572
 .. _Topological consistency:        https://ltb.itc.utwente.nl/page/481/concept/78798
 .. _Spatial-temporal data model:    https://ltb.itc.utwente.nl/page/481/concept/78775
-
 .. _Spatial data acquisition:       https://ltb.itc.utwente.nl/page/481/concept/78549
 .. _Remote sensing:                 https://ltb.itc.utwente.nl/page/481/concept/78759
 .. _Aerial survey:                  https://ltb.itc.utwente.nl/page/481/concept/78839
@@ -30,7 +32,6 @@
 .. _Topology consistency:           https://ltb.itc.utwente.nl/page/481/concept/78798
 .. _Topological data model:         https://ltb.itc.utwente.nl/page/481/concept/78572
 .. _Topological relationship:       https://ltb.itc.utwente.nl/page/481/concept/78799
-
 .. _Reference surface:              https://ltb.itc.utwente.nl/page/481/concept/78641
 .. _Geoid:                          https://ltb.itc.utwente.nl/page/481/concept/78663
 .. _Vertical datum:                 https://ltb.itc.utwente.nl/page/481/concept/78669

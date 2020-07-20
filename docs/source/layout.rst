@@ -59,6 +59,8 @@ Hyperlinks
 
 This is a hyperlink to `QGIS Home Page. <https://qgis.org/en/site/>`_
 
+This is a hyperlink with a  download icon :download:`exercise.zip <https://drive.google.com/file/d/1lbvEWTukZrLD5Omz_sJ4Ebgzjhtw2oqO/view?usp=sharing>`
+
 
 Especial Content
 ----------------
@@ -75,7 +77,7 @@ Especial Content
 
 .. important:: 
    **Resources.**
-   Description to the dataset (optional). A link to the exercise dataset: :download:`exercise.zip <https://drive.google.com/file/d/1lbvEWTukZrLD5Omz_sJ4Ebgzjhtw2oqO/view?usp=sharing>`  Followed by a list of datasets required for the exercise. 
+   Description to the dataset (optional). A link to the exercise dataset: `exercise.zip <https://drive.google.com/file/d/1lbvEWTukZrLD5Omz_sJ4Ebgzjhtw2oqO/view?usp=sharing>`_  Followed by a list of datasets required for the exercise. 
 
 
 .. attention:: 

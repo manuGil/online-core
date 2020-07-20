@@ -1,4 +1,5 @@
 .. Links to the LTB are defined in in assets/ltb-links-gis.rst
+.. Links to the datasets are defined in in assets/data-links-gis.rst
 
 
 Spatial Data Models
@@ -7,8 +8,8 @@ Spatial Data Models
 Geographic Phenomena
 --------------------
 
-.. admonition:: Resources
-
+.. important:: 
+   **Resources.**
    This exercise requires no software or auxiliary datasets. 
 
 `Geographic phenomena`_ is a term for all phenomena with a spatial dimension, such as landcover or air pollution. Phenomena are geographic (spatial) when they: 
@@ -17,7 +18,7 @@ Geographic Phenomena
 * Can be georeferenced (have a location on the Earth’s surface); 
 * Can be assigned a time interval. 
 
-Geographic Phenomena can be divided into  `geographic objects <Geographic object_>`_ and  `geographic fields <Geographic field_>`_, and  Geographic Fields can represent geographic phenomena as discrete fields or continuous fields.
+Geographic Phenomena can be divided into  `geographic objects <Geographic object_>`_ and  `geographic fields <Geographic field_>`_, and  Geographic Fields can represent geographic phenomena as `discrete fields <Discrete field_>`_ or `continuous fields <Continuous field>`_.
 
 .. attention:: 
    **Question.**
@@ -73,14 +74,7 @@ Task
 Crispy or Fuzzy Boundaries
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
   
-Another notion that is important for describing Geographic Phenomena is boundaries. We distinguish two types of boundaries: Crisp and Fuzzy.  
-
-
-
-.. admonition:: LTB
-
-   Learn about: 
-   `Boundaries`_.
+Another notion that is important for describing Geographic Phenomena is `boundaries <Boundaries_>`_. We distinguish two types of boundaries: Crisp and Fuzzy.  
 
 .. attention:: 
    **Question.**
@@ -88,21 +82,14 @@ Another notion that is important for describing Geographic Phenomena is boundari
 
 Autocorrelation 
 ^^^^^^^^^^^^^^^
-There is one more concept that requires an introduction at this point, and that is spatial autocorrelation. Spatial autocorrelation is based on Tobler’s first law of geography.
+There is one more concept that requires an introduction at this point, and that is `Spatial autocorrelation`_. Spatial autocorrelation is based on Tobler’s first law of geography.
 
 Task
     Define in your own words what spatial autocorrelation is. 
 
 Although all computer representations store data as finite representations, it is important that you realise that some phenomena show autocorrelation. 
 
-
-.. admonition:: LTB
-
-   Learn about: 
-   `Spatial autocorrelation`_.
-
-
-
+-------------------------
 
 Computer representations 
 ------------------------
@@ -116,27 +103,25 @@ To get an overview of the different ways we can store geographic phenomena in a 
 .. attention:: 
    **Question.**
    Look for the term “Geographical Representation” in the Living textbook, and explore all related concepts two links apart. How many different types of representations of spatial data did you find? 
-   
 
-.. admonition:: Resources
-
-   You will require the latest LTR version of `QGIS (A Coruna 3.10) <https://qgis.org/en/site/forusers/download.html>`_, plus the dataset **data_modelling.zip** which you can download from CANVAS.  When you unzip the dataset, you will find the following files inside it: 
+.. important:: 
+   **Resources**
+   You will require the latest LTR version of `QGIS (A Coruna 3.10) <https://qgis.org/en/site/forusers/download.html>`_, plus the dataset  `data_modeling.zip <data_modeling_>`_  which you can download from CANVAS.  When you unzip the dataset, you will find the following files inside: 
   
-   + **Cities.csv** – a comma-separated values file with city names; 
+   + ``Cities.csv`` – a comma-separated values file with city names; 
 
-   + **Spatial_data_modelling.qgs** – A QGIS project preloaded with datasets 
+   + ``Spatial_data_modelling.qgs`` – A QGIS project preloaded with datasets 
 
-   + **elevation.tif** – a digital elevation model; 
+   + ``elevation.tif`` – a digital elevation model; 
 
-   + **points.gpkg** – a vector dataset representing elevation points. 
-
+   + ``points.gpkg`` – a vector dataset representing elevation points. 
 
 Tesselations 
 ^^^^^^^^^^^^
 
 Tessellations are a way to represent geographic phenomena in a GIS. A tessellation splits the geographic space into small cells in such a way that the complete area is covered by them. They are like tiles on a floor or a wall. In most cases, such tiles are square cells, and when all cells are equal in size, we call this a regular tessellation. 
 
-In a regular tessellation, each cell is associated with a value (cell value). This value has a data type, such as integer or floating-point. 
+In a `Regular tesselation`_, each cell is associated with a value (cell value). This value has a data type, such as integer or floating-point. 
 
 An integer data type is a number that does not contain any decimals. They are often used to indicate codes in a discrete field (e.g. a land use class). A float or floating-point data type is a number that may contain decimals. A floating-point data type that can store very big numbers (64bit) is known to have ‘double precision’ and it is often called “Double”. The table below shows a list of very common data types used in a GIS. 
 
@@ -178,19 +163,12 @@ Task 2.3
    **Question.**
    What is the difference between a raster and a grid?    
 
-There are also have Irregular tessellations. In irregular tessellations a geographic area is partitioned into cells which are **not equal in size.** 
+There are also `Irregular tesselations <Irregular tesselation_>`_. In irregular tessellations a geographic area is partitioned into cells which are **not equal in size.** 
 
 .. attention:: 
    **Question.**
    It is often stated that irregular tessellations are more adaptive compared to regular tessellations. What exactly is meant by this?
    
-.. admonition:: LTB
-
-   Learn about:
-   `Regular tesselation`_.
-   `Irregular tesselation`_.
-
-
 Task 2.4 
    Although there are multiple examples of irregular tessellations, you only have to study one example: “the Quadtree”. When you are not familiar with Quadtrees yet, refer to your Living Textbook for more information. The best way to learn how Quadtrees work is to construct one manually. 
 
@@ -210,7 +188,7 @@ Vector Data Model
 ^^^^^^^^^^^^^^^^^
 The main difference between our first data model (tessellation) and the vector data model is that tessellations do not explicitly store the georeference of the phenomena, but the vector data model does. This means that with every feature, coordinates are stored. In this section, we will discuss four examples of vector data representations: Triangulated Irregular Networks (TIN), Polygons, Lines and Points. 
 
-We start with the Triangulated Irregular Networks (TINs) because they have some characteristics in common with tessellations. 
+We start with the `Triangulated Irregular Networks <TINs_>`_. (TINs) because they have some characteristics in common with tessellations. 
 
 .. attention:: 
    **Question.**
@@ -222,9 +200,6 @@ Task 2.6
 
    .. image:: _static/img/make-tin.png 
       :align: center
-
-
-
 
 .. attention:: 
    **Question.**
@@ -244,10 +219,6 @@ Task 2.7
 
 A triangulation can also be used to generate a continuous tessellated surface by means of interpolation. In those cases, each cell is assigned the value that is related to how far that cell is from the anchor points. 
 
-.. admonition:: LTB
-
-   Learn about: 
-   `TINs`_.
 
 Task 2.8 
    Create a tessellation using the TIN interpolation tool using as input the anchor points you have in your QGIS project. Then, use the Identify tool to inspect the cell values. 
@@ -286,33 +257,26 @@ Task 2.10
 
 From the previous task, you should have become clear that **points** are the simplest of geometries – they have a Y and X coordinates that anchors them to the spatial frame you are working on. 
 
-Another way of representing geographic phenomenon suing the vector data model is using  **lines**. A line is nothing more than two or more connected points.  
+Another way of representing geographic phenomenon in the vector data model is using a `Line representation`_. A line is nothing more than two or more connected points.  
 
 .. attention:: 
    **Question.**
    What is the difference between nodes and vertices, and how can we know the direction of a line? 
 
-The last type of vector data model is  **polygons**. Polygons are one of the most well-known and commonly used vector data models. There are two important parts when using a polygon data model: the boundary model and the Topological model.  
+The last representation in vector data model is  using **polygons**. Polygons are one of the most well-known and commonly used vector data models. There are two important parts when using a polygon data model: the boundary model and the Topological model.  
 
 The boundary model explains how areas are represented and by storing the closed boundary that defines an area. A closed boundary is defined by a closed line (consisting of nodes and vertices, where the start and end vertices intersect). When representing the footprints of houses or the borders between countries, the boundary of each feature (house/country) is stored individually. 
 
 The Topological model is discussed in the next section of this exercise. (page: Polygon[add internal reference]) 
 
 Task 2.11 
-   Describe in your own words the problems that may arise when using the boundary model without topology. 
-
-.. admonition:: LTB
-
-   Learn about: 
-   `Line representation`_.
-   `Area representation`_.
-
+   Read the section `Area representation`_ and describe in your own words the problems that may arise when using the boundary model without topology. 
 
 
 Topology 
 ^^^^^^^^
 
-The third topic in this exercise is topology. You will first have to understand what topology is before learning different ways to use it. Topological properties are geometric properties and spatial relations that are not affected by the continuous change of shape and size  of a vector data layer (points, lines, or polygons).   
+The third topic in this exercise is `Topology`_. You will first have to understand what topology is before learning different ways to use it. Topological properties are geometric properties and spatial relations that are not affected by the continuous change of shape and size  of a vector data layer (points, lines, or polygons).   
 
 Task 3.1 
    Imagine you are looking at a map (take any map you like). Make a small list containing at least five examples of spatial topology that are visible in your map and five examples of properties that are not topological (use the table below).
@@ -328,11 +292,10 @@ Task 3.1
    5                 \                  \
    ===============  ===============  ==================
 
-When looking at two polygons, we can define all their possible topological relationships. To do so, we must describe each polygon in terms of its boundary and its interior (area inside the boundary). 
+When looking at two polygons, we can define all their possible topological relationships. To do so, we must describe each polygon in terms of its boundary and its interior (area inside the boundary). Read `Topological relationship`_.
 
 .. figure:: _static/img/topo-fundamentals.png
    :alt: topology fundamental concepts
-   :scale: 30 %
    :figclass: align-center
 
    The boundary, interior and exterior of polygons, lines and points.
@@ -341,7 +304,7 @@ When looking at two polygons, we can define all their possible topological relat
    **Question.**
    What is the correct mathematical (set theory) expression that describes the covers relationship? How does this expression differ from the covered by relationship?
 
-By now, you should understand what topology is, but you may wonder how it can be used. During the coming exercises you will see many different uses, but for now, focus on an example given in  the  Topological Data Model.
+By now, you should understand what topology is, but you may wonder how it can be used. During the coming exercises you will see many different uses, but for now, focus on an example given in  the `Topological data model`_.
 
 
 .. attention:: 
@@ -357,14 +320,7 @@ By now, you should understand what topology is, but you may wonder how it can be
    .. image:: _static/img/geldrop-table.png
       :align: center
 
-
-
-.. admonition:: LTB
-
-   Learn about:
-   `Topological relationship`_.
-   `Topological data model`_.
-   `Topological consistency`_.
+   Topology can also be used to ensure consistency of the geometries in a vector layer. There are five rules of  `Topological consistency`_, which you should know about.
   
 
 Task 3.2 
@@ -391,7 +347,7 @@ Temporal Dimension
 
 In many situations, it is not enough to describe geographic phenomena only in terms of space, but also in terms of time because such phenomena change over time. The change may be relatively fast (like the clouds in the sky, hurricanes, and traffic) or slow (like the movement of a glacier). 
 
-To represent the time when modelling spatial data, we define different types of change:  change in attributes, change in location (movement) and change in shape (growth) or combinations of these three. 
+To including time in the representation of spatial data, we talk abou the  `Spatial-temporal data model`_. This model define different types of change: *change in attributes*, *change in location* (movement) and *change in shape* (growth) or combinations of these three. 
 
 Task 4.1 
    Below you see a list of different types of change and some combinations. Can you write down an example for each type? 
@@ -418,17 +374,9 @@ Task 4.1
    + Branching time should be looked at into the future, as the past is already known and has only one branch. 
    + Time granularity is comparable to the spatial concept of resolution. 
 
-.. admonition:: LTB
 
-   Learn about: 
-   `Spatial-temporal data model`_.
-
-
-Reflection
-^^^^^^^^^^
-
-.. attention:: 
-   **Question.**
+.. note:: 
+   **Reflection.**
 
    1. So far, you used vector representation of area features stored as Shapefiles. Are these shapefiles storing topology? In other words, do Shapefiles use a topological data model? 
 

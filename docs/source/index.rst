@@ -8,12 +8,14 @@ Distance Education Core Exercises
 
 .. toctree::
    :maxdepth: 2
+   :numbered: 
    :caption: Doc Layout
 
    layout
 
 .. toctree::
    :maxdepth: 2
+   :numbered: 
    :caption: GI Science
 
    data-modeling
