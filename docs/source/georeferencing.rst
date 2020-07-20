@@ -2,8 +2,8 @@ Georeferencing
 ==============
 
 
-.. admonition:: Resources
-
+.. important:: 
+   **Resources.**
    This exercise requires no software or additional data sets. 
 
 

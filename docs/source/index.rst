@@ -19,6 +19,7 @@ Distance Education Core Exercises
    :caption: GI Science
 
    data-modeling
+   data-entry
    databases
    georeferencing
 

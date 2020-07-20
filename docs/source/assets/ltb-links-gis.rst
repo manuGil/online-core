@@ -36,3 +36,7 @@
 .. _Geoid:                          https://ltb.itc.utwente.nl/page/481/concept/78663
 .. _Vertical datum:                 https://ltb.itc.utwente.nl/page/481/concept/78669
 
+.. _Database:   	                https://ltb.itc.utwente.nl/page/481/concept/78625
+.. _Database management system:     https://ltb.itc.utwente.nl/page/481/concept/78627
+
+
