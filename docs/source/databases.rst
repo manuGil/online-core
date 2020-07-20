@@ -121,7 +121,7 @@ In the previous task, for the layer of geometry type ‘Line’ you probably dig
 
    Connectivity issues between lines. The case of undershooting.
 
-To ensure `Topology consistency`_ between geogmetries, e.g., that line segments get properly connected while digitising, we have to set a snapping tolerance, which tells the GIS software to connect lines that are within certain distance automatically. Otherwise, it will be challenging to ensure that our lines are connected.  
+To ensure `Topology consistency`_ between geometries, e.g., that line segments get properly connected while digitising, we have to set a snapping tolerance, which tells the GIS software to connect lines that are within certain distance automatically. Otherwise, it will be challenging to ensure that our lines are connected.  
 
 
 Task 2.3  

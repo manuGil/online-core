@@ -123,7 +123,7 @@ Tessellations are a way to represent geographic phenomena in a GIS. A tessellati
 
 In a `Regular tesselation`_, each cell is associated with a value (cell value). This value has a data type, such as integer or floating-point. 
 
-An integer data type is a number that does not contain any decimals. They are often used to indicate codes in a discrete field (e.g. a land use class). A float or floating-point data type is a number that may contain decimals. A floating-point data type that can store very big numbers (64bit) is known to have ‘double precision’ and it is often called “Double”. The table below shows a list of very common data types used in a GIS. 
+An integer data type is a number that does not contain any decimals. They are often used to indicate codes in a discrete field (e.g. a land use class). A float or floating-point data type is a number that may contain decimals. A floating-point data type that can store very big numbers (64bit) is known to have ‘double precision’, and it is often called “Double”. The table below shows a list of very common data types used in a GIS. 
 
 ===============   =============================================================
  SHORT INTEGER    Numeric values without decimals within a specific range. 
@@ -139,7 +139,7 @@ An integer data type is a number that does not contain any decimals. They are of
                   
                   Double precision (64bits). 
  TEXT             Names or other textual qualities. 
- DATE             Dates and/or times. 
+ DATE             Dates and times. 
 ===============   =============================================================
 
 
@@ -150,11 +150,11 @@ Task 2.2
    Boundaries in raster layers are both artificial and fixed. This has advantages and disadvantages. Can you give some examples of the advantages and disadvantages of artificial and fixed boundaries in raster layers?
 
 Task 2.3 
-   Open the ’spatial_data_modelling’ QGIS project we provided in the dataset, and explore the properties of the tessellation representing elevation (elevation.tif)
+   Open the `spatial_data_modelling` QGIS project we provided in the dataset, and explore the properties of the tessellation representing elevation (elevation.tif)
 
    How many rows/columns do the elevation.tif data has?. Are the values of type integer or floating-point? What are the minimum and maximum values? 
 
-   (Hint: from the layers panel, right-click on the layer to access its properties. Once in the properties dialog look into the ‘Information’ dialog.) 
+   (Hint: from the layers panel, right-click on the layer to access its properties. Once in the properties dialog, look into the ‘Information’ dialog.) 
 
    .. image:: _static/img/layer-properties.png 
       :align: center
@@ -263,7 +263,7 @@ Another way of representing geographic phenomenon in the vector data model is us
    **Question.**
    What is the difference between nodes and vertices, and how can we know the direction of a line? 
 
-The last representation in vector data model is  using **polygons**. Polygons are one of the most well-known and commonly used vector data models. There are two important parts when using a polygon data model: the boundary model and the Topological model.  
+The last representation in the vector data model is using **polygons**. Polygons are one of the most well-known and commonly used vector data models. There are two important parts when using a polygon data model: the boundary model and the Topological model.  
 
 The boundary model explains how areas are represented and by storing the closed boundary that defines an area. A closed boundary is defined by a closed line (consisting of nodes and vertices, where the start and end vertices intersect). When representing the footprints of houses or the borders between countries, the boundary of each feature (house/country) is stored individually. 
 
@@ -276,7 +276,7 @@ Task 2.11
 Topology 
 ^^^^^^^^
 
-The third topic in this exercise is `Topology`_. You will first have to understand what topology is before learning different ways to use it. Topological properties are geometric properties and spatial relations that are not affected by the continuous change of shape and size  of a vector data layer (points, lines, or polygons).   
+The third topic in this exercise is `Topology`_. You will first have to understand what topology is before learning different ways to use it. Topological properties are geometric properties and spatial relations that are not affected by the continuous change of shape and size of a vector data layer (points, lines, or polygons).   
 
 Task 3.1 
    Imagine you are looking at a map (take any map you like). Make a small list containing at least five examples of spatial topology that are visible in your map and five examples of properties that are not topological (use the table below).
@@ -292,7 +292,7 @@ Task 3.1
    5                 \                  \
    ===============  ===============  ==================
 
-When looking at two polygons, we can define all their possible topological relationships. To do so, we must describe each polygon in terms of its boundary and its interior (area inside the boundary). Read `Topological relationship`_.
+When looking at two polygons, we can define all their possible topological relationships. To do so, we must describe each polygon in terms of its boundary and its interior (the area inside the boundary). Read `Topological relationship`_.
 
 .. figure:: _static/img/topo-fundamentals.png
    :alt: topology fundamental concepts
@@ -302,9 +302,9 @@ When looking at two polygons, we can define all their possible topological relat
 
 .. attention:: 
    **Question.**
-   What is the correct mathematical (set theory) expression that describes the covers relationship? How does this expression differ from the covered by relationship?
+   What is the correct mathematical (set theory) expression that describes the *covers* relationship? How does this expression differ from the covered by relationship?
 
-By now, you should understand what topology is, but you may wonder how it can be used. During the coming exercises you will see many different uses, but for now, focus on an example given in  the `Topological data model`_.
+By now, you should understand what topology is, but you may wonder how it can be used. During the coming exercises, you will see many different uses, but for now, focus on an example given in the `Topological data model`_.
 
 
 .. attention:: 
@@ -347,7 +347,7 @@ Temporal Dimension
 
 In many situations, it is not enough to describe geographic phenomena only in terms of space, but also in terms of time because such phenomena change over time. The change may be relatively fast (like the clouds in the sky, hurricanes, and traffic) or slow (like the movement of a glacier). 
 
-To including time in the representation of spatial data, we talk abou the  `Spatial-temporal data model`_. This model define different types of change: *change in attributes*, *change in location* (movement) and *change in shape* (growth) or combinations of these three. 
+To including time in the representation of spatial data, we talk about the  `Spatial-temporal data model`_. This model defines different types of change: *change in attributes*, *change in location* (movement) and *change in shape* (growth) or combinations of these three. 
 
 Task 4.1 
    Below you see a list of different types of change and some combinations. Can you write down an example for each type? 
