@@ -74,5 +74,7 @@ html_css_files = [
 # Configure paper size, font size, preamble options, etc.
 latex_elements = {
     'figure_align': 'H',
-
+    'preamble': '''
+        \\usepackage{float}
+        ''',
 }
