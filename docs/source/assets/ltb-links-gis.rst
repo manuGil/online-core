@@ -62,10 +62,15 @@
 .. _Projection classification:      https://ltb.itc.utwente.nl/page/481/concept/78708
 
 
+.. _Coordinate transformation:  https://ltb.itc.utwente.nl/page/481/concept/78609
+
+
 .. _Coordinate system:              https://ltb.itc.utwente.nl/page/481/concept/78608
 .. _Planar coordinate system:       https://ltb.itc.utwente.nl/page/481/concept/78660
+.. _Geographic coordinate system:   https://ltb.itc.utwente.nl/page/481/concept/78659
+.. _Georeferencing:                 https://ltb.itc.utwente.nl/page/481/concept/78662
 
-.. _Geographic coordinate system: https://ltb.itc.utwente.nl/page/481/concept/78659
+
 
 
 

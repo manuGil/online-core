@@ -122,8 +122,46 @@ Task 3.1
 
 --------------------------------------
 
-FOLLOW WITH PART 4
-------------------
+Coordinate Transformation
+-------------------------
+
+
+Users of geo-information often need to transform datasets from a particular coordinate system to another. `Coordinate transformations <Coordinate transformation_>`_ are necessary because some analysis require it, or simple because map-user have especial requirements when it comes on how to represent spatial data on a map.
+
+
+.. attention:: 
+   **Question.**
+   You should have noticed that the these datasets have different coordinate systems and datums: ``DEM, floodzones, highways, parish, and rivers.`` 
+   
+   + What problems can result out of leaving these layers with their current coordinate systems?
+   + If you had to transform all these datasets to a single coordinate system, which coordinate system will you choose as target? What criteria determine your choice? Give examples for these specific datasets.
+
+Task 4.1 
+   After choosing a projected coordinate system and datum for your datasets. Use QGIS to do the transformations. Put attention on which layer requires transformation of projections or transformation of projection and datum, because **the order in which you do transformation matters.**
+
+.. note:: 
+   **QGIS.**
+   You may need to refer to QGIS manual, section `projecting and transforming data <https://docs.qgis.org/testing/en/docs/training_manual/vector_analysis/reproject_transform.html>`_.
+
+Task 4.2 
+   Sometimes, when visualising  data in QGIS, some of the layers do not align with each other. This may be because a data layer has an **unknown or incorrect coordinate** system defined. Or a data layer has no *georeferencing* ( no reference to any coordinate system at all).  Do you have any data layer that do not align with the rest of the data layers in your current project? 
+
+
+-------------------------------------------
+
+Ground control points
+---------------------
+
+You can load data into a GIS software which has not been georeferenced to any coordinate system. For example, a scanned topographic map or an image. In the next exercise, we will take a scanned topographic map, and using its grid we will  `georeference <Georeferencing_>`_ the topographic map to match it with the rest of the layers in your dataset.
+
+Task 5.1 
+   Load the ``topographic_map_dominica.jpg`` into a QGIS project and identify points on the topographic map that can be used as control points. 
+
+.. attention:: 
+   **Question.**
+   Why are these points your best choice? How many points are you going to use?
+
+
 
 
 
