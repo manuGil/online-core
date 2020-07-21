@@ -20,6 +20,7 @@ We use a `Reference surface`_ (i.e. datum system) to approximate the shape of th
 
 .. attention:: 
    **Question.**
+
    + Why we use a different reference surfaces for horizontal and vertical positioning?
    + Define in your own words the difference between a local and global horizontal datum? 
    + What is the horizontal datum for your country?
@@ -152,7 +153,7 @@ Task 4.2
 Ground control points
 ---------------------
 
-You can load data into a GIS software which has not been georeferenced to any coordinate system. For example, a scanned topographic map or an image. In the next exercise, we will take a scanned topographic map, and using its grid we will  `georeference <Georeferencing_>`_ the topographic map to match it with the rest of the layers in your dataset.
+You can load data into a GIS software which has not been georeferenced to any coordinate system. For example, a scanned topographic map or an image. In the next exercise, we will take a scanned topographic map, and using its grid we will `georeference <Geo-referencing_>`_ the topographic map to match it with the rest of the layers in your dataset.
 
 Task 5.1 
    Load the ``topographic_map_dominica.jpg`` into a QGIS project and identify points on the topographic map that can be used as control points. 
@@ -161,8 +162,34 @@ Task 5.1
    **Question.**
    Why are these points your best choice? How many points are you going to use?
 
+Task 5.2 
+   In GIS, open the Georeferencer (from the Raster menu tools) and load the  file ``topographic_map_dominica.jpg``. Use the points you chose above to geo-reference the scanned map. Be sure to pay close attention to the coordinate system on the scanned map and your existing data layers. Attempt to match the map as best you can to your current vector layers.
+
+   For this task you might want to first watch the video tutorial `georeferencing an image <https://vimeo.com/album/4389527/video/201997378>`_.
+
+.. note:: 
+   **QGIS.**
+   If the Georeferencer is not visible from the raster menu, you have  to go to the plugins menu and make sure  it is active.
+
+   .. image:: _static/img/georeferencer-plugin.png 
+      :align: center
+
+
+.. attention:: 
+   **Question.**
+
+   + What type of transformation did you apply in the georeferencing task? 
+   + What can you say about the accuracy of the transformation?
+
+---------------------------------------------
+
+Optional Challenges
+-------------------
+
+#. Assume you wish to reconcile spatial data from two neighbouring countries to resolve a border dispute. Published maps in the two countries are based on different local horizontal datums and map projections. *Which steps should you take to render the data sets spatially compatible?*
+
+#. An ellipsoid is usually defined by the semi-major axis :math:`a` and the flattening :math:`f`. Flattening depends on both the semi-major axis and the semi-minor axis :math:`b`. Assume an ellipsoid with a semi-major axis a of **6378137 m** and a flattening  **1:298.257**.  Determine the value of the semi-minor axis :math:`b`. Use the equation :math:`f = (a – b) / b`
 
 
 
-
-
+ 

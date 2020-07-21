@@ -68,8 +68,10 @@
 .. _Coordinate system:              https://ltb.itc.utwente.nl/page/481/concept/78608
 .. _Planar coordinate system:       https://ltb.itc.utwente.nl/page/481/concept/78660
 .. _Geographic coordinate system:   https://ltb.itc.utwente.nl/page/481/concept/78659
-.. _Georeferencing:                 https://ltb.itc.utwente.nl/page/481/concept/78662
+.. _Geo-referencing:                 https://ltb.itc.utwente.nl/page/481/concept/78662
 
+.. _Ground control points:          https://ltb.itc.utwente.nl/page/481/concept/78661
+.. _RMSE:                           https://ltb.itc.utwente.nl/page/481/concept/78541
 
 
 
