@@ -159,6 +159,7 @@ Task 2.5
 
 In some cases, detecting and fixing topological errors is not that simple. Just keep in mind that you should always check the integrity of the data you receive, especially if you do not know the source and lineage of the data.  
 
+.. _spatialising-data:
 
 Spatialising data
 ^^^^^^^^^^^^^^^^^ 

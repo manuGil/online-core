@@ -136,7 +136,7 @@ Task 3.4
 -----------------------------------
 
 Data Retrieval
--------------
+--------------
 
 So far, you have got acquainted with the concepts of the relational database and its components. Now, you will interact with a database and perform simple queries to retrieve data stored in the database.  
 

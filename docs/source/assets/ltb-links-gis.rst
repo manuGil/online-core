@@ -56,6 +56,16 @@
 .. _Attribute projection:           https://ltb.itc.utwente.nl/page/481/concept/78766
 .. _Join:                           https://ltb.itc.utwente.nl/page/481/concept/78689
 .. _Join condition:                 https://ltb.itc.utwente.nl/page/481/concept/78691
+.. _Ellipsoid:                      https://ltb.itc.utwente.nl/page/481/concept/78640
+
+.. _Map projection:                 https://ltb.itc.utwente.nl/page/481/concept/78707
+.. _Projection classification:      https://ltb.itc.utwente.nl/page/481/concept/78708
+
+
+.. _Coordinate system:              https://ltb.itc.utwente.nl/page/481/concept/78608
+.. _Planar coordinate system:       https://ltb.itc.utwente.nl/page/481/concept/78660
+
+.. _Geographic coordinate system: https://ltb.itc.utwente.nl/page/481/concept/78659
 
 
 
