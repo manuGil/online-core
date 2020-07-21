@@ -154,7 +154,7 @@ Task 4.2
 Ground control points
 ---------------------
 
-You can load data into a GIS software which has not been georeferenced to any coordinate system —for example, a scanned topographic map or an image. In the next exercise, we will `georeference <Geo-referencing_>`_ a scanned topographic map to match the spatial reference of other layers in your dataset.
+You can load data into a GIS software which has not been georeferenced to any coordinate system —for example, a scanned topographic map or an image. In the next exercise, we will `georeference <Geo-referencing_>`_ a scanned topographic map using `Ground control points`_ to match the spatial reference of other layers in the project.
 
 Task 5.1 
    Load the ``topographic_map_dominica.jpg`` into a QGIS project and identify points on the topographic map that can be used as control points. 
@@ -168,6 +168,12 @@ Task 5.2
 
    For this task, you might want first to watch the video tutorial `georeferencing an image <https://vimeo.com/album/4389527/video/201997378>`_.
 
+   .. raw:: html
+
+      <video width="560" height="315" controls>
+         <source src="https://vimeo.com/album/4389527/video/201997378">
+      </video>
+
 .. note:: 
    **QGIS.**
    If the Georeferencer is not visible from the raster menu, you have to go to the plugins menu and make sure it is active.
@@ -178,7 +184,8 @@ Task 5.2
 
 .. attention:: 
    **Question.**
-
+   
+   + The quality of the georeferencing can be assessed by computing the `RMSE`_  . Do you understand how it works? 
    + What type of transformation did you apply in the georeferencing task? 
    + What can you say about the accuracy of the transformation?
 
