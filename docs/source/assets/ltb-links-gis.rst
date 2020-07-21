@@ -3,6 +3,8 @@
 .. Study area:  The core of GIS 2020
     Id: 481
 
+
+.. _Living Textbook:                https://ltb.itc.utwente.nl/page/481/dashboard
 .. _Geographic phenomena:           https://ltb.itc.utwente.nl/page/481/concept/78658
 .. _Geographic field:               https://ltb.itc.utwente.nl/page/481/concept/78601
 .. _Geographic object:              https://ltb.itc.utwente.nl/page/481/concept/78571
@@ -38,5 +40,23 @@
 
 .. _Database:   	                https://ltb.itc.utwente.nl/page/481/concept/78625
 .. _Database management system:     https://ltb.itc.utwente.nl/page/481/concept/78627
+.. _Spatial database:    	        https://ltb.itc.utwente.nl/page/481/concept/78624
+.. _GIS:               	            https://ltb.itc.utwente.nl/page/481/concept/78626
+.. _Query:           	            https://ltb.itc.utwente.nl/page/481/concept/78556
+.. Querying a spatial database with SQL
+
+.. _Querying SQL:               	https://ltb.itc.utwente.nl/page/481/concept/78743 
+.. _Relational data model:         	https://ltb.itc.utwente.nl/page/481/concept/78756 
+.. _Relation:                    	https://ltb.itc.utwente.nl/page/481/concept/78690
+.. _Tuple:                          https://ltb.itc.utwente.nl/page/481/concept/78769
+.. _Attribute:                      https://ltb.itc.utwente.nl/page/481/concept/78614
+.. _Keys:                           https://ltb.itc.utwente.nl/page/481/concept/78859
+
+.. _Tuple selection:                https://ltb.itc.utwente.nl/page/481/concept/78768
+.. _Attribute projection:           https://ltb.itc.utwente.nl/page/481/concept/78766
+.. _Join:                           https://ltb.itc.utwente.nl/page/481/concept/78689
+.. _Join condition:                 https://ltb.itc.utwente.nl/page/481/concept/78691
+
+
 
 

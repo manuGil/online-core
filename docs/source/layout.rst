@@ -31,13 +31,16 @@ This is an image with no caption.
    :align: center
 
 This is a figure: an image plus a caption. Use always with images describing processing steps or activities and add a meaningful caption.
-
-.. figure:: _static/img/fig1.png
-   :alt: map to buried treasure
+Use this to refer to :numref:`figquerysimple`.
+   
+.. _mylabel:
+.. figure:: _static/img/task-simple-query.png
+   :alt: simple query
    :figclass: align-center
 
    This the caption for this figure without a period
-    
+
+
 
 Tables
 ------
@@ -65,7 +68,7 @@ This is a hyperlink with a  download icon :download:`exercise.zip <https://drive
 Especial Content
 ----------------
 
-+ Reference to the `Living Textbook <https://ltb.itc.utwente.nl/>`_ as inline text.
++ Reference to the `Living Textbook2 <https://ltb.itc.utwente.nl/>`_ as inline text.
 
 .. note:: 
    **QGIS.**
