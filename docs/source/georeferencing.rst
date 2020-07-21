@@ -8,7 +8,7 @@ We use a `Reference surface`_ (i.e. datum system) to approximate the shape of th
 
 .. attention:: 
    **Question.**
-   In the Netherlands, elevation is measured using as reference the water level in the canals of Amsterdam. This  vertical datum is called *Normal Amsterdams Peil (NAP)*. A large part of the Netherlands would flood if we would not have any dunes or dikes, see :numref:`figsea-level`. In fact, all land below 0 meters NAP would be sea. Different countries measure height by referencing to different mean sea levels. Why do we not use one measure for all countries? 
+   In the Netherlands, the elevation is measured using as a reference the water level in the canals of Amsterdam. This vertical datum is called *Normal Amsterdams Peil (NAP)*. A large part of the Netherlands would flood if we would not have any dunes or dikes, see :numref:`figsea-level`. In fact, all land below 0 meters NAP would be the sea. Different countries measure height by referencing to different mean sea levels. Why do we not use one measure for all countries? 
 
    .. _figsea-level:
    .. figure:: _static/img/sea-level-nl.jpg
@@ -21,7 +21,7 @@ We use a `Reference surface`_ (i.e. datum system) to approximate the shape of th
 .. attention:: 
    **Question.**
 
-   + Why we use a different reference surfaces for horizontal and vertical positioning?
+   + Why we use different reference surfaces for horizontal and vertical positioning?
    + Define in your own words the difference between a local and global horizontal datum? 
    + What is the horizontal datum for your country?
    + How are the horizontal and vertical datums connected?
@@ -37,11 +37,11 @@ In mapping, a `Coordinate system`_ is used to uniquely determine the position of
 Task 2.1 
    Define in your own words the difference between `coordinate systems <Coordinate system_>`_ and `planar coordinate systems <Planar coordinate system_>`_. 
 
-The most widely used global coordinate system is the `Geographic coordinate system`_. It consists of lines of geographic latitude and longitude. Lines of equal latitude are called parallels. They form circles on the surface of the ellipsoid. Lines of equal longitude are called meridians and form ellipses (meridian ellipses) on the ellipsoid 
+The most widely used global coordinate system is the `Geographic coordinate system`_. It consists of lines of geographic latitude and longitude. Lines of equal latitude are called parallels. They form circles on the surface of the ellipsoid. Lines of equal longitude are called meridians and form ellipses (meridian ellipses) on the ellipsoid. 
 
-Geographic coordinate systems use latitude and longitude to describe a position on the Earth’s surface.   *Latitude* is zero on the Equator and increases towards both poles to **90° N** and **90° S**.  Latitude is positive on the North hemisphere and negative on the South hemisphere. *Longitude* is measured from the meridian of Greenwich where it is zero, and it increases eastwards up to 180∘ (**180∘ E**), and westwards up to 180∘ (**180∘ W**). Longitude is positive towards the East and negative towards the West.
+Geographic coordinate systems use latitude and longitude to describe a position on the Earth’s surface.   *Latitude* is zero on the Equator and increases towards both poles to **90° N** and **90° S**.  Latitude is positive on the northern hemisphere and negative on the South hemisphere. *Longitude* is measured from the meridian of Greenwich where it is zero, and it increases eastwards up to 180∘ (**180∘ E**), and westwards up to 180∘ (**180∘ W**). Longitude is positive towards the East and negative towards the West.
 
-Geographic coordinates are typically expressed in two formats. In *Degrees, Minutes Seconds* or in *Decimal* formats.  However, from a computational point of view, the decimal format should be preferred because it makes it easier for the computer to parse the values. If you use the decimal format the computer will read it as decimal number but if you use the DMS format the computer will most likely read it as a string of text with no numeric or mathematical meaning.
+Geographic coordinates are typically expressed in two formats. In *Degrees, Minutes Seconds* or in *Decimal* formats.  However, from a computational point of view, the decimal format should be preferred because it makes it easier for the computer to parse the values. If you use the decimal format, the computer will read it as a decimal number, but if you use the DMS format, the computer will most likely read it as a string of text with no numeric or mathematical meaning.
  
 For example, Enschede is located at:
 
@@ -67,7 +67,7 @@ Task 2.3
 
    .. attention:: 
       **Question.**
-      What geographic coordinate system (geodetic datum) was used in the ``control_points.xlsx`` file?
+      What was the geographic coordinate system (geodetic datum) used in the ``control_points.xlsx`` file?
  
 Task 2.4   
    Open each of the remainder datasets in QGIS and check whether each dataset is spatially referenced or not. 
@@ -75,14 +75,14 @@ Task 2.4
    .. attention:: 
       **Question.**
       #. Do you have any data in a geographic coordinate system? 
-      #. What geographic coordinate system was used?
+      #. What was the geographic coordinate system used?
 
 ----------------------------------------------------
 
 Map Projections
 ---------------
 
-A `Map projection`_ is a mathematically described technique for representing the Earth’s curved surface on a flat map. Flattening out a spherical surface is an imperfect task, as you can experience yourself when you are peeling an orange and try to lay flat the skin. To represent the  Earth’s surface on a map, we use a map projection. Map projections are developed for specific purposes, and each one has some distortions. Therefore, understanding about the `classificaion of map projections <Projection classification_>`_ is important when choosing a suitable map projection.
+A `Map projection`_ is a mathematically described technique for representing the Earth’s curved surface on a flat map. Flattening out a spherical surface is an imperfect task, as you can experience yourself when you are peeling an orange and try to lay flat the skin. To represent the  Earth’s surface on a map, we use a map projection. Map projections are developed for specific purposes, and each one has some distortions. Therefore, understanding the `classification of map projections <Projection classification_>`_ is essential when choosing a suitable map projection.
 
 No matter which map projection you choose, it always comes with certain distortions You can experience this yourself for the case of the widely used Mercator Projection by using this link: http://hive.sewanee.edu/pridepj0/286/mercatorMap.html
 
@@ -112,7 +112,7 @@ Task 3.1
    + Are there any datasets that use a map projection? 
    + What geographic coordinate system is used by the projected datasets? 
 
-   For this task you might want to first watch the video `managing coordinate systems <https://vimeo.com/album/4389527/video/201997378>`_.
+   For this task, you might want first to watch the video `managing coordinate systems <https://vimeo.com/album/4389527/video/201997378>`_.
 
    .. raw:: html
 
@@ -127,25 +127,26 @@ Coordinate Transformation
 -------------------------
 
 
-Users of geo-information often need to transform datasets from a particular coordinate system to another. `Coordinate transformations <Coordinate transformation_>`_ are necessary because some analysis require it, or simple because map-user have especial requirements when it comes on how to represent spatial data on a map.
+Users of geo-information often need to transform datasets from a particular coordinate system to another. `Coordinate transformations <Coordinate transformation_>`_ are necessary because some analysis requires planar measurement units.
+In other cases, the map-user have especial requirements on how to represent spatial data on a map.
 
 
 .. attention:: 
    **Question.**
-   You should have noticed that the these datasets have different coordinate systems and datums: ``DEM, floodzones, highways, parish, and rivers.`` 
+   You should have noticed that these datasets have different coordinate systems and datums: ``DEM, floodzones, highways, parish, and rivers.`` 
    
    + What problems can result out of leaving these layers with their current coordinate systems?
-   + If you had to transform all these datasets to a single coordinate system, which coordinate system will you choose as target? What criteria determine your choice? Give examples for these specific datasets.
+   + If you had to transform all these datasets to a single coordinate system, which coordinate system will you choose as a target? What criteria determine your choice? Give examples for these specific datasets.
 
 Task 4.1 
-   After choosing a projected coordinate system and datum for your datasets. Use QGIS to do the transformations. Put attention on which layer requires transformation of projections or transformation of projection and datum, because **the order in which you do transformation matters.**
+   After choosing a projected coordinate system, and datum for your datasets, use QGIS to do the transformations. Put attention on which layer requires a transformation of projections or a transformation of projection and datum, because **the order in which you do transformation matters.**
 
 .. note:: 
    **QGIS.**
    You may need to refer to QGIS manual, section `projecting and transforming data <https://docs.qgis.org/testing/en/docs/training_manual/vector_analysis/reproject_transform.html>`_.
 
 Task 4.2 
-   Sometimes, when visualising  data in QGIS, some of the layers do not align with each other. This may be because a data layer has an **unknown or incorrect coordinate** system defined. Or a data layer has no *georeferencing* ( no reference to any coordinate system at all).  Do you have any data layer that do not align with the rest of the data layers in your current project? 
+   Sometimes, when visualising data in QGIS, some of the layers do not align with each other. This may be because a data layer has an **unknown or incorrect coordinate** system defined. Or a data layer has no *georeferencing* ( no reference to any coordinate system at all).  Do you have any data layer that does not align with the rest of the data layers in your current project? 
 
 
 -------------------------------------------
@@ -153,7 +154,7 @@ Task 4.2
 Ground control points
 ---------------------
 
-You can load data into a GIS software which has not been georeferenced to any coordinate system. For example, a scanned topographic map or an image. In the next exercise, we will take a scanned topographic map, and using its grid we will `georeference <Geo-referencing_>`_ the topographic map to match it with the rest of the layers in your dataset.
+You can load data into a GIS software which has not been georeferenced to any coordinate system —for example, a scanned topographic map or an image. In the next exercise, we will `georeference <Geo-referencing_>`_ a scanned topographic map to match the spatial reference of other layers in your dataset.
 
 Task 5.1 
    Load the ``topographic_map_dominica.jpg`` into a QGIS project and identify points on the topographic map that can be used as control points. 
@@ -163,13 +164,13 @@ Task 5.1
    Why are these points your best choice? How many points are you going to use?
 
 Task 5.2 
-   In GIS, open the Georeferencer (from the Raster menu tools) and load the  file ``topographic_map_dominica.jpg``. Use the points you chose above to geo-reference the scanned map. Be sure to pay close attention to the coordinate system on the scanned map and your existing data layers. Attempt to match the map as best you can to your current vector layers.
+   In GIS, open the Georeferencer (from the Raster menu tools) and load the file ``topographic_map_dominica.jpg``. Use the points you chose above to georeference the scanned map. Be sure to pay close attention to the coordinate system on the scanned map and your existing data layers. Attempt to match the map as best you can to your current vector layers.
 
-   For this task you might want to first watch the video tutorial `georeferencing an image <https://vimeo.com/album/4389527/video/201997378>`_.
+   For this task, you might want first to watch the video tutorial `georeferencing an image <https://vimeo.com/album/4389527/video/201997378>`_.
 
 .. note:: 
    **QGIS.**
-   If the Georeferencer is not visible from the raster menu, you have  to go to the plugins menu and make sure  it is active.
+   If the Georeferencer is not visible from the raster menu, you have to go to the plugins menu and make sure it is active.
 
    .. image:: _static/img/georeferencer-plugin.png 
       :align: center
@@ -190,6 +191,3 @@ Optional Challenges
 
 #. An ellipsoid is usually defined by the semi-major axis :math:`a` and the flattening :math:`f`. Flattening depends on both the semi-major axis and the semi-minor axis :math:`b`. Assume an ellipsoid with a semi-major axis a of **6378137 m** and a flattening  **1:298.257**.  Determine the value of the semi-minor axis :math:`b`. Use the equation :math:`f = (a – b) / b`
 
-
-
- 
