@@ -1,14 +1,13 @@
 Databases
 ==========
 
-.. important:: 
-   **Resources.**
-   This exercise requires no data and no specific software. 
-
------------------------------------------------------------
 
 Database Management Systems
 ---------------------------
+
+.. important:: 
+   **Resources.**
+   This exercise requires no data and no specific software. 
 
 Begin by reading about `Database`_ and  `Database management system`_ (DBMS) in the Living Textbook.
 
@@ -148,6 +147,18 @@ In this exercise you will not interact with a RDBMS but with a Spatialite databa
    Even though it is a good practice to store and organize your data in a database, it is not always necessary. In personal projects where you do not have multiple users, and the amount of data is not very large and/or the queries you need are not too complicated, you can use a file structure in your GIS or a file-based database instead of an external database. But if deal with large projects where more than one user will work with hundreds or thousands of files and perform advanced queries, you should design and implement a database before starting analysing and visualising your data in a GIS. 
 
 Having the necessary datasets is the starting point to be able to extract relevant information. Querying data is an important skill of a GIS analyst. To accomplish we use SQL – Structured Query Language.
+
+.. important:: 
+   **Resources.**
+   You will require the latest LTR version of `QGIS (A Coruna 3.10) <https://qgis.org/en/site/forusers/download.html>`_, plus the dataset `database_queries.zip <database_queries>`_ which you can download from CANVAS.  When you unzip the dataset, you will find the following files inside:
+
+   + ``Database_queries.qgs`` – a QGIS project preloaded with the dataset described below;
+   + ``country_Data`` – a table with additional information on the countries of the world;
+   + ``database.sqlite`` – a SpatiaLite database containing:
+      + ``countries`` – polygons of the boundaries of the countries of the world;
+      + ``railroads`` – lines representing the main railroads of the world;
+      + ``urban_areas`` – polygons of the boundaries of the main urban areas of the world 
+
 
 
 Task
