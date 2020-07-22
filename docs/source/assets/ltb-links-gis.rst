@@ -33,7 +33,6 @@
 .. _Reference surface:              https://ltb.itc.utwente.nl/page/481/concept/78641
 .. _Geoid:                          https://ltb.itc.utwente.nl/page/481/concept/78663
 .. _Vertical datum:                 https://ltb.itc.utwente.nl/page/481/concept/78669
-
 .. _Database:   	                https://ltb.itc.utwente.nl/page/481/concept/78625
 .. _Database management system:     https://ltb.itc.utwente.nl/page/481/concept/78627
 .. _Spatial database:    	        https://ltb.itc.utwente.nl/page/481/concept/78624
@@ -47,46 +46,34 @@
 .. _Tuple:                          https://ltb.itc.utwente.nl/page/481/concept/78769
 .. _Attribute:                      https://ltb.itc.utwente.nl/page/481/concept/78614
 .. _Keys:                           https://ltb.itc.utwente.nl/page/481/concept/78859
-
 .. _Tuple selection:                https://ltb.itc.utwente.nl/page/481/concept/78768
 .. _Attribute projection:           https://ltb.itc.utwente.nl/page/481/concept/78766
 .. _Join:                           https://ltb.itc.utwente.nl/page/481/concept/78689
 .. _Join condition:                 https://ltb.itc.utwente.nl/page/481/concept/78691
 .. _Ellipsoid:                      https://ltb.itc.utwente.nl/page/481/concept/78640
-
 .. _Map projection:                 https://ltb.itc.utwente.nl/page/481/concept/78707
 .. _Projection classification:      https://ltb.itc.utwente.nl/page/481/concept/78708
-
-
 .. _Coordinate transformation:      https://ltb.itc.utwente.nl/page/481/concept/78609
-
-
 .. _Coordinate system:              https://ltb.itc.utwente.nl/page/481/concept/78608
 .. _Planar coordinate system:       https://ltb.itc.utwente.nl/page/481/concept/78660
 .. _Geographic coordinate system:   https://ltb.itc.utwente.nl/page/481/concept/78659
-.. _Geo-referencing:                 https://ltb.itc.utwente.nl/page/481/concept/78662
-
+.. _Geo-referencing:                https://ltb.itc.utwente.nl/page/481/concept/78662
 .. _Ground control points:          https://ltb.itc.utwente.nl/page/481/concept/78661
 .. _RMSE:                           https://ltb.itc.utwente.nl/page/481/concept/78541
-
 .. _Precision:                      https://ltb.itc.utwente.nl/page/481/concept/78740
 .. _Positional accuracy:            https://ltb.itc.utwente.nl/page/481/concept/78739
 .. _Accuracy:                       https://ltb.itc.utwente.nl/page/481/concept/78539
 .. _Attribute accuracy:             https://ltb.itc.utwente.nl/page/481/concept/78557
 .. _Error matrix:                   https://ltb.itc.utwente.nl/page/481/concept/78560
-
 .. _Error propagation:              https://ltb.itc.utwente.nl/page/481/concept/78857
 .. _Rasterisation:                  https://ltb.itc.utwente.nl/page/481/concept/78851
 .. _Perkal band:                    https://ltb.itc.utwente.nl/page/481/concept/78540
-
 .. _Data checks and repairs:        https://ltb.itc.utwente.nl/page/481/concept/78847
-
 .. _combining data from multiple sources: https://ltb.itc.utwente.nl/page/481/concept/78853
 .. _Merging datasets:               https://ltb.itc.utwente.nl/page/481/concept/78855
 .. _Accuracy differences:           https://ltb.itc.utwente.nl/page/481/concept/78854
 .. _Logical consistency:            https://ltb.itc.utwente.nl/page/481/concept/78699
 .. _Completeness:                   https://ltb.itc.utwente.nl/page/481/concept/78596
-
-.. _Uncertainty: https://ltb.itc.utwente.nl/page/481/concept/78559
-.. _Sources of errors: https://ltb.itc.utwente.nl/page/481/concept/78561
-.. _Lineage: https://ltb.itc.utwente.nl/page/481/concept/78694
+.. _Uncertainty:                    https://ltb.itc.utwente.nl/page/481/concept/78559
+.. _Sources of errors:              https://ltb.itc.utwente.nl/page/481/concept/78561
+.. _Lineage:                        https://ltb.itc.utwente.nl/page/481/concept/78694
