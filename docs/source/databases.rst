@@ -165,6 +165,8 @@ Task
    Read the about `querying a spatial database with SQL <Querying SQL_>`_. You should understand what `Tuple selection`_ means; what is  `Attribute projection`_; and how can we `join <Join_>`_ two or more than two relations.  Such understanding is necessary for solving query-formulation problems, using a `Join condition`_. 
 
 
+.. _`sec-select-attrib`:
+
 Selection by Attributes
 ^^^^^^^^^^^^^^^^^^^^^^^^
 

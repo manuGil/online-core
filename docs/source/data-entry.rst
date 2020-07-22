@@ -52,7 +52,9 @@ Although spatial data can be acquired from third-party sources like government a
    + ``Pearl_Harbour_topographic_map_(1999).tif`` – a raster map; 
    + ``Educational_facilities.csv`` – tabular data; 
    + ``Polygons.gpk`` – a polygon vector layer. 
-   
+
+.. _`sec-digitising`:
+
 Digitising 
 ^^^^^^^^^^
 
@@ -121,7 +123,7 @@ In the previous task, for the layer of geometry type ‘Line’ you probably dig
 
    Connectivity issues between lines. The case of undershooting.
 
-To ensure `Topology consistency`_ between geometries, e.g., that line segments get properly connected while digitising, we have to set a snapping tolerance, which tells the GIS software to connect lines that are within certain distance automatically. Otherwise, it will be challenging to ensure that our lines are connected.  
+To ensure `Topological consistency`_ between geometries, e.g., that line segments get properly connected while digitising, we have to set a snapping tolerance, which tells the GIS software to connect lines that are within certain distance automatically. Otherwise, it will be challenging to ensure that our lines are connected.  
 
 
 Task 2.3  

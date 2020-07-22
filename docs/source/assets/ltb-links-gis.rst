@@ -30,10 +30,6 @@
 .. _Digitizing:                     https://ltb.itc.utwente.nl/page/481/concept/78631
 .. _Scanning:                       https://ltb.itc.utwente.nl/page/481/concept/78763
 .. _Associating attributes:         https://ltb.itc.utwente.nl/page/481/concept/78849
-.. _Topology:                       https://ltb.itc.utwente.nl/page/481/concept/78800
-.. _Topology consistency:           https://ltb.itc.utwente.nl/page/481/concept/78798
-.. _Topological data model:         https://ltb.itc.utwente.nl/page/481/concept/78572
-.. _Topological relationship:       https://ltb.itc.utwente.nl/page/481/concept/78799
 .. _Reference surface:              https://ltb.itc.utwente.nl/page/481/concept/78641
 .. _Geoid:                          https://ltb.itc.utwente.nl/page/481/concept/78663
 .. _Vertical datum:                 https://ltb.itc.utwente.nl/page/481/concept/78669
@@ -62,7 +58,7 @@
 .. _Projection classification:      https://ltb.itc.utwente.nl/page/481/concept/78708
 
 
-.. _Coordinate transformation:  https://ltb.itc.utwente.nl/page/481/concept/78609
+.. _Coordinate transformation:      https://ltb.itc.utwente.nl/page/481/concept/78609
 
 
 .. _Coordinate system:              https://ltb.itc.utwente.nl/page/481/concept/78608
@@ -73,7 +69,24 @@
 .. _Ground control points:          https://ltb.itc.utwente.nl/page/481/concept/78661
 .. _RMSE:                           https://ltb.itc.utwente.nl/page/481/concept/78541
 
+.. _Precision:                      https://ltb.itc.utwente.nl/page/481/concept/78740
+.. _Positional accuracy:            https://ltb.itc.utwente.nl/page/481/concept/78739
+.. _Accuracy:                       https://ltb.itc.utwente.nl/page/481/concept/78539
+.. _Attribute accuracy:             https://ltb.itc.utwente.nl/page/481/concept/78557
+.. _Error matrix:                   https://ltb.itc.utwente.nl/page/481/concept/78560
 
+.. _Error propagation:              https://ltb.itc.utwente.nl/page/481/concept/78857
+.. _Rasterisation:                  https://ltb.itc.utwente.nl/page/481/concept/78851
+.. _Perkal band:                    https://ltb.itc.utwente.nl/page/481/concept/78540
 
+.. _Data checks and repairs:        https://ltb.itc.utwente.nl/page/481/concept/78847
 
+.. _combining data from multiple sources: https://ltb.itc.utwente.nl/page/481/concept/78853
+.. _Merging datasets:               https://ltb.itc.utwente.nl/page/481/concept/78855
+.. _Accuracy differences:           https://ltb.itc.utwente.nl/page/481/concept/78854
+.. _Logical consistency:            https://ltb.itc.utwente.nl/page/481/concept/78699
+.. _Completeness:                   https://ltb.itc.utwente.nl/page/481/concept/78596
 
+.. _Uncertainty: https://ltb.itc.utwente.nl/page/481/concept/78559
+.. _Sources of errors: https://ltb.itc.utwente.nl/page/481/concept/78561
+.. _Lineage: https://ltb.itc.utwente.nl/page/481/concept/78694
