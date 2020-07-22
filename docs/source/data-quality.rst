@@ -146,19 +146,19 @@ Task 1.1
        Using the rasterisation tool.
 
 
-    The result is not very impressive. Besides we lost the attribute table and with a *15m* resolution, we also lost information on the shape of the buildings.
+    The result is not very impressive. Besides we lost the attribute table and with a :math:`15 m`  resolution, we also lost information on the shape of the buildings.
 
 .. attention:: 
    **Question.**
-   Convert the porto_buildings layer to a raster once more, this time use a resolution of *2m*.
+   Convert the porto_buildings layer to a raster once more, this time use a resolution of :math:`2 m`.
     
-    + Does the 2m resolution raster has enough quality?
+    + Does the :math:`2 m` resolution raster has enough quality?
     + What do you lose and what do you gain when you rasterize?
-    + Does the 2m resolution raster preserves all the original vector features,  i.e.  at least one pixel per building? How can you tell?
+    + Does the :math:`2 m` resolution raster preserves all the original vector features,  i.e.  at least one pixel per building? How can you tell?
 
 Converting from vector to raster usually means to give up of your semantic information, the attribute table. Nevertheless, having an attribute table associated to a raster is possible with certain software products but in such cases the attribute table  can only be used from within that specific software product.  In other words, it is software dependent.
 
-A compromised solution to preserve attribute information, is to create a raster layer  using the numeric values of a single attribute in the vector layer. In such case, attribute values are converted to pixel or cell values in the resulting raster layer. For example, in a vector layer representing land cover, usually every type of land cover has a unique numeric code (e.g. forest = 100, road = 400, water= 700). If you set an attribute when converting  to a raster layers, cells inherit the values from that attribute.  Then, the cell values have an implicit semantic meaning, for this example that is type of land cover.
+A compromised solution to preserve attribute information, is to create a raster layer  using the numeric values of a single attribute in the vector layer. In such case, attribute values are converted to pixel or cell values in the resulting raster layer. For example, in a vector layer representing land cover, usually every type of land cover has a unique numeric code (e.g. *forest = 100, road = 400, water= 700*). If you set an attribute when converting  to a raster layers, cells inherit the values from that attribute.  Then, the cell values have an implicit semantic meaning, for this example that is type of land cover.
   
 Task 1.3 
     Repeat the vector to raster conversion for the porto_buildings layer. This time feed the attribute fid into the option **Field to use for a burn-in value.** :numref:`fig-burn-values`
@@ -256,7 +256,7 @@ Task 3.2
 
 .. note:: 
    **QGIS.**
-   When you press ok (step 7), QGIS will automatically enter into edit mode to commit the changes into the attribute table of the vector layer. You can toggle off editing mode using the button *toggle editing*. You will be asked to save the edits - make sure you do.
+   When you press OK (step 7), QGIS will automatically enter into edit mode to commit the changes into the attribute table of the vector layer. You can toggle off editing mode using the button *toggle editing*. You will be asked to save the edits - make sure you do.
 
 
 Task 3.3 
@@ -360,6 +360,6 @@ This is not the same as saying that we should care about metadata. However, can 
 
 .. attention:: 
    **Question.**
+   
    + How can metadata be useful? 
    + Would you add something else to the list of principles above?
-
