@@ -99,6 +99,7 @@ No matter which map projection you choose, it always comes with certain distorti
 
    + ``DEM10.tif`` (and auxiliary files) – a digital elevation model in raster format;
    + ``Topographical_map_dominica.tif`` – a (ungeoreferenced) raster map;
+   + ``Topographic_map_hengelo.tif`` – a (ungeoreferenced) raster map;
    + ``Control_points.csv`` – a table with points collected via GPS;
    + ``Floodzones.gpkg`` – vector data (polygons) of floodable areas;
    + ``Highways.gpk`` – line vector layer;
@@ -191,10 +192,24 @@ Task 5.2
 
 ---------------------------------------------
 
-Optional Challenges
--------------------
+Additional questions
+--------------------
 
-#. Assume you wish to reconcile spatial data from two neighbouring countries to resolve a border dispute. Published maps in the two countries are based on different local horizontal datums and map projections. *Which steps should you take to render the data sets spatially compatible?*
+.. attention::
+   	Open the topographic_map_hengelo.tif of Enschede.
+	 * Is the image is georeferenced?
+	 * Zoom in to the legend at the center-bottom of the screen. How many coordinate systems are available in the topographic map?
+	 * Which of the three systems has a grid on the topographic map?
+	 * Which of the three systems you would use as coordinate system to georeference the digital version of the map?
 
-#. An ellipsoid is usually defined by the semi-major axis :math:`a` and the flattening :math:`f`. Flattening depends on both the semi-major axis and the semi-minor axis :math:`b`. Assume an ellipsoid with a semi-major axis a of **6378137 m** and a flattening  **1:298.257**.  Determine the value of the semi-minor axis :math:`b`. Use the equation :math:`f = (a – b) / b`
+	Imagine the case where you import a digital map into your GIS system and after the import you realize that the digital map has coordinates but the coordinate system is unknown.
+	 * Do you think this case is uncommon?
+	 * What to do in this case? Do you have to georeference the map again or you just assign the Coordinate System in case you know it?
 
+	You receive 4 projected topographic maps in paper of the same area:
+	Map 1: has information on the ellipsoid, datum and projection
+	Map 2: has information on the ellipsoid and datum but not projection
+	Map 3: has information on ellipsoid and projection but not datum
+	Map 4: has information on datum and projection but not ellipsoid
+	 * Out of these 4 maps how many maps have enough information to build a complete spatial reference system in order to digitize correctly the topographic maps?
+	 * Can a topographic map with coordinates be digitized without knowing the coordinate system?
