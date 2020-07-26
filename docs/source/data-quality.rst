@@ -45,7 +45,7 @@ A way of assessing the positional accuracy of a dataset is calculating the Root 
 
 Task 1.1 
     Open the project "accuracy assessment.qgs ".  The project has two layers:
-    "geodesic_marks "and "peaks ".  Use the  **Identify tool** to find the coordinates of two points that fall close to each other, :numref:`fig-find-coor`. You can draw a small rectangle over the features you want, or you can click.
+    "geodesic_marks "and "peaks ".  Use the  **Identify tool** |identify| to find the coordinates of two points that fall close to each other, :numref:`fig-find-coor`. You can draw a small rectangle over the features you want, or you can click.
     Make sure that in the Identify window that will pop up the option Mode is set to Top-down.
     You may need to resize or rearrange your panels to make room for the **Identify Results** window.
 
@@ -256,7 +256,7 @@ Task 3.2
 
 .. note:: 
    **QGIS.**
-   When you press OK (step 7), QGIS will automatically enter into edit mode to commit the changes into the attribute table of the vector layer. You can toggle off editing mode using the button *toggle editing*. You will be asked to save the edits - make sure you do.
+   When you press OK (step 7), QGIS will automatically enter into edit mode to commit the changes into the attribute table of the vector layer. You can toggle off editing mode using the button |edit| . You will be asked to save the edits - make sure you do.
 
 
 Task 3.3 

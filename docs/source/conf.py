@@ -53,7 +53,8 @@ rst_epilog=""
 
 # Target link-files
 link_file = ['assets/ltb-links-gis.rst',
-            'assets/data-links-gis.rst'
+            'assets/data-links-gis.rst',
+            'substitutions.txt'
             ]
 # Read links in the from the target files
 for file in link_file:
