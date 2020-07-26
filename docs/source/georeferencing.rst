@@ -196,20 +196,25 @@ Additional questions
 --------------------
 
 .. attention::
-   	Open the topographic_map_hengelo.tif of Enschede.
-	 * Is the image is georeferenced?
-	 * Zoom in to the legend at the center-bottom of the screen. How many coordinate systems are available in the topographic map?
-	 * Which of the three systems has a grid on the topographic map?
-	 * Which of the three systems you would use as coordinate system to georeference the digital version of the map?
+   
+   1. Open the ``topographic_map_hengelo.tif`` of Enschede.
+	
+      a. Is the image is georeferenced?
+      b. Zoom in to the legend at the center-bottom of the screen. How many coordinate systems are available in the topographic map?
+      c. Which of the three systems has a grid on the topographic map?
+      d. Which of the three systems you would use as coordinate system to georeference the digital version of the map?
+	
+   2. Imagine the case where you import a digital map into your GIS system and after the import you realize that the digital map has coordinates but the coordinate system is unknown.
 
-	Imagine the case where you import a digital map into your GIS system and after the import you realize that the digital map has coordinates but the coordinate system is unknown.
-	 * Do you think this case is uncommon?
-	 * What to do in this case? Do you have to georeference the map again or you just assign the Coordinate System in case you know it?
+      a. Do you think this case is uncommon?
+      b. What to do in this case? Do you have to georeference the map again or you just assign the Coordinate System in case you know it?
 
-	You receive 4 projected topographic maps in paper of the same area:
-	Map 1: has information on the ellipsoid, datum and projection
-	Map 2: has information on the ellipsoid and datum but not projection
-	Map 3: has information on ellipsoid and projection but not datum
-	Map 4: has information on datum and projection but not ellipsoid
-	 * Out of these 4 maps how many maps have enough information to build a complete spatial reference system in order to digitize correctly the topographic maps?
-	 * Can a topographic map with coordinates be digitized without knowing the coordinate system?
+   3. You receive 4 projected topographic maps in paper of the same area:
+
+      * Map 1: has information on the ellipsoid, datum and projection
+      * Map 2: has information on the ellipsoid and datum but not projection
+      * Map 3: has information on ellipsoid and projection but not datum
+      * Map 4: has information on datum and projection but not ellipsoid
+	
+      a. Out of these 4 maps how many maps have enough information to build a complete spatial reference system in order to digitize correctly the topographic maps?
+      b. Can a topographic map with coordinates be digitized without knowing the coordinate system?

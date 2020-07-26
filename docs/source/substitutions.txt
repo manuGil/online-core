@@ -1,5 +1,3 @@
-# Substitutions below are sorted and should be in lowerCamelCase
-# NOTE that for inline images (like button and menu icons inline in text) you HAVE TO make a substitution
 
 .. |25dSymbol| image:: _static/qgis-common/renderer25dSymbol.png
    :width: 1.5em

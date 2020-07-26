@@ -146,7 +146,7 @@ Task 1.1
        Using the rasterisation tool.
 
 
-    The result is not very impressive. Besides, we lost the attribute table and with a :math: '15 m`  resolution, we also lost information on the shape of the buildings.
+    The result is not very impressive. Besides, we lost the attribute table and with a :math: `15 m`  resolution, we also lost information on the shape of the buildings.
 
 .. attention:: 
    **Question.**
@@ -338,10 +338,10 @@ Task 4.1
     + Would you have organised the data for this exercise differently? How?
 
 Task 4.2 
-As you moved along the exercises you might have produced some output files, some of them have experimental results, others have definitive results.
+    As you moved along the exercises you might have produced some output files, some of them have experimental results, others have definitive results.
 
--   Have you saved them in a proper and accessible folder?
--   Can you trace back the changes you made during every processing attempt from the file names?
+    + Have you saved them in a proper and accessible folder?
+    + Can you trace back the changes you made during every processing attempt from the file names?
 
 A relevant topic for data quality is **Metadata**,  often defined as *"data about the data"*. Metadata provides additional or auxiliary information about a geospatial dataset that may not be easily obtainable from the dataset itself. For example, sometimes you can read the coordinates of a geometry in a vector data set. Still, you may not be able to determine the spatial reference system from the coordinate values alone. Ideally, metadata includes details related to the `Lineage`_ and `Completeness`_ of the data.
 There are standards and directives for metadata of spatial data. In Europe, an important directive is the `INSPIRE <https://inspire.ec.europa.eu/>`_ initiative.
@@ -352,9 +352,11 @@ This is not the same as saying that we should care about metadata. However, we c
 
 #. Save metadata in a format that is not software-dependent (a simple *Readme* file is often enough).
 #. Include the lineage of the data:
-    + how was the data aggregated? 
-    + Where to find the original data? 
-    + What geoprocessing operations were performed? 
+
+   + how was the data aggregated? 
+   + Where to find the original data? 
+   + What geoprocessing operations were performed? 
+
 #. Include contact information of the author or owner of the dataset, if you expect others to use the dataset.
 #. Historical information. Is the dataset representing a geographic phenomenon in 2013 or in 2020?
 #. Licensing: copyrights and restriction on using the data.
