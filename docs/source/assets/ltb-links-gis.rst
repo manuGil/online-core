@@ -77,3 +77,19 @@
 .. _Uncertainty:                    https://ltb.itc.utwente.nl/page/481/concept/78559
 .. _Sources of errors:              https://ltb.itc.utwente.nl/page/481/concept/78561
 .. _Lineage:                        https://ltb.itc.utwente.nl/page/481/concept/78694
+
+
+.. _Vector Measurements: https://ltb.itc.utwente.nl/page/481/concept/78810
+.. _Vector Overlay: https://ltb.itc.utwente.nl/page/481/concept/78811
+.. _Buffer: https://ltb.itc.utwente.nl/page/481/concept/78574
+.. _Thiessen Polygons: https://ltb.itc.utwente.nl/page/481/concept/78796
+
+.. _Network: https://ltb.itc.utwente.nl/page/481/concept/78717
+
+.. _Network Analysis: https://ltb.itc.utwente.nl/page/481/concept/78720
+.. _Optimal Path Finding: https://ltb.itc.utwente.nl/page/481/concept/78729
+.. _Network Allocation: https://ltb.itc.utwente.nl/page/481/concept/78719
+.. _Network Partitioning: https://ltb.itc.utwente.nl/page/481/concept/78721
+.. _Trace analysis: https://ltb.itc.utwente.nl/page/481/concept/78842
+
+

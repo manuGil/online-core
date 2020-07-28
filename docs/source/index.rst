@@ -22,7 +22,9 @@ Distance Education Core Exercises
    data-entry
    databases
    georeferencing
+   vector-analysis
    data-quality
+   
 
 .. toctree::
    :maxdepth: 2
