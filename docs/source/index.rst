@@ -24,6 +24,7 @@ Distance Education Core Exercises
    georeferencing
    vector-analysis
    data-quality
+   raster-analysis
    
 
 .. toctree::
