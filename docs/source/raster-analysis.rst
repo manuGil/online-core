@@ -114,3 +114,6 @@ Task 1.3
 
    .. image:: _static/img/happiness-plot.png
       :align: center
+
+
+.. Continue with part 2
