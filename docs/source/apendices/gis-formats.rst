@@ -1,4 +1,4 @@
-.. _rst_formats:
+.. _gis-formats:
 
 Common GIS file formats
 =======================

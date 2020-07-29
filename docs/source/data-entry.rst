@@ -186,4 +186,4 @@ Task 2.6
    If all went well, you should have ended up with a layer of points in your project. Does that mean that the ``educational_facilities.csv`` is spatial data?
 
 
-In the Appendices section, you find a list of :ref:`rst_formats`. 
+In the Appendices section, you find a list of :ref:`gis-formats`. 

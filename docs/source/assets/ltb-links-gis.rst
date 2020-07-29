@@ -100,3 +100,7 @@
 .. _Flow: https://ltb.itc.utwente.nl/page/481/concept/78844
 .. _Surface Analysis: https://ltb.itc.utwente.nl/page/481/concept/78579
 
+.. _Visualization: https://ltb.itc.utwente.nl/page/481/concept/78703
+.. _Map: https://ltb.itc.utwente.nl/page/481/concept/78701
+
+

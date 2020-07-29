@@ -25,6 +25,7 @@ Distance Education Core Exercises
    vector-analysis
    data-quality
    raster-analysis
+   visualisation
    
 
 .. toctree::
@@ -39,6 +40,7 @@ Distance Education Core Exercises
    :caption: Appendices
 
    apendices/gis-formats
+   apendices/shaded-terrain-models
 
 
 Indices and tables
