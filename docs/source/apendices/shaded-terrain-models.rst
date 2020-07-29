@@ -26,7 +26,10 @@ You can experiment with some of these options:
 
 + The *Z factor* settings provide an optional exaggeration of the heights.
 + The *Scale* option should be used if the height data units are not the same as the horizontal coordinate units.In our case both are in meters, but if for example, one would have a DEM in meters and a projection in latitude-longitude decimal degrees, one should use a :math:`scale = 111120`.
-+  *ZevenbergenThorne, Combined and Multidirectional* shading are different algorithms to produce shadows.
++  *ZevenbergenThorne, Combined and Multidirectional* are different algorithms to produce shadows.
 
 .. image:: ../_static/img/hillshade-win.png 
    :align: center
+
+.. note:: 
+   In QGIS, the DEM Terrain models are part of the GDAL toolbox. Therfore the best place for find help and information about the hillshade option is at http://www.gdal.org/gdaldem.html.
