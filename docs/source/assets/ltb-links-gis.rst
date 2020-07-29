@@ -92,3 +92,11 @@
 .. _Automatic reclassification:     https://ltb.itc.utwente.nl/page/481/concept/78562
 .. _User controlled classification: https://ltb.itc.utwente.nl/page/481/concept/78809
 
+.. _Raster Overlay: https://ltb.itc.utwente.nl/page/481/concept/78747
+.. _Overlay Analysis: https://ltb.itc.utwente.nl/page/481/concept/78733
+
+.. _Raster Measurements: https://ltb.itc.utwente.nl/page/481/concept/78746
+.. _Diffusion: https://ltb.itc.utwente.nl/page/481/concept/78843
+.. _Flow: https://ltb.itc.utwente.nl/page/481/concept/78844
+.. _Surface Analysis: https://ltb.itc.utwente.nl/page/481/concept/78579
+

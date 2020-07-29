@@ -2,14 +2,9 @@ Raster Analysis
 ===============
 
 
-.. important:: 
-   **Resources.**
-   You will require the latest LTR version of `QGIS (A Coruna 3.10) <https://qgis.org/en/site/forusers/download.html>`_, plus the dataset `raster-analysis.zip <raster_analysis>`_ which you can download from CANVAS.  For this section, you will need the following files: 
 
-    + ``classification.qgs`` – a QGIS project preloaded with the datasets described below;
 
-        + ``classes.tif``
-
+.. _sec-reclass:
 
 Reclassification
 ----------------
@@ -33,6 +28,15 @@ There are different classification methods for raster datasets, two of those are
 
 Automatic Classification
 ------------------------
+
+.. important:: 
+   **Resources.**
+   You will require the latest LTR version of `QGIS (A Coruna 3.10) <https://qgis.org/en/site/forusers/download.html>`_, plus the dataset `raster-analysis.zip <raster_analysis>`_ which you can download from CANVAS.  For this section, you will need the following files: 
+
+    + ``classification.qgs`` – a QGIS project preloaded with the datasets described below;
+
+        + ``classes.tif``
+
 
 Task 1.1 
     Below, you see a raster layer represented as an array of values. Classify  the values by applying the equal interval and the equal frequency techniques. Use five classes and write down the classified values in the boxes below. A good approach is to draw a raster attribute table first, which indicates the values and their frequencies, and then determine the new class values. 
@@ -115,5 +119,272 @@ Task 1.3
    .. image:: _static/img/happiness-plot.png
       :align: center
 
+-----------------------------------------------
 
-.. Continue with part 2
+Raster overlay
+--------------
+
+During the vector exercise you were already introduced to the concept of overlay. In case you need to refresh your memory, check `Overlay Analysis`_.
+
+`Raster Overlay`_ operations can be classified into four groups: **Arithmetic, Boolean and Logical, Conditional,** and **Decision tables**. All of these methods are cell by cell operations. 
+
+
+.. important:: 
+   **Resources.**
+   You will require the latest LTR version of `QGIS (A Coruna 3.10) <https://qgis.org/en/site/forusers/download.html>`_, plus the dataset `raster-analysis.zip <raster_analysis>`_ which you can download from CANVAS.  For this section, you will need the following files: 
+
+   + ``overlay.qgs`` – a QGIS project preloaded with the datasets described below;
+      
+      + ``suit1.tif``
+      + ``suit2.tif``
+
+
+Arithmetic operators
+^^^^^^^^^^^^^^^^^^^^
+
+Image you want to find a location for a new house. You have two criteria: close to a school and in a safe neighborhood. You prepared two input layers;  *'suit1'*  contains information about the closeness to schools, and *'suit2'*  contains information about the safety of neighborhoods. 
+
+When using arithmetic operators to combine multiple raster layers, it is very important to evaluate the input values of the layers. In case the layers represent a suitability and the suitability value is indicated as *zero=”not suitable”* and *one=”suitable”*, arithmetic operators can be used to combine these input layers via raster overlay; :numref:`fig-suit12` . You may wonder how you would get such a binary input layer. A good method is to use a :ref:`sec-reclass`   to convert your input layer into a suitability layer with only relevant classes.
+
+
+.. _fig-suit12:
+.. figure:: _static/img/suit1-suit2.png
+   :alt: suit1 suit2
+   :figclass: align-center
+
+   Values of two suitability layers for a new house. Left: suit1. Right: suit2.
+
+
+.. attention:: 
+   **Question.**
+
+   + Which arithmetic operators can you use to combine these layers and obtain suitable location for the new house?
+   + How many different output values will you get in your out layer?
+   + What would be total suitable area in your output layer?
+
+
+Task 2.1 
+   The Layers in Figure X are also available as raster layers in the exercise’s dataset. Open the project ``Overlay.qgs`` and conduct an arithmetic overlay using *'Suit1'* and *'Suit2'* as input layers.  Then check the results. You will need the **Raster Calculator** :numref:`fig-raster-calc` 
+
+   .. _fig-raster-calc:
+   .. figure:: _static/img/raster-calc.png
+      :alt: raster Calculator
+      :figclass: align-center
+
+      The Raster Calculator.
+
+Comparison and Logical Operators
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+You may already be familiar with both Comparison (e.g. :math:`=, \ >, \ <=`, etc.) and Logical operators (e.g. :math:`AND, \ OR`, etc.). They were introduced as part of attribute selection using SQL. 
+
+Assume that the input layers for a raster overlay, have not been classified as suitable or unsuitable yet, rather they contain other values. In the example about the location of a new house, such values might be the perception of safety in each neighborhood  and the distance to schools. 
+Then, values of distance would be continuous (floating point), and values of safety would be discrete (integer). See :numref:`fig-safety-school`.
+
+
+.. _fig-safety-school:
+.. figure:: _static/img/ras-safety-school.png
+   :alt: safety school rasters
+   :figclass: align-center
+
+   Raster layers representing safety of neighborhoods (left), and distance to schools (right).
+
+Task 2.2 
+   Write down an expression to combine rater layers in :numref:`fig-safety-school`, using comparison and logical operators. Note that the size of these layers is not the same, but they do overlap. Assume that for the raster on the left (safety), pixels with values of 3 and 7 are suitable;  and for the raster on the right (distance to schools), pixels with values below 1000 are suitable.
+
+ Task 2.3 
+   The layers are available in the exercise’s dataset: ``classes.tif`` (safety) and ``dist2.tif`` (distance to schools). Try out your expression in the **Raster Calculator.**
+
+.. attention:: 
+   **Question.**
+   
+   + How many output cells are suitable?
+   + What is extent of the output raster layer? 
+   + What is the range of output values?
+
+Conditional Operators and Decision Tables
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+In the previous type of overlay, the output value was always either zero (un-suitable) or one (suitable). Yet sometimes, you would like to generate values expressing the degree of suitability. For example,  where one is not so suitable, three is reasonably suitable and ten is perfectly suitable. This is not possible using the type of analysis discussed in in the previous section. We achieve such analysis by using **conditional statements** and **decision tables**.
+
+.. note:: 
+   **QGIS.**
+   In the **Raster Calculator**, conditional statements are implicit in the output of other operators. For example, if given two raster, *'raster1'* and *'raster2'*, we want as output the sum of  pixel values of *'raster1'* and *'raster2'*, whenever the value of a pixel in *'raster1'* is more than then 5.  We can use the follow expression:
+
+   .. code-block:: prolog
+      :linenos:
+
+      (( raster1@1 > 5) * raster1@1 + raster2@1)
+
+
+   **Explanation.** 
+    
+   ``(raster1@1 > 5)`` states a condition that will return 1 (*True*) when a pixel in *'raster1'* is more than 5, and 0 (*False*) otherwise. Then, we retrieve the original pixel values in *'raster1'* by using a multiplication  ``( raster1@1 > 5) * raster1@1``. If the pixel in *'raster1'* is more than 5, it would return a 1, and 1 multiplied by any number will always return that number. 
+
+   Finally, ``+ raster2@1``  adds values in *'raster2'* to the values of *'raster1'*, after applying the condition stated by the comparison operator.
+   You can see more examples in the `QGIS documentation <https://docs.qgis.org/3.10/en/docs/user_manual/working_with_raster/raster_analysis.html#raster-calculator>`_. 
+
+
+Task 2.4 
+   Using the case explained in :numref:`fig-safety-school`, write down an expression for the raster calculator that uses conditional statements to produce an output raster with different levels of suitability. Define at least three suitability levels.
+
+An alternative to conditional statements is using decision tables. Decision tables are often use when there are many input raster or when the  output raster contains classes with a value that are the result of meeting different conditions. See an example in the bottom of the explanation on `Raster Overlay`_.
+
+
+Task 2.5 
+   Rewrite the conditional statement from the previous task using a decision table.
+
+.. attention:: 
+   **Question.**
+   What is the difference between reclassification based on an input table and the Decision Tables discussed above? 
+
+---------------------------------------------------
+
+
+
+
+.. important:: 
+   **Resources.**
+   You will require the latest LTR version of `QGIS (A Coruna 3.10) <https://qgis.org/en/site/forusers/download.html>`_, plus the dataset `raster-analysis.zip <raster_analysis>`_ which you can download from CANVAS.  For this section, you will need the following files: 
+
+   + ``distance.qgs`` – a QGIS project preloaded with the datasets described below;
+
+      + ``raster_points.tif``
+   
+   + ``surface_analysis.qgs`` – a QGIS project preloaded with the datasets described below;
+   
+      + ``dem(srtm).tif`` – a Digital Elevation model
+
+
+Measuring distances
+-------------------
+
+Distance
+^^^^^^^^
+
+There are several questions related to`Raster Measurements`_ that can be answered using raster analysis. For example.
+
++ How far are two locations?
++ How long is this line?
++ What is the distance to the nearest point?
++ What is the area closed to this point?
+
+
+Distance, in a raster layer, can be measured as **“Euclidean”** or **“cell centre to cell centre”**. Euclidean distance is measured from the cell centre of the origin-cell to the cell centre of the destination-cell in a straight line. However, for some operations we use a distance measured from the cell centre of the origin-cell to the cell centre of an adjacent cell until reaching the cell centre of the destination-cell. 
+
+Task 3.1 
+   Below you see two pictures. In each picture two marked cells. Draw a line to represent the distance between the two cells. For the one *on the left*, use the concept of Euclidean distance. For the one *on the right*, use the concept of cell centre to cell centre.
+
+   .. image:: _static/img/task-ras-dist.png 
+      :align: center
+
+
+.. attention:: 
+   **Question.**
+   How far are the two cells, from the previous task, when the size of a  cell (resolution) is 10 by 10 m? 
+
+
+Task 3.2 
+   Compute the distance over a raster layer. Open the project ``distance.qgs`` You will see a layer named *'raster_points'*. Go to **Raster > Analysis > Proximity** and generate a raster distance map. Answer the following questions:
+
+   + Is it possible to select which type of distance you want to measure? 
+   + Is the Proximity tool calculating the Euclidean distance or cell centre distance?
+
+   Make sure the *'raster_points'* layer is on top and use the **Value tool** to inspect the pixel values; :numref:`fig-ras-dist` . It will make it easier to interpret the data.
+
+
+   .. _fig-ras-dist:
+   .. figure:: _static/img/ras-dist.png
+      :alt: distance raster
+      :figclass: align-center
+
+      Inspecting the distance raster.
+
+Computation of diffusion
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+The computation of `Diffusion`_ differs from distance computation in the sense that diffusion takes into account both  distance and **resistance**. Diffusion is also referred to as the least accumulated cost distance, where cost refers to the resistance factor.
+
+The following elements are important to understand diffusion:
+
++ It requires two inputs. One containing the source(s) cells layer, and the other containing the resistance or cost layer.
++ Distance is calculated from cell centre to cell centre. Because there is a difference between distances between the cell centres of the neighbouring cells,  i.e. the distance of diagonally adjacent cells is longer, we have to take this into account. 
++ It determines the minimal cost for arriving at a certain cell. If there are multiple paths to reach a cell, diffusion calculates the value for each cell, but it will assign the lowest value.
+
+Below you see an explanation of the computation of diffusion.
+
+   .. image:: _static/img/diff-1.png 
+      :align: center
+
+   .. image:: _static/img/diff-2.png 
+      :align: center
+
+
+Task. 
+   The best way to learn how the computation of diffusion works is by doing it manually. Use pencil and paper to compute the diffusion on the raster layers represented below. 
+
+   .. image:: _static/img/task-diffusion.png 
+      :align: center
+
+
+Task 3.3 
+   You can also experiment with the computation of diffusion in QGIS. In a previous task, you created a distance layer using the *'raster_points'* layer. Here, you will use that distance layer as a *resistance layer* (In Qgis this is called 'cost layer'). In the **Processing Toolbox**, open the tool **r.cost**, and provide the inputs as depicted in the screenshot below; :numref:`fig-rcost` The tool will generate more than one output, ignore all of them except for the *'cumulative cost'* layer.
+
+   With the help of the **Value tool**, inspect the values of the pixels of the proximity map and of the *'cumulative cost'* layers. Make sure you understand what those values represent.
+
+
+   .. _fig-rcost:
+   .. figure:: _static/img/rcost.png
+      :alt: rcost tool
+      :figclass: align-center
+
+      Calculation of diffusion using the r.cost tool.
+
+.. attention:: 
+   **Question.**
+   Can you give some examples of applications that might use the computation of diffusion?
+
+Flow computation
+^^^^^^^^^^^^^^^^
+
+Flow computation calculates the flow along the least-cost path for each cell. Contrary to diffusion, which computes the spread of some material in all directions, flow computation is suitable to calculate the path that water will take when flowing downhill.
+The procedure consists of two steps: 
++ Calculation of the flow direction raster
++ Calculation of the accumulated flow
+
+
+The input for flow computation is a continuous field (raster), e.g. a DEM. The computation of the **flow direction** goes as follows. See :numref:`fig-flow-comp` 
+
+   For each cell  in the input raster layer (e.g.,  cell 88), we determine the smallest direct neighbour (cell 74) and the smallest diagonal neighbour (cell 44). Then, we calculate the difference between the target cell and the neighbours, such as :math:`88 \ –  \ 74 \ =  \ 14 \ m` and :math:`88 \ –  \ 44 \ = \ 44 \ m`. Then, we calculate the steepness of the neighbours, for this we take into account the distance between the cell centres. If the resolution is :math:`10x10  \ m`, we can calculate the steepness as :math:`14/10 \ =  \ 1.4` for the direct neighbour, and as :math:`44/10 \ * \ sqr(2) \ = \ 3.11` for the diagonal neighbour. Now, we know to which cell some material in the target cell (cell 88) will flow. This is to cell 44, because its steepness is the highest. 
+
+To compute the **flow accumulation**, we count for any given cell, how many other cells flow into it for the whole extent of the flow direction raster. For the target cell in :numref:`fig-flow-comp` , the flow accumulation is 7. Read a more detailed explanation on `flow computation <Flow_>`_.
+
+   .. _fig-flow-comp:
+   .. figure:: _static/img/flow-comp.png
+      :alt: flow computation
+      :figclass: align-center
+
+      An illustration of the flow computation in a DEM.
+
+Task
+   Compute the flow direction and flow accumulation for the elevation raster below. Use pencil and paper.
+
+   .. image:: _static/img/task-flow.png 
+      :align: center
+
+-------------------------------
+
+Surface Analysis
+----------------
+
+`Surface Analysis`_ consists of computations such as Slope angle, Slope aspect, Hillshading, etc. A common factor among these computation is they require continuous input surfaces (e.g., elevation), and they can tell the user something about the change or shape of this surface. 
+
+Task 3.4 
+   Open the project ``surface_analysis.qgis`` and use your software to compute the *slope angle, slope aspect and hillshade* of the elevation raster *'dem_srtm'*. Use the tools under **Raster terrain analysis** in the Processing toolbox, :numref:`fig-ras-terrain`  . Once you have the outputs, use the **Value Tool** to analyse the results.
+
+   .. _fig-ras-terrain:
+   .. figure:: _static/img/ras-terrain.png
+      :alt: terrain analysis
+      :figclass: align-center
+
+      The raster terrain analysis tools.
