@@ -8,9 +8,9 @@ Distance Education Core Exercises
 
 .. toctree::
    :maxdepth: 2
-   :numbered: 
-   :caption: Doc Layout
+   :caption: Introduction
 
+   how-to
    layout
 
 .. toctree::
@@ -20,11 +20,11 @@ Distance Education Core Exercises
 
    data-modeling
    data-entry
-   databases
    georeferencing
+   databases
    vector-analysis
-   data-quality
    raster-analysis
+   data-quality
    visualisation
    
 
