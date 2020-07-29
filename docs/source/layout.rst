@@ -1,5 +1,7 @@
-Unit Title
-==========
+Document Layout
+===============
+
+This section provide examples on how to organize and format the content of exercises.
 
 Exercise Title
 --------------
