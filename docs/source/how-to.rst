@@ -27,6 +27,8 @@ This document is divided into five parts:
 + **Part five**, the *Appendices* contain additional information that will be useful for some of the exercises.
 
 
+
+
 Conventions
 -----------
 
@@ -65,3 +67,6 @@ Relevant issues to report:
     + Wrong referencing, e.g., links do not refer to the correct resources. 
     + Missing or incomplete content. Text or figures.
     + Grammatical errors. We use British spelling.
+
+.. danger::  You will notice that **Tasks** are not numbered correctly. We are aware of this and we are working to fix it. Do not report this as an issue.
+ 
