@@ -90,7 +90,7 @@ Especial Content
    Ask students to answer questions. Question will become pointers to the virtual discussion session.
 
 
-Embedde Content
+Embedded Content
 ---------------
 
 Video
