@@ -5,7 +5,7 @@ This website contains a list of exercises that you will carry out as part of the
 
 Along with the exercises, you will be asked to perform several activities:
 
-+ **Read the Living Textbook** to obtain theoretical knowledge of the concepts used in the exercises. Be aware that the exercises do not provide a full explanation of the topics in the course. Therefore, you also have to study reference materials mentioned here. Whenever relevant information is available in the Living Textbook about a concept or a topic, you will see a  `hyperlink like this <#>`_ in the text. 
++ **Read the Living Textbook** to obtain theoretical knowledge of the concepts used in the exercises. Be aware that the exercises do not provide a full explanation of the topics in the course. Therefore, you also have to study reference materials mentioned here. *Whenever relevant information is available in the Living Textbook*, you will see a  `hyperlink like this <#>`_ in the text. 
 
 + **Perform pencil and paper tasks** to reinforce your understanding. Although this is an online course, you will be asked to do some task that required to write things down or perform some computations. You can use calculators or spreadsheets to do the calculations, but remember that what it is essential is that you learn the procedure required for each computation.
 
@@ -14,10 +14,17 @@ Along with the exercises, you will be asked to perform several activities:
 + **Answer questions and participate in the Virtual Classroom**. Each exercise contains questions that you should answer while conducting the exercises. Such questions will help you to assess your understanding of a certain concept or topic.  Therefore, take the time to analyse them and provide the best answer you can. During the Virtual Classroom session, we will discuss the answers. 
 
 
+
 Structure
 ---------
 
-This document is divided into five parts. Part one is, contains general information about the exercises. That is the part you are reading right now. Part two contains exercises related to *GI Science*, where you can learn about Geographic Information Systems and Spatial Analysis. Part three contains exercises related to *Earth Observation*, where you can learn about Remote Sensing and Image Interpretation. Part four contains exercises related to *Data Integration*, where you can learn about system dynamics and approaches to integrate data from multiple sources and perform advanced analysis. Part five, the *Appendices* contain additional information that will be useful for some of the exercises.
+This document is divided into five parts:
+
++ **Part one** contains general information about the exercises. That is the part you are reading right now. 
++ **Part two** contains exercises related to *GI Science*, where you can learn about Geographic Information Systems and Spatial Analysis. 
++ **Part three** contains exercises related to *Earth Observation*, where you can learn about Remote Sensing and Image Interpretation. 
++ **Part four** contains exercises related to *Data Integration*, where you can learn about system dynamics and approaches to integrate data from multiple sources and perform advanced analysis. 
++ **Part five**, the *Appendices* contain additional information that will be useful for some of the exercises.
 
 
 Conventions
