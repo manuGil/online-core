@@ -150,7 +150,7 @@ Task 1.1
 
 .. attention:: 
    **Question.**
-   Convert the porto_buildings layer to a raster once more; this time use a resolution of :math:`2 m`.
+   Convert the porto_buildings layer to a raster once more; this time use a resolution of :math: `2 m`.
     
     + Does the :math:`2 m` resolution raster has enough quality?
     + What do you lose and what do you gain when you rasterise?

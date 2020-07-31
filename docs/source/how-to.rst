@@ -5,7 +5,7 @@ This website contains a list of exercises that you will carry out as part of the
 
 Along with the exercises, you will be asked to perform several activities:
 
-+ **Read the Living Textbook** to obtain theoretical knowledge of the concepts used in the exercises. Be aware that the exercises do not provide a full explanation of the topics in the course. Therefore, you also have to study reference materials mentioned here. *Whenever relevant information is available in the Living Textbook*, you will see a  `hyperlink like this <#>`_ in the text. 
++ **Read the Living Textbook** to obtain theoretical knowledge of the concepts used in the exercises. Be aware that the exercises do not provide a full explanation of the topics in the course. Therefore, you also have to study reference materials mentioned here. *Whenever relevant information is available in the Living Textbook*, you will see a |ltb| `hyperlink like this <#>`_ in the text. 
 
 + **Perform pencil and paper tasks** to reinforce your understanding. Although this is an online course, you will be asked to do some task that required to write things down or perform some computations. You can use calculators or spreadsheets to do the calculations, but remember that what it is essential is that you learn the procedure required for each computation.
 
