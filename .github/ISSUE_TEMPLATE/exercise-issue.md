@@ -7,8 +7,11 @@ assignees: manuGil
 
 ---
 
-## Description:
+**Descritpion**
 
-## URL to the section containing the issue:
 
-## Screenshot (optional):
+**URL to the section containing the issue:**
+
+
+**Screenshot (optional):**
+
