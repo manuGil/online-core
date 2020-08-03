@@ -32,8 +32,6 @@ Distance Education Core Exercises
    :maxdepth: 2
    :caption: Earth Observation
 
-   er
-   sensors-img
     
 .. toctree::
    :maxdepth: 2

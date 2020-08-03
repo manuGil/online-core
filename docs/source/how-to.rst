@@ -55,11 +55,11 @@ Along with this document, we use some formating conventions to highlight content
 Reporting Issues
 ----------------
 
-If you would like to report any issues in this document. You can do so by opening an issue in this `GitHub repository <https://github.com/manuGil/online-core/issues`_.  
+If you would like to report any issues in this document. You can do so by opening an issue in this `GitHub repository <https://github.com/manuGil/online-core/issues`_. 
 
 Include the following:
     1. A short, but precise description of the issue,
-    2. A link to the title of the specific section that contains the issues. *You can find the URL of a title's section by click on the **chain icon** on the right side of title's section.*
+    2. A link to the title of the specific section that contains the issues. *You can find the URL of a title's section by click on the*  **chain icon**  *on the right side of title's section.*
     3. Optionally, include a screenshot of the part of the section containing the issue.
 
 Relevant issues to report:
