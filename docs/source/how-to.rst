@@ -55,7 +55,7 @@ Along with this document, we use some formating conventions to highlight content
 Reporting Issues
 ----------------
 
-If you would like to report any issues in this document. You can do so by opening an issue in this `GitHub repository <https://github.com/manuGil/online-core/issues/new/choose`_.  
+If you would like to report any issues in this document. You can do so by opening an issue in this `GitHub repository <https://github.com/manuGil/online-core/issues`_.  
 
 Include the following:
     1. A short, but precise description of the issue,
