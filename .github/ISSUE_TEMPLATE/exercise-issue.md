@@ -7,7 +7,7 @@ assignees: manuGil
 
 ---
 
-**Descritpion**
+**Describe the issue:**
 
 
 **URL to the section containing the issue:**
