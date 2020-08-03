@@ -10,7 +10,7 @@ The main goal of this exercise is to provide you with the first-hand experience 
 
 .. important:: 
    **Resources.**
-   You will require the latest LTR version of `QGIS (A Coruna 3.10) <https://qgis.org/en/site/forusers/download.html>`_, plus the dataset `georeferencing.zip <georeferencing>`_ which you can download from CANVAS.  For this section, you will need the following files: 
+   You will require the latest LTR version of `QGIS (A Coruna 3.10) <https://qgis.org/en/site/forusers/download.html>`_, plus the dataset |ltb| `georeferencing.zip <georeferencing>`_ which you can download from CANVAS.  For this section, you will need the following files: 
 
     + ``accuracy.qgs`` – a QGIS project preloaded with the datasets described below;
     + ``geodesic_marks.gpgk`` – peaks signaled by geodetic marks;
@@ -25,7 +25,7 @@ The main goal of this exercise is to provide you with the first-hand experience 
 Positional accuracy
 ^^^^^^^^^^^^^^^^^^^
 
-For the first part of this exercise, we will explore the concepts of `Accuracy`_, `Precision`_ and bias. One of the ways of assessing the quality of a dataset is by determining how accurate the data is. Accuracy might be measured with regards to `Positional accuracy`_ or attribute correctness, but in any case, we can only measure accuracy if we have a second data source of higher accuracy that we can regard as true or more close to the truth than the one we are assessing.
+For the first part of this exercise, we will explore the concepts of |ltb| `Accuracy`_, |ltb| `Precision`_ and bias. One of the ways of assessing the quality of a dataset is by determining how accurate the data is. Accuracy might be measured with regards to |ltb| `Positional accuracy`_ or attribute correctness, but in any case, we can only measure accuracy if we have a second data source of higher accuracy that we can regard as true or more close to the truth than the one we are assessing.
 
 
 .. attention:: 
@@ -40,7 +40,7 @@ In this exercise, the ``geodesic_marks`` dataset has higher accuracy than the ``
     
     The ASTER GDEM covers the Earth's surfaces between 83°N and 83°S. The ASTER GDEM  surveys the Earth's surface and collects 22,600 tiles; each tile covers 1° per side. Only tiles that contain at least 0.01% of land area are included in the dataset. The ASTER GDEM is stored in GeoTIFF format with geographic lat/long coordinates and a one arc-second (30 m) grid of elevation postings (vertical resolution). It is referenced to the WGS84/EGM96 geoid http://www.jspacesystems.or.jp/ersdac/GDEM/E/4.html
 
-A way of assessing the positional accuracy of a dataset is calculating the Root Means Square Error (`RMSE`_). 
+A way of assessing the positional accuracy of a dataset is calculating the Root Means Square Error (|ltb| `RMSE`_). 
 
 
 Task 1.1 
@@ -79,7 +79,7 @@ Task 1.2
 Attribute accuracy
 ^^^^^^^^^^^^^^^^^^
 
-Accuracy doesn't refer solely to positioning; it can also refer to attributes, in which case we call it `Attribute accuracy`_. The two layers in your project contain altitudes of geomorphological features, i. e. 'peaks'. The true values when it comes to attributes are also stored in the geodesic_marks layer.
+Accuracy doesn't refer solely to positioning; it can also refer to attributes, in which case we call it |ltb| `Attribute accuracy`_. The two layers in your project contain altitudes of geomorphological features, i. e. 'peaks'. The true values when it comes to attributes are also stored in the geodesic_marks layer.
 
 Task 1.3 
     Using the Identify Tool like in the previous task. Make a quick comparison of the difference between the altitudes stored in the attribute **COTA_SINAL**  of the *geodesic_marks* layer, and the altitudes in the attribute **aster_gdem** of the *peaks* layer.
@@ -88,7 +88,7 @@ Task 1.3
    **Question.**
    Could you use RMSE to assess attribute accuracy? If yes, what would the error you obtain will represent?
 
-Note that you can also measure the attribute accuracy of qualitative attributes, such as land cover. In that case, we use an   `Error matrix`_. We will be discussed in more detail in the Course on Earth Observation.
+Note that you can also measure the attribute accuracy of qualitative attributes, such as land cover. In that case, we use an   |ltb| `Error matrix`_. We will be discussed in more detail in the Course on Earth Observation.
 
 Biased data
 ^^^^^^^^^^^
@@ -119,7 +119,7 @@ Bias can also have political reasons. Maps can be statements of power, and there
 Data Acquisition Errors
 -----------------------
 
-A common source of errors occurs during the spatial acquisition phase. Errors originating in this phase `propagate <Error propagation>`_ if not corrected immediately.
+A common source of errors occurs during the spatial acquisition phase. Errors originating in this phase |ltb| `propagate <Error propagation>`_ if not corrected immediately.
 
 .. important:: 
    **Resources.**
@@ -133,7 +133,7 @@ A common source of errors occurs during the spatial acquisition phase. Errors or
 Conversion Operations Leading to Quality Loss
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Conversion can have different meanings in the GIS world. In the scope of this exercise "conversion" refers to format conversion (raster to vector and vice-versa). Vector and raster data are usually associated with the representation of discrete and continuous phenomena, respectively. Having to convert between formats is a common operation in the GIS world, however, these operations always imply some type of compromise regarding what we get and what we lose, especially in the case `Rasterisation`_.
+Conversion can have different meanings in the GIS world. In the scope of this exercise "conversion" refers to format conversion (raster to vector and vice-versa). Vector and raster data are usually associated with the representation of discrete and continuous phenomena, respectively. Having to convert between formats is a common operation in the GIS world, however, these operations always imply some type of compromise regarding what we get and what we lose, especially in the case |ltb| `Rasterisation`_.
 
 Task 1.1 
     Open the project "rasterisation .qgis ". From the Processing Toolbox, use the ** Rasterise tool** to convert the *porto_buildings* layer to a raster using a resolution of *15m*. :numref:`fig-rasterisation`
@@ -184,7 +184,7 @@ Task 1.3
 Digitising operations leading to errors
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-A common cause of errors has its origin in data acquisition through digitisation. When digitising features from a base map the resulting accuracy is related to the scale that is being used at the moment of digitising, this is related to the concept of `Perkal band`_. The basic principle is that the smaller the scale, the less accurate the digitalisation will be.
+A common cause of errors has its origin in data acquisition through digitisation. When digitising features from a base map the resulting accuracy is related to the scale that is being used at the moment of digitising, this is related to the concept of |ltb| `Perkal band`_. The basic principle is that the smaller the scale, the less accurate the digitalisation will be.
 
 
 Task 1.4 
@@ -194,7 +194,7 @@ Task 1.4
 
 .. attention:: 
    **Question.**
-   Read about the `Data checks and repairs`_. What are the clean-up operations that you would need to perform on the streets layer you created in the previous task?.
+   Read about the |ltb| `Data checks and repairs`_. What are the clean-up operations that you would need to perform on the streets layer you created in the previous task?.
 
 You would avoid many problems with these errors, if you properly set your **snapping** and **topological edition** options, as discussed in  Data Entry. But before start working with a new dataset, you should always check its quality.
 
@@ -204,7 +204,7 @@ You would avoid many problems with these errors, if you properly set your **snap
 Error Propagation
 -----------------
 
-When `combining spatial data from multiple sources <combining data from multiple sources>`_, and especially when `merging two datasets <Merging datasets_>`_ or more layers,  errors like sliver polygons may occur due to `differences in accuracy <Accuracy differences_>`_. Sliver polygons are very narrow polygons that usually appear along the border of other polygons. They do not necessarily represent a problem. They may be legitimate features resulting from a geoprocessing routine, or they can be errors exposing accuracy issues.
+When |ltb| `combining spatial data from multiple sources <combining data from multiple sources>`_, and especially when |ltb| `merging two datasets <Merging datasets_>`_ or more layers,  errors like sliver polygons may occur due to |ltb| `differences in accuracy <Accuracy differences_>`_. Sliver polygons are very narrow polygons that usually appear along the border of other polygons. They do not necessarily represent a problem. They may be legitimate features resulting from a geoprocessing routine, or they can be errors exposing accuracy issues.
 
 
 
@@ -282,7 +282,7 @@ In this case, you would probably proceed to delete those polygons and clean the 
 Conceptual errors
 ^^^^^^^^^^^^^^^^^
 
-Conceptual errors are errors that arise not from acquisition or processing but from logically erroneous thinking. These type of errors are associated with the way reality is being modelled, and they have a direct relation with `Logical consistency`_ and `Completeness`_ of datasets and analytical approaches.
+Conceptual errors are errors that arise not from acquisition or processing but from logically erroneous thinking. These type of errors are associated with the way reality is being modelled, and they have a direct relation with |ltb| `Logical consistency`_ and |ltb| `Completeness`_ of datasets and analytical approaches.
 
 Example. 
     You are making a map to support biologists who want to study a particular species of amphibious that thrives on any small pond. 
@@ -306,7 +306,7 @@ Task 3.4
    **Question.**
 
    + This analysis of the previous task has some conceptual problems that make it very prone to errors. Can you identify some of them?
-   + `Uncertainty`_ is related to the `Sources of errors`_. Can you describe how the sources of errors influence uncertainty?
+   + |ltb| `Uncertainty`_ is related to the |ltb| `Sources of errors`_. Can you describe how the sources of errors influence uncertainty?
 
 ------------------------------------
 
@@ -325,7 +325,7 @@ It is essential to organise your input and output data in such a way that you ca
 
 .. important:: 
    **Resources.**
-   You will require the dataset `georeferencing.zip <georeferencing>`_ which you can download from CANVAS. 
+   You will require the dataset  `georeferencing.zip <georeferencing>`_ which you can download from CANVAS. 
 
 
 Task 4.1 
@@ -343,7 +343,7 @@ Task 4.2
     + Have you saved them in a proper and accessible folder?
     + Can you trace back the changes you made during every processing attempt from the file names?
 
-A relevant topic for data quality is **Metadata**,  often defined as *"data about the data"*. Metadata provides additional or auxiliary information about a geospatial dataset that may not be easily obtainable from the dataset itself. For example, sometimes you can read the coordinates of a geometry in a vector data set. Still, you may not be able to determine the spatial reference system from the coordinate values alone. Ideally, metadata includes details related to the `Lineage`_ and `Completeness`_ of the data.
+A relevant topic for data quality is **Metadata**,  often defined as *"data about the data"*. Metadata provides additional or auxiliary information about a geospatial dataset that may not be easily obtainable from the dataset itself. For example, sometimes you can read the coordinates of a geometry in a vector data set. Still, you may not be able to determine the spatial reference system from the coordinate values alone. Ideally, metadata includes details related to the |ltb| `Lineage`_ and |ltb| `Completeness`_ of the data.
 There are standards and directives for metadata of spatial data. In Europe, an important directive is the `INSPIRE <https://inspire.ec.europa.eu/>`_ initiative.
 
 From a practical point of view, it is not easy to maintain all necessary metadata, mainly if you aim at being 100% compliant with a particular standard or recommendation. Additionally, each software package has its metadata management system, which makes the interoperability of metadata difficult.

@@ -4,7 +4,7 @@ Georeferencing
 Reference Surfaces
 ------------------ 
 
-We use a `Reference surface`_ (i.e. datum system) to approximate the shape of the Earth. A horizontal datum (also called geodetic datum) is a model used to measure positions on the Earth. A `Vertical datum`_ is a model used to measure elevations, which is related to the `Geoid`_. The elevations are usually related to a mean sea level, and the horizontal position is measured by using an `Ellipsoid`_ as reference.
+We use a |ltb| `Reference surface`_ (i.e. datum system) to approximate the shape of the Earth. A horizontal datum (also called geodetic datum) is a model used to measure positions on the Earth. A |ltb| `Vertical datum`_ is a model used to measure elevations, which is related to the |ltb| `Geoid`_. The elevations are usually related to a mean sea level, and the horizontal position is measured by using an |ltb| `Ellipsoid`_ as reference.
 
 .. attention:: 
    **Question.**
@@ -31,13 +31,13 @@ We use a `Reference surface`_ (i.e. datum system) to approximate the shape of th
 Coordinate Systems
 ------------------
 
-In mapping, a `Coordinate system`_ is used to uniquely determine the position of a place with respect to the Earth’s surface.
+In mapping, a |ltb| `Coordinate system`_ is used to uniquely determine the position of a place with respect to the Earth’s surface.
 
 
 Task 2.1 
-   Define in your own words the difference between `coordinate systems <Coordinate system_>`_ and `planar coordinate systems <Planar coordinate system_>`_. 
+   Define in your own words the difference between |ltb| `coordinate systems <Coordinate system_>`_ and |ltb| `planar coordinate systems <Planar coordinate system_>`_. 
 
-The most widely used global coordinate system is the `Geographic coordinate system`_. It consists of lines of geographic latitude and longitude. Lines of equal latitude are called parallels. They form circles on the surface of the ellipsoid. Lines of equal longitude are called meridians and form ellipses (meridian ellipses) on the ellipsoid. 
+The most widely used global coordinate system is the |ltb| `Geographic coordinate system`_. It consists of lines of geographic latitude and longitude. Lines of equal latitude are called parallels. They form circles on the surface of the ellipsoid. Lines of equal longitude are called meridians and form ellipses (meridian ellipses) on the ellipsoid. 
 
 Geographic coordinate systems use latitude and longitude to describe a position on the Earth’s surface.   *Latitude* is zero on the Equator and increases towards both poles to **90° N** and **90° S**.  Latitude is positive on the northern hemisphere and negative on the South hemisphere. *Longitude* is measured from the meridian of Greenwich where it is zero, and it increases eastwards up to 180∘ (**180∘ E**), and westwards up to 180∘ (**180∘ W**). Longitude is positive towards the East and negative towards the West.
 
@@ -82,7 +82,7 @@ Task 2.4
 Map Projections
 ---------------
 
-A `Map projection`_ is a mathematically described technique for representing the Earth’s curved surface on a flat map. Flattening out a spherical surface is an imperfect task, as you can experience yourself when you are peeling an orange and try to lay flat the skin. To represent the  Earth’s surface on a map, we use a map projection. Map projections are developed for specific purposes, and each one has some distortions. Therefore, understanding the `classification of map projections <Projection classification_>`_ is essential when choosing a suitable map projection.
+A |ltb| `Map projection`_ is a mathematically described technique for representing the Earth’s curved surface on a flat map. Flattening out a spherical surface is an imperfect task, as you can experience yourself when you are peeling an orange and try to lay flat the skin. To represent the  Earth’s surface on a map, we use a map projection. Map projections are developed for specific purposes, and each one has some distortions. Therefore, understanding the |ltb| `classification of map projections <Projection classification_>`_ is essential when choosing a suitable map projection.
 
 No matter which map projection you choose, it always comes with certain distortions You can experience this yourself for the case of the widely used Mercator Projection by using this link: http://hive.sewanee.edu/pridepj0/286/mercatorMap.html
 
@@ -128,7 +128,7 @@ Coordinate Transformation
 -------------------------
 
 
-Users of geo-information often need to transform datasets from a particular coordinate system to another. `Coordinate transformations <Coordinate transformation_>`_ are necessary because some analysis requires planar measurement units.
+Users of geo-information often need to transform datasets from a particular coordinate system to another. |ltb| `Coordinate transformations <Coordinate transformation_>`_ are necessary because some analysis requires planar measurement units.
 In other cases, the map-user have especial requirements on how to represent spatial data on a map.
 
 
@@ -155,7 +155,7 @@ Task 4.2
 Ground control points
 ---------------------
 
-You can load data into a GIS software which has not been georeferenced to any coordinate system —for example, a scanned topographic map or an image. In the next exercise, we will `georeference <Geo-referencing_>`_ a scanned topographic map using `Ground control points`_ to match the spatial reference of other layers in the project.
+You can load data into a GIS software which has not been georeferenced to any coordinate system —for example, a scanned topographic map or an image. In the next exercise, we will |ltb| `georeference <Geo-referencing_>`_ a scanned topographic map using |ltb| `Ground control points`_ to match the spatial reference of other layers in the project.
 
 Task 5.1 
    Load the ``topographic_map_dominica.jpg`` into a QGIS project and identify points on the topographic map that can be used as control points. 
@@ -186,7 +186,7 @@ Task 5.2
 .. attention:: 
    **Question.**
    
-   + The quality of the georeferencing can be assessed by computing the `RMSE`_  . Do you understand how it works? 
+   + The quality of the georeferencing can be assessed by computing the |ltb| `RMSE`_  . Do you understand how it works? 
    + What type of transformation did you apply in the georeferencing task? 
    + What can you say about the accuracy of the transformation?
 

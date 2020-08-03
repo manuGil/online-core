@@ -7,7 +7,7 @@ Visualisation
 Cartographic Grammar
 --------------------
 
-The cartographic grammar defines a set of ‘rules of thumb’ for the `Visualization`_ of spatial data and the correct representation of spatial and temporal information on a `Map`_. Cartographic grammar ensures that maps effectively communicate information to the map user.
+The cartographic grammar defines a set of ‘rules of thumb’ for the |ltb| `Visualization`_ of spatial data and the correct representation of spatial and temporal information on a |ltb| `Map`_. Cartographic grammar ensures that maps effectively communicate information to the map user.
 
 For a more detailed explanation on Cartographic Grammar, visit https://kartoweb.itc.nl/TMT 
 The **Thematic Map Tutor** will help you to understand which visual variable to use depending on the type of data you want to visualise. This will help you in completing the tasks below.
@@ -40,7 +40,7 @@ Task
     + rolling to hilly terrain (slopes 7-30%)
     + steep, rugged terrain (slopes > 30%)
  
-    All possible combinations of rock type and terrain classes may occur. Describe how you would set up this map: you *do not have to draw the map or legend symbols*, instead, describe:
+    All possible combinations of rock type and terrain classes may occur. Describe how you would set up this map: *you do not have to draw the map or legend symbols*, instead, describe:
     
     + which layer(s) of information you would put in the map and what visual variable(s) should be used to combine those layer(s) in a single map, 
     + which legend titles and categories you would use, and 

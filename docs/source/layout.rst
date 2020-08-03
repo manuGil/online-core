@@ -70,7 +70,7 @@ This is a hyperlink with a  download icon :download:`exercise.zip <https://drive
 Especial Content
 ----------------
 
-+ Reference to the `Living Textbook2 <https://ltb.itc.utwente.nl/>`_ as inline text.
++ Reference to the |ltb| `Living Textbook2 <https://ltb.itc.utwente.nl/>`_ as inline text. A hyperlink with an icon to the left.
 
 .. note:: 
    **QGIS.**

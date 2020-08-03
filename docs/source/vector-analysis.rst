@@ -12,7 +12,7 @@ The term "geometric measurements" describes measurements on the spatial features
 + length (length of a line segment or boundary of a polygon)
 + area (of polygon features)
 
-In this exercise, we will discuss all these measurements. A general overview of `measurement operations <Vector Measurements_>`_ on vector data is provided in your Living Textbook.
+In this exercise, we will discuss all these measurements. A general overview of |ltb| `measurement operations <Vector Measurements_>`_ on vector data is provided in your Living Textbook.
 
 
 .. important:: 
@@ -99,7 +99,7 @@ Task 1.5
 Overlays
 --------
 
-`Vector Overlay`_ operations combine two input layers (be it a point, line or polygon layers) into a new data layer. Vector overlay operations apply combinations of the following:
+|ltb| `Vector Overlay`_ operations combine two input layers (be it a point, line or polygon layers) into a new data layer. Vector overlay operations apply combinations of the following:
 
 + Intersection of the geometry
 + Spatial join of the attribute tables
@@ -145,7 +145,7 @@ Task 2.2
 Proximity operators
 -------------------
 
-We will cover two proximity operations: `Buffer`_ and `Thiessen Polygons`_. 
+We will cover two proximity operations: |ltb| `Buffer`_ and |ltb| `Thiessen Polygons`_. 
 
 You create a buffer using point, line and polygon layers as inputs. Buffers can be created for all the features in a layer or selected features only. We can use fixed buffer distance; in which case, a buffer of the same size will be created for all the features in a data layer. However, we can also use a variable buffer distance for each feature; in which case such the buffer distances need to be stored in the attribute table of the layer. 
 
@@ -192,7 +192,7 @@ Before moving onto network analysis, we have to understand networks a bit better
 Characteristics of networks
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-There are two critical aspects in a `Network`_; the directionality of the network and the degree in which the network is planar. When you understand these two concepts you know why different types of networks are modelled in a different way and why not all `analysis techniques <Network Analysis_>`_ are relevant for all types of networks. 
+There are two critical aspects in a |ltb| `Network`_; the directionality of the network and the degree in which the network is planar. When you understand these two concepts you know why different types of networks are modelled in a different way and why not all |ltb| `analysis techniques <Network Analysis_>`_ are relevant for all types of networks. 
 
 
 Task 
@@ -214,7 +214,7 @@ The Network Data Model and Analysis
 
 Networks consist of points (nodes) and lines (edges or segments). What is very important for a network is connectivity. Therefore, the smallest gap between the edges stops the flow over the network. We use line topology to ensure that we end with a network with connected points and lines.
 
-In data modelling, we already learned that a line has a * 'start node'* and an *‘end node'*. Because of this, the network segments have direction. When discussion the directionality in a network, we usually called the start and end nodes as ** "from node"** and ** "to node"**, respectively. In network analysis, we use a cost function to represent **‘impedance'**;  i.e. a function that determines the cost of moving from one node to another in the network. Cost functions are stored as an attribute indicating the cost to travel each edge in the network. `Optimal Path Finding`_ is an example of network analysis using cost functions.
+In data modelling, we already learned that a line has a * 'start node'* and an *‘end node'*. Because of this, the network segments have direction. When discussion the directionality in a network, we usually called the start and end nodes as ** "from node"** and ** "to node"**, respectively. In network analysis, we use a cost function to represent **‘impedance'**;  i.e. a function that determines the cost of moving from one node to another in the network. Cost functions are stored as an attribute indicating the cost to travel each edge in the network. |ltb| `Optimal Path Finding`_ is an example of network analysis using cost functions.
 
 Task 4.1 
    Determine the optimal path of a network. Below you see a road network (left) with the IDs for each line segment. On the left size, you see an (attribute) table with the cost associated with each line segments. **What is the least cost path from the start-point to the end-point?**
@@ -234,7 +234,7 @@ Task 4.2
    **Question.**
    The cost function can be associated with lines (as in the previous tasks), and nodes of a network. When would you apply cost on the nodes?
 
-More advance topics on network analysis are `Network Partitioning`_, `Network Allocation`_ and `Trace Analysis`_. Network partitioning is a group of analytical functions that assigns part of a network to predefined target locations. In network allocation parts of a network are assigned to specific locations defined as service areas. In trace analysis, part of the network is also assigned to particular locations, but its use is restricted to directed networks.
+More advance topics on network analysis are |ltb| `Network Partitioning`_, |ltb| `Network Allocation`_ and |ltb| `Trace Analysis`_. Network partitioning is a group of analytical functions that assigns part of a network to predefined target locations. In network allocation parts of a network are assigned to specific locations defined as service areas. In trace analysis, part of the network is also assigned to particular locations, but its use is restricted to directed networks.
 
 .. attention:: 
    **Question.**

@@ -10,9 +10,9 @@ Direct (or primary) spatial data acquisition
    This exercise requires no data and no specific software. 
 
 
-The `acquisition of spatial data <Spatial data acquisition_>`_ can be done from several sources. There has been an increase in data acquired (or produced) using `remotely sensed sources <Remote sensing_>`_, such as satellite imagery. 
+The |ltb| `acquisition of spatial data <Spatial data acquisition_>`_ can be done from several sources. There has been an increase in data acquired (or produced) using |ltb| `remotely sensed sources <Remote sensing_>`_, such as satellite imagery. 
 
-Other sources of spatial data include `Aerial survey`_, `Terrestrial survey`_ and  `Crowdsourcing`_. The use of different spatial data sources implies that how suitable (strengths and weaknesses) each particular source is for a particular analysis, depends on the acquisition methods. 
+Other sources of spatial data include |ltb| `Aerial survey`_, |ltb| `Terrestrial survey`_ and  |ltb| `Crowdsourcing`_. The use of different spatial data sources implies that how suitable (strengths and weaknesses) each particular source is for a particular analysis, depends on the acquisition methods. 
 
 .. attention:: 
    **Question.**
@@ -40,7 +40,7 @@ Although spatial data can be acquired from third-party sources like government a
 
 .. attention:: 
    **Question.**
-   Read and observe the relation between  `Digitizing`_ and `Scanning`_. Is Digitising the only way to turn a scanning into Spatial data?
+   Read and observe the relation between  |ltb| `Digitizing`_ and |ltb| `Scanning`_. Is Digitising the only way to turn a scanning into Spatial data?
 
 
 .. important:: 
@@ -62,7 +62,7 @@ Extracting the data, you need from a raster base map to a vector layer starts wi
 
 Capturing elements from a base map is an abstraction exercise; this abstraction depends on the scale and purpose for which the data will be used. For example, think of airports; will you represent them (abstract them) as points or as polygons? The answer to this question will depend on how you are going to use the data. If you want to publish a world map of the major airports, probably you could depict them as points. But if you're going to map the accessibilities to a given airport, a larger scale will be needed; therefore, polygons might be better.  
 
-The `attributes associated <Associating attributes_>`_ with the geometries are another important aspect to consider. The choice of attributes depends not only on the scale and intended use, but it also depends on the availability of the data (e.g. what is the capacity of the airport? How does it rank on security? How many international connections does it serve? – would these be information you need to have? And if so, do you have access to this data?) 
+The |ltb| `attributes associated <Associating attributes_>`_ with the geometries are another important aspect to consider. The choice of attributes depends not only on the scale and intended use, but it also depends on the availability of the data (e.g. what is the capacity of the airport? How does it rank on security? How many international connections does it serve? – would these be information you need to have? And if so, do you have access to this data?) 
 
 
 Task 2.1 
@@ -104,7 +104,7 @@ Task 2.1
 Topology 
 ^^^^^^^^
 
-`Topology`_ refers to the spatial relationships that should exist among the geometries of a vector dataset, and it is based on the `Topological data model`_. Topology can be a complex subject, but we will take a very pragmatic approach and show you how to maintain the most common topological relationships `topological relationships <Topological relationship_>`_: adjacency in polygons and connectivity of lines.  
+|ltb| `Topology`_ refers to the spatial relationships that should exist among the geometries of a vector dataset, and it is based on the |ltb| `Topological data model`_. Topology can be a complex subject, but we will take a very pragmatic approach and show you how to maintain the most common topological relationships |ltb| `topological relationships <Topological relationship_>`_: adjacency in polygons and connectivity of lines.  
 
 .. figure:: _static/img/common-topo-rel.png
    :alt: topological relations
@@ -123,7 +123,7 @@ In the previous task, for the layer of geometry type ‘Line’ you probably dig
 
    Connectivity issues between lines. The case of undershooting.
 
-To ensure `Topological consistency`_ between geometries, e.g., that line segments get properly connected while digitising, we have to set a snapping tolerance, which tells the GIS software to connect lines that are within certain distance automatically. Otherwise, it will be challenging to ensure that our lines are connected.  
+To ensure |ltb| `Topological consistency`_ between geometries, e.g., that line segments get properly connected while digitising, we have to set a snapping tolerance, which tells the GIS software to connect lines that are within certain distance automatically. Otherwise, it will be challenging to ensure that our lines are connected.  
 
 
 Task 2.3  

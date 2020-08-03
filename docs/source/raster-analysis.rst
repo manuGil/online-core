@@ -9,7 +9,7 @@ Raster Analysis
 Reclassification
 ----------------
 
-Start this section by reading about the general aspect of `Reclassification`_.
+Start this section by reading about the general aspect of |ltb| `Reclassification`_.
 
 .. attention:: 
    **Question.**
@@ -18,7 +18,7 @@ Start this section by reading about the general aspect of `Reclassification`_.
    + What is the difference between reclassification of vector data and reclassification of raster data?
 
 When applying a reclassification to a raster layer, you often reduce the number of different cell values and group them into class values. Through reclassification, the level of detail in a raster input layer can be reduced and reveal general patterns in a dataset. 
-There are different classification methods for raster datasets, two of those are `User controlled classification`_ and `Automatic reclassification`_. 
+There are different classification methods for raster datasets, two of those are |ltb| `User controlled classification`_ and |ltb| `Automatic reclassification`_. 
 
 .. attention:: 
    **Question.**
@@ -124,9 +124,9 @@ Task 1.3
 Raster overlay
 --------------
 
-During the vector exercise, you were already introduced to the concept of overlaying. In case you need to refresh your memory, check `Overlay Analysis`_.
+During the vector exercise, you were already introduced to the concept of overlaying. In case you need to refresh your memory, check |ltb| `Overlay Analysis`_.
 
-`Raster Overlay`_ operations can be classified into four groups: **Arithmetic, Boolean and Logical, Conditional,** and **Decision tables**. All of these methods are cell by cell operations. 
+|ltb| `Raster Overlay`_ operations can be classified into four groups: **Arithmetic, Boolean and Logical, Conditional,** and **Decision tables**. All of these methods are cell by cell operations. 
 
 
 .. important:: 
@@ -228,7 +228,7 @@ In the previous type of overlay, the output value was always either zero (un-sui
 Task 2.4 
    Using the case explained in :numref:`fig-safety-school`, write down an expression for the raster calculator that uses conditional statements to produce an output raster with different levels of suitability. Define at least three suitability levels.
 
-An alternative to conditional statements is using decision tables. Decision tables are often used when there are many input raster or when the output raster contains classes with a value that are the result of meeting different conditions. See an example in the bottom of the explanation on `Raster Overlay`_.
+An alternative to conditional statements is using decision tables. Decision tables are often used when there are many input raster or when the output raster contains classes with a value that are the result of meeting different conditions. See an example in the bottom of the explanation on |ltb| `Raster Overlay`_.
 
 
 Task 2.5 
@@ -262,7 +262,7 @@ Measuring distances
 Distance
 ^^^^^^^^
 
-There are several questions related to `Raster Measurements`_ that can be answered using raster analysis. For example.
+There are several questions related to |ltb| `Raster Measurements`_ that can be answered using raster analysis. For example.
 
 + How far are two locations?
 + How long is this line?
@@ -303,7 +303,7 @@ Task 3.2
 Computation of diffusion
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-The computation of `Diffusion`_ differs from distance computation in the sense that diffusion takes into account both distance and **resistance**. Diffusion is also referred to as the least accumulated cost distance, where cost refers to the resistance factor.
+The computation of |ltb| `Diffusion`_ differs from distance computation in the sense that diffusion takes into account both distance and **resistance**. Diffusion is also referred to as the least accumulated cost distance, where cost refers to the resistance factor.
 
 The following elements are essential to understand diffusion:
 
@@ -357,7 +357,7 @@ The input for flow computation is a continuous field (raster), e.g. a DEM. The c
 
    For each cell in the input raster layer (e.g.,  cell 88), we determine the smallest direct neighbour (cell 74) and the smallest diagonal neighbour (cell 44). Then, we calculate the difference between the target cell and the neighbours, such as :math:`88 \ –  \ 74 \ =  \ 14 \ m` and :math:`88 \ –  \ 44 \ = \ 44 \ m`. Then, we calculate the steepness of the neighbours. For this, we take into account the distance between the cell centres. If the resolution is :math:`10x10  \ m`, we can calculate the steepness as :math:`14/10 \ =  \ 1.4` for the direct neighbour, and as :math:`44/10 \ * \ sqr(2) \ = \ 3.11` for the diagonal neighbour. Now, we know to which cell some material in the target cell (cell 88) will flow. That is to cell 44 because its steepness is the highest. 
 
-To compute the **flow accumulation**, we count for any given cell, how many other cells flow into it for the whole extent of the flow direction raster. For the target cell in :numref:`fig-flow-comp` , the flow accumulation is 7. Read a more detailed explanation on `flow computation <Flow_>`_.
+To compute the **flow accumulation**, we count for any given cell, how many other cells flow into it for the whole extent of the flow direction raster. For the target cell in :numref:`fig-flow-comp` , the flow accumulation is 7. Read a more detailed explanation on |ltb| `flow computation <Flow_>`_.
 
    .. _fig-flow-comp:
    .. figure:: _static/img/flow-comp.png

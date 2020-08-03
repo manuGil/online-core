@@ -9,7 +9,7 @@ Database Management Systems
    **Resources.**
    This exercise requires no data and no specific software. 
 
-Begin by reading about `Database`_ and  `Database management system`_ (DBMS) in the Living Textbook.
+Begin by reading about |ltb| `Database`_ and  |ltb| `Database management system`_ (DBMS) in the Living Textbook.
 
 Task 1.1 In the following table, you find the definitions for some of the most frequently used terms in database technology.  Such as Database, Data, Dataset, Database management system (DBMS) and a Database system.  Fill in the terminology column with the term that matches each definition. 
 
@@ -33,7 +33,7 @@ Task 1.1 In the following table, you find the definitions for some of the most f
 GIS and Spatial Databases
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-A `Geographic Information System <GIS_>`_ should not be called GIS if any of these four components are missing:
+A |ltb| `Geographic Information System <GIS_>`_ should not be called GIS if any of these four components are missing:
 
 .. figure:: _static/img/components-gis.png
    :alt: components GIS
@@ -43,7 +43,7 @@ A `Geographic Information System <GIS_>`_ should not be called GIS if any of the
 
 Behind the user interface of a GIS Software, there are things like application logic and data storage. Data can be stored as GIS files or in an (external) database. GIS software can use its DBMS or be connected to another DBMS such as PostgreSQL, Oracle, etc. 
 
-In GIS, in addition to the tabular data, we work with Spatial Objects. This requires a database that supports “spatial data”, which means that a database is capable of storing geometry data type. `Spatial databases <Spatial database_>`_ provide spatial data handling in terms of storage, manipulation and analysis. A spatial database is not constrained by the need to present data visually.
+In GIS, in addition to the tabular data, we work with Spatial Objects. This requires a database that supports “spatial data”, which means that a database is capable of storing geometry data type. |ltb| `Spatial databases <Spatial database_>`_ provide spatial data handling in terms of storage, manipulation and analysis. A spatial database is not constrained by the need to present data visually.
 
 A Spatial DBMS is a software package that:
 
@@ -51,7 +51,7 @@ A Spatial DBMS is a software package that:
 
 + supports spatial data models (vector, field), spatial data types, e.g. point, line, or polygon;
 
-+ provides functionality to `Query`_ and manipulate spatial data using `Structured Query Language (SQL) <Querying SQL_>`_;
++ provides functionality to |ltb| `Query`_ and manipulate spatial data using |ltb| `Structured Query Language (SQL) <Querying SQL_>`_;
 
 + supports spatial indexing (efficient algorithms for processing spatial operations) and domain-specific rules for query optimization.
 
@@ -65,13 +65,13 @@ A Spatial DBMS is a software package that:
 Relational Databases
 --------------------
 
-Databases use data models for handling that data that they store. One of the most common models is the `Relational data model`_.
-In this section of the exercise, you will explore the main building components of a relational database: `Relation`_, `Tuple`_, and `Attribute`_. Then you will learn how a relational schema is represented in the form of a relation.
+Databases use data models for handling that data that they store. One of the most common models is the |ltb| `Relational data model`_.
+In this section of the exercise, you will explore the main building components of a relational database: |ltb| `Relation`_, |ltb| `Tuple`_, and |ltb| `Attribute`_. Then you will learn how a relational schema is represented in the form of a relation.
 
 .. attention:: 
    **Question.**
    Which are some of the most popular Spatial DBMS? 
-   Using the concept map in the `Living Textbook`_, reflect on the relationships connecting the concepts associated with Relational database. Can you elaborate a short explanation of that representation?
+   Using the concept map in the |ltb| `Living Textbook`_, reflect on the relationships connecting the concepts associated with Relational database. Can you elaborate a short explanation of that representation?
 
 Task 3.1 
    Below, you find part of the instance of a relation in a database. Fill in the blanks with the names of the components indicated by the arrows. Choose from: attribute, domain, relation, tuple. 
@@ -96,7 +96,7 @@ Task 3.2
 Keys
 ^^^^
 
-`Primary keys and foreign keys <Keys_>`_ enforce database integrity. By having a primary key in each relation, you make sure that there are no duplicated tuples in a relation. A **primary key** can be one attribute or a combination of attributes as far as it is unique and minimal. This means that if a unique combination of values can be achieved with two attributes, more attributes should not be used. 
+|ltb| `Primary keys and foreign keys <Keys_>`_ enforce database integrity. By having a primary key in each relation, you make sure that there are no duplicated tuples in a relation. A **primary key** can be one attribute or a combination of attributes as far as it is unique and minimal. This means that if a unique combination of values can be achieved with two attributes, more attributes should not be used. 
 You can read more about primary keys in your Living Textbook (page: Keys)
 
 
@@ -150,7 +150,7 @@ Having the necessary datasets is the starting point to be able to extract releva
 
 .. important:: 
    **Resources.**
-   You will require the latest LTR version of `QGIS (A Coruna 3.10) <https://qgis.org/en/site/forusers/download.html>`_, plus the dataset `database_queries.zip <database_queries>`_ which you can download from CANVAS.  When you unzip the dataset, you will find the following files inside:
+   You will require the latest LTR version of `QGIS (A Coruna 3.10) <https://qgis.org/en/site/forusers/download.html>`_, plus the dataset |ltb| `database_queries.zip <database_queries>`_ which you can download from CANVAS.  When you unzip the dataset, you will find the following files inside:
 
    + ``Database_queries.qgs`` – a QGIS project preloaded with the dataset described below;
    + ``country_Data`` – a table with additional information on the countries of the world;
@@ -162,7 +162,7 @@ Having the necessary datasets is the starting point to be able to extract releva
 
 
 Task
-   Read the about `querying a spatial database with SQL <Querying SQL_>`_. You should understand what `Tuple selection`_ means; what is  `Attribute projection`_; and how can we `join <Join_>`_ two or more than two relations.  Such understanding is necessary for solving query-formulation problems, using a `Join condition`_. 
+   Read the about |ltb| `querying a spatial database with SQL <Querying SQL_>`_. You should understand what |ltb| `Tuple selection`_ means; what is  |ltb| `Attribute projection`_; and how can we |ltb| `join <Join_>`_ two or more than two relations.  Such understanding is necessary for solving query-formulation problems, using a |ltb| `Join condition`_. 
 
 
 .. _`sec-select-attrib`:

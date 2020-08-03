@@ -74,7 +74,7 @@ Task
 Crispy or Fuzzy Boundaries
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
   
-Another notion that is important for describing Geographic Phenomena is `boundaries <Boundaries_>`_. We distinguish two types of boundaries: Crisp and Fuzzy.  
+Another notion that is important for describing Geographic Phenomena is |ltb| `boundaries <Boundaries_>`_. We distinguish two types of boundaries: Crisp and Fuzzy.  
 
 .. attention:: 
    **Question.**
@@ -82,7 +82,7 @@ Another notion that is important for describing Geographic Phenomena is `boundar
 
 Autocorrelation 
 ^^^^^^^^^^^^^^^
-There is one more concept that requires an introduction at this point, and that is `Spatial autocorrelation`_. Spatial autocorrelation is based on Tobler’s first law of geography.
+There is one more concept that requires an introduction at this point, and that is |ltb| `Spatial autocorrelation`_. Spatial autocorrelation is based on Tobler’s first law of geography.
 
 Task
     Define in your own words what spatial autocorrelation is. 
@@ -121,7 +121,7 @@ Tesselations
 
 Tessellations are a way to represent geographic phenomena in a GIS. A tessellation splits the geographic space into small cells in such a way that the complete area is covered by them. They are like tiles on a floor or a wall. In most cases, such tiles are square cells, and when all cells are equal in size, we call this a regular tessellation. 
 
-In a `Regular tesselation`_, each cell is associated with a value (cell value). This value has a data type, such as integer or floating-point. 
+In a |ltb| `Regular tesselation`_, each cell is associated with a value (cell value). This value has a data type, such as integer or floating-point. 
 
 An integer data type is a number that does not contain any decimals. They are often used to indicate codes in a discrete field (e.g. a land use class). A float or floating-point data type is a number that may contain decimals. A floating-point data type that can store very big numbers (64bit) is known to have ‘double precision’, and it is often called “Double”. The table below shows a list of very common data types used in a GIS. 
 
@@ -163,7 +163,7 @@ Task 2.3
    **Question.**
    What is the difference between a raster and a grid?    
 
-There are also `Irregular tesselations <Irregular tesselation_>`_. In irregular tessellations a geographic area is partitioned into cells which are **not equal in size.** 
+There are also |ltb| `Irregular tesselations <Irregular tesselation_>`_. In irregular tessellations a geographic area is partitioned into cells which are **not equal in size.** 
 
 .. attention:: 
    **Question.**
@@ -188,7 +188,7 @@ Vector Data Model
 ^^^^^^^^^^^^^^^^^
 The main difference between our first data model (tessellation) and the vector data model is that tessellations do not explicitly store the georeference of the phenomena, but the vector data model does. This means that with every feature, coordinates are stored. In this section, we will discuss four examples of vector data representations: Triangulated Irregular Networks (TIN), Polygons, Lines and Points. 
 
-We start with the `Triangulated Irregular Networks <TINs_>`_. (TINs) because they have some characteristics in common with tessellations. 
+We start with the |ltb| `Triangulated Irregular Networks <TINs_>`_. (TINs) because they have some characteristics in common with tessellations. 
 
 .. attention:: 
    **Question.**
@@ -257,7 +257,7 @@ Task 2.10
 
 From the previous task, you should have become clear that **points** are the simplest of geometries – they have a Y and X coordinates that anchors them to the spatial frame you are working on. 
 
-Another way of representing geographic phenomenon in the vector data model is using a `Line representation`_. A line is nothing more than two or more connected points.  
+Another way of representing geographic phenomenon in the vector data model is using a |ltb| `Line representation`_. A line is nothing more than two or more connected points.  
 
 .. attention:: 
    **Question.**
@@ -270,13 +270,13 @@ The boundary model explains how areas are represented and by storing the closed 
 The Topological model is discussed in the next section of this exercise. (page: Polygon[add internal reference]) 
 
 Task 2.11 
-   Read the section `Area representation`_ and describe in your own words the problems that may arise when using the boundary model without topology. 
+   Read the section |ltb| `Area representation`_ and describe in your own words the problems that may arise when using the boundary model without topology. 
 
 
 Topology 
 ^^^^^^^^
 
-The third topic in this exercise is `Topology`_. You will first have to understand what topology is before learning different ways to use it. Topological properties are geometric properties and spatial relations that are not affected by the continuous change of shape and size of a vector data layer (points, lines, or polygons).   
+The third topic in this exercise is |ltb| `Topology`_. You will first have to understand what topology is before learning different ways to use it. Topological properties are geometric properties and spatial relations that are not affected by the continuous change of shape and size of a vector data layer (points, lines, or polygons).   
 
 Task 3.1 
    Imagine you are looking at a map (take any map you like). Make a small list containing at least five examples of spatial topology that are visible in your map and five examples of properties that are not topological (use the table below).
@@ -292,7 +292,7 @@ Task 3.1
    5                 \                  \
    ===============  ===============  ==================
 
-When looking at two polygons, we can define all their possible topological relationships. To do so, we must describe each polygon in terms of its boundary and its interior (the area inside the boundary). Read `Topological relationship`_.
+When looking at two polygons, we can define all their possible topological relationships. To do so, we must describe each polygon in terms of its boundary and its interior (the area inside the boundary). Read |ltb| `Topological relationship`_.
 
 .. figure:: _static/img/topo-fundamentals.png
    :alt: topology fundamental concepts
@@ -304,7 +304,7 @@ When looking at two polygons, we can define all their possible topological relat
    **Question.**
    What is the correct mathematical (set theory) expression that describes the *covers* relationship? How does this expression differ from the covered by relationship?
 
-By now, you should understand what topology is, but you may wonder how it can be used. During the coming exercises, you will see many different uses, but for now, focus on an example given in the `Topological data model`_.
+By now, you should understand what topology is, but you may wonder how it can be used. During the coming exercises, you will see many different uses, but for now, focus on an example given in the |ltb| `Topological data model`_.
 
 
 .. attention:: 
@@ -320,7 +320,7 @@ By now, you should understand what topology is, but you may wonder how it can be
    .. image:: _static/img/geldrop-table.png
       :align: center
 
-   Topology can also be used to ensure consistency of the geometries in a vector layer. There are five rules of  `Topological consistency`_, which you should know about.
+   Topology can also be used to ensure consistency of the geometries in a vector layer. There are five rules of  |ltb| `Topological consistency`_, which you should know about.
   
 
 Task 3.2 
@@ -347,7 +347,7 @@ Temporal Dimension
 
 In many situations, it is not enough to describe geographic phenomena only in terms of space, but also in terms of time because such phenomena change over time. The change may be relatively fast (like the clouds in the sky, hurricanes, and traffic) or slow (like the movement of a glacier). 
 
-To including time in the representation of spatial data, we talk about the  `Spatial-temporal data model`_. This model defines different types of change: *change in attributes*, *change in location* (movement) and *change in shape* (growth) or combinations of these three. 
+To including time in the representation of spatial data, we talk about the  |ltb| `Spatial-temporal data model`_. This model defines different types of change: *change in attributes*, *change in location* (movement) and *change in shape* (growth) or combinations of these three. 
 
 Task 4.1 
    Below you see a list of different types of change and some combinations. Can you write down an example for each type? 
