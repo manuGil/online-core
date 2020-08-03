@@ -5,10 +5,6 @@ Data Entry
 Direct (or primary) spatial data acquisition 
 --------------------------------------------
 
-.. important:: 
-   **Resources.**
-   This exercise requires no data and no specific software. 
-
 
 The |ltb| `acquisition of spatial data <Spatial data acquisition_>`_ can be done from several sources. There has been an increase in data acquired (or produced) using |ltb| `remotely sensed sources <Remote sensing_>`_, such as satellite imagery. 
 

@@ -5,13 +5,11 @@ Databases
 Database Management Systems
 ---------------------------
 
-.. important:: 
-   **Resources.**
-   This exercise requires no data and no specific software. 
 
 Begin by reading about |ltb| `Database`_ and  |ltb| `Database management system`_ (DBMS) in the Living Textbook.
 
-Task 1.1 In the following table, you find the definitions for some of the most frequently used terms in database technology.  Such as Database, Data, Dataset, Database management system (DBMS) and a Database system.  Fill in the terminology column with the term that matches each definition. 
+Task 1.1 
+   In the following table, you find the definitions for some of the most frequently used terms in database technology.  Such as Database, Data, Dataset, Database management system (DBMS) and a Database system.  Fill in the terminology column with the term that matches each definition. 
 
 ==============     ============================================================================================
  Terminology       Definition                                                      

@@ -8,10 +8,6 @@ Spatial Data Models
 Geographic Phenomena
 --------------------
 
-.. important:: 
-   **Resources.**
-   This exercise requires no software or auxiliary datasets. 
-
 |ltb| `Geographic phenomena`_ is a term for all phenomena with a spatial dimension, such as landcover or air pollution. Phenomena are geographic (spatial) when they: 
 
 * Can be named or described; 

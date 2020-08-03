@@ -185,9 +185,6 @@ Networks
 Before moving onto network analysis, we have to understand networks a bit better. This means understanding a network's characteristics and data model. 
 
 
-.. important:: 
-   **Resources.**
-   The remainder of this section requires no software nor auxiliary datasets. 
 
 Characteristics of networks
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^

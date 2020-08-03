@@ -74,6 +74,7 @@ Task 2.4
 
    .. attention:: 
       **Question.**
+      
       #. Do you have any data in a geographic coordinate system? 
       #. What was the geographic coordinate system used?
 
