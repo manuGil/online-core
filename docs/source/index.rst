@@ -30,7 +30,10 @@ Distance Education Core Exercises
 
 .. toctree::
    :maxdepth: 2
+   :numbered:
    :caption: Earth Observation
+
+   atmospheric-corr
 
     
 .. toctree::
