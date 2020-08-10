@@ -4,8 +4,8 @@ Radiometric Operations
 ======================
 
 
-Image Enhancement by Histogram Operations
------------------------------------------
+Image Enhancement: Histogram Operations
+---------------------------------------
 
 .. important::
    **Resources.**
@@ -253,6 +253,45 @@ Task 5.12
 
 
 
+Image Enhancement: Filter Operations
+------------------------------------
+
+.. important::
+   **Resources.**
+
+   You will require the latest LTR version of `QGIS (A Coruna 3.10) <https://qgis.org/en/site/forusers/download.html>`_, plus the dataset `data.zip <#>`_ which you can download from CANVAS.  When you unzip the dataset, you will find the following files inside: 
+   
+   + ``tm1999_b4.tif`` -
+   + ``tm1999_xs_ml_classification.tif`` -
+   + ``NW-SE_3x3.txt`` -
+
+Preparation
+^^^^^^^^^^^
+
+QGIS offers the possibility to apply all kind of filter kernels on images which are displayed in a viewer. In this exercise, we will make use of tools which apply some filters and store the output as temporary files. In such way, we can easily compare different results.
+
+
+Task 1.1 
+   Install the **Profile tool** plugin. *Go to Plugins > Manage* and Install Plugins, and install the plugin.
+
+Task 1.2 
+   Set the default contrast stretch to use the 2% and 98% cumulative pixel count for gray scale images. In the Settings menu, select *Options > Rendering tab*. Scroll down to **Contrast enhancement settings**, and set the default for **Single band gray** to *Stretch To MinMax*. Then, set **Limits (minimum/maximum)** to *Cumulative pixel count cut*. Make sure that the cut limits are set to :math:`2.0` and :math:`98.0%`. Select OK.
+
+.. note::
+   **QGIS**
+   QGIS is not specifically tailored for Remote Sensing and does not provide standard filter tools. Such filtering tools are made available through the processing toolbox using external providers like *SAGA* and *GRASS*.
+
+CONTINUE PAGE 4
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -327,6 +366,7 @@ ETM99                                                       **n.a.**
 
 .. [#] Not applicable
 
+\
 
    Use the **Value tool** to read DN values. Note that the tool shows pixel values for all bands of the multispectral image. *Read the value for the proper band!*
 
