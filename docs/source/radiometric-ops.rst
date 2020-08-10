@@ -1,5 +1,10 @@
+
+
+Radiometric Operations
+======================
+
 Correction of Atmospheric Disturbances 
-======================================
+--------------------------------------
 
 The procedures describe in this section fall within the “pre-processing” group of image processing techniques, and they focus on radiometric corrections.
 
@@ -13,9 +18,19 @@ The procedures describe in this section fall within the “pre-processing” gro
 
 
 Haze correction
----------------
+^^^^^^^^^^^^^^^
 
-Three images are available: SPOT panchromatic, Landsat TM and Landsat ETM. All provide almost cloud-free skies. 
+.. important::
+   **Resources.**
+
+   You will require the latest LTR version of `QGIS (A Coruna 3.10) <https://qgis.org/en/site/forusers/download.html>`_, plus the dataset `data.zip <#>`_ which you can download from CANVAS.  When you unzip the dataset, you will find the following files inside: 
+   
+   + ``etm99.img`` -  Landsat Enchanced Thematic Mapper
+   + ``pan.img``  - SPOT panchromatic
+   + ``tm89.img`` - Landsat Temathic Mapper
+
+   These three images are provided with almost cloud-free skies. 
+
 
 Task 2.1 
     Use the `Satellite and sensor database <#>`_ and the file and meta data information to find the information for the spectral specifications of *SPOT PAN, Landsat TM B1 to B4* and *Landsat ETM B1 to B4*. Then, complete the table bellow.
@@ -94,7 +109,7 @@ Task 2.8
     Suppose you had a SPOT image with the  values for the channels that correspond to R, G, and B. Would the Haze values be different than those in the TM scene? Why or why not?
 
 Sun Angle Correction
---------------------
+^^^^^^^^^^^^^^^^^^^^
 
 So far we have corrected for Haze by simplifying the illumination formula, such as:
 
@@ -113,7 +128,7 @@ Where :math:`DN` is the input pixel, :math:`DN’` is the output pixel value, an
 In case you have multiple images with varying sun angles you could calibrate them to zenith, or select one of the images as reference and correct to others to match the reference sun angle.
 
 Absolute Sun Angle Correction
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+*****************************
 
 Usually, you will find the sun elevation angle :math:` \sigma` in the header file of the images. However, this time, we provide the angle below for the *'SPOT PAN'* image.
 
@@ -137,7 +152,7 @@ Task 3.3
 
 .. attention:: 
    **Question.**
-   
+
    + In which way have the values of the *haze-corrected* and *haze-and-sun-angle-corrected* images changed? Are the changes constant, linear, or exponential? Was the change predictable?
    + Why did we apply haze correction before sun angle correction? Does the other of these corrections make a difference?
    + In case of multiband images, we do not need to calculate the sun-angle separately for each of the bands. Why not?

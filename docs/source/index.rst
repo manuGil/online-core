@@ -33,7 +33,7 @@ Distance Education Core Exercises
    :numbered:
    :caption: Earth Observation
 
-   atmospheric-corr
+   radiometric-ops
 
     
 .. toctree::
