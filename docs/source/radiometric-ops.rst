@@ -493,7 +493,7 @@ Haze correction
 
 
 Task 2.1 
-   Use the `Satellite and sensor database <#>`_ and the file and meta data information to find the information for the spectral specifications of *SPOT PAN, Landsat TM B1 to B4* and *Landsat ETM B1 to B4*. Then, complete the table bellow.
+   Use the `Satellite and sensor database <https://webapps.itc.utwente.nl/sensor/default.aspx?view=searchsat>`_ and the file and meta data information to find the information for the spectral specifications of *SPOT PAN, Landsat TM B1 to B4* and *Landsat ETM B1 to B4*. Then, complete the table bellow.
 
 =====================       ============    ====    ===========================     ==============
 Satellite/sensor            File name(s)    Date    Approx. time of acquisition     Resolution GSD
