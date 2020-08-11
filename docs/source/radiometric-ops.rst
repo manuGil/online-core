@@ -251,7 +251,7 @@ Task 5.12
    **Reflection.**
    By now, it should be clear to you that for some contrast enhancement methods,  statistics of the data play an important role, e.g. mean and standard deviation, minimum and maximum. However,  when you have knowledge about the spectral properties of the objects of interest, the  characteristic of the scene and the sensor, you can interpret the histograms directly and make improvements to make effective use of the brightness values in an image.
 
-
+------------------------------------
 
 Image Enhancement: Filter Operations
 ------------------------------------
@@ -281,27 +281,187 @@ Task 1.2
    **QGIS**
    QGIS is not specifically tailored for Remote Sensing and does not provide standard filter tools. Such filtering tools are made available through the processing toolbox using external providers like *SAGA* and *GRASS*.
 
-CONTINUE PAGE 4
+   *For an overview on how to use the Processing Tools in QGIS, watch the* `introduction to processing <https://vimeo.com/album/4389527/video/204013568>`_ video tutorial.
+
+   .. raw:: html
+
+      <video width="560" height="315" controls>
+         <source src="https://player.vimeo.com/video/204013568?color=007e83&portrait=0">
+      </video>
+
+Task 1.3 
+   In the Settings menu, go to *Options > Processing* and check that you have  the SAGA and GRASS providers enabled.
 
 
 
+Linear Filters 
+^^^^^^^^^^^^^^
+
+Smoothing Filter
+****************
 
 
+ Task 2.1 
+   Apply a linear filter to the *’tm1999_b4’* image. In QGIS, open the  ``tm1999_b4.tif``. Your project should assume the same Spatial Reference System as the image (*EPSG:32632 WGS84/UTM zone 32N*). In the **Processing Toolbox**, open the SAGA tool called *’User defined filter’*. 
+
+   Confirm that *’tm1999_b4’* is the input and click **Default filter matrix (3x3)** to open an empty filter kernel. Enter the weights of an *average filter kernel*. Ensure that the sum of weights is equal to 1. Confirm with OK. In the **User defined filter dialogue** execute the kernel by clicking OK. The output is added to the Map View as temporary file. 
+
+   In the **Layers panel** right click the *’Filtered Grid’* layer and rename to *’Average’*.
+
+.. attention:: 
+   **Question.** 
+   Which kernel weights did you use in the previous task? Write them down.
+   
+   .. image:: _static/img/3by3.png
+      :width: 160px
+      :align: center
 
 
+Task 2.5 
+   Explore the filter results around the Twente Airport. Reset the zoom to fit the image to the **Map View**. Next, change the scale, in the textbox at the bottom of the Map View, to :math:`1: 75,000`.  Zoom in to the major runway of the *Twente Airport*. See Figure x.
+
+   We will use  the **Profile tool** to compare the results of the average filter and original image. If you do not know how to install the *Profile Tool* plugin, watch the video tutorial on installing plugins in QGIS.
+
+   .. raw:: html
+
+      <video width="560" height="315" controls>
+         <source src="https://player.vimeo.com/video/201997421?color=007e83&portrait=0">
+      </video>
+
+   Start the Profile tool. Select on of the layers in the **Layer Panel**. Zoom into the centre of the image and draw a profile (line) across the major runway. Click on **Add Layer**. Select the other layer in the **Layers panel** and click on *Add Layer* again.
+
+.. figure:: _static/img/task-smooth-result.png
+   :alt: smoothing filter result
+   :figclass: align-center
+
+   Comparison of the result of a smoothing filter to 'tm1999_b4.img'  using the 'Profile tool'
 
 
+.. attention:: 
+   **Question.**
+   Just by looking at the graph of the Profile tool,  can you tell which profile belongs to the layer with the average filter?
+
+Task 2.8 
+   Draw profiles at different locations, and confirm your knowledge of the effects of applying an average filter (smoothing).
+  
+Gradient Filter
+***************
+
+ Task 2.9 
+   Use the **User defined filer** tool to apply a filter using the weights in the figure below, on the original image *’tm1999_b4 layer’*. Rename the resulting layer to ‘*Laplace’*.
+
+   .. image:: _static/img/laplace-kernel.png
+      :width: 160px
+      :align: center
+
+.. attention:: 
+   **Question.**
+   
+   + Is kernel above a detection kernel? If yes, what does it detect?
+   + Does the layer resulting of the previous task contain the same brightness as the original image for area objects?
+
+Task 2.11 
+   Examine the result of the Laplace filter. Toggle on and off the visibility of the *’Laplace’* layer to visually check what happened. Zoom in to the edge of the image until you see individual pixels.  Toggle again visibility of the *’Laplace’* layer.
+
+.. attention:: 
+   **Question.**
+   What phenomena do you observe? Can you explain it?
+
+Task 2.12 
+   Open the histogram of the ‘*Laplace’* layer. Go to *Properties > Histogram*; check the values in the image.
+
+.. attention:: 
+   **Question.**
+   Around which value does the histogram has its centre?
 
 
+Task 2.13 
+   In the **Profile** tool add *’Laplace’* layer  and toggle the visibility for the other layers. Confirm that the filter kernel detected two edges, i.e. both sides of the runway.
+
+The *’Laplace’* layer  looks rather artificial. The brightness of the  original image is gone; the lighter and darker areas in the original have now a common grey tone and  high contrasting pixels at their edges. Actually. This filter have  detected the changes (edges) between local lighter and darker pixels. The circular build of the kernel that you applied, i.e. all negative weights around the centre with positive weight,  detected changes in all directions.
+
+Edge Enhancement
+****************
+
+Task 
+   Repeat the steps of the previous task, but this time use kernels with the following values of the centre: 12, 16 and 200. Increasing the centre value will increase the weight of the centre pixel in the original image. When using a value of about 16 for the centre pixel; the kernel will calculate the Laplace enhancement of the image. Then, the resulting layer will actually look like the original image.
+
+One could use the output DN value to discriminate between strong/steep edges (high *absolute* DN values) and weak/low edges (low DN values, close to 0) and between positive edges which correlate positively with the kernel (positive DN values) and negative edges which correlate negatively with the kernel (negative DN values). [CHECK WITH ANDRE]
+
+Custom Filters
+**************
+
+The Laplace kernel detects edges in all directions. We can also define kernels which detect edges in specific directions. In the next task you will use a costume filter defined in a costume filter. Check the content of  ``NW-SE_3x3.txt`` by opening in a text editor.
+
+.. attention:: 
+   **Question.**
+   Which are the weight of the filter define in ``NW-SE_3x3.txt``?  Write them down.
+
+   .. image:: _static/img/3by3.png
+      :width: 160px
+      :align: center
+
+Task 2.14 
+   In the Processing Toolbox, use the **r.mfilter** tool of GRASS  to detect edges in specific direction.  Use the file ``NW-SE_3x3.txt`` as *Filter file*.  
+
+   Check the results and  confirm that one of the runways of the *Twente Airport*  was not detected at all! Also confirm that the edges of the main runway were detected by returning  positive values on one side of the runway and a negative  on the other. This is because the results of this filter show correlation with the positive and  negative weights in the kernel. 
+
+   Notice also, that the edges in the resulting layer have a slope and a direction. In this case the kernel has detected edges in the SW-NE direction. 
+
+Enhancement using Non-linear Filters
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Rank-Order Filter
+*****************
+
+Task 3.1  
+   In the Processing Tools, look for the SAGA  **Rank filter**.  Select  the *’tm1999_b4’* layer as the input grid. Set the *Search Mode* to *Square* and a Radius  of 1. Use a *Rank (Percent)* of 50. This settings essentially define a **median filter**. Execute the filter.
+   
+   Use the **Profile tool** to inspect the results and confirm the difference between the original image and result of the  Average and Median filters. Pay especial attention to locations where you expect differences, for instance, around the edges between areas. 
+
+Majority Filter 
+***************
+
+Task 3.3 
+   Add the ``tm_xs_ml_classification.tif`` into the Map View, this layer contains a set of classes representing land cover. You will notice that there are many isolated pixels  inside some homogeneous areas. For example, the yellow pixels identify maize, which usually does not grow in such small parcels.
+ 
+   In the **Processing Toolbox**, open the **r.neighbors** tool. Select *’tm1999_xs_ml_classifciation’* as input raster and set the neighbourhood operation as *’mode’* (also known as majority filter).
+   
+   The results will be shown as grey scale or black and white. You can apply a pseudo colour to properly visualise the results. Copy the style of the  *’tm1999_xs_ml_classifciation’* into the result of the majority filter layer. See :ref:`fig-copy-style`  
+
+   In the **Layer panel**, right-click on the *’tm1999_xs_ml_classifciation’*  layer and copy the style. Then right click on the majority filter layer and paste the style. 
+
+.. _fig-copy-style:
+.. figure:: _static/img/copy-style.png
+   :alt: copy layer style
+   :figclass: align-center
+
+   Copying the style between two raster layers in QGIS
 
 
+Task 3.6 
+   Toggle the visibility of the filtered result and compare it with the original landcover layer. Confirm that most isolated pixels have disappeared, and that thin lines of pixels surrounded by  homogeneous areas also disappeared (e.g. a runway in the Twente Airport). The main runway should still be distinguishable.
+ 
+.. attention:: 
+   **Question.**
+   Can you explain why one of the small runways of the Twente Airport disappeared after applying a majority filter?
+
+Task 3.7 
+   Use the **r.neighbor** to compute another mode filter on the *’tm1999_xs_ml_classifciation’* layer. This time use neighbourhood  of size :math:`5`; which means to apply a 5x5 kernel. Compare the result of this filter  with the 3x3 majority filter.
+
+.. attention:: 
+   **Question.**
+   What do you observe when comparing the result of a 3x3 and 5x5 majority filters around the  main runway of the Twente Airport?
 
 
+Task 3.8 
+   Experiment with the application of consecutive filters. Apply a the 3x3 majority filter to the  results of the  existing *’3x3 majority’* filter layer. Compare these results  with the result of applying a single 5x5 majority filter. You will notice that the results are not the same.
 
+.. note:: 
+   **Reflection.**
+   In summary, you should acknowledge that in the case of neighbour operations, the results will change depending on the size of the kernel and the number of time a filter is applied to a input raster.
 
-
-
-
+--------------------------------------
 
 Correction of Atmospheric Disturbances 
 --------------------------------------
@@ -333,7 +493,7 @@ Haze correction
 
 
 Task 2.1 
-    Use the `Satellite and sensor database <#>`_ and the file and meta data information to find the information for the spectral specifications of *SPOT PAN, Landsat TM B1 to B4* and *Landsat ETM B1 to B4*. Then, complete the table bellow.
+   Use the `Satellite and sensor database <#>`_ and the file and meta data information to find the information for the spectral specifications of *SPOT PAN, Landsat TM B1 to B4* and *Landsat ETM B1 to B4*. Then, complete the table bellow.
 
 =====================       ============    ====    ===========================     ==============
 Satellite/sensor            File name(s)    Date    Approx. time of acquisition     Resolution GSD
@@ -350,11 +510,11 @@ Landsat-7/ETM+              ETM99
 
 
 Task 2.2 
-    Open  ``etm99.img``, ``pan.img``, and ``tm89.img`` in QGIS. and take a look at the images. Display all images using **bands 4, 3, 2 for RGB** and *No Stretch*. Open the **Value tool** to get pixel information. 
+   Open  ``etm99.img``, ``pan.img``, and ``tm89.img`` in QGIS. and take a look at the images. Display all images using **bands 4, 3, 2 for RGB** and *No Stretch*. Open the **Value tool** to get pixel information. 
     
-    Haze has an additive effect to the overall image, resulting in higher DN values. As a result, it is reducing the contrast of the image. Because this effect is :math:`\lambda`  dependent, its influence differs per band. 
+   Haze has an additive effect to the overall image, resulting in higher DN values. As a result, it is reducing the contrast of the image. Because this effect is :math:`\lambda`  dependent, its influence differs per band. 
     
-    We will assume that there is a real *blackbody* present in the images; therefore we can simply subtract to a minimum of zero. Assume that the blackbody in this case is *deep, clear and unpolluted water*. Complete the table below with the **minimum values** that you can find in such water body. Some hints are given below.
+   We will assume that there is a real *blackbody* present in the images; therefore we can simply subtract to a minimum of zero. Assume that the blackbody in this case is *deep, clear and unpolluted water*. Complete the table below with the **minimum values** that you can find in such water body. Some hints are given below.
 
 =====   =============   =========   =========   =========   =========
 Image   Band 1 DN       Band 2 DN   Band 3 DN   Band 4 DN   Pan DN
@@ -389,9 +549,9 @@ ETM99                                                       **n.a.**
 
 
 Task 
-    Correct the images for haze by subtraction values using the Raster calculator. In QGIS go to **Raster > Raster Calculator**. Specify the formula to subtract the Haze value from Band 4 and specify the name of the output file. 
+   Correct the images for haze by subtraction values using the Raster calculator. In QGIS go to **Raster > Raster Calculator**. Specify the formula to subtract the Haze value from Band 4 and specify the name of the output file. 
 
-    Select the newly created *Band 4 with haze correction* on the **Layers Panel**.  Go to  Properties  of the layer and modify the contrast stretch as follows. Minimum 0,  maximum 255. Do the same for the *Band 4  without haze correction.*
+   Select the newly created *Band 4 with haze correction* on the **Layers Panel**.  Go to  Properties  of the layer and modify the contrast stretch as follows. Minimum 0,  maximum 255. Do the same for the *Band 4  without haze correction.*
 
 .. attention:: 
    **Question.**
@@ -400,14 +560,14 @@ Task
 Verify that the histograms of the haze-corrected bands have shifted towards the origin. Both histograms have the same shape before and after haze correction but a different location. It also shows that there are apparently some pixels with DN values lower than the small lake on the island. These negative values should not exist in EO images but are caused by the fact that we use a GIS to do the calculation. Before continuing we have to correct this artefact.
 
 Task 2.8 
-    From the **Processing Toolbox**, use the SAGA module **Reclassify values (simple)** to set all negative values to 0. Select condition  ``[0] Low value <= grid value < high value``. Edit the Lookup table; delete two rows and enter :math:`-255` for *Low Value*. This will replace all values in the range  :math:`[-255,0]` with 0.
+   From the **Processing Toolbox**, use the SAGA module **Reclassify values (simple)** to set all negative values to 0. Select condition  ``[0] Low value <= grid value < high value``. Edit the Lookup table; delete two rows and enter :math:`-255` for *Low Value*. This will replace all values in the range  :math:`[-255,0]` with 0.
 
- Task 2.9 
-    Calculate the Haze correction for all bands of *‘ETM99’*, for band 4 of *'TM89*' and *'Spot PAN'*, including the reclassification.
+Task 2.9 
+   Calculate the Haze correction for all bands of *‘ETM99’*, for band 4 of *'TM89*' and *'Spot PAN'*, including the reclassification.
 
 .. attention:: 
    **Question.**
-    Suppose you had a SPOT image with the  values for the channels that correspond to R, G, and B. Would the Haze values be different than those in the TM scene? Why or why not?
+   Suppose you had a SPOT image with the  values for the channels that correspond to R, G, and B. Would the Haze values be different than those in the TM scene? Why or why not?
 
 Sun Angle Correction
 ^^^^^^^^^^^^^^^^^^^^
