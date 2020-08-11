@@ -11,8 +11,8 @@ Image Enhancement: Histogram Operations
    You will require the latest LTR version of `QGIS (A Coruna 3.10) <https://qgis.org/en/site/forusers/download.html>`_, plus the dataset `data.zip <#>`_ which you can download from CANVAS.  When you unzip the dataset, you will find the following files inside: 
    
    + ``SPOT270611.img`` – SPOT 5 image with 4 spectral bands.
-   + ``tm24aug99.img`` -  TM image of the 24th of august 1999.
-   + ``tm24aug99_sub.tif`` -  a subset of tm24aug99.img
+   + ``tm24aug99.img``  – TM image of the 24th of august 1999.
+   + ``tm24aug99_sub.tif`` –  a subset of tm24aug99.img
    + ``topo34f.img`` – scan of a topographic map in RGB.
 
 
@@ -259,9 +259,9 @@ Image Enhancement: Filter Operations
 
    You will require the latest LTR version of `QGIS (A Coruna 3.10) <https://qgis.org/en/site/forusers/download.html>`_, plus the dataset `data.zip <#>`_ which you can download from CANVAS.  When you unzip the dataset, you will find the following files inside: 
    
-   + ``tm1999_b4.tif`` -
-   + ``tm1999_xs_ml_classification.tif`` -
-   + ``NW-SE_3x3.txt`` -
+   + ``tm1999_b4.tif`` – A scene from band 4 of the Landsat TM. Enschede in 1999.
+   + ``tm1999_xs_ml_classification.tif`` – Classification of the types of land cover in Enschede. From Landsat TM 1999.
+   + ``NW-SE_3x3.txt`` – Definition of a custom filter.
 
 Preparation
 ^^^^^^^^^^^
@@ -479,9 +479,9 @@ The procedures describe in this section fall within the “pre-processing” gro
 
    You will require the latest LTR version of `QGIS (A Coruna 3.10) <https://qgis.org/en/site/forusers/download.html>`_, plus the dataset `data.zip <#>`_ which you can download from CANVAS.  When you unzip the dataset, you will find the following files inside: 
    
-   + ``etm99.img`` -  Landsat Enhanced Thematic Mapper
-   + ``pan.img``  - SPOT panchromatic
-   + ``tm89.img`` - Landsat Thematic Mapper
+   + ``etm99.img`` – Scene from Landsat Enhanced Thematic Mapper, bands 1 to 4. Wadden islands, 1999.
+   + ``pan.img``  – Scene from SPOT, panchromatic band.
+   + ``tm89.img`` – Scene from  Landsat Thematic Mapper.
 
    These three images are provided with almost cloud-free skies. 
 
