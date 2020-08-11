@@ -16,9 +16,14 @@
 
 import sphinx_rtd_theme
 
+import os
+import sys
+
+sys.path.append(os.path.abspath("./_ext"))
+
 # -- Project information -----------------------------------------------------
 
-project = 'online-core'
+project = 'core-online'
 copyright = '2020, University of Twente'
 author = 'Manuel G. Garcia'
 
@@ -35,6 +40,7 @@ master_doc = 'index'
 # ones.
 extensions = [
     "sphinx_rtd_theme",
+    "helloworld",
 ]
 
 # Figure numbering
