@@ -34,10 +34,9 @@ Distance Education Core Exercises
    apendices/gis-formats
    apendices/shaded-terrain-models
 
+..  Indices and tables
+.. ==================
 
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+.. * :ref:`genindex` 
+.. * :ref:`modindex`
+.. * :ref:`search`
