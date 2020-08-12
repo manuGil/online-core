@@ -1,7 +1,10 @@
-Document Layout
-===============
+Styling Conventions
+===================
 
 This section provide examples on how to organize and format the content of exercises.
+
+.. warning:: This section is aimed for development purposes. It will be removed in the version provided to students.
+
 
 Exercise Title
 --------------

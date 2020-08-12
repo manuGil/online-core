@@ -58,15 +58,15 @@ Reporting Issues
 If you would like to report any issues in this document. You can do so by opening an issue in this `GitHub repository <https://github.com/manuGil/online-core/issues>`_ 
 
 Include the following:
-    1. A short, but precise description of the issue,
-    2. A link to the title of the specific section that contains the issues. *You can find the URL of a title's section by click on the*  **chain icon**  *on the right side of title's section.*
-    3. Optionally, include a screenshot of the part of the section containing the issue.
+   1. A short, but precise description of the issue,
+   2. A link to the title of the specific section that contains the issues. *You can find the URL of a title's section by click on the*  **chain icon**  *on the right side of title's section.*
+   3. Optionally, include a screenshot of the part of the section containing the issue.
 
 Relevant issues to report:
-    + Broken links. 
-    + Wrong referencing, e.g., links do not refer to the correct resources. 
-    + Missing or incomplete content. Text or figures.
-    + Grammatical errors. We use British spelling.
+   + Broken links. 
+   + Wrong referencing, e.g., links do not refer to the correct resources. 
+   + Missing or incomplete content. Text or figures.
+   + Grammatical errors. We use British spelling.
 
-.. danger::  You will notice that **Tasks** are not numbered correctly. We are aware of this and we are working to fix it. Do not report this as an issue.
+.. warning:: You will notice that **Tasks** are not numbered correctly. We are aware of this and we are working to fix it. Do not report this as an issue.
  
