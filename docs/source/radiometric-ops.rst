@@ -378,6 +378,16 @@ Task 2.13
 
 The *’Laplace’* layer looks rather artificial. The brightness of the original image is gone; the lighter and darker areas in the original have now a common grey tone and high contrasting pixels at their edges. This filter has detected the changes (edges) between local lighter and darker pixels. The circular build of the kernel that you applied, i.e. all negative weights around the centre with positive weight,  detected changes in all directions.
 
+
+.. note:: 
+   **Reflection.**
+   We can use the output values of an edge detection kernel to discriminate **edges with high contrast** and **edges with low contrast**. For example,  a field with relatively low values and a neighbouring field with relatively high values will result in edges with high contrast. In comparison, edges with low contrast may be the result of adjacent pixels which have a different value. You could use a threshold to select only edges with high contrast and delimit the edges between areas/fields.
+
+   Detection filter kernels have **positive** and **negative** weights, and their output values could be positive or negative. Positive values represent edges which correlate positively with the kernel, negative values represent edges which correlate negatively – ‘ are opposite to’ –. We can also use the sign of the values to discriminate different classes or types of edges. 
+   
+   If you do not understand these statements, review the lecture material once more.
+
+
 Edge Enhancement
 ****************
 
