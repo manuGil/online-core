@@ -142,7 +142,7 @@ Task 2.2
 
 -----------------------------------------
 
-Proximity operators
+Proximity Operators
 -------------------
 
 We will cover two proximity operations: |ltb| `Buffer`_ and |ltb| `Thiessen Polygons`_. 
@@ -186,7 +186,7 @@ Before moving onto network analysis, we have to understand networks a bit better
 
 
 
-Characteristics of networks
+Characteristics of Networks
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 There are two critical aspects in a |ltb| `Network`_; the directionality of the network and the degree in which the network is planar. When you understand these two concepts you know why different types of networks are modelled in a different way and why not all |ltb| `analysis techniques <Network Analysis_>`_ are relevant for all types of networks. 
