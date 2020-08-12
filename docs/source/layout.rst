@@ -27,6 +27,8 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 Images and Figures
 ------------------
 
+.. todo:: Fixt this
+
 This is an image with no caption.
 
 .. image:: _static/img/qgis310.png 
@@ -98,6 +100,7 @@ Video Tutorial from Vimeo
 
 *A short sentence introducing the video below and including a* `hyperlink. <https://player.vimeo.com/external/316725601.hd.mp4?s=c6af68bb5180619816eb0b847933d22d0f2972f2&profile_id=175filename=Basic_Digitizing.mp4>`_
 
+.. todo:: this also
 
 .. raw:: html
 

@@ -26,7 +26,7 @@ Distance Education Core Exercises
    raster-analysis
    data-quality
    visualisation
-   
+
 
 .. toctree::
    :maxdepth: 2

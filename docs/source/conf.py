@@ -41,7 +41,10 @@ master_doc = 'index'
 extensions = [
     "sphinx_rtd_theme",
     "helloworld",
+    "todo"
 ]
+
+todo_include_todos = True
 
 # Figure numbering
 numfig = True
