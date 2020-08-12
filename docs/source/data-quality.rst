@@ -22,7 +22,7 @@ The main goal of this exercise is to provide you with the first-hand experience 
     + ``rmse.xls`` – a spreadsheet to calculate the rmse.
 
 
-Positional accuracy
+Positional Accuracy
 ^^^^^^^^^^^^^^^^^^^
 
 For the first part of this exercise, we will explore the concepts of |ltb| `Accuracy`_, |ltb| `Precision`_ and bias. One of the ways of assessing the quality of a dataset is by determining how accurate the data is. Accuracy might be measured with regards to |ltb| `Positional accuracy`_ or attribute correctness, but in any case, we can only measure accuracy if we have a second data source of higher accuracy that we can regard as true or more close to the truth than the one we are assessing.
@@ -90,7 +90,7 @@ Task 1.3
 
 Note that you can also measure the attribute accuracy of qualitative attributes, such as land cover. In that case, we use an   |ltb| `Error matrix`_. We will be discussed in more detail in the Course on Earth Observation.
 
-Biased data
+Biased Data
 ^^^^^^^^^^^
 
 Another possible problem with your data is **bias**. Biased data is systematically inaccurate data, usually for technical reasons. A classic example of biased data is the case of features that were digitised over a badly georeferenced base map. *Because the digitising process comes after georeferencing; any displacements introduced during the georeferencing propagate to all the features that are digitised.*
@@ -181,7 +181,7 @@ Task 1.3
 
       The porto_buildings  layer rasterised using burn-in values.
 
-Digitising operations leading to errors
+Digitising Operations Leading to Errors
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A common cause of errors has its origin in data acquisition through digitisation. When digitising features from a base map the resulting accuracy is related to the scale that is being used at the moment of digitising, this is related to the concept of |ltb| `Perkal band`_. The basic principle is that the smaller the scale, the less accurate the digitalisation will be.
@@ -279,7 +279,7 @@ In this case, you would probably proceed to delete those polygons and clean the 
     + What problems might occur if our data has sliver polygons? 
     + Can you think of other methods to detect sliver polygons?
 
-Conceptual errors
+Conceptual Errors
 ^^^^^^^^^^^^^^^^^
 
 Conceptual errors are errors that arise not from acquisition or processing but from logically erroneous thinking. These type of errors are associated with the way reality is being modelled, and they have a direct relation with |ltb| `Logical consistency`_ and |ltb| `Completeness`_ of datasets and analytical approaches.
