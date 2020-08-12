@@ -1,4 +1,4 @@
-How To Use the Exercises
+How to Use the Exercises
 ========================
 
 This website contains a list of exercises that you will carry out as part of the online course *"GI Science and Earth Observation: a system-based approach"*.
