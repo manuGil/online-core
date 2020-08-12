@@ -8,7 +8,7 @@ Database Management Systems
 
 Begin by reading about |ltb| `Database`_ and  |ltb| `Database management system`_ (DBMS) in the Living Textbook.
 
-Task 1.1 
+Task 1
    In the following table, you find the definitions for some of the most frequently used terms in database technology.  Such as Database, Data, Dataset, Database management system (DBMS) and a Database system.  Fill in the terminology column with the term that matches each definition. 
 
 ==============     ============================================================================================
@@ -71,14 +71,14 @@ In this section of the exercise, you will explore the main building components o
    Which are some of the most popular Spatial DBMS? 
    Using the concept map in the |ltb| `Living Textbook`_, reflect on the relationships connecting the concepts associated with Relational database. Can you elaborate a short explanation of that representation?
 
-Task 3.1 
+Task 2 
    Below, you find part of the instance of a relation in a database. Fill in the blanks with the names of the components indicated by the arrows. Choose from: attribute, domain, relation, tuple. 
 
    .. image:: _static/img/task-components-db.png 
       :align: center
 
 
-Task 3.2 
+Task 3 
    Draw a relation based on the relation schema defined below. Fill it with three examples  (rows) of data that match the attribute domains.
 
    .. code-block:: miniscript
@@ -98,7 +98,7 @@ Keys
 You can read more about primary keys in your Living Textbook (page: Keys)
 
 
-Task 3.3
+Task 4
    In the instance of the relation below, which attribute(s) can be possible candidates for primary keys? Which attribute(s) would you choose to set a primary key? Explain your reasons or the choice you made.
 
    ==    ============      ============   =============
@@ -115,13 +115,13 @@ Task 3.3
 
 Relations in a relational data model are linked to each other through a common attribute. A foreign key is a set of attributes that are used to refer to tuples in another relation. A **foreign key** must correspond with the values of a primary key in another relation. A foreign key behaves like a ’logical pointer’.
 
-Task 3.3 
+Task 5
    In the figure below, you see the instances of two relations in a database. One holds data about countries; the other holds data about the production of crops productions in different countries and for various years. The countries and production relations should be related through a common attribute. Mark the primary key and the foreign key attributes and draw an arrow from the primary key pointing to the foreign key.
 
    .. image:: _static/img/task-keys.jpg 
       :align: center
 
-Task 3.4
+Task 6
     Think of at least three relations (including courses) that can model a universe of discourse for managing courses in a university. Define the attributes and attribute domains for each of these relations and ensure your database integrity by specifying primary keys, foreign keys and any other given constraint. 
 
    + Hint1: *Typically, you may think of Students and Courses. You can replace any of these relations and add as many more as you think is necessary for capturing the data you need.*
@@ -153,13 +153,14 @@ Having the necessary datasets is the starting point to be able to extract releva
    + ``Database_queries.qgs`` – a QGIS project preloaded with the dataset described below;
    + ``country_Data`` – a table with additional information on the countries of the world;
    + ``database.sqlite`` – a SpatiaLite database containing:
+
       + ``countries`` – polygons of the boundaries of the countries of the world;
       + ``railroads`` – lines representing the main railroads of the world;
       + ``urban_areas`` – polygons of the boundaries of the main urban areas of the world 
 
 
 
-Task
+Task 7
    Read the about |ltb| `querying a spatial database with SQL <Querying SQL_>`_. You should understand what |ltb| `Tuple selection`_ means; what is  |ltb| `Attribute projection`_; and how can we |ltb| `join <Join_>`_ two or more than two relations.  Such understanding is necessary for solving query-formulation problems, using a |ltb| `Join condition`_. 
 
 
@@ -186,8 +187,8 @@ In SQL, you can use comparison operators (``>, < ,=, !=, >=, <=``)  and logical 
 
 When you query data in a GIS (and not a DBMS), the way you express your attribute selection may be slightly different, but it usually follows the SQL syntax. The following task shows you how to query a data layer. 
 
- Task 4.1 
-   Open the QGIS project ``database_queries``. Right-click on the layer countries, open the Filter menu and define the simple query below.  
+Task 8 
+   Open the QGIS project *'database_queries'*. Right-click on the layer countries, open the Filter menu and define the simple query below.  
    See :numref:`figquerysimple`.
    
    .. code-block:: postgresql
@@ -224,10 +225,10 @@ In SQL, a join can be defined by structuring statements in the following way:
    In the SQL statement above, you immediately notice that it is using two relations instead of one. Can you tell which common attributes are being used in this example?
  
  
-Task 4.2 
+Task 9
    Examine the attribute tables of ``countries.shp`` and  ``countries_data.shp``. You will certainly note that the data contained in the attribute table of *countries_data* data layer complements the data provided by *countries* data layer.
  
-Task 4.2 
+Task 10 
    Write a joining condition for the datasets above. The following SQL statement will help get you started.
 
    .. code-block:: postgresql   
@@ -240,7 +241,7 @@ Task 4.2
 
 QGIS (and other GIS packages) provides a graphical interface from where you can define a join without having to type the SQL statements.
 
-Task 4.2 
+Task 11
    Use QGIS to apply the join defined in the *previous task*. :numref:`figjoin` shows how it is done.
 
    .. _figjoin:
@@ -254,9 +255,9 @@ Task 4.2
    **QGIS.**
    *Joins only exist in the scope of a project*. Notice that the countries dataset is now richer in attributes as long as the table *countries_data* is in the same project, and as long as the join condition remains active. If you open the countries in a different QGIS project, you will see that the attribute table does not include the attributes from the *countries* table. To make the results of a join permanent, you have to create a dataset by exporting the joined dataset to a new file. This procedure is common to any GIS software. *Also, be aware that filtering will not take into account the joined attributes, unless you the results to a new dataset,  or create a virtual field (check the next task).*
 
-Now that the attribute table of the countries layer is extended, we can revisit Task 4.1 and make more interesting queries. 
+Now that the attribute table of the *'countries'* layer is extended, we can revisit **Task 8** and make more interesting queries. 
 
-Task 4.3 
+Task 12
    Right-click on the layer countries to open the **Filter menu**. The message depicted in :numref:`figvirtuallayer`  will pop up – make sure to click Yes. 
 
    .. _figvirtuallayer:
@@ -285,7 +286,7 @@ GIS handles spatial data, and this means that:
 
 The implications of Tobler’s first law of Geography are what allow us to search for information based on spatial relationships while ignoring the semantics associated with the features. The key idea to remember is that all the objects represented in the same coordinate space have at least one thing in common - space itself! This means that we can filter our data based on several Topological relationships like disjoint, meets, equal to, inside, covers etc.
 
-Task 4.4 
+Task 13
    suppose we want to find out how many urban areas are connected to railroads.  Use the Select by location tool from the Processing toolbox to find out. Figure :numref:`figselectlocation`
 
    .. _figselectlocation:
@@ -317,7 +318,7 @@ If our data is a spatial database, we can access all sort of spatial functions u
 
 To explore spatial functions using SQL, we will use the capabilities of *SpatiaLite*, a file-based database engine. This means you don’t need to install any database software. All data is contained in a single file that can be copied from one computer to another without losing information.
 
-Task 4.5 
+Task 14
    Connect to the Spatialite database.
 
    If your database.sqlite is not listed under the Spatialite section, you have to connect to it first. Simply right-click over the Spatialite Branch and point to the folder where you have the ``database.sqlite`` database. :numref:`fig-connect-sqlite` 
@@ -361,7 +362,7 @@ Task 4.5
       Although syntactically correct, the results produced by the query above cannot be trusted. Can you explain why?
 
 
-Task 4.7 
+Task 15
    To finish this section, we will give you another demonstration of the capabilities of a spatial database. Suppose you want to know what is the total area next to the railroads of Australia given a certain distance. The distance could represent a buffer zone restricted to the public for security reasons. 
 
    Here is on way to do it using SQL:

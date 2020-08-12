@@ -23,48 +23,48 @@ Geographic Phenomena can be divided into |ltb| `geographic objects <Geographic o
 Objects or Fields
 ^^^^^^^^^^^^^^^^^
 
-Task
-    Complete the table below by indicating if the phenomenon on the left is an object or field and if it is discrete or continuous.
+Task 1
+   Complete the table below by indicating if the phenomenon on the left is an object or field and if it is discrete or continuous.
 
-    +---------------------+------------------+-------------------------+
-    | Phenomena           | Field of Object  | Discrete or Continuous  |
-    +=====================+==================+=========================+
-    | Wind direction      | \                |    \                    |
-    +---------------------+------------------+-------------------------+
-    | Temperature         | \                |             \           |
-    +---------------------+------------------+-------------------------+
-    |  Roads              | \                |    \                    |
-    +---------------------+------------------+-------------------------+
-    | Buildings           | \                |    \                    |
-    +---------------------+------------------+-------------------------+
-    | Field sample points | \                |    \                    | 
-    +---------------------+------------------+-------------------------+
-    | Landuse             | \                |    \                    |
-    +---------------------+------------------+-------------------------+
-    | Soil Type           | \                |    \                    |
-    +---------------------+------------------+-------------------------+
+   +---------------------+------------------+-------------------------+
+   | Phenomena           | Field of Object  | Discrete or Continuous  |
+   +=====================+==================+=========================+
+   | Wind direction      | \                |    \                    |
+   +---------------------+------------------+-------------------------+
+   | Temperature         | \                |             \           |
+   +---------------------+------------------+-------------------------+
+   |  Roads              | \                |    \                    |
+   +---------------------+------------------+-------------------------+
+   | Buildings           | \                |    \                    |
+   +---------------------+------------------+-------------------------+
+   | Field sample points | \                |    \                    | 
+   +---------------------+------------------+-------------------------+
+   | Landuse             | \                |    \                    |
+   +---------------------+------------------+-------------------------+
+   | Soil Type           | \                |    \                    |
+   +---------------------+------------------+-------------------------+
 
 
 Object's Parameters
 ^^^^^^^^^^^^^^^^^^^
 
-Task
-    Which locational parameters can be used to describe objects? Not all the parameters that you identified are essential for all objects.  
-    Which of the locational parameters are important for the objects below? 
+Task 2
+   Which locational parameters can be used to describe objects? Not all the parameters that you identified are essential for all objects.  
+   Which of the locational parameters are important for the objects below? 
 
-    +---------------------+----------------+---------------+----------------+--------------+
-    | Object              | Parameter 1    | Parameter 2   | Parameter 3    |  Parameter n |
-    +=====================+================+===============+================+==============+
-    | House               | \              | \             |  \             |  \           |
-    +---------------------+----------------+---------------+----------------+--------------+
-    | Road                | \              | \             |  \             |  \           |
-    +---------------------+----------------+---------------+----------------+--------------+
-    |  Well               | \              | \             |  \             |  \           |
-    +---------------------+----------------+---------------+----------------+--------------+
-    |  Lakes              | \              | \             |  \             |  \           |
-    +---------------------+----------------+---------------+----------------+--------------+
-    | Rivers              | \              | \             |  \             |  \           |
-    +---------------------+----------------+---------------+----------------+--------------+
+   +---------------------+----------------+---------------+----------------+--------------+
+   | Object              | Parameter 1    | Parameter 2   | Parameter 3    |  Parameter n |
+   +=====================+================+===============+================+==============+
+   | House               | \              | \             |  \             |  \           |
+   +---------------------+----------------+---------------+----------------+--------------+
+   | Road                | \              | \             |  \             |  \           |
+   +---------------------+----------------+---------------+----------------+--------------+
+   |  Well               | \              | \             |  \             |  \           |
+   +---------------------+----------------+---------------+----------------+--------------+
+   |  Lakes              | \              | \             |  \             |  \           |
+   +---------------------+----------------+---------------+----------------+--------------+
+   | Rivers              | \              | \             |  \             |  \           |
+   +---------------------+----------------+---------------+----------------+--------------+
 
 
 Crispy or Fuzzy Boundaries
@@ -80,8 +80,8 @@ Autocorrelation
 ^^^^^^^^^^^^^^^
 There is one more concept that requires an introduction at this point, and that is |ltb| `Spatial autocorrelation`_. Spatial autocorrelation is based on Tobler’s first law of geography.
 
-Task
-    Define in your own words what spatial autocorrelation is. 
+Task 3
+   Define in your own words what spatial autocorrelation is. 
 
 Although all computer representations store data as finite representations, it is important that you realise that some phenomena show autocorrelation. 
 
@@ -139,13 +139,13 @@ An integer data type is a number that does not contain any decimals. They are of
 ===============   =============================================================
 
 
-Task 2.1 
+Task 4
    What data type would you use to represent a discrete field when you store it as a tessellation? And for a continuous field? 
 
-Task 2.2 
+Task 5 
    Boundaries in raster layers are both artificial and fixed. This has advantages and disadvantages. Can you give some examples of the advantages and disadvantages of artificial and fixed boundaries in raster layers?
 
-Task 2.3 
+Task 6 
    Open the `spatial_data_modelling` QGIS project we provided in the dataset, and explore the properties of the tessellation representing elevation (elevation.tif)
 
    How many rows/columns do the elevation.tif data has?. Are the values of type integer or floating-point? What are the minimum and maximum values? 
@@ -165,7 +165,7 @@ There are also |ltb| `Irregular tesselations <Irregular tesselation_>`_. In irre
    **Question.**
    It is often stated that irregular tessellations are more adaptive compared to regular tessellations. What exactly is meant by this?
    
-Task 2.4 
+Task 7 
    Although there are multiple examples of irregular tessellations, you only have to study one example: “the Quadtree”. When you are not familiar with Quadtrees yet, refer to your Living Textbook for more information. The best way to learn how Quadtrees work is to construct one manually. 
 
    Construct the Quadtree for the raster layer shown below. Upload a picture of your Quadtree in the discussion board. 
@@ -177,7 +177,7 @@ Task 2.4
    Using a Quadtree to represent a geographic phenomenon improves computation performance (computations are faster). Do you understand how this works?
 
 
-Task 2.5 
+Task 8
    Calculate the area of the green, blue and white cells in the Quadtree above using the levels of the regions Quadtree.
 
 Vector Data Model 
@@ -191,7 +191,7 @@ We start with the |ltb| `Triangulated Irregular Networks <TINs_>`_. (TINs) becau
    Which characteristics have in common TINs and tessellations?
 
 
-Task 2.6 
+Task 9
    From the picture below, manually create a TIN from the given input points.
 
    .. image:: _static/img/make-tin.png 
@@ -202,7 +202,7 @@ Task 2.6
    You may be surprised, but not all triangulations are equally good. The standard triangulation is a Delaunay triangulation. Was your triangulation Delaunay? 
 
 
-Task 2.7 
+Task 10
    In your QGIS project, you find a layer with points. Generate a Delaunay triangulation and compare the result with the tessellation you made.    
 
    .. figure:: _static/img/create-tin.png
@@ -216,7 +216,7 @@ Task 2.7
 A triangulation can also be used to generate a continuous tessellated surface by means of interpolation. In those cases, each cell is assigned the value that is related to how far that cell is from the anchor points. 
 
 
-Task 2.8 
+Task 11
    Create a tessellation using the TIN interpolation tool using as input the anchor points you have in your QGIS project. Then, use the Identify tool to inspect the cell values. 
 
    .. figure:: _static/img/create-tessellation.png
@@ -242,7 +242,7 @@ We can, however, explore the concept of ‘on the fly interpolation with a simpl
    **Question.**
    What exactly are the advantages of a TIN over a tessellation?  
 
-Task 2.10 
+Task 12
    In your data, you find a table Cities2.csv. Try to use this table to create a point layer in QGIS. Start a new QGIS project and add the layer to QGIS using the “Delimited Text” option. 
 
    .. figure:: _static/img/layer-from-csv.png
@@ -265,7 +265,7 @@ The boundary model explains how areas are represented and by storing the closed 
 
 The Topological model is discussed in the next section of this exercise. (page: Polygon[add internal reference]) 
 
-Task 2.11 
+Task 13 
    Read the section |ltb| `Area representation`_ and describe in your own words the problems that may arise when using the boundary model without topology. 
 
 
@@ -274,7 +274,7 @@ Topology
 
 The third topic in this exercise is |ltb| `Topology`_. You will first have to understand what topology is before learning different ways to use it. Topological properties are geometric properties and spatial relations that are not affected by the continuous change of shape and size of a vector data layer (points, lines, or polygons).   
 
-Task 3.1 
+Task 14
    Imagine you are looking at a map (take any map you like). Make a small list containing at least five examples of spatial topology that are visible in your map and five examples of properties that are not topological (use the table below).
 
 
@@ -319,7 +319,7 @@ By now, you should understand what topology is, but you may wonder how it can be
    Topology can also be used to ensure consistency of the geometries in a vector layer. There are five rules of  |ltb| `Topological consistency`_, which you should know about.
   
 
-Task 3.2 
+Task 15
    Identify for every example below which rule of topological consistency is violated. 
 
    ====================================================  =========
@@ -345,7 +345,7 @@ In many situations, it is not enough to describe geographic phenomena only in te
 
 To including time in the representation of spatial data, we talk about the  |ltb| `Spatial-temporal data model`_. This model defines different types of change: *change in attributes*, *change in location* (movement) and *change in shape* (growth) or combinations of these three. 
 
-Task 4.1 
+Task 16 
    Below you see a list of different types of change and some combinations. Can you write down an example for each type? 
 
 

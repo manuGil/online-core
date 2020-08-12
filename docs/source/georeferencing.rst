@@ -34,7 +34,7 @@ Coordinate Systems
 In mapping, a |ltb| `Coordinate system`_ is used to uniquely determine the position of a place with respect to the Earth’s surface.
 
 
-Task 2.1 
+Task 1
    Define in your own words the difference between |ltb| `coordinate systems <Coordinate system_>`_ and |ltb| `planar coordinate systems <Planar coordinate system_>`_. 
 
 The most widely used global coordinate system is the |ltb| `Geographic coordinate system`_. It consists of lines of geographic latitude and longitude. Lines of equal latitude are called parallels. They form circles on the surface of the ellipsoid. Lines of equal longitude are called meridians and form ellipses (meridian ellipses) on the ellipsoid. 
@@ -49,7 +49,7 @@ For example, Enschede is located at:
    + Longitude: **6°53′44″ E** (DMS format)       or       **6.895556** (decimal format)
 
 
-Task 2.2  
+Task 2 
    Use Google Maps to find what is in the following locations.
 
       ============   =============     ===============
@@ -61,7 +61,7 @@ Task 2.2
       ============   =============     ===============
 
 
-Task 2.3 
+Task 3 
    Start a new project in QGIS and map the locations contained in the  ``control_points.csv`` file. This file contains geographic coordinates captured using a GPS device. You may need to refect to the section :ref:`spatialising-data` for this.
 
 
@@ -69,7 +69,7 @@ Task 2.3
       **Question.**
       What was the geographic coordinate system (geodetic datum) used in the ``control_points.xlsx`` file?
  
-Task 2.4   
+Task 4   
    Open each of the remainder datasets in QGIS and check whether each dataset is spatially referenced or not. 
 
    .. attention:: 
@@ -108,7 +108,7 @@ No matter which map projection you choose, it always comes with certain distorti
    + ``Rivers.gpkg`` –line vector layer representing rivers.
 
 
-Task 3.1
+Task 5
    Load the vector and raster datasets you downloaded from Canvas into a new QGIS project and answer the following questions:
    
    + Are there any datasets that use a map projection? 
@@ -140,14 +140,14 @@ In other cases, the map-user have especial requirements on how to represent spat
    + What problems can result out of leaving these layers with their current coordinate systems?
    + If you had to transform all these datasets to a single coordinate system, which coordinate system will you choose as a target? What criteria determine your choice? Give examples for these specific datasets.
 
-Task 4.1 
+Task 6 
    After choosing a projected coordinate system, and datum for your datasets, use QGIS to do the transformations. Put attention on which layer requires a transformation of projections or a transformation of projection and datum, because **the order in which you do transformation matters.**
 
 .. note:: 
    **QGIS.**
    You may need to refer to QGIS manual, section `projecting and transforming data <https://docs.qgis.org/testing/en/docs/training_manual/vector_analysis/reproject_transform.html>`_.
 
-Task 4.2 
+Task 7
    Sometimes, when visualising data in QGIS, some of the layers do not align with each other. This may be because a data layer has an **unknown or incorrect coordinate** system defined. Or a data layer has no *georeferencing* ( no reference to any coordinate system at all).  Do you have any data layer that does not align with the rest of the data layers in your current project? 
 
 
@@ -158,14 +158,14 @@ Ground Control Points
 
 You can load data into a GIS software which has not been georeferenced to any coordinate system —for example, a scanned topographic map or an image. In the next exercise, we will |ltb| `georeference <Geo-referencing_>`_ a scanned topographic map using |ltb| `Ground control points`_ to match the spatial reference of other layers in the project.
 
-Task 5.1 
+Task 8
    Load the ``topographic_map_dominica.jpg`` into a QGIS project and identify points on the topographic map that can be used as control points. 
 
 .. attention:: 
    **Question.**
    Why are these points your best choice? How many points are you going to use?
 
-Task 5.2 
+Task 9
    In GIS, open the Georeferencer (from the Raster menu tools) and load the file ``topographic_map_dominica.jpg``. Use the points you chose above to georeference the scanned map. Be sure to pay close attention to the coordinate system on the scanned map and your existing data layers. Attempt to match the map as best you can to your current vector layers.
 
    For this task, you might want first to watch the video tutorial `georeferencing an image <https://vimeo.com/album/4389527/video/201997378>`_.

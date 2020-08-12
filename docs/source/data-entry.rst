@@ -61,7 +61,7 @@ Capturing elements from a base map is an abstraction exercise; this abstraction 
 The |ltb| `attributes associated <Associating attributes_>`_ with the geometries are another important aspect to consider. The choice of attributes depends not only on the scale and intended use, but it also depends on the availability of the data (e.g. what is the capacity of the airport? How does it rank on security? How many international connections does it serve? – would these be information you need to have? And if so, do you have access to this data?) 
 
 
-Task 2.1 
+Task 1
     Start QGIS and open the ``data_entry.qgs`` project. Among others, you will see a layer named ``Pearl_Harbour_topographic_map_(1999).tif`` Observe the map and complete the table below, considering the following requirements: 
 
     + Think of at least three vector layers that can be acquired from the raster base map;  
@@ -80,10 +80,10 @@ Task 2.1
     \               \                   \               \
     ===========     ===============   ===========     ===========
 
- Task 2.2 
-    Now that you know what you want to extract and how are you are going to abstract it, proceed with the creation of the new layers. Digitise at least three features per layer. 
+Task 2
+   Now that you know what you want to extract and how are you are going to abstract it, proceed with the creation of the new layers. Digitise at least three features per layer. 
 
-    *For this task, you may want to watch the video tutorial on* `basic digitizing <https://player.vimeo.com/external/316725601.hd.mp4?s=c6af68bb5180619816eb0b847933d22d0f2972f2&profile_id=175>`_:
+   *For this task, you may want to watch the video tutorial on* `basic digitizing <https://player.vimeo.com/external/316725601.hd.mp4?s=c6af68bb5180619816eb0b847933d22d0f2972f2&profile_id=175>`_:
 
 .. raw:: html
     
@@ -121,7 +121,7 @@ In the previous task, for the layer of geometry type ‘Line’ you probably dig
 To ensure |ltb| `Topological consistency`_ between geometries, e.g., that line segments get properly connected while digitising, we have to set a snapping tolerance, which tells the GIS software to connect lines that are within certain distance automatically. Otherwise, it will be challenging to ensure that our lines are connected.  
 
 
-Task 2.3  
+Task 3
    In QGIS, go to Project > Snapping Options and enable Snapping mode. Enter a tolerance of 20px for every layer of lines that you may have. Refer to ‘Topological editing’ 
 
    *For this task, you may want to watch this* `video tutorial <https://player.vimeo.com/external/316725579.hd.mp4?s=191d661ef5758730a50d4a5a2a6567fa2f70d148&profile_id=175>`_ :
@@ -132,7 +132,7 @@ Task 2.3
 
 \
 
-Task 2.4  
+Task 4
     Digitise some new lines making sure they are topologically connected.  You will notice during digitising; if you go closer than a certain distance of an existing feature; the line would be automatically ‘pulled’ towards the nearest vertex or segment of the closest feature. You are thus ensuring connectivity. 
 
     In the case of polygons, it is also possible to ensure that adjacent polygons do not overlap. 
@@ -146,7 +146,7 @@ Task 2.4
     **Reflection.**
     Ensuring the topological consistency of your vector data is usually not that difficult if you are in control of the data acquisition technique (vectorisation) from the moment the dataset is created. Problems often arise when you receive datasets from third parties. When that happens, you should always do check to make sure the dataset maintains the basic topological relations. 
 
-Task 2.5  
+Task 5
     Start QGIS and open the ``checking_errors.qgs`` project. You will see one layer (polygons). Find a way to check if there are overlapping or adjacency errors automatically. Tip: you may want to install and activate the **Geometry Checker** plugin. Once it is activated,  it should be reachable from the Vector menu.
 
     .. image:: _static/img/geometry-checker.png
@@ -165,7 +165,7 @@ Another way to acquire spatial data is by means of spatialising data. In other w
 You can spatialise your data in two ways. By means of a *join* (a concept that will be explored later ahead in the course), or by means of building point geometries given that the tabular data contains X and Y coordinates.  
 
 
-Task 2.6 
+Task 6
     Spatialising data. Open the ``data_entry.qgs`` project and create a point layer using the ``educational_facilities.csv`` file. Follow the steps depicted in the screenshot below.
 
     .. figure:: _static/img/spacialising.png

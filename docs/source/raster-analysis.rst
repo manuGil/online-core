@@ -36,13 +36,13 @@ Automatic Classification
         + ``classes.tif``
 
 
-Task 1.1 
+Task 1
     Below, you see a raster layer represented as an array of values. Classify the values by applying the *equal interval* and *equal frequency* techniques. Use five classes and write down the classified values in the boxes below. A good approach is to draw a raster attribute table first, which indicates the values and their frequencies, and then determine the new class values. 
 
     .. image:: _static/img/task-reclass.png
        :align: center
 
-Task 1.2 
+Task 2 
     The input layer mentioned in the previous task, it is also provided in the exercise’s dataset. Open the project *'Classification'*,  then from the **Layers** panel, right-click over the layer classes, and apply a symbology using an equal interval classifier, :numref:`fig-auto-class`. Repeat the previous steps, and this time apply a quantile classifier. Compare the results.
 
     .. _fig-auto-class:
@@ -72,15 +72,15 @@ You can also manually control the number of classes and the ranges of values bel
    **QGIS.**
    When You classify a raster using the symbology menu, you are not changing the pixel values; you are merely grouping the pixels for visualisation purposes. If you want to generate a raster whose pixel values are actually overwritten according to whatever rules you decide, then you have to create a new raster using the steps in the next task.
 
-Task 1.3 
-    Say you want to create a new raster which grouped values (reclassify) according to what we shown in Figure 2. That is 3 classes ( :math:`class1 =1,  class2 = 2 \ to \ 6,` and :math:`class3 = 7 \ to \ 9`). In the **Processing toolbox**, open the tool **Classify by table** and write down the reclassification rules as shown in :numref:`fig-class-table`.
+Task 3 
+   Say you want to create a new raster which grouped values (reclassify) according to what we shown in Figure 2. That is 3 classes ( :math:`class1 =1,  class2 = 2 \ to \ 6,` and :math:`class3 = 7 \ to \ 9`). In the **Processing toolbox**, open the tool **Classify by table** and write down the reclassification rules as shown in :numref:`fig-class-table`.
 
-    .. _fig-class-table:
-    .. figure:: _static/img/task-class-table.png
-       :alt: reclassify by table
-       :figclass: align-center
+   .. _fig-class-table:
+   .. figure:: _static/img/task-class-table.png
+      :alt: reclassify by table
+      :figclass: align-center
 
-    Steps for creating a raster using Reclassify by table.
+   Steps for creating a raster using Reclassify by table.
 
 .. note:: 
    **QGIS.**
@@ -162,7 +162,7 @@ When using arithmetic operators to combine multiple raster layers, it is imperat
    + What would be the total suitable area in your output layer?
 
 
-Task 2.1 
+Task 4 
    The Layers in Figure X are also available as raster layers in the exercise’s dataset. Open the project ``Overlay.qgs`` and conduct an arithmetic overlay using *'Suit1'* and *'Suit2'* as input layers.  Then check the results. You will need the **Raster Calculator** :numref:`fig-raster-calc` 
 
    .. _fig-raster-calc:
@@ -188,10 +188,10 @@ Then, values of distance would be continuous (floating point), and values of saf
 
    Raster layers representing safety of neighbourhoods (left), and distance to schools (right).
 
-Task 2.2 
+Task 5
    Write down an expression to combine rater layers in :numref:`fig-safety-school`, using comparison and logical operators. Note that the size of these layers is not the same, but they do overlap. Assume that for the raster on the left (safety), pixels with values of 3 and 7 are suitable. For the raster on the right (distance to schools), pixels with values below :math:`1000` are suitable.
 
- Task 2.3 
+Task 6
    The layers are available in the exercise’s dataset: ``classes.tif`` (safety) and ``dist2.tif`` (distance to schools). Try out your expression in the **Raster Calculator.**
 
 .. attention:: 
@@ -224,13 +224,13 @@ In the previous type of overlay, the output value was always either zero (un-sui
    You can see more examples in the `QGIS documentation <https://docs.qgis.org/3.10/en/docs/user_manual/working_with_raster/raster_analysis.html#raster-calculator>`_. 
 
 
-Task 2.4 
+Task 7
    Using the case explained in :numref:`fig-safety-school`, write down an expression for the raster calculator that uses conditional statements to produce an output raster with different levels of suitability. Define at least three suitability levels.
 
 An alternative to conditional statements is using decision tables. Decision tables are often used when there are many input raster or when the output raster contains classes with a value that are the result of meeting different conditions. See an example in the bottom of the explanation on |ltb| `Raster Overlay`_.
 
 
-Task 2.5 
+Task 8
    Rewrite the conditional statement from the previous task using a decision table.
 
 .. attention:: 
@@ -271,7 +271,7 @@ There are several questions related to |ltb| `Raster Measurements`_ that can be 
 
 Distance, in a raster layer, can be measured as **“Euclidean”** or **“cell centre to cell centre”**. Euclidean distance is measured from the cell centre of the origin-cell to the cell centre of the destination-cell in a straight line. However, for some operations, we use a distance measured from the cell centre of the origin-cell to the cell centre of an adjacent cell until reaching the cell centre of the destination-cell. 
 
-Task 3.1 
+Task 9
    Below you see two pictures. In each picture, two marked cells. Draw a line to represent the distance between the two cells. For the one *on the left*, use the concept of Euclidean distance. For the one *on the right*, use the concept of 'cell centre to cell centre".
 
    .. image:: _static/img/task-ras-dist.png 
@@ -283,7 +283,7 @@ Task 3.1
    How far are the two cells, from the previous task, when the size of a  cell (resolution) is :math:`10 x 10 m`? 
 
 
-Task 3.2 
+Task 10
    Compute the distance over a raster layer. Open the project ``distance.qgs`` You will see a layer named *'raster_points'*. Go to **Raster > Analysis > Proximity** and generate a raster distance map. Answer the following questions:
 
    + Is it possible to select which type of distance you want to measure? 
@@ -319,14 +319,14 @@ Below you see an explanation of the computation of diffusion.
       :align: center
 
 
-Task. 
+Task 11
    The best way to learn how the computation of diffusion works is by doing it manually. Use pencil and paper to compute the diffusion on the raster layers represented below. 
 
    .. image:: _static/img/task-diffusion.png 
       :align: center
 
 
-Task 3.3 
+Task 12
    You can also experiment with the computation of diffusion in QGIS. In a previous task, you created a distance layer using the *'raster_points'* layer. Here, you will use that distance layer as a *resistance layer* (In Qgis this is called 'cost layer'). In the **Processing Toolbox**, open the tool **r.cost**, and provide the inputs as depicted in the screenshot below; :numref:`fig-rcost` The tool will generate more than one output, ignore all of them except for the *'cumulative cost'* layer.
 
    With the help of the **Value tool**, inspect the values of the pixels of the proximity map and of the *'cumulative cost'* layers. Make sure you understand what those values represent.
@@ -365,7 +365,7 @@ To compute the **flow accumulation**, we count for any given cell, how many othe
 
       An illustration of the flow computation in a DEM.
 
-Task
+Task 13
    Compute the flow direction and flow accumulation for the elevation raster below. Use a pencil and paper.
 
    .. image:: _static/img/task-flow.png 
@@ -378,7 +378,7 @@ Surface Analysis
 
 `Surface Analysis`_ consists of computations such as Slope angle, Slope aspect, Hillshading, etc. A common factor among these computations is they require continuous input surfaces (e.g., elevation), and they can tell the user something about the change or shape of this surface. 
 
-Task 3.4 
+Task 14
    Open the project ``surface_analysis.qgis`` and use your software to compute the *slope angle, slope aspect and hillshade* of the elevation raster *'dem_srtm'*. Use the tools under **Raster terrain analysis** in the Processing toolbox, :numref:`fig-ras-terrain`. Once you have the outputs, use the **Value Tool** to analyse the results.
 
    .. _fig-ras-terrain:

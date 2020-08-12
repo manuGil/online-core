@@ -1,9 +1,6 @@
 Visualisation
 =============
 
-
-
-
 Cartographic Grammar
 --------------------
 
@@ -26,25 +23,25 @@ The **Thematic Map Tutor** will help you to understand which visual variable to 
    #. Which visual variable(s) is (are) suitable to depict this data?
    #. Which type of thematic map would you use to depict this data?
 
-Task
-    Suppose you have to design symbols for a small scale (:math:`1:100.000`) geological map. The following rock types have to be represented on the map:
+Task 1
+   Suppose you have to design symbols for a small scale (:math:`1:100.000`) geological map. The following rock types have to be represented on the map:
     
-    + igneous rock
-    + metamorphic rock
-    + consolidated sedimentary rock
-    + unconsolidated sedimentary rock
+   + igneous rock
+   + metamorphic rock
+   + consolidated sedimentary rock
+   + unconsolidated sedimentary rock
 
-    You also have to map the terrain morphology, according to the following classification:
+   You also have to map the terrain morphology, according to the following classification:
 
-    + relatively flat terrain (slopes 0-7%)
-    + rolling to hilly terrain (slopes 7-30%)
-    + steep, rugged terrain (slopes > 30%)
+   + relatively flat terrain (slopes 0-7%)
+   + rolling to hilly terrain (slopes 7-30%)
+   + steep, rugged terrain (slopes > 30%)
  
-    All possible combinations of rock type and terrain classes may occur. Describe how you would set up this map: *you do not have to draw the map or legend symbols*, instead, describe:
+   All possible combinations of rock type and terrain classes may occur. Describe how you would set up this map: *you do not have to draw the map or legend symbols*, instead, describe:
     
-    + which layer(s) of information you would put in the map and what visual variable(s) should be used to combine those layer(s) in a single map, 
-    + which legend titles and categories you would use, and 
-    + which type of map(s) to represent the data.
+   + which layer(s) of information you would put in the map and what visual variable(s) should be used to combine those layer(s) in a single map, 
+   + which legend titles and categories you would use, and 
+   + which type of map(s) to represent the data.
 
 ---------------------------------------------------------
 
@@ -53,14 +50,14 @@ Critical Map Viewing
 
 With the knowledge, you gathered in the previous section on Cartographic Grammar; you can critically look at existing maps and identify their shortcomings.
 
-Task
-    Look carefully at the two maps below and use what you have learned about depicting quantitative data to analyse them critically. 
+Task 2
+   Look carefully at the two maps below and use what you have learned about depicting quantitative data to analyse them critically. 
 
-    .. image:: _static/img/alumni-map.png 
-       :align: center
+   .. image:: _static/img/alumni-map.png 
+      :align: center
 
-    .. image:: _static/img/construction-map.png 
-       :align: center
+   .. image:: _static/img/construction-map.png 
+      :align: center
 
 .. attention:: 
    **Question.**
@@ -69,8 +66,8 @@ Task
     + How will you solve such shortcomings? Give some examples.
 
 
-Task 2.1 
-    Before the next session in the Virtual Classroom, find a map (in the newspapers, on the web, in a research paper or a book) that you find interesting. You may select a map because you think something is wrong with it, but also because you particularly like it or think it is a well-made map.
+Task 3
+   Before the next session in the Virtual Classroom, find a map (in the newspapers, on the web, in a research paper or a book) that you find interesting. You may select a map because you think something is wrong with it, but also because you particularly like it or think it is a well-made map.
 
 .. attention:: 
    **Question.**
@@ -135,7 +132,7 @@ Vector data
 Map Making
 ^^^^^^^^^^
 
-Task 3.1 
+Task 4
    Open the QGIS project ``topographic_map.qgs``. It contains all the layers you will need. Make a topographic map of this part of Switzerland (the "Berner Oberland", highlands of Kanton Bern), that adheres to the  following requirements:
 
    A. The map shall present data in the information categories mentioned below. The visualisation shall be correct for the type of data,  and it shall also be tailored for the specific combination. The required information categories are:
