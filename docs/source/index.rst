@@ -26,15 +26,6 @@ Distance Education Core Exercises
    raster-analysis
    data-quality
    visualisation
-
-
-.. toctree::
-   :maxdepth: 2
-   :numbered:
-   :caption: Earth Observation
-
-   radiometric-ops
-
     
 .. toctree::
    :maxdepth: 2
