@@ -15,6 +15,7 @@ The main goal of this exercise is to provide you with the first-hand experience 
     + ``geodesic_marks.gpgk`` – peaks signaled by geodetic marks;
     + ``peaks.gpgk`` – geomorphological features (peaks);
     + ``bias.qgs`` – a QGIS project preloaded with the datasets described below;
+    
         + ``extent.gpgk``;
         + ``aereal_photo.tif``;
     + ``road.gpkg`` – a vector dataset representing a road;

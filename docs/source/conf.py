@@ -28,7 +28,7 @@ copyright = '2020, University of Twente'
 author = 'Manuel G. Garcia'
 
 # The full version, including alpha/beta/rc tags
-release = '0.0.1'
+release = '4.0.0'
 
 # Name of the master document. 
 master_doc = 'index'

@@ -9,7 +9,7 @@ Along with the exercises, you will be asked to perform several activities:
 
 + **Perform pencil and paper tasks** to reinforce your understanding. Although this is an online course, you will be asked to do some task that required to write things down or perform some computations. You can use calculators or spreadsheets to do the calculations, but remember that what it is essential is that you learn the procedure required for each computation.
 
-+ **Perform software tasks using QGIS** to acquire skills and enhance your understanding of specific topics. For most of the tasks, we will provide tutorials (description or video) on how to do things. Such tutorials will be more detailed in the first exercises and less detailed in later exercises. We expect that by the end of the course you become an independent **Quantum GIS** user, in the topics covered in this course. 
++ **Perform software tasks using QGIS** to acquire skills and enhance your understanding of specific topics. We will use the latest LTR version of `QGIS (A Coruna 3.10) <https://qgis.org/en/site/forusers/download.html>`_. For most of the tasks, we will provide tutorials (description or video) on how to do things. Such tutorials will be more detailed in the first exercises and less detailed in later exercises. We expect that by the end of the course you become an independent **Quantum GIS** user, in the topics covered in this course. 
 
 + **Answer questions and participate in the Virtual Classroom**. Each exercise contains questions that you should answer while conducting the exercises. Such questions will help you to assess your understanding of a certain concept or topic.  Therefore, take the time to analyse them and provide the best answer you can. During the Virtual Classroom session, we will discuss the answers. 
 
@@ -44,7 +44,7 @@ Along with this document, we use some formating conventions to highlight content
 
 .. important:: 
    **Resources.**
-   This will describe the software and datasets required for completing a certain exercise. Not all exercises require you to use data; therefore, this will appear only on the sections that do need it. 
+   This will describe the software and datasets required for completing a certain exercise. Not all exercises include the use of data; therefore, this will appear only on the sections that it need. 
 
 
 .. attention:: 
@@ -55,7 +55,7 @@ Along with this document, we use some formating conventions to highlight content
 Reporting Issues
 ----------------
 
-If you would like to report any issues in this document. You can do so by opening an issue in this `GitHub repository <https://github.com/manuGil/issues-core-online/issues>`_ 
+If you would like to report any issues in this website. You can do that by opening an issue in this `GitHub repository <https://github.com/manuGil/issues-core-online/issues>`_ 
 
 Include the following:
    1. A short, but precise description of the issue,

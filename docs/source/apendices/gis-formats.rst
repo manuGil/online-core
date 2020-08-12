@@ -1,6 +1,6 @@
 .. _gis-formats:
 
-Common GIS file formats
+Common GIS File Formats
 =======================
 
 .. danger:: 
