@@ -83,14 +83,13 @@ Task 2.1
  Task 2.2 
     Now that you know what you want to extract and how are you are going to abstract it, proceed with the creation of the new layers. Digitise at least three features per layer. 
 
-    *For this task, you may want to watch this* `video tutorial <https://player.vimeo.com/external/316725601.hd.mp4?s=c6af68bb5180619816eb0b847933d22d0f2972f2&profile_id=175>`_:
+    *For this task, you may want to watch the video tutorial on* `basic digitizing <https://player.vimeo.com/external/316725601.hd.mp4?s=c6af68bb5180619816eb0b847933d22d0f2972f2&profile_id=175>`_:
 
-    .. raw:: html
+.. raw:: html
+    
+   <div style="padding:53.75% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/316725601?color=007e83&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 
-       <video width="560" height="315" controls>
-         <source src="https://player.vimeo.com/external/316725601.hd.mp4?s=c6af68bb5180619816eb0b847933d22d0f2972f2&profile_id=175>
-       </video>
-
+\
 
 .. note:: 
    **QGIS.**
@@ -123,16 +122,15 @@ To ensure |ltb| `Topological consistency`_ between geometries, e.g., that line s
 
 
 Task 2.3  
-    In QGIS, go to Project > Snapping Options and enable Snapping mode. Enter a tolerance of 20px for every layer of lines that you may have. Refer to ‘Topological editing’ 
+   In QGIS, go to Project > Snapping Options and enable Snapping mode. Enter a tolerance of 20px for every layer of lines that you may have. Refer to ‘Topological editing’ 
 
-    *For this task, you may want to watch this* `video tutorial <https://player.vimeo.com/external/316725579.hd.mp4?s=191d661ef5758730a50d4a5a2a6567fa2f70d148&profile_id=175>`_ :
+   *For this task, you may want to watch this* `video tutorial <https://player.vimeo.com/external/316725579.hd.mp4?s=191d661ef5758730a50d4a5a2a6567fa2f70d148&profile_id=175>`_ :
 
-    .. raw:: html
+.. raw:: html
 
-       <video width="560" height="315" controls>
-         <source src="https://player.vimeo.com/external/316725579.hd.mp4?s=191d661ef5758730a50d4a5a2a6567fa2f70d148&profile_id=175">
-       </video>
+   <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/316725579?color=007e83&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 
+\
 
 Task 2.4  
     Digitise some new lines making sure they are topologically connected.  You will notice during digitising; if you go closer than a certain distance of an existing feature; the line would be automatically ‘pulled’ towards the nearest vertex or segment of the closest feature. You are thus ensuring connectivity. 

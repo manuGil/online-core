@@ -2,8 +2,6 @@ Raster Analysis
 ===============
 
 
-
-
 .. _sec-reclass:
 
 Reclassification
@@ -86,30 +84,30 @@ Task 1.3
 
 .. note:: 
    **QGIS.**
-    We highly recommend that at this point you install the **Value Tool Plugin**. It allows you to see the pixel values of all the active raster at the current location of the mouse pointer. :numref:`fig-result-reclass`
+   We highly recommend that at this point you install the **Value Tool Plugin**. It allows you to see the pixel values of all the active raster at the current location of the mouse pointer. :numref:`fig-result-reclass`
 
-    .. _fig-result-reclass:
-    .. figure:: _static/img/result-reclass.png
-       :alt: result reclassify by table
-       :figclass: align-center
+   .. _fig-result-reclass:
+   .. figure:: _static/img/result-reclass.png
+      :alt: result reclassify by table
+      :figclass: align-center
 
-       Result of applying a manual classification using Reclassify by table.
+      Result of applying a manual classification using Reclassify by table.
 
-    Please refer to the QGIS training manual, section `Installing Plugins <https://docs.qgis.org/3.10/en/docs/training_manual/qgis_plugins/fetching_plugins.html>`_, or refer to the video `Installing Plugin in QGIS <https://vimeo.com/showcase/5716094/video/201997421>`_.
+   Please refer to the QGIS training manual, section `Installing Plugins <https://docs.qgis.org/3.10/en/docs/training_manual/qgis_plugins/fetching_plugins.html>`_, or watch to the video tutorial on `Installing Plugin in QGIS <https://vimeo.com/showcase/5716094/video/201997421>`_.
 
-    .. raw:: html
+   .. raw:: html
 
-        <video width="560" height="315" controls>
-            <source src="https://vimeo.com/showcase/5716094/video/201997421">
-        </video>
+      <div style="padding:53.54% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/201997421?color=007e83&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+
+\
 
 .. attention:: 
    **Question.**
 
-    + If we have pixels whose values are not covered by any reclassification rule, what value will it be assigned to those pixels in the new raster?  
-    + Will the new raster delete those pixels (i.e. null), assign a random value, preserve the original value, or something else?
+   + If we have pixels whose values are not covered by any reclassification rule, what value will it be assigned to those pixels in the new raster?  
+   + Will the new raster delete those pixels (i.e. null), assign a random value, preserve the original value, or something else?
 
-    + To test your understanding on classification techniques; imagine you are going to make a map showing the “happiness” of the countries of the world, as of 2012. You want to reclassify the data on happiness. Below you see a map and a scatter plot of the data. What reclassification technique would you apply and why?
+   + To test your understanding on classification techniques; imagine you are going to make a map showing the “happiness” of the countries of the world, as of 2012. You want to reclassify the data on happiness. Below you see a map and a scatter plot of the data. What reclassification technique would you apply and why?
 
    .. image:: _static/img/happiness-map.png
       :align: center
@@ -118,6 +116,7 @@ Task 1.3
 
    .. image:: _static/img/happiness-plot.png
       :align: center
+
 
 -----------------------------------------------
 

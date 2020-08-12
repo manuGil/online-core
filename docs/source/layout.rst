@@ -93,13 +93,12 @@ Especial Content
 Embedded Content
 ----------------
 
-Video
-^^^^^
+Video Tutorial from Vimeo
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 *A short sentence introducing the video below and including a* `hyperlink. <https://player.vimeo.com/external/316725601.hd.mp4?s=c6af68bb5180619816eb0b847933d22d0f2972f2&profile_id=175filename=Basic_Digitizing.mp4>`_
 
-   .. raw:: html
 
-      <video width="560" height="315" controls>
-         <source src="https://player.vimeo.com/external/316725601.hd.mp4?s=c6af68bb5180619816eb0b847933d22d0f2972f2&profile_id=175filename=Basic_Digitizing.mp4">
-      </video>
+.. raw:: html
+
+   <div style="padding:53.54% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/201997421?color=007e83&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>

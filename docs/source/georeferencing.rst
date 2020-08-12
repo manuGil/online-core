@@ -116,11 +116,11 @@ Task 3.1
 
    For this task, you might want first to watch the video `managing coordinate systems <https://vimeo.com/album/4389527/video/201997378>`_.
 
-   .. raw:: html
+.. raw:: html
 
-      <video width="560" height="315" controls>
-         <source src="https://vimeo.com/album/4389527/video/201997378?color=007e838portrait=0">
-      </video>
+   <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/318765116?color=007e83&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+
+\
 
 
 --------------------------------------
@@ -170,11 +170,13 @@ Task 5.2
 
    For this task, you might want first to watch the video tutorial `georeferencing an image <https://vimeo.com/album/4389527/video/201997378>`_.
 
-   .. raw:: html
+.. raw:: html
 
-      <video width="560" height="315" controls>
-         <source src="https://vimeo.com/album/4389527/video/201997378">
-      </video>
+   <div style="padding:53.54% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/201997378?color=007e83&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+
+\
+
+
 
 .. note:: 
    **QGIS.**
