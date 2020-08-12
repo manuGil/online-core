@@ -30,7 +30,6 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 Images and Figures
 ------------------
 
-.. todo:: Fixt this
 
 This is an image with no caption.
 
