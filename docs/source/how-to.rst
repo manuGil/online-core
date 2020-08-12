@@ -68,5 +68,4 @@ Relevant issues to report:
    + Missing or incomplete content. Text or figures.
    + Grammatical errors. We use British spelling.
 
-.. warning:: You will notice that **Tasks** are not numbered correctly. We are aware of this and we are working to fix it. Do not report this as an issue.
- 
+
