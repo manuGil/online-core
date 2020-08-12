@@ -153,7 +153,7 @@ Task 4.2
 
 -------------------------------------------
 
-Ground control points
+Ground Control Points
 ---------------------
 
 You can load data into a GIS software which has not been georeferenced to any coordinate system —for example, a scanned topographic map or an image. In the next exercise, we will |ltb| `georeference <Geo-referencing_>`_ a scanned topographic map using |ltb| `Ground control points`_ to match the spatial reference of other layers in the project.
@@ -195,7 +195,7 @@ Task 5.2
 
 ---------------------------------------------
 
-Additional questions
+Additional Questions
 --------------------
 
 .. attention::
