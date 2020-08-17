@@ -27,13 +27,23 @@ Distance Education Core Exercises
    raster-analysis
    data-quality
    visualisation
-    
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Earth Observation
+
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Data Integration
+
 .. toctree::
    :maxdepth: 2
    :caption: Appendices
 
    apendices/gis-formats
    apendices/shaded-terrain-models
+
 
 ..  Indices and tables
 .. ==================
