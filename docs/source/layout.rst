@@ -94,6 +94,12 @@ Especial Content
    Ask students to answer questions. Question will become pointers to the virtual discussion session.
 
 
+QGIS Icons
+----------
+
+See https://docs.qgis.org/3.10/en/docs/documentation_guidelines/substitutions.html 
+
+
 Embedded Content
 ----------------
 
