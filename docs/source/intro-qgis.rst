@@ -98,6 +98,8 @@ Task 6
 
    Add a point to a layer to indicate the location of the city you come from
 
+\
+
    The information you provided is being saved in a remote server. Therefore the map is always up today, you only need to refresh the view from time to time to see if any of your course mates have already plot something else on the map.
    You may also see the map through your web browser by accessing this page.
 
