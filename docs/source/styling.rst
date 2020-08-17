@@ -166,7 +166,7 @@ LTB concept with icon                           .. code-block:: rst
 Especial Content
 ----------------
 
-We **admonitions** to highlight content that requires special attention. Here, we use the standard admonitions in the following ways:
+We use **admonitions** to highlight content that requires special attention. Here, we use the standard admonitions in the following ways:
 
 QGIS specific
    This will provide additional explanations specific to how Quantum GIS works. 
