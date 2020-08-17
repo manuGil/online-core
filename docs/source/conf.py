@@ -30,6 +30,8 @@ author = 'Manuel G. Garcia'
 # The full version, including alpha/beta/rc tags
 release = '4.0.0'
 
+html_show_sourcelink = False
+
 # Name of the master document. 
 master_doc = 'index'
 
