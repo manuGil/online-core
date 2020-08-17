@@ -12,7 +12,6 @@ Distance Education Core Exercises
 
    how-to
    intro-qgis
-   layout
 
 .. toctree::
    :maxdepth: 2
