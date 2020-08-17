@@ -13,6 +13,20 @@ Along with the exercises, you will be asked to perform several activities:
 
 + **Answer questions and participate in the Virtual Classroom**. Each exercise contains questions that you should answer while conducting the exercises. Such questions will help you to assess your understanding of a certain concept or topic.  Therefore, take the time to analyse them and provide the best answer you can. During the Virtual Classroom session, we will discuss the answers. 
 
+While approaching these exercises, you must use all of the resources you have at hand. We will explain things the best that we can, even though it is possible that at some point you get stuck with a certain task.  In those cases, you will put your troubleshooting skills to the test. This is an essential skill because, in the future, you might have to learn other GIS software.
+
+When it comes to troubleshooting software issues, you can use a variety of resources to find answers:
+
++ The `QGIS manual <https://docs.qgis.org/3.10/en/docs/user_manual/index.html>`_ can help you to find answers on how to use the tools and interfaces, and it is the first source you should consult when you have a question on how to use QGIS. If a specific task is not fully explained in the exercise; we will provide a link to the QGIS manual, or a video tutorial.
+
++ If you have more advance questions, for example on how to implement a rather specific procedure or data analysis related with GIS and QGIS, then `GIS Stack exchange <https://gis.stackexchange.com/>`_ might help you with that.
++ You could also subscribe to the `QGIS-Users mailing list <https://lists.osgeo.org/mailman/listinfo/qgis-user>`_ The mailing list contains a big archive of Q&As from the QGIS user community.  You can also post your questions, and someone from the community might answer.
+
++  Ask the instructors of the course. They will point out materials and documents where you can find answers. However, they cannot help you with the tasks and questions explicitly designed to prompt you to find an answer on your own. Those tasks are to help you acquire skills and knowledge. Therefore, knowing how to solve problems by yourself is a skill that you should cultivate!
+
+.. tip:: 
+   Bookmark the pages above in your browser; that way, you can easily access the content whenever you need it. 
+
 
 
 Structure
@@ -50,6 +64,8 @@ Along with this document, we use some formating conventions to highlight content
 .. attention:: 
    **Question.**
    This will post questions that you have to answer during the exercises. Write down your answer and take them to the virtual classroom.
+
+
 
 
 Reporting Issues
