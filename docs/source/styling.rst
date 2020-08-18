@@ -45,7 +45,7 @@ Sub-section divider                             horizontal line using at least 5
 Images and Figures
 ------------------
 
-Whenever possible store images as **PNG** files.
+Whenever possible store images as **PNG** files. Except inside admonitions and table, *figures* are declared without any spacing to the left.
 
 =============================================   ==================================================    ====================================================
 Content                                         Style                                                 Example
@@ -231,6 +231,7 @@ Video Content
 -------------
 
 Videos are embedded using pure **html**. *Videos are not embedded in the PDF version*; thefore you should include a hyperlink to the video so that all the content remains accessible despite the format. A way to do that appears below.
+Except inside admonitions, *video* are declared without any spacing to the left, this will provide a better user experience.
 
 .. code-block:: rst
 

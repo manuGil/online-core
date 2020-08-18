@@ -311,6 +311,8 @@ Task 13
          From urban_areas as u, railroads as r  /* relation aliases */
          Where st_intersects(u.geom, r.geom)    /* spatial relation */
 
+.. _sec-spatialsql:
+
 Using Spatial SQL
 ^^^^^^^^^^^^^^^^^
 
