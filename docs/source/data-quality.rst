@@ -9,7 +9,7 @@ The main goal of this exercise is to provide you with the first-hand experience 
 
 .. important:: 
    **Resources.**
-   You will require the latest LTR version of `QGIS (A Coruna 3.10) <https://qgis.org/en/site/forusers/download.html>`_, plus the dataset |ltb| `georeferencing.zip <georeferencing>`_ which you can download from CANVAS.  For this section, you will need the following files: 
+   You will require the latest LTR version of `QGIS (A Coruna 3.10) <https://qgis.org/en/site/forusers/download.html>`_, plus the dataset `georeferencing.zip <georeferencing>`_ which you can download from CANVAS.  For this section, you will need the following files: 
 
     + ``accuracy.qgs`` – a QGIS project preloaded with the datasets described below;
     + ``geodesic_marks.gpgk`` – peaks signaled by geodetic marks;
@@ -30,22 +30,22 @@ For the first part of this exercise, we will explore the concepts of |ltb| `Accu
 
 .. attention:: 
    **Question.**
-    How is accuracy different from precision?
+   How is accuracy different from precision?
 
 
-In this exercise, the ``geodesic_marks`` dataset has higher accuracy than the ``peaks`` dataset. These datasets are from Portugal. **Geodesic_marks**  is a very high accuracy dataset from a topographic survey.  **Peaks** represents the altitude of mountain peaks extracted from a digital elevation model obtained using remote sensing  – ASTER Global Digital Elevation Model.
+In this exercise, the *'geodesic_marks'* dataset has higher accuracy than the *'peaks'* dataset. These datasets are from Portugal. **'Geodesic_marks'**  is a very high accuracy dataset from a topographic survey.  **'Peaks'** represents the altitude of mountain peaks extracted from a digital elevation model obtained using remote sensing  – ASTER Global Digital Elevation Model.
 
 .. note:: 
     The ASTER Global Digital Elevation Model (ASTER GDEM) is a `product` developed and made available to the public by the Ministry of Economy, Trade, and Industry (METI) of Japan and the United States National Aeronautics and Space Administration (NASA). It is produced using data from the Advanced Spaceborne Thermal Emission and Reflection Radiometer (ASTER), a space-borne remote sensor.
     
-    The ASTER GDEM covers the Earth's surfaces between 83°N and 83°S. The ASTER GDEM  surveys the Earth's surface and collects 22,600 tiles; each tile covers 1° per side. Only tiles that contain at least 0.01% of land area are included in the dataset. The ASTER GDEM is stored in GeoTIFF format with geographic lat/long coordinates and a one arc-second (30 m) grid of elevation postings (vertical resolution). It is referenced to the WGS84/EGM96 geoid http://www.jspacesystems.or.jp/ersdac/GDEM/E/4.html
+    The ASTER GDEM covers the Earth's surfaces between :math:`83°N` and :math:`83°S`. The ASTER GDEM  surveys the Earth's surface and collects 22,600 tiles; each tile covers :math:`1°` per side. Only tiles that contain at least :math:`0.01 \ %` of land area are included in the dataset. The ASTER GDEM is stored in GeoTIFF format with geographic lat/long coordinates and a one arc-second (aprox. :math:`30 \ m`) grid of elevation postings (vertical resolution). It is referenced to the WGS84/EGM96 geoid http://www.jspacesystems.or.jp/ersdac/GDEM/E/4.html
 
 A way of assessing the positional accuracy of a dataset is calculating the Root Means Square Error (|ltb| `RMSE`_). 
 
 
 Task 1
-   Open the project "accuracy assessment.qgs ".  The project has two layers:
-   "geodesic_marks "and "peaks ".  Use the  **Identify tool** |identify| to find the coordinates of two points that fall close to each other, :numref:`fig-find-coor`. You can draw a small rectangle over the features you want, or you can click.
+   Open the project ``accuracy assessment.qgs``.  The project has two layers:
+   *'geodesic_marks'* and *'peaks'*.  Use the  **Identify tool** |identify| to find the coordinates of two points that fall close to each other, :numref:`fig-find-coor`. You can draw a small rectangle over the features you want, or you can click.
    Make sure that in the Identify window that will pop up the option Mode is set to Top-down.
    You may need to resize or rearrange your panels to make room for the **Identify Results** window.
 
@@ -55,10 +55,10 @@ Task 1
    :alt: find coordinate in identity tool
    :figclass: align-center
 
-   Use of the identity tool to find coordinates in a point layer.
+   Use of the identity tool to find coordinates in a point layer
  
 Task 2
-   Copy the coordinates from the Identity Results dialog and paste them in the spreadsheet "rmse.xls. ":numref:`fig-rmse` 
+   Copy the coordinates from the Identity Results dialog and paste them in the spreadsheet ``rmse.xls`` :numref:`fig-rmse` 
    You will need Microsoft Excel or Libre Office to open the file. Remember that true values are the ones associated with the *geodesic_marks* layer and that the measured values are the ones associated with the peaks layer. Repeat this process for more points (minimum 4, maximum 8). The RMSE will be computed automatically a the bottom of the table.
 
 .. _fig-rmse:
@@ -66,7 +66,7 @@ Task 2
    :alt: spreadsheet rmse
    :figclass: align-center
 
-   Spreadsheet for calculating the RMSE.
+   Spreadsheet for calculating the RMSE
 
 
 .. attention:: 
@@ -79,10 +79,10 @@ Task 2
 Attribute accuracy
 ^^^^^^^^^^^^^^^^^^
 
-Accuracy doesn't refer solely to positioning; it can also refer to attributes, in which case we call it |ltb| `Attribute accuracy`_. The two layers in your project contain altitudes of geomorphological features, i. e. 'peaks'. The true values when it comes to attributes are also stored in the geodesic_marks layer.
+Accuracy doesn't refer solely to positioning; it can also refer to attributes, in which case we call it |ltb| `Attribute accuracy`_. The two layers in your project contain altitudes of geomorphological features, i. e. *'peaks'*. The true values when it comes to attributes are also stored in the geodesic_marks layer.
 
 Task 3 
-   Using the Identify Tool like in the previous task. Make a quick comparison of the difference between the altitudes stored in the attribute **COTA_SINAL**  of the *geodesic_marks* layer, and the altitudes in the attribute **aster_gdem** of the *peaks* layer.
+   Using the Identify Tool like in the previous task. Make a quick comparison of the difference between the altitudes stored in the attribute **COTA_SINAL**  of the *'geodesic_marks'* layer, and the altitudes in the attribute **aster_gdem** of the *'peaks'* layer.
 
 .. attention:: 
    **Question.**
@@ -112,7 +112,7 @@ Bias can also have political reasons. Maps can be statements of power, and there
    :alt: spreadsheet rmse
    :figclass: align-center
 
-   Anonymous map c.1550 of Eastern Africa, Asia and Western Oceania.
+   Anonymous map c.1550 of Eastern Africa, Asia and Western Oceania
 
 -------------------------------------------
 
@@ -133,20 +133,20 @@ A common source of errors occurs during the spatial acquisition phase. Errors or
 Conversion Operations Leading to Quality Loss
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Conversion can have different meanings in the GIS world. In the scope of this exercise "conversion" refers to format conversion (raster to vector and vice-versa). Vector and raster data are usually associated with the representation of discrete and continuous phenomena, respectively. Having to convert between formats is a common operation in the GIS world, however, these operations always imply some type of compromise regarding what we get and what we lose, especially in the case |ltb| `Rasterisation`_.
+Conversion can have different meanings in the GIS world. In the scope of this exercise **conversion** refers to format conversion (raster to vector and vice-versa). Vector and raster data are usually associated with the representation of discrete and continuous phenomena, respectively. Having to convert between formats is a common operation in the GIS world, however, these operations always imply some type of compromise regarding what we get and what we lose, especially in the case |ltb| `Rasterisation`_.
 
 Task 5
-   Open the project "rasterisation .qgis ". From the Processing Toolbox, use the ** Rasterise tool** to convert the *porto_buildings* layer to a raster using a resolution of *15m*. :numref:`fig-rasterisation`
+   Open the project "rasterisation .qgis ". From the Processing Toolbox, use the ** Rasterise tool** to convert the *porto_buildings* layer to a raster using a resolution of :math:`15 \ m`. :numref:`fig-rasterisation`
 
-   .. _fig-rasterisation:
-   .. figure:: _static/img/task-rasterisation.png
-      :alt: rasterisation
-      :figclass: align-center
+.. _fig-rasterisation:
+.. figure:: _static/img/task-rasterisation.png
+   :alt: rasterisation
+   :figclass: align-center
 
-      Using the rasterisation tool.
+   Using the rasterisation tool
 
 
-   The result is not very impressive. Besides, we lost the attribute table and with a :math: `15 m`  resolution, we also lost information on the shape of the buildings.
+   The result is not very impressive. Besides, we lost the attribute table and with a :math:`15 \ m`  resolution, we also lost information on the shape of the buildings.
 
 .. attention:: 
    **Question.**
@@ -158,28 +158,28 @@ Task 5
 
 Converting from vector to raster usually means to give up of your semantic information, the attribute table. Nevertheless, having an attribute table associated with a raster is possible with certain software products. Still, in such cases, the attribute table can only be used from within that specific software product.  In other words, it is software dependent.
 
-A compromised solution to preserve attribute information is to create a raster layer using the numeric values of a single attribute in the vector layer. In such a case, attribute values are converted to pixel or cell values in the resulting raster layer. For example, in a vector layer representing land cover, usually, every type of land cover has a unique numeric code (e.g. *forest = 100, road = 400, water= 700*). If you set an attribute when converting to a raster layer, cells inherit the values from that attribute.  Then, the cell values have an implicit semantic meaning; for this example, that is the type of land cover.
+A compromised solution to preserve attribute information is to create a raster layer using the numeric values of a single attribute in the vector layer. In such a case, attribute values are converted to pixel or cell values in the resulting raster layer. For example, in a vector layer representing land cover, usually, every type of land cover has a unique numeric code (e.g. :math:`forest = 100, road = 400, water= 700`). If you set an attribute when converting to a raster layer, cells inherit the values from that attribute.  Then, the cell values have an implicit semantic meaning; for this example, that is the type of land cover.
   
 Task 6
    Repeat the vector to raster conversion for the porto_buildings layer. This time feed the attribute fid into the option **Field to use for a burn-in value.** :numref:`fig-burn-values`
 
-   .. _fig-burn-values:
-   .. figure:: _static/img/burn-values.png
-      :alt: rasterisation with burn values
-      :figclass: align-center
+.. _fig-burn-values:
+.. figure:: _static/img/burn-values.png
+   :alt: rasterisation with burn values
+   :figclass: align-center
 
-      Rasterisation with burn-in values.
+   Rasterisation with burn-in values
 
 .. note:: 
    **Reflection.**
-   As a result of the previous task, you will get a map like the one shown in :numref:`fig-ras-porto`. Make sure you understand the map and how it relates to the "porto_builfings "vector dataset.
+   As a result of the previous task, you will get a map like the one shown in :numref:`fig-ras-porto`. Make sure you understand the map and how it relates to the *'porto_builfings'* vector dataset.
 
    .. _fig-ras-porto:
    .. figure:: _static/img/ras-porto-buildings.png
       :alt: raster porto buildings
       :figclass: align-center
 
-      The porto_buildings  layer rasterised using burn-in values.
+      The porto_buildings  layer rasterised using burn-in values
 
 Digitising Operations Leading to Errors
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -221,23 +221,23 @@ When |ltb| `combining spatial data from multiple sources <combining data from mu
 Errors Generated by Geoprocessing Routines
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The project ``error_propagation.qgs`` has a layer named *porto_meadows* that contains areas classified as 'meadows'; and another layer named *porto_buildings* We want to merge these two layers so that:
+The project ``error_propagation.qgs`` has a layer named *'porto_meadows'* that contains areas classified as **'meadows'**; and another layer named *'porto_buildings'* We want to merge these two layers so that:
 
    #. We obtain a layer whose polygons represent either buildings or meadows, and 
    #. Look for inconsistencies – areas that are both building and a meadow.
   
   
 Task 8
-   Open the project error_propagation.qgis. From the **Processing Toolbox**, use the **Union tool** to create a  new layer which merges the porto_buildings and porto_meadows layers. :numref:`fig-union`.
+   Open the project ``error_propagation.qgis``. From the :guilabel:`Processing Toolbox`, use the :guilabel:`Union tool` to create a  new layer which merges the *'porto_buildings'* and *'porto_meadows'* layers. :numref:`fig-union`.
 
-   .. _fig-union:
-   .. figure:: _static/img/task-union.png
-      :alt: union tool
-      :figclass: align-center
+.. _fig-union:
+.. figure:: _static/img/task-union.png
+   :alt: union tool
+   :figclass: align-center
 
-      The Union Tool.
+   The Union Tool
 
-Now, we could filter the union-layer to find out if any of the resulting polygons are classified as both *\ 'meadow' and 'building'.* But, before that we will focus on finding **sliver polygons.**
+Now, we could filter the union-layer to find out if any of the resulting polygons are classified as both *'meadow'* and *'building'.* But, before that we will focus on finding **sliver polygons.**
 
 .. attention:: 
    **Question.**
@@ -246,30 +246,30 @@ Now, we could filter the union-layer to find out if any of the resulting polygon
    + Do you think you could also find silver polygons before the union operation? How?
 
 Task 9
-   Sliver polygons are usually very small. Go the layer properties and from there access the **Source fields** tab. Once there, add a field to the attribute table of the vector layer that resulted from the union operation, this will store the area of the polygons. Use the **Field Calucalor** :numref:`fig-field-calculator`.
+   Sliver polygons are usually very small. Go the layer :guilabel:`Properties..` > :guilabel:`Source fields`. Once there, add a field to the attribute table of the vector layer that resulted from the union operation, this will store the area of the polygons. Use the **Field Calucalor** :numref:`fig-field-calculator`.
 
-   .. _fig-field-calculator:
-   .. figure:: _static/img/field-calculator.png
-      :alt: field calculator
-      :figclass: align-center
+.. _fig-field-calculator:
+.. figure:: _static/img/field-calculator.png
+   :alt: field calculator
+   :figclass: align-center
 
-      Adding a field to the attribute table using the field calculator.
+   Adding a field to the attribute table using the field calculator
 
 .. note:: 
    **QGIS.**
-   When you press OK (step 7), QGIS will automatically enter into edit mode to commit the changes into the attribute table of the vector layer. You can toggle off editing mode using the button |edit| . You will be asked to save the edits - make sure you do.
+   When you press :guilabel:`OK` (step 7), QGIS will automatically enter into edit mode to commit the changes into the attribute table of the vector layer. You can toggle off editing mode using the button |edit| . You will be asked to save the edits - make sure you do.
 
 
 Task 10 
-   Using the field you just created. Filter the polygons whose area is less than :math:`x`;  where  :math:`x` can be any value as long it is suitable for a particular case. For this case use 2 m\ :sup:`2`, polygons smaller than this are potentially sliver polygons. Refer to section :ref:`sec-select-attrib` if you need to.
+   Using the field you just created. Filter the polygons whose area is less than :math:`x`;  where  :math:`x` can be any value as long it is suitable for a particular case. For this case use :math:`2 \ m^2`, polygons smaller than this are potentially sliver polygons. Refer to section :ref:`sec-select-attrib` if you need to.
    Once the filter is applied, browse the attribute table and zoom to specific features to take a close look at the sliver polygons. :numref:`fig-sliver`
 
-   .. _fig-sliver:
-   .. figure:: _static/img/sliver-pol.png
-      :alt: sliver polygons
-      :figclass: align-center
+.. _fig-sliver:
+.. figure:: _static/img/sliver-pol.png
+   :alt: sliver polygons
+   :figclass: align-center
 
-      Browsing the filtered attribute table to find sliver polygons.
+   Browsing the filtered attribute table to find sliver polygons
 
 In this case, you would probably proceed to delete those polygons and clean the dataset. But keep in mind that knowing if a sliver polygon is an error or not is, it is a tricky question because it depends on what your data is supposed to represent. Having very small polygons can simply represent a very small feature! Therefore depending on the nature and scale of the data, a particular sliver might be an error or not. In cadastral datasets, for example, sliver polygons are most likely errors.
 
@@ -286,22 +286,23 @@ Conceptual Errors
 Conceptual errors are errors that arise not from acquisition or processing but from logically erroneous thinking. These type of errors are associated with the way reality is being modelled, and they have a direct relation with |ltb| `Logical consistency`_ and |ltb| `Completeness`_ of datasets and analytical approaches.
 
 Example. 
-    You are making a map to support biologists who want to study a particular species of amphibious that thrives on any small pond. 
-    With that in mind, you produced a raster map of water ponds of the study are using a cell size of :math:`20 m`; i.e. that will mean that the minimum size for an object to be properly represented in your dataset is 400 m\ :sup:`2`). 
-    However, when you show the map to the biologists, they explain to you that this species has been found in pounds much smaller than 400 m\ :sup:`2`. *If you insist on using such raster dataset for further analysis, the final result may not be valid for the biologists.*
+   You are making a map to support biologists who want to study a particular species of amphibious that thrives on any small pond. 
+   With that in mind, you produced a raster map of water ponds of the study are using a cell size of :math:`20 \ m`; i.e. that will mean that the minimum size for an object to be properly represented in your dataset is :math:`400 \ m^2`.
 
-To explore the idea of conceptual errors, we will use a simple example that applies network analysis. In this example, we want to estimate the fastest route from point *A* to point *B*.
+   However, when you show the map to the biologists, they explain to you that this species has been found in pounds much smaller than :math:`400 \ m^2`. *If you insist on using such raster dataset for further analysis, the final result may not be valid for the biologists.*
+
+To explore the idea of conceptual errors, we will use a simple example that applies network analysis. In this example, we want to estimate the fastest route from point :math:`A` to point :math:`B`.
 
 Task 11
    From the Processing Toolbox, use the **Shortest path (Point to Point)** tool to calculate the fastest route between any origin-destination over the *porto_roads* layer. :numref:`fig-shortest-path`.
 
 
-   .. _fig-shortest-path:
-   .. figure:: _static/img/task-shortest-path.png
-      :alt: shortest-path
-      :figclass: align-center
+.. _fig-shortest-path:
+.. figure:: _static/img/task-shortest-path.png
+   :alt: shortest-path
+   :figclass: align-center
 
-      Using the shortest path tool for network analysis.
+   Using the shortest path tool for network analysis
 
 .. attention:: 
    **Question.**
@@ -347,7 +348,7 @@ Task 13
 A relevant topic for data quality is **Metadata**,  often defined as *"data about the data"*. Metadata provides additional or auxiliary information about a geospatial dataset that may not be easily obtainable from the dataset itself. For example, sometimes you can read the coordinates of a geometry in a vector data set. Still, you may not be able to determine the spatial reference system from the coordinate values alone. Ideally, metadata includes details related to the |ltb| `Lineage`_ and |ltb| `Completeness`_ of the data.
 There are standards and directives for metadata of spatial data. In Europe, an important directive is the `INSPIRE <https://inspire.ec.europa.eu/>`_ initiative.
 
-From a practical point of view, it is not easy to maintain all necessary metadata, mainly if you aim at being 100% compliant with a particular standard or recommendation. Additionally, each software package has its metadata management system, which makes the interoperability of metadata difficult.
+From a practical point of view, it is not easy to maintain all necessary metadata, mainly if you aim at being :math:`100 \%` compliant with a particular standard or recommendation. Additionally, each software package has its metadata management system, which makes the interoperability of metadata difficult.
 
 This is not the same as saying that we should care about metadata. However, we can be pragmatic and consider at least the following principles:
 

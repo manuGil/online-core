@@ -275,7 +275,7 @@ Inline math expression                          math role                       
                                                                                                          :math:`expression`
 Inline scalar (magnitude unit)                  math role                                             .. code-block:: rst
                                                 [magnitude-**space**-unit]                                                         
-                                                                                                         :math:`100 \m`    
+                                                                                                         :math:`100 \ m`    
 Equation                                        math directive + latex code                           .. code-block:: rst
                                                                                                          
                                                                                                          .. math::
