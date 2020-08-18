@@ -54,7 +54,7 @@ Image                                           image directive alinged to the c
  
                                                                                                          .. image:: path/to/image.png 
                                                                                                             :align: center
-Figure [1]_                                      figure directive, aligned to center, with caption     .. code-block:: rst
+Figure [2]_                                      figure directive, aligned to center, with caption     .. code-block:: rst
 
                                                                                                          .. _fig-label:
                                                                                                          .. figure:: path/to/image.png
@@ -62,7 +62,7 @@ Figure [1]_                                      figure directive, aligned to ce
                                                                                                             :figclass: align-center
 
                                                                                                             Caption without a period
-Inline image [1]_                               substitution                                          .. code-block:: rst
+Inline image [2]_                               substitution                                          .. code-block:: rst
 
                                                                                                          .. |label| image:: path/to/image.png
                                                                                                             :width: 1.5em
@@ -71,7 +71,7 @@ Inline image [1]_                               substitution                    
                                                                                                          the subtitution.
 =============================================   ==================================================    ====================================================
 
-.. [1] Labels are use to reference content in the same file or in other files, therefore they must be unique in a project.
+.. [2] Labels are use to reference content in the same file or in other files, therefore they must be unique in a project.
 
 --------------
 
@@ -276,7 +276,10 @@ Inline math expression                          math role                       
 Inline scalar (magnitude unit)                  math role                                             .. code-block:: rst
                                                 [magnitude-**space**-unit]                                                         
                                                                                                          :math:`100 \ m`    
-Equation                                        math directive + latex code                           .. code-block:: rst
+Inline equation or math expression              math role + latex expression                          .. code-block:: rst
+
+                                                                                                         A senstence including a :math:`latex-expression`. 
+Equation                                        math directive + latex expression                     .. code-block:: rst
                                                                                                          
                                                                                                          .. math::
 
