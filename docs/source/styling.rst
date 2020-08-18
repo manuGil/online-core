@@ -2,11 +2,14 @@ Styling Conventions
 ===================
 
 
-This document describe formatting and styling conversion used in the exercise of the online Core course. These convention are based on Sphinx and use ReStructed Text.
+This document describe formatting and styling conversion used in the exercise of the online Core course. These conventions are based on Sphinx using ReStructed Text (RST).
 
+Sphinx provides a bigger variety of option to format content. However, for the sake of consistency and simplicity we only a subset.
 
 Structure
 ---------
+
+Titles must be written by capitilizing each of the main words. Exceptions: ``the, in, at, etc.``
 
 =============================================   ============================================    ========================================= 
 Content                                         Style                                           Example
@@ -25,7 +28,7 @@ Sub-sub-section                                 underlined section with ``*``   
                                                                                                    ********************
 Sub-section divider                             horizontal line using at least 5 ``-``          .. code-block:: rst
                                                                                                    
-                                                                                                   A Sub-Section
+                                                                                                   A Sub-section
                                                                                                    -------------
                                                                                                    Some text before divider
 
@@ -241,3 +244,52 @@ Videos are embedded using pure **html**. *Videos are not embedded in the PDF ver
          style="position:absolute;top:0;left:0;width:100%;height:100%;" 
          frameborder="0" allow="autoplay; fullscreen" allowfullscreen
       </iframe>
+
+----------------------------
+
+Text Formatting Guidelines
+--------------------------
+
+This section describe a list of formating convention used in the online core exercise. These should be followed to maitain consistency in 
+
+=============================================   ==================================================    ====================================================
+Content                                         Style                                                 Example
+=============================================   ==================================================    ====================================================
+Filename + extension                            verbatim                                              .. code-block:: rst
+                                                                                                         
+                                                                                                         ``filename.ext``
+*Data* layer or filename without extension      italics between single quotes                         .. code-block:: rst
+                                                                                                         
+                                                                                                         *'name-data-layer'*
+                                                                                                         *'filename'*
+Tool name                                       bold                                                  .. code-block:: rst
+                                                                                                         
+                                                                                                         **tool name**
+Action on sofware interface                     guilabel role, separte labels with ``>``              .. code-block:: rst
+
+                                                                                                         To save the changes:
+                                                                                                         Go to :guilabel:`Menu` > :guilabel:`Save`                                                                                              
+Inline math expression                          math role                                             .. code-block:: rst
+                                                                                                         
+                                                                                                         :math:`expression`
+Inline scalar (magnitude unit)                  math role                                             .. code-block:: rst
+                                                [magnitude-**space**-unit]                                                         
+                                                                                                         :math:`100 \m`    
+Equation                                        math directive + latex code                           .. code-block:: rst
+                                                                                                         
+                                                                                                         .. math::
+
+                                                                                                            c^2 = \sqrt{a^2 + b^2}            
+Code block (any language)                       code-block directive, language, and line numbers      .. code-block:: rst
+                                                                                                         
+                                                                                                         .. code-block:: postgresql
+                                                                                                            :lineos:
+
+                                                                                                            your code
+Inline code                                     verbatim or code role                                 .. code-block:: rst
+                                                                                                         
+                                                                                                         Some of  ``your code`` between text.
+
+                                                                                                         More of :code:`your code` between text.                                                   
+
+=============================================   ==================================================    ====================================================                                                                                                          

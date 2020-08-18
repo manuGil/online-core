@@ -122,7 +122,7 @@ To ensure |ltb| `Topological consistency`_ between geometries, e.g., that line s
 
 
 Task 3
-   In QGIS, go to Project > Snapping Options and enable Snapping mode. Enter a tolerance of 20px for every layer of lines that you may have. Refer to ‘Topological editing’ 
+   In QGIS, go to :guilabel:`Project` > :guilabel:`Spaning Options` and enable :guilabel:`Snapping mode`. Enter a tolerance of 20px for every layer of lines that you may have. Refer to ‘Topological editing’ 
 
    *For this task, you may want to watch this* `video tutorial <https://player.vimeo.com/external/316725579.hd.mp4?s=191d661ef5758730a50d4a5a2a6567fa2f70d148&profile_id=175>`_ :
 

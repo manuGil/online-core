@@ -12,6 +12,7 @@ Distance Education Core Exercises
 
    how-to
    intro-qgis
+   styling
 
 
 .. toctree::
