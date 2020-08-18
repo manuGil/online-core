@@ -196,7 +196,7 @@ Resources
 
       .. important:: 
          **Resources.**
-         Text including a link to download the `dataset.zip <url>`_.
+         Text including a link to download the `dataset.zip <path>`_.
 
          If relevant an unnumbered list of files or datasets, such as:
 

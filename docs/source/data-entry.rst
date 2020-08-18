@@ -2,13 +2,13 @@ Data Entry
 =====================
 
 
-Direct (or primary) spatial data acquisition 
---------------------------------------------
+Direct Spatial Data Acquisition 
+-------------------------------
 
 
 The |ltb| `acquisition of spatial data <Spatial data acquisition_>`_ can be done from several sources. There has been an increase in data acquired (or produced) using |ltb| `remotely sensed sources <Remote sensing_>`_, such as satellite imagery. 
 
-Other sources of spatial data include |ltb| `Aerial survey`_, |ltb| `Terrestrial survey`_ and  |ltb| `Crowdsourcing`_. The use of different spatial data sources implies that how suitable (strengths and weaknesses) each particular source is for a particular analysis, depends on the acquisition methods. 
+Other sources of spatial data include |ltb| `Aerial survey`_, |ltb| `Terrestrial survey`_ and  |ltb| `Crowdsourcing`_. The use of different spatial data sources implies that how suitable (strengths and weaknesses) each particular source is for a particular analysis, depends on the acquisition methods. In this section we focus on methods for direct or **primary** data acquisition.
 
 .. attention:: 
    **Question.**
@@ -28,10 +28,10 @@ Other sources of spatial data include |ltb| `Aerial survey`_, |ltb| `Terrestrial
 
 -----------------------------
 
-Indirect (or secondary) spatial data acquisition 
-------------------------------------------------
+Indirect Spatial Data Acquisition 
+---------------------------------
 
-Although spatial data can be acquired from third-party sources like government agencies or specialised companies, there will always be the need to acquire your own data. This usually means ‘digitising’ also known as ‘vectorisation’ – the process of capturing objects from a raster base layer like a map or an aerial photograph as points, lines and polygons. In this section, we will cover the main techniques used for vectorisation. 
+Although spatial data can be acquired from third-party sources like government agencies or specialised companies, there will always be the need to acquire your own data. This usually means ‘digitising’ also known as ‘vectorisation’ – the process of capturing objects from a raster base layer like a map or an aerial photograph as points, lines and polygons. In this section, we focus on methods for indirect or **secundary** data acquisition. Specifically, the main techniques used for *vectorisation*. 
 
 
 .. attention:: 
@@ -83,7 +83,7 @@ Task 1
 Task 2
    Now that you know what you want to extract and how are you are going to abstract it, proceed with the creation of the new layers. Digitise at least three features per layer. 
 
-   *For this task, you may want to watch the video tutorial on* `basic digitizing <https://player.vimeo.com/external/316725601.hd.mp4?s=c6af68bb5180619816eb0b847933d22d0f2972f2&profile_id=175>`_:
+   For this task, you may want to watch the video tutorial on `basic digitizing <https://player.vimeo.com/external/316725601.hd.mp4?s=c6af68bb5180619816eb0b847933d22d0f2972f2&profile_id=175>`_:
 
 .. raw:: html
     
@@ -122,9 +122,9 @@ To ensure |ltb| `Topological consistency`_ between geometries, e.g., that line s
 
 
 Task 3
-   In QGIS, go to :guilabel:`Project` > :guilabel:`Spaning Options` and enable :guilabel:`Snapping mode`. Enter a tolerance of 20px for every layer of lines that you may have. Refer to ‘Topological editing’ 
+   In QGIS, go to :guilabel:`Project` > :guilabel:`Spaning Options` and enable :guilabel:`Snapping mode`. Enter a tolerance of :math:`20 px` for every layer of lines that you may have. 
 
-   *For this task, you may want to watch this* `video tutorial <https://player.vimeo.com/external/316725579.hd.mp4?s=191d661ef5758730a50d4a5a2a6567fa2f70d148&profile_id=175>`_ :
+   If you may want to watch the video tutorial on  `advance editing <https://vimeo.com/showcase/5716094/video/316725579>`_ :
 
 .. raw:: html
 
@@ -139,7 +139,9 @@ Task 4
 
 .. attention:: 
    **Question.**
-   How to define a snapping tolerance? What do the options ‘Enable topological editing’ and  ‘Enable snapping on intersection’ allow you to do? Try to think of situations where these options might be useful. 
+
+   + How to define a snapping tolerance? 
+   + What do the options ‘Enable topological editing’ and  ‘Enable snapping on intersection’ allow you to do? Try to think of situations where these options might be useful. 
 
  
 .. note:: 
