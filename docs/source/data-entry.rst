@@ -162,7 +162,7 @@ In some cases, detecting and fixing topological errors is not that simple. Just 
 
 .. _spatialising-data:
 
-Spatialising data
+Spatialising Data
 ^^^^^^^^^^^^^^^^^ 
 
 Another way to acquire spatial data is by means of spatialising data. In other words, associate a geographic location with objects. This is a very common procedure when you get, for example, a spreadsheet or some sort of tabular data. 

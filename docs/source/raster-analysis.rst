@@ -120,7 +120,7 @@ Task 3
 
 -----------------------------------------------
 
-Raster overlay
+Raster Overlay
 --------------
 
 During the vector exercise, you were already introduced to the concept of overlaying. In case you need to refresh your memory, check |ltb| `Overlay Analysis`_.
@@ -293,7 +293,7 @@ Task 10
 
    Inspecting the distance raster
 
-Computation of diffusion
+Computation of Diffusion
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
 The computation of |ltb| `Diffusion`_ differs from distance computation in the sense that diffusion takes into account both distance and **resistance**. Diffusion is also referred to as the least accumulated cost distance, where cost refers to the resistance factor.
@@ -336,7 +336,7 @@ Task 12
    **Question.**
    Can you give some examples of applications that might use the computation of diffusion?
 
-Flow computation
+Flow Computation
 ^^^^^^^^^^^^^^^^
 
 Flow computation calculates the flow along the least-cost path for each cell. Contrary to diffusion, which computes the spread of some material in all directions, flow computation is suitable to calculate the path that water will take when flowing downhill.

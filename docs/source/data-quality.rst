@@ -76,7 +76,7 @@ Task 2
     + Is the error systematic?
     + Is the error acceptable?
 
-Attribute accuracy
+Attribute Accuracy
 ^^^^^^^^^^^^^^^^^^
 
 Accuracy doesn't refer solely to positioning; it can also refer to attributes, in which case we call it |ltb| `Attribute accuracy`_. The two layers in your project contain altitudes of geomorphological features, i. e. *'peaks'*. The true values when it comes to attributes are also stored in the geodesic_marks layer.

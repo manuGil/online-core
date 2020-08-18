@@ -12,7 +12,6 @@ Distance Education Core Exercises
 
    how-to
    intro-qgis
-   styling
 
 
 .. toctree::
@@ -32,7 +31,6 @@ Distance Education Core Exercises
 .. toctree::
    :maxdepth: 2
    :caption: Earth Observation
-
 
 .. toctree::
    :maxdepth: 2
