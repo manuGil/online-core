@@ -124,7 +124,7 @@ Vector data
 
     The road data from EGM is notoriously incomplete and too general for the scale of the map that you will make. Therefore, we included data from the *OpenStreetMap* database. We extracted the road data for the categories that depict main roads. The OSM data was originally stored using geographical coordinates. However, this version is in meter coordinates in **UTM zone 32N** on the **WGS84 datum** (EPSG: 32632). Only a small selection of the original attributes of OSM was kept in this version. Those are:
 
-    ``osm_roads.gpkg``: osm_id = unique id of each segment; type = motorway, primary, secondary, or trunk; tunnel: 0 = not in tunnel; 1 = in tunnel;
+    ``osm_roads.gpkg``: **osm_id**: unique id of each segment; **type**: motorway, primary, secondary, or trunk; **tunnel**: 0 = not in tunnel; 1 = in tunnel.
 
         *Note that the OSM data is very detailed. It is up to you to decide if you need all categories, or if it is better to delete or not show some of them. This will depend on the requirement of your user, and the choices of symbology that you make of this and the other data layers.*
 
@@ -143,7 +143,7 @@ Task 4
       #. The hydrography: lakes and rivers. The most important rivers and lakes shall show their names.
       #. Optionally, the map shall include additional data that you gather from other sources (e.g., the  Internet, atlases, other). Useful additional information might be the *names of mountain tops*, the *famous tourist sites*, and others.
 
-   B. The map shall fit on an A4 landscape paper sheet. The outer bounds of the map shall be rectangular and match the extent of the DEM. The projection of the data shall be Universal Transverse Mercator **(UTM) Zone 32N** on the *WGS84* datum. The data is already provided in that projection.
+   B. The map shall fit on an A4 landscape paper sheet. The outer bounds of the map shall be rectangular and match the extent of the DEM. The projection of the data shall be Universal Transverse Mercator **(UTM) Zone 32N** on the **WGS84** datum. The data is already provided in that projection.
 
    C. The map shall contain all necessary marginal information, such as title, legend, scale bar, etc.
 
