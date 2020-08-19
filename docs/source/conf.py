@@ -29,7 +29,7 @@ author = 'Manuel G. Garcia'
 
 # The full version, including alpha/beta/rc tags
 release = '4.0.0'
-
+show_authors = True
 html_show_sourcelink = False
 
 # Name of the master document. 
@@ -89,7 +89,7 @@ html_static_path = ['_static']
 # Costume css. Paths are either relative to html_static_path
 # or fully qualified paths (eg. https://...)
 html_css_files = [
-    'css/core.css',
+    'css/custom.css',
 ]
 
 # Latex Costume configurations

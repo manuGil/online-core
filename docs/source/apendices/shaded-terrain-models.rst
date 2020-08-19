@@ -33,3 +33,5 @@ You can experiment with some of these options:
 
 .. note:: 
    In QGIS, the DEM Terrain models are part of the GDAL toolbox. Therefore the best place to find help and information about the hillshade option is at http://www.gdal.org/gdaldem.html.
+
+.. sectionauthor:: Barend Köbben & Andre Mano Da Silva
