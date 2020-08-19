@@ -1,14 +1,16 @@
+.. _sec-data-entry:
+
 Data Entry
 =====================
 
 
-Direct (or primary) spatial data acquisition 
---------------------------------------------
+Direct Spatial Data Acquisition 
+-------------------------------
 
 
 The |ltb| `acquisition of spatial data <Spatial data acquisition_>`_ can be done from several sources. There has been an increase in data acquired (or produced) using |ltb| `remotely sensed sources <Remote sensing_>`_, such as satellite imagery. 
 
-Other sources of spatial data include |ltb| `Aerial survey`_, |ltb| `Terrestrial survey`_ and  |ltb| `Crowdsourcing`_. The use of different spatial data sources implies that how suitable (strengths and weaknesses) each particular source is for a particular analysis, depends on the acquisition methods. 
+Other sources of spatial data include |ltb| `Aerial survey`_, |ltb| `Terrestrial survey`_ and  |ltb| `Crowdsourcing`_. The use of different spatial data sources implies that how suitable (strengths and weaknesses) each particular source is for a particular analysis, depends on the acquisition methods. In this section we focus on methods for direct or **primary** data acquisition.
 
 .. attention:: 
    **Question.**
@@ -28,10 +30,10 @@ Other sources of spatial data include |ltb| `Aerial survey`_, |ltb| `Terrestrial
 
 -----------------------------
 
-Indirect (or secondary) spatial data acquisition 
-------------------------------------------------
+Indirect Spatial Data Acquisition 
+---------------------------------
 
-Although spatial data can be acquired from third-party sources like government agencies or specialised companies, there will always be the need to acquire your own data. This usually means ‘digitising’ also known as ‘vectorisation’ – the process of capturing objects from a raster base layer like a map or an aerial photograph as points, lines and polygons. In this section, we will cover the main techniques used for vectorisation. 
+Although spatial data can be acquired from third-party sources like government agencies or specialised companies, there will always be the need to acquire your own data. This usually means ‘digitising’ also known as ‘vectorisation’ – the process of capturing objects from a raster base layer like a map or an aerial photograph as points, lines and polygons. In this section, we focus on methods for indirect or **secundary** data acquisition. Specifically, the main techniques used for *vectorisation*. 
 
 
 .. attention:: 
@@ -62,28 +64,28 @@ The |ltb| `attributes associated <Associating attributes_>`_ with the geometries
 
 
 Task 1
-    Start QGIS and open the ``data_entry.qgs`` project. Among others, you will see a layer named ``Pearl_Harbour_topographic_map_(1999).tif`` Observe the map and complete the table below, considering the following requirements: 
+   Start QGIS and open the ``data_entry.qgs`` project. Among others, you will see a layer named ``Pearl_Harbour_topographic_map_(1999).tif`` Observe the map and complete the table below, considering the following requirements: 
 
-    + Think of at least three vector layers that can be acquired from the raster base map;  
-    + Make sure all geometric types – Polygon, Line, Point are represented;  
-    + For each layer think of at least two attributes. 
+   + Think of at least three vector layers that can be acquired from the raster base map;  
+   + Make sure all geometric types – Polygon, Line, Point are represented;  
+   + For each layer think of at least two attributes. 
 
-    ===========     ===============   ===========     ===========
-    LayerName       Geometric Type    Attribute 1     Attribute 2 
-    ===========     ===============   ===========     ===========
-    water_lines     line                Id              length 
-    \               \                   \               \
-    \               \                   \               \
-    \               \                   \               \
-    \               \                   \               \
-    \               \                   \               \
-    \               \                   \               \
-    ===========     ===============   ===========     ===========
+   ===========     ===============   ===========     ===========
+   LayerName       Geometric Type    Attribute 1     Attribute 2 
+   ===========     ===============   ===========     ===========
+   water_lines     line                Id              length 
+   \               \                   \               \
+   \               \                   \               \
+   \               \                   \               \
+   \               \                   \               \
+   \               \                   \               \
+   \               \                   \               \
+   ===========     ===============   ===========     ===========
 
 Task 2
    Now that you know what you want to extract and how are you are going to abstract it, proceed with the creation of the new layers. Digitise at least three features per layer. 
 
-   *For this task, you may want to watch the video tutorial on* `basic digitizing <https://player.vimeo.com/external/316725601.hd.mp4?s=c6af68bb5180619816eb0b847933d22d0f2972f2&profile_id=175>`_:
+   For this task, you may want to watch the video tutorial on `basic digitizing <https://player.vimeo.com/external/316725601.hd.mp4?s=c6af68bb5180619816eb0b847933d22d0f2972f2&profile_id=175>`_:
 
 .. raw:: html
     
@@ -96,8 +98,10 @@ Task 2
    Refer to `Editing <https://docs.qgis.org/3.10/en/docs/user_manual/working_with_vector/editing_geometry_attributes.html>`_ for a detailed description of vector editing with QGIS.
 
 
-Topology 
-^^^^^^^^
+.. _sec-topology-con:
+
+Topological Consistency 
+^^^^^^^^^^^^^^^^^^^^^^^
 
 |ltb| `Topology`_ refers to the spatial relationships that should exist among the geometries of a vector dataset, and it is based on the |ltb| `Topological data model`_. Topology can be a complex subject, but we will take a very pragmatic approach and show you how to maintain the most common topological relationships |ltb| `topological relationships <Topological relationship_>`_: adjacency in polygons and connectivity of lines.  
 
@@ -105,26 +109,25 @@ Topology
    :alt: topological relations
    :figclass: align-center
 
-   Common topological relations on polygons, lines, and points.
+   Common topological relations on polygons, lines, and points
 
 
 In the previous task, for the layer of geometry type ‘Line’ you probably digitised something that is supposed to be a network like roads or water lines. The key characteristic of a network is *connectivity*. However, if you happen to have digitised lines that are supposed to be connected and you zoom in to the point where the intersection is supposed to be, you will see that lines are not connected. Instead, you will see connectivity issues either by excess or by insufficiency (also known as *overshoots* and *undershoots* respectively). 
-
 
 
 .. figure:: _static/img/under-shoot.png
    :alt: undershoot
    :figclass: align-center
 
-   Connectivity issues between lines. The case of undershooting.
+   Connectivity issues between lines. The case of undershooting
 
 To ensure |ltb| `Topological consistency`_ between geometries, e.g., that line segments get properly connected while digitising, we have to set a snapping tolerance, which tells the GIS software to connect lines that are within certain distance automatically. Otherwise, it will be challenging to ensure that our lines are connected.  
 
 
 Task 3
-   In QGIS, go to Project > Snapping Options and enable Snapping mode. Enter a tolerance of 20px for every layer of lines that you may have. Refer to ‘Topological editing’ 
+   In QGIS, go to :guilabel:`Project` > :guilabel:`Spaning Options` and enable :guilabel:`Snapping mode`. Enter a tolerance of :math:`20 px` for every layer of lines that you may have. 
 
-   *For this task, you may want to watch this* `video tutorial <https://player.vimeo.com/external/316725579.hd.mp4?s=191d661ef5758730a50d4a5a2a6567fa2f70d148&profile_id=175>`_ :
+   If you may want to watch the video tutorial on  `advance editing <https://vimeo.com/showcase/5716094/video/316725579>`_ :
 
 .. raw:: html
 
@@ -133,13 +136,15 @@ Task 3
 \
 
 Task 4
-    Digitise some new lines making sure they are topologically connected.  You will notice during digitising; if you go closer than a certain distance of an existing feature; the line would be automatically ‘pulled’ towards the nearest vertex or segment of the closest feature. You are thus ensuring connectivity. 
+   Digitise some new lines making sure they are topologically connected.  You will notice during digitising; if you go closer than a certain distance of an existing feature; the line would be automatically ‘pulled’ towards the nearest vertex or segment of the closest feature. You are thus ensuring connectivity. 
 
-    In the case of polygons, it is also possible to ensure that adjacent polygons do not overlap. 
+   In the case of polygons, it is also possible to ensure that adjacent polygons do not overlap. 
 
 .. attention:: 
    **Question.**
-   How to define a snapping tolerance? What do the options ‘Enable topological editing’ and  ‘Enable snapping on intersection’ allow you to do? Try to think of situations where these options might be useful. 
+
+   + How to define a snapping tolerance? 
+   + What do the options ‘Enable topological editing’ and  ‘Enable snapping on intersection’ allow you to do? Try to think of situations where these options might be useful. 
 
  
 .. note:: 
@@ -147,9 +152,9 @@ Task 4
     Ensuring the topological consistency of your vector data is usually not that difficult if you are in control of the data acquisition technique (vectorisation) from the moment the dataset is created. Problems often arise when you receive datasets from third parties. When that happens, you should always do check to make sure the dataset maintains the basic topological relations. 
 
 Task 5
-    Start QGIS and open the ``checking_errors.qgs`` project. You will see one layer (polygons). Find a way to check if there are overlapping or adjacency errors automatically. Tip: you may want to install and activate the **Geometry Checker** plugin. Once it is activated,  it should be reachable from the Vector menu.
+   Start QGIS and open the ``checking_errors.qgs`` project. You will see one layer (polygons). Find a way to check if there are overlapping or adjacency errors automatically. Tip: you may want to install and activate the **Geometry Checker** plugin. Once it is activated,  it should be reachable from the Vector menu.
 
-    .. image:: _static/img/geometry-checker.png
+   .. image:: _static/img/geometry-checker.png
 
 
 
@@ -157,7 +162,7 @@ In some cases, detecting and fixing topological errors is not that simple. Just 
 
 .. _spatialising-data:
 
-Spatialising data
+Spatialising Data
 ^^^^^^^^^^^^^^^^^ 
 
 Another way to acquire spatial data is by means of spatialising data. In other words, associate a geographic location with objects. This is a very common procedure when you get, for example, a spreadsheet or some sort of tabular data. 
@@ -166,13 +171,13 @@ You can spatialise your data in two ways. By means of a *join* (a concept that w
 
 
 Task 6
-    Spatialising data. Open the ``data_entry.qgs`` project and create a point layer using the ``educational_facilities.csv`` file. Follow the steps depicted in the screenshot below.
+   Spatialising data. Open the ``data_entry.qgs`` project and create a point layer using the ``educational_facilities.csv`` file. Follow the steps depicted in the screenshot below.
 
-    .. figure:: _static/img/spacialising.png
-       :alt: Create new point layer
-       :figclass: align-center
+.. figure:: _static/img/spacialising.png
+   :alt: Create new point layer
+   :figclass: align-center
 
-       Step to create a point layer from the educational_facilities.csv file.
+   Step to create a point layer from the 'educational_facilities.csv' file
 
 
 .. attention:: 

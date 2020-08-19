@@ -11,7 +11,8 @@ Distance Education Core Exercises
    :caption: Introduction
 
    how-to
-   layout
+   intro-qgis
+
 
 .. toctree::
    :maxdepth: 2
@@ -27,15 +28,14 @@ Distance Education Core Exercises
    data-quality
    visualisation
 
+.. toctree::
+   :maxdepth: 2
+   :caption: Earth Observation
 
 .. toctree::
    :maxdepth: 2
-   :numbered:
-   :caption: Earth Observation
+   :caption: Data Integration
 
-   radiometric-ops
-
-    
 .. toctree::
    :maxdepth: 2
    :caption: Appendices
@@ -44,9 +44,9 @@ Distance Education Core Exercises
    apendices/shaded-terrain-models
 
 
-Indices and tables
-==================
+..  Indices and tables
+.. ==================
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+.. * :ref:`genindex` 
+.. * :ref:`modindex`
+.. * :ref:`search`

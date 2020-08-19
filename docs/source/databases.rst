@@ -37,7 +37,7 @@ A |ltb| `Geographic Information System <GIS_>`_ should not be called GIS if any 
    :alt: components GIS
    :figclass: align-center
 
-   The four components of a Geographic Information System.
+   The four components of a Geographic Information System
 
 Behind the user interface of a GIS Software, there are things like application logic and data storage. Data can be stored as GIS files or in an (external) database. GIS software can use its DBMS or be connected to another DBMS such as PostgreSQL, Oracle, etc. 
 
@@ -122,7 +122,7 @@ Task 5
       :align: center
 
 Task 6
-    Think of at least three relations (including courses) that can model a universe of discourse for managing courses in a university. Define the attributes and attribute domains for each of these relations and ensure your database integrity by specifying primary keys, foreign keys and any other given constraint. 
+   Think of at least three relations (including courses) that can model a universe of discourse for managing courses in a university. Define the attributes and attribute domains for each of these relations and ensure your database integrity by specifying primary keys, foreign keys and any other given constraint. 
 
    + Hint1: *Typically, you may think of Students and Courses. You can replace any of these relations and add as many more as you think is necessary for capturing the data you need.*
 
@@ -148,7 +148,7 @@ Having the necessary datasets is the starting point to be able to extract releva
 
 .. important:: 
    **Resources.**
-   You will require the latest LTR version of `QGIS (A Coruna 3.10) <https://qgis.org/en/site/forusers/download.html>`_, plus the dataset |ltb| `database_queries.zip <database_queries>`_ which you can download from CANVAS.  When you unzip the dataset, you will find the following files inside:
+   You will require the latest LTR version of `QGIS (A Coruna 3.10) <https://qgis.org/en/site/forusers/download.html>`_, plus the dataset  `database_queries.zip <database_queries>`_ which you can download from CANVAS.  When you unzip the dataset, you will find the following files inside:
 
    + ``Database_queries.qgs`` – a QGIS project preloaded with the dataset described below;
    + ``country_Data`` – a table with additional information on the countries of the world;
@@ -183,13 +183,13 @@ A tuple selection written in SQL has the following structure:
 
 SQL has a very clear structure. Line 1 (**select**) defines the attributes to be projected (shown in the result of the query), Line 2 (**from**) defines the relations that will be used. Line 3 (**where**) contains the condition(s) that will be applied to filter the data.
 
-In SQL, you can use comparison operators (``>, < ,=, !=, >=, <=``)  and logical operators (``AND, OR, Like, NOT``, etc.) to define conditions for filtering data. 
+In SQL, you can use comparison operators (``>, < ,=, !=, >=, <=``)  and logical operators (``AND, OR, Like, NOT``) to define conditions for filtering data. 
 
 When you query data in a GIS (and not a DBMS), the way you express your attribute selection may be slightly different, but it usually follows the SQL syntax. The following task shows you how to query a data layer. 
 
 Task 8 
-   Open the QGIS project *'database_queries'*. Right-click on the layer countries, open the Filter menu and define the simple query below.  
-   See :numref:`figquerysimple`.
+   Open the QGIS project *'database_queries'*. :guilabel:`Right-click` on the layer countries > :guilabel:`Filter..`, define the simple query below, and click :guilabel:`OK`.   
+   See :numref:`figquerysimple`
    
    .. code-block:: postgresql
       
@@ -201,7 +201,9 @@ Task 8
    :alt: simple query
    :figclass: align-center
 
-   Filtering data using a simple query in the query builder.
+   Filtering data using a simple query in the query builder
+
+\
 
    You should see now that your dataset only shows the countries that belong to Russia. 
 
@@ -242,14 +244,14 @@ Task 10
 QGIS (and other GIS packages) provides a graphical interface from where you can define a join without having to type the SQL statements.
 
 Task 11
-   Use QGIS to apply the join defined in the *previous task*. :numref:`figjoin` shows how it is done.
+   Use QGIS to apply the join defined in the *previous task*. :numref:`fig-join` shows how it is done.
 
-   .. _figjoin:
-   .. figure:: _static/img/define-join.png
-      :alt: join definition
-      :figclass: align-center
+.. _fig-join:
+.. figure:: _static/img/define-join.png
+   :alt: join definition
+   :figclass: align-center
 
-   The definition of a join in QGIS.
+   The definition of a join in QGIS
 
 .. note:: 
    **QGIS.**
@@ -258,22 +260,20 @@ Task 11
 Now that the attribute table of the *'countries'* layer is extended, we can revisit **Task 8** and make more interesting queries. 
 
 Task 12
-   Right-click on the layer countries to open the **Filter menu**. The message depicted in :numref:`figvirtuallayer`  will pop up – make sure to click Yes. 
+   :guilabel:`Right-click` on the layer countries > :guilabel:`Filter...`. The message depicted in below will pop up. Click :guilabel:`Yes`. 
 
-   .. _figvirtuallayer:
-   .. figure:: _static/img/virtual-layer.png
-      :alt: message virtual layer
-      :figclass: align-center
+   .. image:: _static/img/virtual-layer.png
+      :align: center
 
-   The message displayed when filtering a layer with joined fields. 
+   \
 
-   Once you are in the filter menu, try to solve the following query formulation problems. Remember to click the **Clear button** before proceeding to the next query problem. 
+   Once you are in the filter menu, try to solve the following query formulation problems. Remember to click the :guilabel:`Clear` button before proceeding to the next query problem. 
 
    .. attention:: 
       **Question.**
 
       #. How many countries start with the letter ‘E’?
-      #. List all the countries belonging Africa and Europe that have more than 100 000 000 inhabitants.
+      #. List all the countries belonging Africa and Europe that have more than :math:`100.000.000` inhabitants.
       #. How many countries whose official name includes ‘Republic’ are classified as   ‘6. Developing region’?
 
 
@@ -282,21 +282,23 @@ Selection and Joins by Spatial Relationship
 
 GIS handles spatial data, and this means that:
 
-    *"Everything is related to everything else, but near things are more related than distant things."* 
+   *"Everything is related to everything else, but near things are more related than distant things."* 
 
 The implications of Tobler’s first law of Geography are what allow us to search for information based on spatial relationships while ignoring the semantics associated with the features. The key idea to remember is that all the objects represented in the same coordinate space have at least one thing in common - space itself! This means that we can filter our data based on several Topological relationships like disjoint, meets, equal to, inside, covers etc.
 
 Task 13
-   suppose we want to find out how many urban areas are connected to railroads.  Use the Select by location tool from the Processing toolbox to find out. Figure :numref:`figselectlocation`
+   suppose we want to find out how many urban areas are connected to railroads.  Use the :guilabel:`Select by location` tool from the **Processing toolbox** to find out. Figure :numref:`figselectlocation`
 
-   .. _figselectlocation:
-   .. figure:: _static/img/select-by-location.png
-      :alt: select by location
-      :figclass: align-center
+.. _figselectlocation:
+.. figure:: _static/img/select-by-location.png
+   :alt: select by location
+   :figclass: align-center
 
-      The 'select by location' tool in the Toolbox.
+   The 'select by location' tool in the Toolbox
 
-   If all went well, you should see some features in the ``urban_areas`` layer highlighted with yellow. This means that such features intersect a railroad.
+\
+
+   If all went well, you should see some features in the *'urban_areas'* layer highlighted with yellow. This means that such features intersect a railroad.
 
    .. note:: 
       **Reflection.**
@@ -311,6 +313,8 @@ Task 13
          From urban_areas as u, railroads as r  /* relation aliases */
          Where st_intersects(u.geom, r.geom)    /* spatial relation */
 
+.. _sec-spatialsql:
+
 Using Spatial SQL
 ^^^^^^^^^^^^^^^^^
 
@@ -321,25 +325,29 @@ To explore spatial functions using SQL, we will use the capabilities of *SpatiaL
 Task 14
    Connect to the Spatialite database.
 
-   If your database.sqlite is not listed under the Spatialite section, you have to connect to it first. Simply right-click over the Spatialite Branch and point to the folder where you have the ``database.sqlite`` database. :numref:`fig-connect-sqlite` 
+   If your ``database.sqlite`` is not listed under the **Spatialite** section, you have to connect to it first. Simply *right-click* over  :guilabel:`Spatialite` > :guilabel:`New Connection...`, then point to the folder where you have the ``database.sqlite`` file. :numref:`fig-connect-sqlite` 
 
-   .. _fig-connect-sqlite:
-   .. figure:: _static/img/connection-sqlite.png
-      :alt: connect sqlite
-      :figclass: align-center
+.. _fig-connect-sqlite:
+.. figure:: _static/img/connection-sqlite.png
+   :alt: connect sqlite
+   :figclass: align-center
 
-      Connecting to a SpatialLite database.
+   Connecting to a SpatialLite database
 
-   Then, open the Database Manager and browse to the Spatialite branch to get a list of the relations inside the ``database.sqlite``. Note that layers in the database are already loaded into your project, do not load them again.
+\
 
-   .. _fig-browse-sqlite:
-   .. figure:: _static/img/browse-sqlite.png
-      :alt: browse sqlite
-      :figclass: align-center
+   Then, go to :guilabel:`DB Manager` > :guilabel:`Spatialite` > :guilabel:`database.sqlite`  to get a list of the relations inside the ``database.sqlite``. Note that layers in the database are already loaded into your project, *do not load them again.*
 
-      Browsing a SpatiaLite database in the DB Manager.
+.. _fig-browse-sqlite:
+.. figure:: _static/img/browse-sqlite.png
+   :alt: browse sqlite
+   :figclass: align-center
 
-   Now open the SQL window and execute the query below, in the DB Manager. :numref:`fig-query-dbmanager`
+   Browsing a SpatiaLite database in the DB Manager
+
+\
+
+   Now open :guilabel:`Query`  window, copy the SQL code below,  click :guilabel:`Execute` :numref:`fig-query-dbmanager`
 
    .. code-block:: postgresql   
       :linenos:
@@ -349,12 +357,12 @@ Task 14
       ORDER BY area DESC
       LIMIT 10
 
-   .. _fig-query-dbmanager:
-   .. figure:: _static/img/query-db-manager.png
-      :alt: query in db manager
-      :figclass: align-center
+.. _fig-query-dbmanager:
+.. figure:: _static/img/query-db-manager.png
+   :alt: query in db manager
+   :figclass: align-center
 
-      Executing a query in the DB Manager.
+   Executing a query in the DB Manager
 
    .. attention:: 
       **Question.**

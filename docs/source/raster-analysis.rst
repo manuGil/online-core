@@ -43,7 +43,7 @@ Task 1
        :align: center
 
 Task 2 
-    The input layer mentioned in the previous task, it is also provided in the exercise’s dataset. Open the project *'Classification'*,  then from the **Layers** panel, right-click over the layer classes, and apply a symbology using an equal interval classifier, :numref:`fig-auto-class`. Repeat the previous steps, and this time apply a quantile classifier. Compare the results.
+    The input layer mentioned in the previous task, it is also provided in the exercise’s dataset. Open the project *'Classification'*,  then from the :guilabel:`Layers panel`, right-click over the layer classes, and apply a symbology using an **equal interval** classifier, :numref:`fig-auto-class`. Repeat the previous steps, and this time apply a **quantile classifier**. Compare the results.
 
     .. _fig-auto-class:
     .. figure:: _static/img/task-auto-class.png
@@ -73,14 +73,14 @@ You can also manually control the number of classes and the ranges of values bel
    When You classify a raster using the symbology menu, you are not changing the pixel values; you are merely grouping the pixels for visualisation purposes. If you want to generate a raster whose pixel values are actually overwritten according to whatever rules you decide, then you have to create a new raster using the steps in the next task.
 
 Task 3 
-   Say you want to create a new raster which grouped values (reclassify) according to what we shown in Figure 2. That is 3 classes ( :math:`class1 =1,  class2 = 2 \ to \ 6,` and :math:`class3 = 7 \ to \ 9`). In the **Processing toolbox**, open the tool **Classify by table** and write down the reclassification rules as shown in :numref:`fig-class-table`.
+   Say you want to create a new raster which group values (reclassify) according to what we shown in :numref:`fig-manual-class`. That is 3 classes ( :math:`class1 =1,  class2 = 2 \ to \ 6,` and :math:`class3 = 7 \ to \ 9`). Go to :guilabel:`Processing toolbox` > :guilabel:`Classify by table` and write down the reclassification rules as shown in :numref:`fig-class-table`.
 
-   .. _fig-class-table:
-   .. figure:: _static/img/task-class-table.png
-      :alt: reclassify by table
-      :figclass: align-center
+.. _fig-class-table:
+.. figure:: _static/img/task-class-table.png
+   :alt: reclassify by table
+   :figclass: align-center
 
-   Steps for creating a raster using Reclassify by table.
+   Steps for creating a raster using Reclassify by table
 
 .. note:: 
    **QGIS.**
@@ -91,7 +91,7 @@ Task 3
       :alt: result reclassify by table
       :figclass: align-center
 
-      Result of applying a manual classification using Reclassify by table.
+      Result of applying a manual classification using Reclassify by table
 
    Please refer to the QGIS training manual, section `Installing Plugins <https://docs.qgis.org/3.10/en/docs/training_manual/qgis_plugins/fetching_plugins.html>`_, or watch to the video tutorial on `Installing Plugin in QGIS <https://vimeo.com/showcase/5716094/video/201997421>`_.
 
@@ -120,7 +120,7 @@ Task 3
 
 -----------------------------------------------
 
-Raster overlay
+Raster Overlay
 --------------
 
 During the vector exercise, you were already introduced to the concept of overlaying. In case you need to refresh your memory, check |ltb| `Overlay Analysis`_.
@@ -151,7 +151,7 @@ When using arithmetic operators to combine multiple raster layers, it is imperat
    :alt: suit1 suit2
    :figclass: align-center
 
-   Values of two suitability layers for the location of a new house. Left: suit1. Right: suit2.
+   Values of two suitability layers for the location of a new house. Left: 'suit1'. Right: 'suit2'
 
 
 .. attention:: 
@@ -163,19 +163,19 @@ When using arithmetic operators to combine multiple raster layers, it is imperat
 
 
 Task 4 
-   The Layers in Figure X are also available as raster layers in the exercise’s dataset. Open the project ``Overlay.qgs`` and conduct an arithmetic overlay using *'Suit1'* and *'Suit2'* as input layers.  Then check the results. You will need the **Raster Calculator** :numref:`fig-raster-calc` 
+   The layers shown  in :numref:`fig-suit12`  are also available as raster layers in the exercise’s dataset. Open the project ``Overlay.qgs`` and conduct an arithmetic overlay using *'Suit1'* and *'Suit2'* as input layers.  You will need the **Raster Calculator** :numref:`fig-raster-calc` Then check the results. 
 
-   .. _fig-raster-calc:
-   .. figure:: _static/img/raster-calc.png
-      :alt: raster Calculator
-      :figclass: align-center
+.. _fig-raster-calc:
+.. figure:: _static/img/raster-calc.png
+   :alt: raster Calculator
+   :figclass: align-center
 
-      The Raster Calculator.
+   The Raster Calculator
 
 Comparison and Logical Operators
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-You may already be familiar with both Comparison (e.g. ``=, >, <=``, etc.) and Logical operators (e.g. ``AND, OR``, etc.). They were introduced as part of attribute selection using SQL. 
+You may already be familiar with both Comparison (e.g. ``=, >, <=``) and Logical operators (e.g. ``AND, OR, NOT``). They were introduced as part of attribute selection using SQL. 
 
 Assume that the input layers for a raster overlay, have not been classified as suitable or unsuitable yet, rather they contain other values. In the example of the location of a new house. The values might represent the perception of safety in each neighbourhood,  and the distance to schools. 
 Then, values of distance would be continuous (floating point), and values of safety would be discrete (integer). See :numref:`fig-safety-school`.
@@ -186,7 +186,7 @@ Then, values of distance would be continuous (floating point), and values of saf
    :alt: safety school rasters
    :figclass: align-center
 
-   Raster layers representing safety of neighbourhoods (left), and distance to schools (right).
+   Raster layers representing safety of neighbourhoods (left), and distance to schools (right)
 
 Task 5
    Write down an expression to combine rater layers in :numref:`fig-safety-school`, using comparison and logical operators. Note that the size of these layers is not the same, but they do overlap. Assume that for the raster on the left (safety), pixels with values of 3 and 7 are suitable. For the raster on the right (distance to schools), pixels with values below :math:`1000` are suitable.
@@ -217,7 +217,6 @@ In the previous type of overlay, the output value was always either zero (un-sui
 
 
    **Explanation.** 
-    
    ``(raster1@1 > 5)`` states a condition that will return 1 (*True*) when a pixel in *'raster1'* is more than 5, and 0 (*False*) otherwise. Then, we retrieve the original pixel values in *'raster1'* by using a multiplication  ``( raster1@1 > 5) * raster1@1``. If the pixel in *'raster1'* is more than 5, it will return a 1, and 1 multiplied by any number will always return that number. 
 
    Finally, ``+ raster2@1``  adds values in *'raster2'* to the values of *'raster1'*, after applying the condition stated by the comparison operator.
@@ -239,8 +238,15 @@ Task 8
 
 ---------------------------------------------------
 
+Raster Measurements & Computations
+----------------------------------
 
+There are several questions related to |ltb| `Raster Measurements`_ that can be answered using raster analysis. For example.
 
++ How far are two locations?
++ How long is this line?
++ What is the distance to the nearest point?
++ What is the area closed to this point?
 
 .. important:: 
    **Resources.**
@@ -254,20 +260,8 @@ Task 8
    
       + ``dem(srtm).tif`` – a Digital Elevation model
 
-
-Measuring distances
--------------------
-
 Distance
 ^^^^^^^^
-
-There are several questions related to |ltb| `Raster Measurements`_ that can be answered using raster analysis. For example.
-
-+ How far are two locations?
-+ How long is this line?
-+ What is the distance to the nearest point?
-+ What is the area closed to this point?
-
 
 Distance, in a raster layer, can be measured as **“Euclidean”** or **“cell centre to cell centre”**. Euclidean distance is measured from the cell centre of the origin-cell to the cell centre of the destination-cell in a straight line. However, for some operations, we use a distance measured from the cell centre of the origin-cell to the cell centre of an adjacent cell until reaching the cell centre of the destination-cell. 
 
@@ -280,26 +274,26 @@ Task 9
 
 .. attention:: 
    **Question.**
-   How far are the two cells, from the previous task, when the size of a  cell (resolution) is :math:`10 x 10 m`? 
+   How far are the two cells, from the previous task, when the size of a  cell (resolution) is :math:`10 \times 10 \ m`? 
 
 
 Task 10
-   Compute the distance over a raster layer. Open the project ``distance.qgs`` You will see a layer named *'raster_points'*. Go to **Raster > Analysis > Proximity** and generate a raster distance map. Answer the following questions:
+   Compute the distance over a raster layer. Open the project ``distance.qgs`` You will see a layer named *'raster_points'*. Go to :guilabel:`Raster` > :guilabel:`Analysis` > :guilabel:`Proximity` and generate a raster distance map. Answer the following questions:
 
    + Is it possible to select which type of distance you want to measure? 
-   + Is the Proximity tool calculating the Euclidean distance or cell centre distance?
+   + Is the **Proximity** tool calculating the Euclidean distance or cell centre distance?
 
    Make sure the *'raster_points'* layer is on top and use the **Value tool** to inspect the pixel values; :numref:`fig-ras-dist` . It will make it easier to interpret the data.
 
 
-   .. _fig-ras-dist:
-   .. figure:: _static/img/ras-dist.png
-      :alt: distance raster
-      :figclass: align-center
+.. _fig-ras-dist:
+.. figure:: _static/img/ras-dist.png
+   :alt: distance raster
+   :figclass: align-center
 
-      Inspecting the distance raster.
+   Inspecting the distance raster
 
-Computation of diffusion
+Computation of Diffusion
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
 The computation of |ltb| `Diffusion`_ differs from distance computation in the sense that diffusion takes into account both distance and **resistance**. Diffusion is also referred to as the least accumulated cost distance, where cost refers to the resistance factor.
@@ -327,23 +321,22 @@ Task 11
 
 
 Task 12
-   You can also experiment with the computation of diffusion in QGIS. In a previous task, you created a distance layer using the *'raster_points'* layer. Here, you will use that distance layer as a *resistance layer* (In Qgis this is called 'cost layer'). In the **Processing Toolbox**, open the tool **r.cost**, and provide the inputs as depicted in the screenshot below; :numref:`fig-rcost` The tool will generate more than one output, ignore all of them except for the *'cumulative cost'* layer.
+   You can also experiment with the computation of diffusion in QGIS. In a previous task, you created a distance layer using the *'raster_points'* layer. Here, you will use that distance layer as a *resistance layer* (In QGIS this is called 'cost layer'). Go to :guilabel:`Processing Toolbox` > :guilabel:`r.cost`, and provide the inputs as depicted in the screenshot below; :numref:`fig-rcost` The tool will generate more than one output, ignore all of them except for the *'cumulative cost'* layer.
 
    With the help of the **Value tool**, inspect the values of the pixels of the proximity map and of the *'cumulative cost'* layers. Make sure you understand what those values represent.
 
+.. _fig-rcost:
+.. figure:: _static/img/rcost.png
+   :alt: rcost tool
+   :figclass: align-center
 
-   .. _fig-rcost:
-   .. figure:: _static/img/rcost.png
-      :alt: rcost tool
-      :figclass: align-center
-
-      Calculation of diffusion using the r.cost tool.
+   Calculation of diffusion using the 'r.cost' tool
 
 .. attention:: 
    **Question.**
    Can you give some examples of applications that might use the computation of diffusion?
 
-Flow computation
+Flow Computation
 ^^^^^^^^^^^^^^^^
 
 Flow computation calculates the flow along the least-cost path for each cell. Contrary to diffusion, which computes the spread of some material in all directions, flow computation is suitable to calculate the path that water will take when flowing downhill.
@@ -354,16 +347,16 @@ The procedure consists of two steps:
 
 The input for flow computation is a continuous field (raster), e.g. a DEM. The computation of the **flow direction** goes as follows. See :numref:`fig-flow-comp` 
 
-   For each cell in the input raster layer (e.g.,  cell 88), we determine the smallest direct neighbour (cell 74) and the smallest diagonal neighbour (cell 44). Then, we calculate the difference between the target cell and the neighbours, such as :math:`88 \ –  \ 74 \ =  \ 14 \ m` and :math:`88 \ –  \ 44 \ = \ 44 \ m`. Then, we calculate the steepness of the neighbours. For this, we take into account the distance between the cell centres. If the resolution is :math:`10x10  \ m`, we can calculate the steepness as :math:`14/10 \ =  \ 1.4` for the direct neighbour, and as :math:`44/10 \ * \ sqr(2) \ = \ 3.11` for the diagonal neighbour. Now, we know to which cell some material in the target cell (cell 88) will flow. That is to cell 44 because its steepness is the highest. 
+   For each cell in the input raster layer (e.g.,  cell 88), we determine the smallest direct neighbour (cell 74) and the smallest diagonal neighbour (cell 44). Then, we calculate the difference between the target cell and the neighbours, such as :math:`88  - 74  =   14 \ m` and :math:`88  –  44  = 44 \ m`. Then, we calculate the steepness of the neighbours. For this, we take into account the distance between the cell centres. If the resolution is :math:`10 \times 10  \ m`, we can calculate the steepness as :math:`14/10  =   1.4` for the direct neighbour, and as :math:`44/10  * \sqrt{2}  =  3.11` for the diagonal neighbour. Now, we know to which cell some material in the target cell (cell 88) will flow. *This is to cell 44 because it is the cell where the steepness is the highest.* 
 
 To compute the **flow accumulation**, we count for any given cell, how many other cells flow into it for the whole extent of the flow direction raster. For the target cell in :numref:`fig-flow-comp` , the flow accumulation is 7. Read a more detailed explanation on |ltb| `flow computation <Flow_>`_.
 
-   .. _fig-flow-comp:
-   .. figure:: _static/img/flow-comp.png
-      :alt: flow computation
-      :figclass: align-center
+.. _fig-flow-comp:
+.. figure:: _static/img/flow-comp.png
+   :alt: flow computation
+   :figclass: align-center
 
-      An illustration of the flow computation in a DEM.
+   An illustration of the flow computation in a DEM
 
 Task 13
    Compute the flow direction and flow accumulation for the elevation raster below. Use a pencil and paper.
@@ -381,9 +374,9 @@ Surface Analysis
 Task 14
    Open the project ``surface_analysis.qgis`` and use your software to compute the *slope angle, slope aspect and hillshade* of the elevation raster *'dem_srtm'*. Use the tools under **Raster terrain analysis** in the Processing toolbox, :numref:`fig-ras-terrain`. Once you have the outputs, use the **Value Tool** to analyse the results.
 
-   .. _fig-ras-terrain:
-   .. figure:: _static/img/ras-terrain.png
-      :alt: terrain analysis
-      :figclass: align-center
+.. _fig-ras-terrain:
+.. figure:: _static/img/ras-terrain.png
+   :alt: terrain analysis
+   :figclass: align-center
 
-      The raster terrain analysis tools.
+   The raster terrain analysis tools

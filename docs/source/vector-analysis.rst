@@ -37,12 +37,12 @@ Task 1
    In your dataset, you find a Shapefile called *'Centroids'*. Compute the centroids for the features in that layer in QGIS. Then, check if the centroids are inside or outside the original polygons. :numref:`fig-centroids` 
 
 
-   .. _fig-centroids:
-   .. figure:: _static/img/task-centroids.png
-      :alt: computing centroids
-      :figclass: align-center
+.. _fig-centroids:
+.. figure:: _static/img/task-centroids.png
+   :alt: computing centroids
+   :figclass: align-center
 
-      Computing centroids in QGIS.
+   Computing centroids in QGIS
 
 
 .. attention:: 
@@ -56,25 +56,25 @@ Distance
 Another geometric measurement is distance. Computing the distance between two points in a straight line is a basic operation that you can solve using applying basic math.
 
 Task 2 
-   Observe the picture below, :numref:`fig-comp-dist`  . Calculate the distance between the two points. Assume the units are meters.
+   Observe the picture below, :numref:`fig-comp-dist` Calculate the distance between the two points. Assume the units are meters.
 
-   .. _fig-comp-dist:
-   .. figure:: _static/img/task-compute-distance.png
-      :alt: task compute distance
-      :figclass: align-center
+.. _fig-comp-dist:
+.. figure:: _static/img/task-compute-distance.png
+   :alt: task compute distance
+   :figclass: align-center
 
-      Measuring distances in vector data.
+   Measuring distances in vector data
 
 
 Task 3 
-   Using the Measure Line tool, measure the distance between the points in the  DistancePoints layer. :numref:`fig-measure-tool`
+   Using the **Measure Line** tool |measure|, measure the distance between the points in the *'DistancePoints'* layer. :numref:`fig-measure-tool`
 
-   .. _fig-measure-tool:
-   .. figure:: _static/img/measure-tool.png
-      :alt: measure tool
-      :figclass: align-center
+.. _fig-measure-tool:
+.. figure:: _static/img/measure-tool.png
+   :alt: measure tool
+   :figclass: align-center
 
-      Using the Measure Line Tool.
+   Using the Measure Line Tool
 
 .. attention:: 
    **Question.**
@@ -86,13 +86,13 @@ Task 3
    + The distance between the two closest vertices?
 
 Task 4 
-   Use the **Distance to Nearest Hub (points)** tool from the Processing Toolbox to compute the distances between the *'DistancePoints'* layer and the other layers. 
+   Use the **Distance to Nearest Hub (points)** tool from the **Processing Toolbox** to compute the distances between the *'DistancePoints'* layer and the other layers. 
 
 Another type of geometric measurement discussed is the *minimal bounding box* of a feature.
 
 
 Task 5  
-   Use the **Bounding boxes** tool from the Processing Toolbox to visualise the minimal bounding boxes of the features of the *'overlay2'* layer.
+   Use the **Bounding boxes** tool from the **Processing Toolbox** to visualise the minimal bounding boxes of the features of the *'overlay2'* layer.
 
 -----------------------------------------
 
@@ -125,7 +125,7 @@ Task 6
 
 
 Task 7
-   Find the **Union Intersect** and **Clip** tools in the Processing Toolbox and use them to compute the overlay operations using the *'overlay1'* and *'overlay2'* layer as inputs. Compare the result with the table above.
+   Find the **Union Intersect** and **Clip** tools in the **Processing Toolbox** and use them to compute the overlay operations using the *'overlay1'* and *'overlay2'* layers as inputs. Compare the result with the table above.
 
 * "The fundamental operator of all these vector operations is polygon intersection. The other operators can be defined in terms of it, usually in combination with polygon selection and/or classification".* Below you see the result of an overlay operation called: **Symmetrical Difference** between the *'overlay1'*  and *'overlay2'* data layers. :numref:`fig-symdif` 
 
@@ -134,7 +134,7 @@ Task 7
    :alt: Symmetrical difference
    :figclass: align-center
 
-   Symmetrical difference bertween 'overlay1' and 'overlay2'.
+   Symmetrical difference bertween 'overlay1' and 'overlay2'
 
 .. attention:: 
    **Question.**
@@ -150,8 +150,9 @@ We will cover two proximity operations: |ltb| `Buffer`_ and |ltb| `Thiessen Poly
 You create a buffer using point, line and polygon layers as inputs. Buffers can be created for all the features in a layer or selected features only. We can use fixed buffer distance; in which case, a buffer of the same size will be created for all the features in a data layer. However, we can also use a variable buffer distance for each feature; in which case such the buffer distances need to be stored in the attribute table of the layer. 
 
 Task 8
-   Check the attribute table of the *'linebuf layer'*.  You will find an attribute called **Bufdist**. Use this attribute to generate buffers with different buffer distances. In the **Processing Toolbox** look for the tool **Variable distance** buffer to do that. 
-   Then, create a zonated buffer for the *'linebuf'* layer using a fix buffer distance. Use the tool **Multiring buffer (constant distance)**.
+   Check the attribute table of the *'linebuf'* layer.  You will find an attribute called **Bufdist**. Use this attribute to generate buffers with different buffer distances. Go to :guilabel:`Processing Toolbox` > :guilabel:`Variable distance buffer`. 
+
+   Then, create a zonated buffer for the *'linebuf'* layer using a fix buffer distance. :guilabel:`Processing Toolbox` > :guilabel:`Multiring buffer (constant distance)`.
 
 .. attention:: 
    **Question.**
@@ -178,6 +179,8 @@ Task 10
    **What do Thiessen polygons remind you of?**
 
 ---------------------------------------
+
+.. _sec-networks:
 
 Networks
 --------
@@ -211,7 +214,7 @@ The Network Data Model and Analysis
 
 Networks consist of points (nodes) and lines (edges or segments). What is very important for a network is connectivity. Therefore, the smallest gap between the edges stops the flow over the network. We use line topology to ensure that we end with a network with connected points and lines.
 
-In data modelling, we already learned that a line has a * 'start node'* and an *‘end node'*. Because of this, the network segments have direction. When discussion the directionality in a network, we usually called the start and end nodes as ** "from node"** and ** "to node"**, respectively. In network analysis, we use a cost function to represent **‘impedance'**;  i.e. a function that determines the cost of moving from one node to another in the network. Cost functions are stored as an attribute indicating the cost to travel each edge in the network. |ltb| `Optimal Path Finding`_ is an example of network analysis using cost functions.
+In data modelling, we already learned that a line has a **'start node'** and an **‘end node'**. Because of this, the network segments have direction. When discussion the directionality in a network, we usually called the start and end nodes as **'from node'** and **'to node'**, respectively. In network analysis, we use a **cost function** to represent *'impedance'*;  i.e. *a function that determines the cost of moving from one node to another in the network*. Cost functions are stored as an attribute indicating the cost to travel each edge in the network. |ltb| `Optimal Path Finding`_ is an example of network analysis using cost functions.
 
 Task 12
    Determine the optimal path of a network. Below you see a road network (left) with the IDs for each line segment. On the left size, you see an (attribute) table with the cost associated with each line segments. **What is the least cost path from the start-point to the end-point?**
@@ -222,7 +225,7 @@ Task 12
 In the previous task, there was only one cost function, and it was applied in any direction. There are many reasons why the cost might be different for different directions —for example, different speed limits, different number of lanes, or less traffic.
 
 Task 13
-   Determine the optimal path of the **directed network** below. This time consider two cost functions; a 'to-from' cost (TF-Cost) when moving on the direction of the arrows, and a 'from-to' cost (FT-Cost) when moving in the opposite direction. * Re-evaluate the route, this time the start and end points are different.*  **What is the least cost path from the start-point to the end-point? Is it the same as the previous one?**
+   Determine the optimal path of the **directed network** below. This time consider two cost functions; a 'to-from' cost (TF-Cost) when moving on the direction of the arrows, and a 'from-to' cost (FT-Cost) when moving in the opposite direction. *Re-evaluate the route, this time the start and end points are different.*  **What is the least cost path from the start-point to the end-point? Is it the same as the previous one?**
 
    .. image:: _static/img/task-dir-cost.png 
       :align: center
@@ -247,12 +250,12 @@ Task 14
    **Describe the difference between the two analysis and the reasons behind these differences.**
 
 
-   .. _fig-buffer-network:
-   .. figure:: _static/img/buffer-vs-network.png
-      :alt: buffer vs network
-      :figclass: align-center
+.. _fig-buffer-network:
+.. figure:: _static/img/buffer-vs-network.png
+   :alt: buffer vs network
+   :figclass: align-center
 
-      Zonated buffer and network allocation around a point.
+   Zonated buffer and network allocation around a point
 
 .. attention:: 
    **Question.**

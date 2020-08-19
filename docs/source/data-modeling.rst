@@ -20,8 +20,8 @@ Geographic Phenomena can be divided into |ltb| `geographic objects <Geographic o
    **Question.**
    Give some examples of phenomena for which one of the three elements above is missing. Can they be used in a GIS? 
  
-Objects or Fields
-^^^^^^^^^^^^^^^^^
+Objects and Fields
+^^^^^^^^^^^^^^^^^^
 
 Task 1
    Complete the table below by indicating if the phenomenon on the left is an object or field and if it is discrete or continuous.
@@ -67,8 +67,8 @@ Task 2
    +---------------------+----------------+---------------+----------------+--------------+
 
 
-Crispy or Fuzzy Boundaries
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+Crispy and Fuzzy Boundaries
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
   
 Another notion that is important for describing Geographic Phenomena is |ltb| `boundaries <Boundaries_>`_. We distinguish two types of boundaries: Crisp and Fuzzy.  
 
@@ -87,7 +87,7 @@ Although all computer representations store data as finite representations, it i
 
 -------------------------
 
-Computer representations 
+Computer Representations 
 ------------------------
 
 The previous exercise did not contain any software tasks. This should not have surprised you because the focus of that exercise was to understand geographic phenomena and their characteristics, and not to show the way we represent phenomena.  In this exercise, we will focus on the latter. However, a good understanding of geographic phenomena will help you in choosing a suitable computer representation.  
@@ -146,11 +146,11 @@ Task 5
    Boundaries in raster layers are both artificial and fixed. This has advantages and disadvantages. Can you give some examples of the advantages and disadvantages of artificial and fixed boundaries in raster layers?
 
 Task 6 
-   Open the `spatial_data_modelling` QGIS project we provided in the dataset, and explore the properties of the tessellation representing elevation (elevation.tif)
+   Open the *'spatial_data_modelling'* QGIS project we provided in the dataset, and explore the properties of the tessellation representing elevation (``elevation.tif``).
 
-   How many rows/columns do the elevation.tif data has?. Are the values of type integer or floating-point? What are the minimum and maximum values? 
+   How many rows/columns do the elevation.tif data has? Are the values of type integer or floating-point? What are the minimum and maximum values? 
 
-   (Hint: from the layers panel, right-click on the layer to access its properties. Once in the properties dialog, look into the ‘Information’ dialog.) 
+   *Hint: from the layers panel, right-click on the layer to access its*    :guilabel:`Properties...`. *Once in the properties dialog, look into the* :guilabel:`Information` *dialog.*
 
    .. image:: _static/img/layer-properties.png 
       :align: center
@@ -205,11 +205,11 @@ Task 9
 Task 10
    In your QGIS project, you find a layer with points. Generate a Delaunay triangulation and compare the result with the tessellation you made.    
 
-   .. figure:: _static/img/create-tin.png
-      :alt: Create triangulation QGIS
-      :figclass: align-center
+.. figure:: _static/img/create-tin.png
+   :alt: Create triangulation QGIS
+   :figclass: align-center
       
-      Steps to create a Delaunay triangulation in QGIS
+   Steps to create a Delaunay triangulation in QGIS
 
 
 
@@ -217,19 +217,19 @@ A triangulation can also be used to generate a continuous tessellated surface by
 
 
 Task 11
-   Create a tessellation using the TIN interpolation tool using as input the anchor points you have in your QGIS project. Then, use the Identify tool to inspect the cell values. 
+   Create a tessellation using the **TIN interpolation** tool; use as input the anchor points you have in your QGIS project. Then, use the **Identify tool** to inspect the cell values. 
 
-   .. figure:: _static/img/create-tessellation.png
-      :alt: Create tessellation QGIS
-      :figclass: align-center
+.. figure:: _static/img/create-tessellation.png
+   :alt: Create tessellation QGIS
+   :figclass: align-center
       
-      Steps to create a tessellation from a TIN in QGIS
+   Steps to create a tessellation from a TIN in QGIS
 
 .. important:: 
    **QGIS.**
    QGIS does not perform ‘on the fly interpolation’ – meaning that any point you click within your interpolated surface will have its value calculated on the spot. Instead, what QGIS does is to generate a tessellation of predefined cell size where each cell as a fixed value. ‘On the fly’ interpolations are supported in ArcGIS, for example; however, it is a functionality that will only exist within ArcGIS – the resulting data structure cannot be exported and used in other software packages.
 
-We can, however, explore the concept of ‘on the fly interpolation with a simple paper and pencil exercise. 
+We can, however, explore the concept of ‘on the fly interpolation' with a simple paper and pencil exercise. 
 
 
 .. Task 2.9 
@@ -243,17 +243,17 @@ We can, however, explore the concept of ‘on the fly interpolation with a simpl
    What exactly are the advantages of a TIN over a tessellation?  
 
 Task 12
-   In your data, you find a table Cities2.csv. Try to use this table to create a point layer in QGIS. Start a new QGIS project and add the layer to QGIS using the “Delimited Text” option. 
+   In your data, you find a table ``Cities2.csv``. Try to use this table to create a point layer in QGIS. Start a new QGIS project and add the layer to QGIS using the :guilabel:`Delimited Text` option. 
 
-   .. figure:: _static/img/layer-from-csv.png
-      :alt: Create layer from csv QGIS
-      :figclass: align-center
+.. figure:: _static/img/layer-from-csv.png
+   :alt: Create layer from csv QGIS
+   :figclass: align-center
       
-      Steps to create a point layer using a CSV file in QGIS
+   Steps to create a point layer using a CSV file in QGIS
 
-From the previous task, you should have become clear that **points** are the simplest of geometries – they have a Y and X coordinates that anchors them to the spatial frame you are working on. 
+From the previous task, you should have clear that **points** are the simplest of geometries – they have a Y and X coordinates that anchors them to the spatial frame you are working on. 
 
-Another way of representing geographic phenomenon in the vector data model is using a |ltb| `Line representation`_. A line is nothing more than two or more connected points.  
+Another way of representing geographic phenomenon in the vector data model is using a |ltb| `Line representation`_. A **line** is nothing more than two or more connected points.  
 
 .. attention:: 
    **Question.**
@@ -263,11 +263,13 @@ The last representation in the vector data model is using **polygons**. Polygons
 
 The boundary model explains how areas are represented and by storing the closed boundary that defines an area. A closed boundary is defined by a closed line (consisting of nodes and vertices, where the start and end vertices intersect). When representing the footprints of houses or the borders between countries, the boundary of each feature (house/country) is stored individually. 
 
-The Topological model is discussed in the next section of this exercise. (page: Polygon[add internal reference]) 
+The Topological model is discussed in the the following section on  :ref:`sec-topology`. 
 
 Task 13 
    Read the section |ltb| `Area representation`_ and describe in your own words the problems that may arise when using the boundary model without topology. 
 
+
+.. _sec-topology:
 
 Topology 
 ^^^^^^^^
@@ -294,7 +296,7 @@ When looking at two polygons, we can define all their possible topological relat
    :alt: topology fundamental concepts
    :figclass: align-center
 
-   The boundary, interior and exterior of polygons, lines and points.
+   The boundary, interior and exterior of polygons, lines and points
 
 .. attention:: 
    **Question.**
@@ -331,7 +333,7 @@ Task 15
    Two polygons overlap.                                 \
    ====================================================  =========
 
-   *Additional uses of topology will be discussed in the sections: Data Entry, Queries and Networks. Note: Topology is only required at the conceptual level (no practical component)*
+   Additional uses of topology will be discussed in the sections: :ref:`sec-data-entry`,  :ref:`sec-spatialsql`  and :ref:`sec-networks`. In this course, **you only need to understanding Topology in a conceptual level.**
 
 .. attention:: 
    **Question.**

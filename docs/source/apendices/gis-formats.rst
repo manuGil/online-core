@@ -1,12 +1,12 @@
 .. _gis-formats:
 
-Common GIS file formats
+Common GIS File Formats
 =======================
 
 .. danger:: 
    The information contained on this section **IS NOT part of the assessments** in this course. We do not expect you know all this. It is provided as reference for practical reasons. 
 
-Vector GIS file extensions
+Vector GIS File Extensions
 --------------------------
 
 *Shapefiles (.shp)*
@@ -83,7 +83,7 @@ Although not the most efficient, Tagged Image File Format (``.tif``), is one of 
 + The tags can be used to store georeferencing information. When that happens the TIFF is called GeoTIFF.  
 
 
-*Other raster and vector formats*
+*Other Raster and Vector formats*
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The list of GIS formats is very extensive. The formats we covered so far are the ones that you are more likely to encounter. In the case of QGIS, the complete list of supported formats depends on the formats supported by the GDAL library. You can check the complete list of supported formats in the links below: 

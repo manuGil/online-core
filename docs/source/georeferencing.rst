@@ -39,14 +39,14 @@ Task 1
 
 The most widely used global coordinate system is the |ltb| `Geographic coordinate system`_. It consists of lines of geographic latitude and longitude. Lines of equal latitude are called parallels. They form circles on the surface of the ellipsoid. Lines of equal longitude are called meridians and form ellipses (meridian ellipses) on the ellipsoid. 
 
-Geographic coordinate systems use latitude and longitude to describe a position on the Earth’s surface.   *Latitude* is zero on the Equator and increases towards both poles to **90° N** and **90° S**.  Latitude is positive on the northern hemisphere and negative on the South hemisphere. *Longitude* is measured from the meridian of Greenwich where it is zero, and it increases eastwards up to 180∘ (**180∘ E**), and westwards up to 180∘ (**180∘ W**). Longitude is positive towards the East and negative towards the West.
+Geographic coordinate systems use latitude and longitude to describe a position on the Earth’s surface.   *Latitude* is zero on the Equator and increases towards both poles to :math:`90° N` and :math:`90° S`.  Latitude is positive on the northern hemisphere and negative on the South hemisphere. *Longitude* is measured from the meridian of Greenwich where it is zero, and it increases eastwards up to :math:`180°` (:math:`180° E`), and westwards up to :math:`180°` (:math:`180° W`). Longitude is positive towards the East and negative towards the West.
 
 Geographic coordinates are typically expressed in two formats. In *Degrees, Minutes Seconds* or in *Decimal* formats.  However, from a computational point of view, the decimal format should be preferred because it makes it easier for the computer to parse the values. If you use the decimal format, the computer will read it as a decimal number, but if you use the DMS format, the computer will most likely read it as a string of text with no numeric or mathematical meaning.
  
 For example, Enschede is located at:
 
-   + Latitude: **52°13′05″ N** (DMS format)       or       **52.21806** (decimal format)
-   + Longitude: **6°53′44″ E** (DMS format)       or       **6.895556** (decimal format)
+   + Latitude: :math:`52°13′05″ N` (DMS format)       or       :math:`52.21806` (decimal format)
+   + Longitude: :math:`6°53′44″ E` (DMS format)       or       :math:`6.895556` (decimal format)
 
 
 Task 2 
@@ -135,7 +135,7 @@ In other cases, the map-user have especial requirements on how to represent spat
 
 .. attention:: 
    **Question.**
-   You should have noticed that these datasets have different coordinate systems and datums: ``DEM, floodzones, highways, parish, and rivers.`` 
+   You should have noticed that the following datasets have different coordinate systems and datums: *'DEM'*, *'floodzones'*, *'highways'*, *'parish'*, and *'rivers'*. 
    
    + What problems can result out of leaving these layers with their current coordinate systems?
    + If you had to transform all these datasets to a single coordinate system, which coordinate system will you choose as a target? What criteria determine your choice? Give examples for these specific datasets.
@@ -168,11 +168,11 @@ Task 8
 Task 9
    In GIS, open the Georeferencer (from the Raster menu tools) and load the file ``topographic_map_dominica.jpg``. Use the points you chose above to georeference the scanned map. Be sure to pay close attention to the coordinate system on the scanned map and your existing data layers. Attempt to match the map as best you can to your current vector layers.
 
-   For this task, you might want first to watch the video tutorial `georeferencing an image <https://vimeo.com/album/4389527/video/201997378>`_.
+   For this task, you might want first to watch the video tutorial `georeferencing an image <https://vimeo.com/448818172>`_.
 
 .. raw:: html
 
-   <div style="padding:53.54% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/201997378?color=007e83&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+   <div style="padding:53.49% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/448818172?color=007e83&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 
 \
 
@@ -212,7 +212,7 @@ Additional Questions
       a. Do you think this case is uncommon?
       b. What to do in this case? Do you have to georeference the map again or you just assign the Coordinate System in case you know it?
 
-   3. You receive 4 projected topographic maps in paper of the same area:
+   3. You receive 4 projected topographic maps printed on paper, the maps cover the same area:
 
       * Map 1: has information on the ellipsoid, datum and projection
       * Map 2: has information on the ellipsoid and datum but not projection

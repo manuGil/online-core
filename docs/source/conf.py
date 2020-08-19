@@ -28,7 +28,9 @@ copyright = '2020, University of Twente'
 author = 'Manuel G. Garcia'
 
 # The full version, including alpha/beta/rc tags
-release = '0.0.1'
+release = '4.0.0'
+
+html_show_sourcelink = False
 
 # Name of the master document. 
 master_doc = 'index'
@@ -55,7 +57,7 @@ templates_path = ['_templates']
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = ['assets/ltb-links-gis.rst', 'assets/data-links-gis.rst', ]
+exclude_patterns = ['assets/ltb-links-gis.rst', 'assets/data-links-gis.rst', 'radiometric-ops.rst', 'layout.rst' ]
 
 # Allows storing external links in separated rst
 rst_epilog=""

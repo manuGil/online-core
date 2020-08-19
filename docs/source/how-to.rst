@@ -1,4 +1,4 @@
-How To Use the Exercises
+How to Use the Exercises
 ========================
 
 This website contains a list of exercises that you will carry out as part of the online course *"GI Science and Earth Observation: a system-based approach"*.
@@ -9,9 +9,23 @@ Along with the exercises, you will be asked to perform several activities:
 
 + **Perform pencil and paper tasks** to reinforce your understanding. Although this is an online course, you will be asked to do some task that required to write things down or perform some computations. You can use calculators or spreadsheets to do the calculations, but remember that what it is essential is that you learn the procedure required for each computation.
 
-+ **Perform software tasks using QGIS** to acquire skills and enhance your understanding of specific topics. For most of the tasks, we will provide tutorials (description or video) on how to do things. Such tutorials will be more detailed in the first exercises and less detailed in later exercises. We expect that by the end of the course you become an independent **Quantum GIS** user, in the topics covered in this course. 
++ **Perform software tasks using QGIS** to acquire skills and enhance your understanding of specific topics. We will use the latest LTR version of `QGIS (A Coruna 3.10) <https://qgis.org/en/site/forusers/download.html>`_. For most of the tasks, we will provide tutorials (description or video) on how to do things. Such tutorials will be more detailed in the first exercises and less detailed in later exercises. We expect that by the end of the course you become an independent **Quantum GIS** user, in the topics covered in this course. 
 
 + **Answer questions and participate in the Virtual Classroom**. Each exercise contains questions that you should answer while conducting the exercises. Such questions will help you to assess your understanding of a certain concept or topic.  Therefore, take the time to analyse them and provide the best answer you can. During the Virtual Classroom session, we will discuss the answers. 
+
+While approaching these exercises, you must use all of the resources you have at hand. We will explain things the best that we can, even though it is possible that at some point you get stuck with a certain task.  In those cases, you will put your troubleshooting skills to the test. This is an essential skill because, in the future, you might have to learn other GIS software.
+
+When it comes to troubleshooting software issues, you can use a variety of resources to find answers:
+
++ The `QGIS manual <https://docs.qgis.org/3.10/en/docs/user_manual/index.html>`_ can help you to find answers on how to use the tools and interfaces, and it is the first source you should consult when you have a question on how to use QGIS. If a specific task is not fully explained in the exercise; we will provide a link to the QGIS manual, or a video tutorial.
+
++ If you have more advance questions, for example on how to implement a rather specific procedure or data analysis related with GIS and QGIS, then `GIS Stack exchange <https://gis.stackexchange.com/>`_ might help you with that.
++ You could also subscribe to the `QGIS-Users mailing list <https://lists.osgeo.org/mailman/listinfo/qgis-user>`_ The mailing list contains a big archive of Q&As from the QGIS user community.  You can also post your questions, and someone from the community might answer.
+
++  Ask the instructors of the course. They will point out materials and documents where you can find answers. However, they cannot help you with the tasks and questions explicitly designed to prompt you to find an answer on your own. Those tasks are to help you acquire skills and knowledge. Therefore, knowing how to solve problems by yourself is a skill that you should cultivate!
+
+.. tip:: 
+   Bookmark the pages above in your browser; that way, you can easily access the content whenever you need it. 
 
 
 
@@ -22,11 +36,11 @@ This document is divided into five parts:
 
 + **Part one** contains general information about the exercises. That is the part you are reading right now. 
 + **Part two** contains exercises related to *GI Science*, where you can learn about Geographic Information Systems and Spatial Analysis. 
-+ **Part three** contains exercises related to *Earth Observation*, where you can learn about Remote Sensing and Image Interpretation. 
-+ **Part four** contains exercises related to *Data Integration*, where you can learn about system dynamics and approaches to integrate data from multiple sources and perform advanced analysis. 
++ **Part three** [1]_ contains exercises related to *Earth Observation*, where you can learn about Remote Sensing and Image Interpretation. 
++ **Part four** [1]_ contains exercises related to *Data Integration*, where you can learn about system dynamics and approaches to integrate data from multiple sources and perform advanced analysis. 
 + **Part five**, the *Appendices* contain additional information that will be useful for some of the exercises.
 
-
+.. [1] This part will become visible as you progress in the course.
 
 
 Conventions
@@ -44,7 +58,7 @@ Along with this document, we use some formating conventions to highlight content
 
 .. important:: 
    **Resources.**
-   This will describe the software and datasets required for completing a certain exercise. Not all exercises require you to use data; therefore, this will appear only on the sections that do need it. 
+   This will describe the software and datasets required for completing a certain exercise. Not all exercises include the use of data; therefore, this will appear only on the sections that it need. 
 
 
 .. attention:: 
@@ -52,21 +66,22 @@ Along with this document, we use some formating conventions to highlight content
    This will post questions that you have to answer during the exercises. Write down your answer and take them to the virtual classroom.
 
 
+
+
 Reporting Issues
 ----------------
 
-If you would like to report any issues in this document. You can do so by opening an issue in this `GitHub repository <https://github.com/manuGil/online-core/issues>`_ 
+If you would like to report any issues in this website. You can do that by opening an issue in this `GitHub repository <https://github.com/manuGil/issues-core-online/issues>`_ 
 
 Include the following:
-    1. A short, but precise description of the issue,
-    2. A link to the title of the specific section that contains the issues. *You can find the URL of a title's section by click on the*  **chain icon**  *on the right side of title's section.*
-    3. Optionally, include a screenshot of the part of the section containing the issue.
+   1. A short, but precise description of the issue,
+   2. A link to the title of the specific section that contains the issues. *You can find the URL of a title's section by click on the*  **chain icon**  *on the right side of title's section.*
+   3. Optionally, include a screenshot of the part of the section containing the issue.
 
 Relevant issues to report:
-    + Broken links. 
-    + Wrong referencing, e.g., links do not refer to the correct resources. 
-    + Missing or incomplete content. Text or figures.
-    + Grammatical errors. We use British spelling.
+   + Broken links. 
+   + Wrong referencing, e.g., links do not refer to the correct resources. 
+   + Missing or incomplete content. Text or figures.
+   + Grammatical errors. We use British spelling.
 
-.. danger::  You will notice that **Tasks** are not numbered correctly. We are aware of this and we are working to fix it. Do not report this as an issue.
- 
+
