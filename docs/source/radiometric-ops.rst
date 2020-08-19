@@ -616,3 +616,4 @@ Task 3.3
    + Why did we apply haze correction before sun angle correction? Does the other of these corrections make a difference?
    + In case of multiband images, we do not need to calculate the sun-angle separately for each of the bands. Why not?
 
+.. sectionauthor:: Wan Bakx

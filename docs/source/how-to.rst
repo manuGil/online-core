@@ -84,4 +84,4 @@ Relevant issues to report:
    + Missing or incomplete content. Text or figures.
    + Grammatical errors. We use British spelling.
 
-
+.. sectionauthor:: Manuel G. Garcia

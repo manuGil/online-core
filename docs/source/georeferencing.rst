@@ -221,3 +221,5 @@ Additional Questions
 	
       a. Out of these 4 maps how many maps have enough information to build a complete spatial reference system in order to digitize correctly the topographic maps?
       b. Can a topographic map with coordinates be digitized without knowing the coordinate system?
+
+.. sectionauthor:: Richard Knippers & Andre Mano Da Silva

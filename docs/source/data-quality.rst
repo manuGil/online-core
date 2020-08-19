@@ -369,3 +369,6 @@ This is not the same as saying that we should care about metadata. However, we c
    
    + How can metadata be useful? 
    + Would you add something else to the list of principles above?
+
+
+.. sectionauthor:: Andre Mano Da Silva & Ellen-Wien Augustijn

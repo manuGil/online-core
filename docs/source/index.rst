@@ -3,8 +3,8 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Distance Education Core Exercises 
-#################################
+The Core Course: Exercises 
+##########################
 
 .. toctree::
    :maxdepth: 2
@@ -44,9 +44,10 @@ Distance Education Core Exercises
    apendices/shaded-terrain-models
 
 
-..  Indices and tables
+.. Indices and tables
 .. ==================
 
 .. * :ref:`genindex` 
-.. * :ref:`modindex`
 .. * :ref:`search`
+
+.. * :ref:`modindex`

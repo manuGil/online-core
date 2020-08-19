@@ -385,3 +385,5 @@ Task 16
    4. Besides rectangular cells, other shapes can be used. What are the advantages of using Hexagonal cells? 
    
    5. Make a comparison between raster and vector data models and list the advantages and disadvantages of each one. 
+
+.. sectionauthor:: Ellen-Wien Augustijn, Andre Mano Da Silva & Amy Corbin

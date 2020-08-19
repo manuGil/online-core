@@ -3,7 +3,7 @@
 Common GIS File Formats
 =======================
 
-.. danger:: 
+.. warning:: 
    The information contained on this section **IS NOT part of the assessments** in this course. We do not expect you know all this. It is provided as reference for practical reasons. 
 
 Vector GIS File Extensions
@@ -100,3 +100,5 @@ In addition there are closed proprietary formats that are also fairly common, ho
 
 .. caution:: 
     **Do not overload yourself in knowing all these formats and their details.** The main point here is to understand that different file formats provide different possibilities. Whenever you come across a data format you are not familiar with, do a little research on it to know if that format is adequate for your analysis needs. 
+
+.. sectionauthor:: Andre Mano Da Silva

@@ -380,3 +380,5 @@ Task 14
    :figclass: align-center
 
    The raster terrain analysis tools
+
+.. sectionauthor:: Ellen-Wien Augustij & Andre Mano Da Silva
