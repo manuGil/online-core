@@ -89,7 +89,7 @@ html_static_path = ['_static']
 # Costume css. Paths are either relative to html_static_path
 # or fully qualified paths (eg. https://...)
 html_css_files = [
-    'css/core.css',
+    'css/custom.css',
 ]
 
 # Latex Costume configurations
