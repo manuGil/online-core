@@ -1,10 +1,13 @@
 Styling Conventions
 ===================
 
-
 This document describe formatting and styling conversion used in the exercise of the online Core course. These conventions are based on Sphinx using ReStructed Text (RST).
 
-Sphinx provides a bigger variety of option to format content. However, for the sake of consistency and simplicity we only a subset.
+Sphinx provides a bigger variety of option to format content. However, for the sake of consistency and simplicity we only use a subset in these exercises.
+
+.. note::
+   This style convernsion are based on the theme by `Read the Docs <https://sphinx-rtd-theme.readthedocs.io/en/stable/demo/structure.html>`_
+
 
 Structure
 ---------
@@ -54,7 +57,7 @@ Image                                           image directive alinged to the c
  
                                                                                                          .. image:: path/to/image.png 
                                                                                                             :align: center
-Figure [2]_                                      figure directive, aligned to center, with caption     .. code-block:: rst
+Figure [1]_                                      figure directive, aligned to center, with caption     .. code-block:: rst
 
                                                                                                          .. _fig-label:
                                                                                                          .. figure:: path/to/image.png
@@ -62,7 +65,7 @@ Figure [2]_                                      figure directive, aligned to ce
                                                                                                             :figclass: align-center
 
                                                                                                             Caption without a period
-Inline image [2]_                               substitution                                          .. code-block:: rst
+Inline image [1]_                               substitution                                          .. code-block:: rst
 
                                                                                                          .. |label| image:: path/to/image.png
                                                                                                             :width: 1.5em
@@ -71,7 +74,7 @@ Inline image [2]_                               substitution                    
                                                                                                          the subtitution.
 =============================================   ==================================================    ====================================================
 
-.. [2] Labels are use to reference content in the same file or in other files, therefore they must be unique in a project.
+.. [1] Labels are use to reference content in the same file or in other files, therefore they must be unique in a project.
 
 --------------
 
@@ -296,4 +299,5 @@ Inline code                                     verbatim or code role           
 
                                                                                                          More of :code:`your code` between text.                                                   
 
-=============================================   ==================================================    ====================================================                                                                                                          
+=============================================   ==================================================    ====================================================                                                                                   
+
