@@ -254,7 +254,7 @@ Except inside admonitions, *video* are declared without any spacing to the left,
 Text Formatting Guidelines
 --------------------------
 
-This section describe a list of formating convention used in the online core exercise. These should be followed to maitain consistency in 
+This section describe a list of formating the main text. These must be followed to maitain consistency and easy use. 
 
 =============================================   ==================================================    ====================================================
 Content                                         Style                                                 Example
