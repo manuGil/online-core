@@ -1,5 +1,5 @@
-Georeferencing
-==============
+Spatial Reference Systems
+=========================
 
 Reference Surfaces
 ------------------ 
