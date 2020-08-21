@@ -136,7 +136,7 @@ Conversion Operations Leading to Quality Loss
 Conversion can have different meanings in the GIS world. In the scope of this exercise **conversion** refers to format conversion (raster to vector and vice-versa). Vector and raster data are usually associated with the representation of discrete and continuous phenomena, respectively. Having to convert between formats is a common operation in the GIS world, however, these operations always imply some type of compromise regarding what we get and what we lose, especially in the case |ltb| `Rasterisation`_.
 
 Task 5
-   Open the project "rasterisation .qgis ". From the Processing Toolbox, use the ** Rasterise tool** to convert the *porto_buildings* layer to a raster using a resolution of :math:`15 \ m`. :numref:`fig-rasterisation`
+   Open the project "rasterisation .qgis ". From the Processing Toolbox, use the **Rasterise tool** to convert the *porto_buildings* layer to a raster using a resolution of :math:`15 \ m`. :numref:`fig-rasterisation`
 
 .. _fig-rasterisation:
 .. figure:: _static/img/task-rasterisation.png
@@ -145,6 +145,7 @@ Task 5
 
    Using the rasterisation tool
 
+\
 
    The result is not very impressive. Besides, we lost the attribute table and with a :math:`15 \ m`  resolution, we also lost information on the shape of the buildings.
 
