@@ -58,7 +58,7 @@ Along with this document, we use some formating conventions to highlight content
 
 .. important:: 
    **Resources.**
-   This will describe the software and datasets required for completing a certain exercise. Not all exercises include the use of data; therefore, this will appear only on the sections that it need. 
+   This will describe the software and datasets required for completing a certain exercise. Not all exercises include the use of data; therefore, this will appear only in the sections that need it. 
 
 
 .. attention:: 
