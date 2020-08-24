@@ -381,4 +381,4 @@ Task 14
 
    The raster terrain analysis tools
 
-.. sectionauthor:: Ellen-Wien Augustij & Andre Mano Da Silva
+.. sectionauthor:: Ellen-Wien Augustijn, André da Silva Mano
