@@ -396,4 +396,4 @@ Task 15
 .. important:: 
    This exercise is not meant to provide training on SQL, and we do not expect you to become proficient in it from this exercise. The main thing to retain is that spatial databases are powerful tools and that if you want to take advantage of it, you will have to learn a bit of SQL. If you never had contact with SQL, it might seem intimidating at first, but it is not very hard to learn the basics. A good resource for that can be found at https://www.w3schools.com/sql 
 
-.. sectionauthor:: Andre Mano Da Silva & Pary Pasha
+.. sectionauthor:: Andre da Silva Mano, Parya Pasha & Manuel Garcia Alvarez
