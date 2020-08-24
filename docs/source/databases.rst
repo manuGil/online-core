@@ -373,7 +373,7 @@ Task 14
 Task 15
    To finish this section, we will give you another demonstration of the capabilities of a spatial database. Suppose you want to know what is the total area next to the railroads of Australia given a certain distance. The distance could represent a buffer zone restricted to the public for security reasons. 
 
-   Here is on way to do it using SQL:
+   Here is a way to do it using SQL:
 
    .. code-block:: postgresql   
       :linenos:
