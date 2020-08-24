@@ -386,4 +386,4 @@ Task 16
    
    5. Make a comparison between raster and vector data models and list the advantages and disadvantages of each one. 
 
-.. sectionauthor:: Ellen-Wien Augustijn, Andre da Silva Mano, Manuel Garcia Alvarez & Amy Corbin
+.. sectionauthor:: Ellen-Wien Augustijn, André da Silva Mano, Manuel Garcia Alvarez & Amy Corbin
