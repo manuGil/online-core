@@ -104,7 +104,7 @@ Task 4
    **Question.**
    You will see a significant shift between the road you just digitised and the in the road layer. Can you explain why? Use the **Quick Map services plugin** to add additional satellite imagery to help you find an answer.
 
-Bias can also have political reasons. Maps can be statements of power, and there are countless examples of using maps to project power or to lobby for a hidden agenda. Although that is not a typical case a GIS professional, it is worth mentioning. A classic example of political bias is the maps from the Age of Discoveries (XV to XVII centuries A.D.). In the XVI century map, :numref:`fig-old-map`, Asia is represented as being a possession of Portugal, but that was never the case. The Portuguese Empire in Asia consisted of commercial outposts protected by fortresses and a war navy, but at no moment did the Portuguese control the vast inland areas.
+Bias can also have political reasons. Maps can be statements of power and there are countless examples of using maps to project power or to lobby for a hidden agenda. Although that is not a typical case a GIS professional is exposed to, it is still worth mentioning. A classic example of political bias are the maps from the Age of Discoveries (XV to XVII centuries A.D.). In this XVI century map, :numref:`fig-old-map`, Asia is represented as being a possession of Portugal, but that was never the case. The Portuguese Empire in Asia consisted of commercial outposts protected by fortresses and a war navy, but at no moment did the Portuguese had control over the vast inland areas.
 
 
 .. _fig-old-map:
@@ -290,7 +290,7 @@ Example.
    You are making a map to support biologists who want to study a particular species of amphibious that thrives on any small pond. 
    With that in mind, you produced a raster map of water ponds of the study are using a cell size of :math:`20 \ m`; i.e. that will mean that the minimum size for an object to be properly represented in your dataset is :math:`400 \ m^2`.
 
-   However, when you show the map to the biologists, they explain to you that this species has been found in pounds much smaller than :math:`400 \ m^2`. *If you insist on using such raster dataset for further analysis, the final result may not be valid for the biologists.*
+   However, when you show the map to the biologists, they remind you that this species has been found in pounds much smaller than :math:`400 \ m^2`. *If you insist on using such raster dataset for further analysis, the final result may not be valid for the biologists.*
 
 To explore the idea of conceptual errors, we will use a simple example that applies network analysis. In this example, we want to estimate the fastest route from point :math:`A` to point :math:`B`.
 
@@ -372,4 +372,4 @@ This is not the same as saying that we should care about metadata. However, we c
    + Would you add something else to the list of principles above?
 
 
-.. sectionauthor:: Andre Mano Da Silva & Ellen-Wien Augustijn
+.. sectionauthor:: André da Silva Mano, Ellen-Wien Augustijn & Manuel Garcia Alvarez

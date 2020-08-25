@@ -156,4 +156,4 @@ Task 4
    **Question.**
    Examining the topographic map you created in the previous task. What problems did you encounter during the map-making process? 
 
-.. sectionauthor:: Barend Köbben & Andre Mano Da Silva
+.. sectionauthor:: Barend Köbben, André da Silva Mano & Manuel Garcia Alvarez

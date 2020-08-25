@@ -120,5 +120,5 @@ Task 6
 Task 7
    Now that you know a bit more about your course mates. Go to this `Discussion Board <https://canvas.utwente.nl/courses/6640/discussion_topics/63945>`_ and exchange more details on your interests and expectations in this course.
 
-.. sectionauthor:: Andre Mano Da Silva & Amy Corbin
+.. sectionauthor:: Andrá da Silva Mano, Amy Corbin & Manuel Garcia
 
