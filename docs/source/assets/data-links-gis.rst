@@ -9,7 +9,7 @@
 .. _data_modeling:          https://canvas.utwente.nl/files/1792645/download?download_frd=1
 .. _data_quality:           https://canvas.utwente.nl/files/1792646/download?download_frd=1
 .. _database_queries:       https://canvas.utwente.nl/files/1792647/download?download_frd=1
-.. _data_georeferencing:    https://canvas.utwente.nl/files/1792652/download?download_frd=1
+.. _data_georeferencing:    https://canvas.utwente.nl/files/1799191/download?download_frd=1
 .. _processing_modeling:    https://canvas.utwente.nl/files/1792648/download?download_frd=1
 .. _raster_analysis:        https://canvas.utwente.nl/files/1792649/download?download_frd=1
 .. _vector_analysis:        https://canvas.utwente.nl/files/1792650/download?download_frd=1
