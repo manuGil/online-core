@@ -89,7 +89,7 @@ In this exercise, you have to focus on the production of a cartographically well
 
 .. important:: 
    **Resources.**
-   You will require the latest LTR version of `QGIS (A Coruna 3.10) <https://qgis.org/en/site/forusers/download.html>`_, plus the dataset `visualization.zip <visualisation>`_ which you can download from CANVAS.
+   You will require the latest LTR version of `QGIS (A Coruna 3.10) <https://qgis.org/en/site/forusers/download.html>`_, plus the dataset `visualization.zip <visualisation_>`_ which you can download from CANVAS.
 
 Reference Material
 ^^^^^^^^^^^^^^^^^^
@@ -137,13 +137,13 @@ Task 4
 
    A. The map shall present data in the information categories mentioned below. The visualisation shall be correct for the type of data,  and it shall also be tailored for the specific combination. The required information categories are:
 
-      #. The shape of the terrain shall be visualised using hill-shading in conjunction with layer tints. Consult the appendix :ref:`shaded-models`  to know how to create such a model. Refer to the theory in the Living Textbook and lecture slides to find examples of how to achieve such depiction. Give priority to the design of a sensible and readable visualisation. Something that gives the user a good impression of the shape of the mountains, in the country.
-      #. The infrastructure: roads and railways. The most important roads shall show road numbers.
-      #. The cities and towns. Place names shall be included for at least the larger cities.
-      #. The hydrography: lakes and rivers. The most important rivers and lakes shall show their names.
-      #. Optionally, the map shall include additional data that you gather from other sources (e.g., the  Internet, atlases, other). Useful additional information might be the *names of mountain tops*, the *famous tourist sites*, and others.
+      + **Terrain**. The shape of the terrain shall be visualised using hill-shading in conjunction with layer tints. Consult the appendix :ref:`shaded-models`  to know how to create such a model. Refer to the theory in the Living Textbook and lecture slides to find examples of how to achieve such depiction. Give priority to the design of a sensible and readable visualisation. Something that gives the user a good impression of the shape of the mountains, in the country.
+      + **Infrastructure**: *roads and railways*. The map shall show the number for the important roads.
+      + **Cities and towns**. Place names shall be included for at least the larger cities.
+      + **Hydrography**: *lakes and rivers*. The most important rivers and lakes shall show their names.
+      + Optionally, the map shall include additional data that you gather from other sources (e.g., the  Internet, atlases, and other). Useful additional information might be the *names of mountain tops*, the *famous tourist sites*, and others.
 
-   B. The map shall fit on an A4 landscape paper sheet. The outer bounds of the map shall be rectangular and match the extent of the DEM. The projection of the data shall be Universal Transverse Mercator **(UTM) Zone 32N** on the **WGS84** datum. The data is already provided in that projection.
+   B. The map shall fit on an *A4 landscape paper* sheet. The outer bounds of the map shall be rectangular and match the extent of the DEM. The projection of the data shall be Universal Transverse Mercator **(UTM) Zone 32N** on the **WGS84** datum. The data is already provided in that projection.
 
    C. The map shall contain all necessary marginal information, such as title, legend, scale bar, etc.
 
@@ -156,4 +156,4 @@ Task 4
    **Question.**
    Examining the topographic map you created in the previous task. What problems did you encounter during the map-making process? 
 
-.. sectionauthor:: Barend Köbben & Andre Mano Da Silva
+.. sectionauthor:: Barend Köbben, André da Silva Mano & Manuel Garcia Alvarez

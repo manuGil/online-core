@@ -9,7 +9,7 @@ The main goal of this exercise is to provide you with the first-hand experience 
 
 .. important:: 
    **Resources.**
-   You will require the latest LTR version of `QGIS (A Coruna 3.10) <https://qgis.org/en/site/forusers/download.html>`_, plus the dataset `georeferencing.zip <georeferencing>`_ which you can download from CANVAS.  For this section, you will need the following files: 
+   You will require the latest LTR version of `QGIS (A Coruna 3.10) <https://qgis.org/en/site/forusers/download.html>`_, plus the dataset `data_quality.zip <data_quality_>`_ which you can download from CANVAS.  For this section, you will need the following files: 
 
     + ``accuracy.qgs`` – a QGIS project preloaded with the datasets described below;
     + ``geodesic_marks.gpgk`` – peaks signaled by geodetic marks;
@@ -104,7 +104,7 @@ Task 4
    **Question.**
    You will see a significant shift between the road you just digitised and the in the road layer. Can you explain why? Use the **Quick Map services plugin** to add additional satellite imagery to help you find an answer.
 
-Bias can also have political reasons. Maps can be statements of power, and there are countless examples of using maps to project power or to lobby for a hidden agenda. Although that is not a typical case a GIS professional, it is worth mentioning. A classic example of political bias is the maps from the Age of Discoveries (XV to XVII centuries A.D.). In the XVI century map, :numref:`fig-old-map`, Asia is represented as being a possession of Portugal, but that was never the case. The Portuguese Empire in Asia consisted of commercial outposts protected by fortresses and a war navy, but at no moment did the Portuguese control the vast inland areas.
+Bias can also have political reasons. Maps can be statements of power and there are countless examples of using maps to project power or to lobby for a hidden agenda. Although that is not a typical case a GIS professional is exposed to, it is still worth mentioning. A classic example of political bias are the maps from the Age of Discoveries (XV to XVII centuries A.D.). In this XVI century map, :numref:`fig-old-map`, Asia is represented as being a possession of Portugal, but that was never the case. The Portuguese Empire in Asia consisted of commercial outposts protected by fortresses and a war navy, but at no moment did the Portuguese had control over the vast inland areas.
 
 
 .. _fig-old-map:
@@ -123,7 +123,7 @@ A common source of errors occurs during the spatial acquisition phase. Errors or
 
 .. important:: 
    **Resources.**
-   You will require the latest LTR version of `QGIS (A Coruna 3.10) <https://qgis.org/en/site/forusers/download.html>`_, plus the dataset `georeferencing.zip <georeferencing>`_ which you can download from CANVAS.  For this section, you will need the following files: 
+   You will require the latest LTR version of `QGIS (A Coruna 3.10) <https://qgis.org/en/site/forusers/download.html>`_, plus the dataset `data_quality.zip <data_quality_>`_ which you can download from CANVAS.  For this section, you will need the following files: 
 
     + ``Acquisition_errors.qgs`` – a QGIS project preloaded with the datasets described below;
         + ``Buildings_porto.gpgk``– the footprint of urban buildings from Porto (Portugal);
@@ -136,7 +136,7 @@ Conversion Operations Leading to Quality Loss
 Conversion can have different meanings in the GIS world. In the scope of this exercise **conversion** refers to format conversion (raster to vector and vice-versa). Vector and raster data are usually associated with the representation of discrete and continuous phenomena, respectively. Having to convert between formats is a common operation in the GIS world, however, these operations always imply some type of compromise regarding what we get and what we lose, especially in the case |ltb| `Rasterisation`_.
 
 Task 5
-   Open the project "rasterisation .qgis ". From the Processing Toolbox, use the ** Rasterise tool** to convert the *porto_buildings* layer to a raster using a resolution of :math:`15 \ m`. :numref:`fig-rasterisation`
+   Open the project "rasterisation .qgis ". From the Processing Toolbox, use the **Rasterise tool** to convert the *porto_buildings* layer to a raster using a resolution of :math:`15 \ m`. :numref:`fig-rasterisation`
 
 .. _fig-rasterisation:
 .. figure:: _static/img/task-rasterisation.png
@@ -145,6 +145,7 @@ Task 5
 
    Using the rasterisation tool
 
+\
 
    The result is not very impressive. Besides, we lost the attribute table and with a :math:`15 \ m`  resolution, we also lost information on the shape of the buildings.
 
@@ -210,7 +211,7 @@ When |ltb| `combining spatial data from multiple sources <combining data from mu
 
 .. important:: 
    **Resources.**
-   You will require the latest LTR version of `QGIS (A Coruna 3.10) <https://qgis.org/en/site/forusers/download.html>`_, plus the dataset `georeferencing.zip <georeferencing>`_ which you can download from CANVAS.  For this section, you will need the following files: 
+   You will require the latest LTR version of `QGIS (A Coruna 3.10) <https://qgis.org/en/site/forusers/download.html>`_, plus the dataset `data_quality.zip <data_quality_>`_ which you can download from CANVAS.  For this section, you will need the following files: 
 
     + ``error_propagation.qgs`` – a QGIS project preloaded with the datasets described below;
 
@@ -289,7 +290,7 @@ Example.
    You are making a map to support biologists who want to study a particular species of amphibious that thrives on any small pond. 
    With that in mind, you produced a raster map of water ponds of the study are using a cell size of :math:`20 \ m`; i.e. that will mean that the minimum size for an object to be properly represented in your dataset is :math:`400 \ m^2`.
 
-   However, when you show the map to the biologists, they explain to you that this species has been found in pounds much smaller than :math:`400 \ m^2`. *If you insist on using such raster dataset for further analysis, the final result may not be valid for the biologists.*
+   However, when you show the map to the biologists, they remind you that this species has been found in pounds much smaller than :math:`400 \ m^2`. *If you insist on using such raster dataset for further analysis, the final result may not be valid for the biologists.*
 
 To explore the idea of conceptual errors, we will use a simple example that applies network analysis. In this example, we want to estimate the fastest route from point :math:`A` to point :math:`B`.
 
@@ -327,7 +328,7 @@ It is essential to organise your input and output data in such a way that you ca
 
 .. important:: 
    **Resources.**
-   You will require the dataset  `georeferencing.zip <georeferencing>`_ which you can download from CANVAS. 
+   You will require the dataset  `data_quality.zip <data_quality_>`_ which you can download from CANVAS. 
 
 
 Task 12 
@@ -371,4 +372,4 @@ This is not the same as saying that we should care about metadata. However, we c
    + Would you add something else to the list of principles above?
 
 
-.. sectionauthor:: Andre Mano Da Silva & Ellen-Wien Augustijn
+.. sectionauthor:: André da Silva Mano, Ellen-Wien Augustijn & Manuel Garcia Alvarez

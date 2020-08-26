@@ -263,4 +263,4 @@ Task 14
    + On which types of networks can we apply trace analysis? 
    + Which are the characteristics that a network must have to apply trace analysis?
 
-.. sectionauthor:: Ellen-Wien Augustij & Andre Mano Da Silva
+.. sectionauthor:: Ellen-Wien Augustijn, Andre da Silva Mano, Manuel Garcia Alvarez

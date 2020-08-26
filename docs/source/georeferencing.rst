@@ -33,6 +33,18 @@ Coordinate Systems
 
 In mapping, a |ltb| `Coordinate system`_ is used to uniquely determine the position of a place with respect to the Earth’s surface.
 
+.. important:: 
+   **Resources.**
+   You will require the latest LTR version of `QGIS (A Coruna 3.10) <https://qgis.org/en/site/forusers/download.html>`_, plus the dataset `georeferencing.zip <data_georeferencing_>`_ which you can download from CANVAS.  When you unzip the dataset, you will find the following files inside: 
+
+   + ``DEM10.tif`` (and auxiliary files) – a digital elevation model in raster format;
+   + ``Topographical_map_dominica.tif`` – a (ungeoreferenced) raster map;
+   + ``Topographic_map_hengelo.tif`` – a (ungeoreferenced) raster map;
+   + ``Control_points.csv`` – a table with points collected via GPS;
+   + ``Floodzones.gpkg`` – vector data (polygons) of floodable areas;
+   + ``Highways.gpk`` – line vector layer;
+   + ``Parish.gpkg`` – vectors representing administrative boundaries (parish level);
+   + ``Rivers.gpkg`` –line vector layer representing rivers.
 
 Task 1
    Define in your own words the difference between |ltb| `coordinate systems <Coordinate system_>`_ and |ltb| `planar coordinate systems <Planar coordinate system_>`_. 
@@ -92,20 +104,6 @@ No matter which map projection you choose, it always comes with certain distorti
    Suppose you wish to produce a small-scale map of your country. The map should show the population densities for the different regions (or provinces). What type of map projection would you suggest (consider projection class, property and other projection parameters)? 
 
    This interactive Map Projection Selection Tool can help to select a map projection http://projectionwizard.org 
-
-
-.. important:: 
-   **Resources.**
-   You will require the latest LTR version of `QGIS (A Coruna 3.10) <https://qgis.org/en/site/forusers/download.html>`_, plus the dataset `georeferencing.zip <georeferencing>`_ which you can download from CANVAS.  When you unzip the dataset, you will find the following files inside: 
-
-   + ``DEM10.tif`` (and auxiliary files) – a digital elevation model in raster format;
-   + ``Topographical_map_dominica.tif`` – a (ungeoreferenced) raster map;
-   + ``Topographic_map_hengelo.tif`` – a (ungeoreferenced) raster map;
-   + ``Control_points.csv`` – a table with points collected via GPS;
-   + ``Floodzones.gpkg`` – vector data (polygons) of floodable areas;
-   + ``Highways.gpk`` – line vector layer;
-   + ``Parish.gpkg`` – vectors representing administrative boundaries (parish level);
-   + ``Rivers.gpkg`` –line vector layer representing rivers.
 
 
 Task 5
@@ -222,4 +220,4 @@ Additional Questions
       a. Out of these 4 maps how many maps have enough information to build a complete spatial reference system in order to digitize correctly the topographic maps?
       b. Can a topographic map with coordinates be digitized without knowing the coordinate system?
 
-.. sectionauthor:: Richard Knippers & Andre Mano Da Silva
+.. sectionauthor:: Richard Knippers, André da Silva Mano & Manuel Garcia Alvarez

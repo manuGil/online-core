@@ -187,4 +187,4 @@ Task 6
 
 In the Appendices section, you find a list of :ref:`gis-formats`. 
 
-.. sectionauthor:: Andre Mano Da Silva
+.. sectionauthor:: André da Silva Mano & Manuel Garcia Alvarez  

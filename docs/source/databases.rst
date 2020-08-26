@@ -148,7 +148,7 @@ Having the necessary datasets is the starting point to be able to extract releva
 
 .. important:: 
    **Resources.**
-   You will require the latest LTR version of `QGIS (A Coruna 3.10) <https://qgis.org/en/site/forusers/download.html>`_, plus the dataset  `database_queries.zip <database_queries>`_ which you can download from CANVAS.  When you unzip the dataset, you will find the following files inside:
+   You will require the latest LTR version of `QGIS (A Coruna 3.10) <https://qgis.org/en/site/forusers/download.html>`_, plus the dataset  `database_queries.zip <database_queries_>`_ which you can download from CANVAS.  When you unzip the dataset, you will find the following files inside:
 
    + ``Database_queries.qgs`` – a QGIS project preloaded with the dataset described below;
    + ``country_Data`` – a table with additional information on the countries of the world;
@@ -373,7 +373,7 @@ Task 14
 Task 15
    To finish this section, we will give you another demonstration of the capabilities of a spatial database. Suppose you want to know what is the total area next to the railroads of Australia given a certain distance. The distance could represent a buffer zone restricted to the public for security reasons. 
 
-   Here is on way to do it using SQL:
+   Here is a way to do it using SQL:
 
    .. code-block:: postgresql   
       :linenos:
@@ -396,4 +396,4 @@ Task 15
 .. important:: 
    This exercise is not meant to provide training on SQL, and we do not expect you to become proficient in it from this exercise. The main thing to retain is that spatial databases are powerful tools and that if you want to take advantage of it, you will have to learn a bit of SQL. If you never had contact with SQL, it might seem intimidating at first, but it is not very hard to learn the basics. A good resource for that can be found at https://www.w3schools.com/sql 
 
-.. sectionauthor:: Andre Mano Da Silva & Pary Pasha
+.. sectionauthor:: Andre da Silva Mano, Parya Pasha & Manuel Garcia Alvarez

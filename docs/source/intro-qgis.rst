@@ -1,7 +1,7 @@
 Intro to QGIS
 =============
 
-This exercise will introduce you to QGIS, and at the same time, you will discover more about other people in this course.  If you are already a QGIS user, you can skip the tasks, explain below and answer the questions directly. Then go to the section :ref:`sec-getting-know`.
+This exercise will introduce you to QGIS, and at the same time, you will discover more about other people in this course.  If you are already a QGIS user, you can skip **Tasks 1-3**, but answer the questions. Then go to the section :ref:`sec-getting-know`.
 
 .. important:: 
    **Resources.**
@@ -51,7 +51,7 @@ Task 3
       **Question.**
 
       + How do the coordinates change when you move the mouse pointers? 
-      + Are they in decimal format or in degrees, minutes, and seconds? 
+      + Are they in decimal format or degrees, minutes, and seconds? 
       + How does zooming in or out affect the scale?
 
 
@@ -102,7 +102,7 @@ Task 6
 
 \
 
-   The information you provided is being saved in a remote server. Therefore the map is always up today, you only need to refresh the view from time to time to see if any of your course mates have already plot something else on the map.
+   The information you provided is being saved in a remote server. Therefore the map is always up today; you only need to refresh the view from time to time to see if any of your course mates have already plot something else on the map.
    You may also see the map through your web browser by accessing this page.
 
    .. attention:: 
@@ -118,6 +118,7 @@ Task 6
 
 
 Task 7
-   Now that you know a bit more about your course mates. Go to this `Discussion Board <https://canvas.utwente.nl/courses/6539/discussion_topics/63457>`_ and exchange more details on your interests and expectations in this course.
+   Now that you know a bit more about your course mates. Go to this `Discussion Board <https://canvas.utwente.nl/courses/6640/discussion_topics/63945>`_ and exchange more details on your interests and expectations in this course.
 
-.. sectionauthor:: Andre Mano Da Silva & Amy Corbin
+.. sectionauthor:: Andrá da Silva Mano, Amy Corbin & Manuel Garcia
+
