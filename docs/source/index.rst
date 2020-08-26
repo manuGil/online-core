@@ -13,6 +13,7 @@ The Core Course: Exercises
    how-to
    intro-qgis
    style-guide
+   style-demo
 
 
 .. toctree::

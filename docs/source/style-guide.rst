@@ -28,7 +28,7 @@ Sub-section                                     underlined section with ``-``   
 Sub-sub-section                                 underlined section with ``*``                   .. code-block:: rst
                                                                                                    
                                                                                                    Sub-subsection Title
-                                                                                                   ********************
+                                                                                                   ^^^^^^^^^^^^^^^^^^^^
 Sub-section divider                             horizontal line using at least 5 ``-``          .. code-block:: rst
                                                                                                    
                                                                                                    A Sub-section
