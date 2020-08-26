@@ -31,9 +31,11 @@ The Core Course: Exercises
 
 .. toctree::
    :maxdepth: 2
+   :numbered:
    :caption: Earth Observation
 
    radiometric-ops
+   radiometric-cors
 
 .. toctree::
    :maxdepth: 2

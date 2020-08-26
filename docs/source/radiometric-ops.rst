@@ -1,9 +1,14 @@
 Radiometric Operations
 ======================
 
+A |ltb| `Radiometric operation`_ uses or changes the values the pixes in an image. In this seccion, you will apply some of the most common radiometric operations in image processing. But first, you need to get familiar with how sensors capture  |ltb| `Electromagnetic radiation`_; how we can |ltb| `Display an image <Image display_>`_ based on how  humans see colour according to th |ltb| `Tri-stimuli theory`_;  and how we represent colour on paper using the principle of |ltb| `Subtractive colour system`_.
 
-Image Enhancement: Histogram Operations
----------------------------------------
+
+
+Image Display
+-------------
+
+
 
 .. important::
    **Resources.**
@@ -15,9 +20,6 @@ Image Enhancement: Histogram Operations
    + ``tm24aug99_sub.tif`` –  a subset of tm24aug99.img
    + ``topo34f.img`` – scan of a topographic map in RGB.
 
-
-Preparation
-^^^^^^^^^^^
 
 Through well-known plugins and providers, QGIS offers the possibility to apply all kind image enhancements for visualisation purposes. In this exercise, we will make use of such tools. Note that none of these tools changes the actual values stored in the raster datasets. They simply change the way the image is being displayed to highlight features that are not so obvious when using the default rendering settings.
  
@@ -36,6 +38,8 @@ Task 1
 
 Single Band Display and Relative Brightness
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+In general, remote sensing images can be displayed using |ltb| `Pseudo colour`_  and |ltb| `Colour composite`_. A common colour composite is the so called |ltb| `True Colour`_. Single band display uses **pseudo colour**.
 
 Task 2.1 
    Create a new QGIS project and open the ``topo34f.img``. 
@@ -144,15 +148,18 @@ By now, you have to realise that by knowing the relative *spectral reflectance* 
 
 Some land cover types might have similar or the same spectral reflectance property in specific ranges of the Electromagnetic (EM) spectrum. The integration of more bands in the analysis,  and the assessment of the spectral properties in other ranges of the EM spectrum, can result in the successful discrimination of more types of land cover. This is true not only in the case of land cover but also for many other objects in a remote sensing image.
 
+-----------------------------
 
 Image Enhancement by Histogram Operations
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-----------------------------------------
 
-One method to enhance images, for interpretation or analysis, uses histogram operations. These operations are usually referred to as **global contrast enhancement operations**.
+|ltb| `Image enhancement`_ describes a set of operations that aim to improve the way certain features in an image are displayed. 
+One method to enhance images, for interpretation or analysis, uses |ltb| `Histogram operations <Histogram operation_>`_. These operations use the |ltb| `Histogram`_ of an image to control how it is displayed, and they are usually known as **global contrast enhancement operations**.
+
 To experiment with contrast enhancement, we will use a TM image of the 24th of august 1999, ``tm24aug99.img``. This image covers a large water body and different types of land cover,  and it has clouds-covered areas. 
 
 Contrast Stretching
-*******************
+^^^^^^^^^^^^^^^^^^^
 
  Task 5.2 
    Display the  ``tm24aug99.img`` using the band combination 4, 5 and 3. Set the *Stretch to MinMax* to a *Mean +/- standard deviation* of  2.0, and the *Accuracy* to **Actual (slower)**; as shown below.
@@ -203,7 +210,7 @@ Task 5.5
       :align: center
 
 Choosing Min and Max values
-***************************
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To choose the *min* and *max* values for a contrast stretch, the user has to consider which areas of an image are of interest, or which types of land cover are relevant for certain purposes. To help this choice, we built a model which you can to extract the local statistics for an area of interest.  In this section, you will experiment with such a model.
 
@@ -251,8 +258,11 @@ Task 5.12
 
 ------------------------------------
 
-Image Enhancement: Filter Operations
-------------------------------------
+Image Enhancement by Filter Operations
+--------------------------------------
+
+|ltb| `Filtering`_ discribes a set of radiometric operation used to enhance images.  Filters are applied to images for the sake of |ltb| `Noise reduction`_, |ltb| `Edge Detection`_, and |ltb| `Edge enhancement`_.
+
 
 .. important::
    **Resources.**
@@ -263,8 +273,6 @@ Image Enhancement: Filter Operations
    + ``tm1999_xs_ml_classification.tif`` – Classification of the types of land cover in Enschede. From Landsat TM 1999.
    + ``NW-SE_3x3.txt`` – Definition of a custom filter.
 
-Preparation
-^^^^^^^^^^^
 
 QGIS offers the possibility to apply all kind of filter kernels on images which are displayed in a viewer. In this exercise, we will make use of tools which apply some filters and store the output as temporary files. In such a way, we can easily compare different results.
 
@@ -469,161 +477,7 @@ Task 3.8
    **Reflection.**
    In summary, you should acknowledge that in the case of neighbour operations, the results will change depending on the size of the kernel and the number of time a filter is applied to an input raster.
 
---------------------------------------
-
-Correction of Atmospheric Disturbances 
---------------------------------------
-
-The procedures describe in this section fall within the “pre-processing” group of image processing techniques, and they focus on radiometric corrections.
 
 
-.. figure:: _static/img/corrections-wkf.png
-   :scale: 50% 
-   :alt: corrections workflow
-   :figclass: align-center
-
-   A sequence of possible corrections on optical imagery
-
-.. important::
-   **Resources.**
-
-   You will require the latest LTR version of `QGIS (A Coruna 3.10) <https://qgis.org/en/site/forusers/download.html>`_, plus the dataset `data.zip <#>`_ which you can download from CANVAS.  When you unzip the dataset, you will find the following files inside: 
-   
-   + ``etm99.img`` – Scene from Landsat Enhanced Thematic Mapper, bands 1 to 4. Wadden islands, 1999.
-   + ``pan.img``  – Scene from SPOT, panchromatic band.
-   + ``tm89.img`` – Scene from  Landsat Thematic Mapper.
-
-   These three images are provided with almost cloud-free skies. 
-
-
-Haze correction
-^^^^^^^^^^^^^^^
-
-
-Task 2.1 
-   Use the `Satellite and sensor database <https://webapps.itc.utwente.nl/sensor/default.aspx?view=searchsat>`_ and the file and metadata information to find the information for the spectral specifications of *SPOT PAN, Landsat TM B1 to B4* and *Landsat ETM B1 to B4*. Then, complete the table below.
-
-=====================       ============    ====    ===========================     ==============
-Satellite/sensor            Filename(s)     Date    Approx. time of acquisition     Resolution GSD
-=====================       ============    ====    ===========================     ==============
-SPOT/HRG panchromatic       PAN        
-Landsat-5/TM                TM89       
-Landsat-7/ETM+              ETM99         
-=====================       ============    ====    ===========================     ==============
-
-
-.. attention:: 
-   **Question.**
-   Are the spectral characteristics of the TM and ETM sensors different? 
-
-
-Task 2.2 
-   Open  ``etm99.img``, ``pan.img``, and ``tm89.img`` in QGIS. and take a look at the images. Display all images using **bands 4, 3, 2 for RGB** and *No Stretch*. Open the **Value tool** to get pixel information. 
-    
-   Haze has an additive effect to the overall image, resulting in higher DN values. As a result, it is reducing the contrast of the image. Because this effect is :math:`\lambda`  dependent, its influence differs per band. 
-    
-   We will assume that there is a real *blackbody* present in the images; therefore, we can simply subtract to a minimum of zero. Assume that the blackbody, in this case, is *deep, clear and unpolluted water*. Complete the table below with the **minimum values** that you can find in such water body. Some hints are given below.
-
-=====   =============   =========   =========   =========   =========
-Image   Band 1 DN       Band 2 DN   Band 3 DN   Band 4 DN   Pan DN
-=====   =============   =========   =========   =========   =========
-PAN     **n.a.** [#]_   **n.a.**    **n.a.**    **n.a.**
-TM89    **n.a.**        **n.a.**    **n.a.**                **n.a.**
-ETM99                                                       **n.a.**            
-=====   =============   =========   =========   =========   =========
-
-.. [#] Not applicable
-
-\
-
-   Use the **Value tool** to read DN values. Note that the tool shows pixel values for all bands of the multispectral image. *Read the value for the proper band!*
-
-   The island is surrounded by a tidal flat, which causes tidal currents with a tidal frequency. It is quite difficult to locate clear water in such situations. We recommend using a body with following water, rather small lake on the island as assumed-blackbody.
-
-   1. Select the *'ETM99'* image, go to Properties and change the symbology to single band grayscale for Band 4. Set minimum to 0 and maximum to around 40 to increase the contrast for the lowest DN values (these are objects with the lowest reflectance properties, which are more likely to be water).
-
-   2. Zoom into the area around :math:`[lat, long] = [53.46145,5.652432 ] or [x, y] = [676191, 5927074]` for comparison. This location is a small lake on the island and shows much lower values than most of the sea in the images. Search in the lake for the lowest DN value. Keep a list of lowest values on scratch paper and copy these to the table.
-
-.. attention:: 
-   **Question.** Compare the minimal value found in the lake or tidal flat with the minimum value in that band. 
-   
-   + Why is there a discrepancy between the values? Think about the spectral and spatial characteristics of the band and the spatial dimensions and spectral property of the object.
-
-   + Why are there decreasing values for haze for *'ETM99'* from Band 1 to Band 4?
- 
-   + How can you explain the difference between the Haze values of the different images?
-
-   +  What about the *'PAN'* image? What range on the spectrum does it cover? Does this relate to the observed difference between *'ETM99'* channels and the panchromatic channel? 
-
-
-Task 
-   Correct the images for haze by subtraction values using the Raster calculator. In QGIS go to **Raster > Raster Calculator**. Specify the formula to subtract the Haze value from Band 4 and specify the name of the output file. 
-
-   Select the newly created *Band 4 with haze correction* on the **Layers Panel**.  Go to  Properties of the layer and modify the contrast stretch as follows, minimum: 0,  maximum: 255. Do the same for the *Band 4  without haze correction.*
-
-.. attention:: 
-   **Question.**
-   Compare the two versions of band 4  of *‘ETM99’*. Do they look different?
-
-Verify that the histograms of the haze-corrected bands have shifted towards the origin. Both histograms have the same shape before and after haze correction but a different location. It also shows that there are apparently some pixels with DN values lower than the small lake on the island. These negative values should not exist in EO images but are caused by the fact that we use a GIS to do the calculation. Before continuing, we have to correct this artefact.
-
-Task 2.8 
-   From the **Processing Toolbox**, use the SAGA module **Reclassify values (simple)** to set all negative values to 0. Select condition  ``[0] Low value <= grid value < high value``. Edit the Lookup table; delete two rows and enter :math:`-255` for *Low Value*. This will replace all values in the range  :math:`[-255,0]` with 0.
-
-Task 2.9 
-   Calculate the Haze correction for all bands of *‘ETM99’*, for band 4 of *'TM89*' and *'Spot PAN'*, including the reclassification.
-
-.. attention:: 
-   **Question.**
-   Suppose you had a SPOT image with the values for the channels that correspond to R, G, and B. Would the Haze values be different than those in the TM scene? Why or why not?
-
-Sun Angle Correction
-^^^^^^^^^^^^^^^^^^^^
-
-So far we have corrected for haze by simplifying the illumination formula, such as:
-
-.. math::
-
-   DN = (T\sigma +  T\delta_i)R_i 
-
-
-The sun angle determines the amount of irradiance per unit area on the ground. We can correct for sun angle attenuation by normalising the sun angle to a zenith situation.  We do this by dividing the image values by the sine of its sun elevation angle (in degrees). This correction will result in slightly higher values: 
-
-.. math::
-   DN' = \frac{DN}{sin(\sigma)}
-
-Where :math:`DN` is the input pixel, :math:`DN’` is the output pixel value, and :math:`\sigma` is the sun angle. Note that because the angle is smaller than :math:`90˚` the sine will be smaller than 1 and as a result :math:`DN’ > DN`.
-
-In case you have many images with various sun angles, you can calibrate them to the zenith.  Or you can select one of the images, which serves as a reference for sun angle correction, and correct to others to match the reference sun angle.
-
-Absolute Sun Angle Correction
-*****************************
-
-Usually, you will find the sun elevation angle :math:` \sigma` in the header file of the images. However, this time, we provide the angle below for the *'SPOT PAN'* image.
-
-
-.. attention:: 
-   **Question.**
-   What is the sine for the :math:`\sigma`  of the *’SPOT PAN’* image you used  in the previous section
-   Write the answer in the table below.
-
-   ======   ======================     ===================
-   Scene    :math:`\sigma`             :math:`sin(\sigma)` 
-   ======   ======================     ===================
-   PAN      :math:`58.9^{\circ}`
-   ======   ======================     ===================
-
-Task 3.2 
-   Use the **Raster Calculator** to calculate to correct for the sun angle on the *’haze-corrected SPOT PAN’* image. 
-
-Task 3.3 
-   Locate some particularly dark and bright pixels with the **Value tool** in the *’SPOT PAN’*, and examine the difference between *haze-corrected* and *haze-and-sun-angle-corrected* values.
-
-.. attention:: 
-   **Question.**
-
-   + In which way have the values of the *haze-corrected* and *haze-and-sun-angle-corrected* images changed? Are the changes constant, linear, or exponential? Were the changes predictable?
-   + Why did we apply haze correction before sun angle correction? Does the other of these corrections make a difference?
-   + In case of multiband images, we do not need to calculate the sun-angle separately for each of the bands. Why not?
 
 .. sectionauthor:: Wan Bakx
