@@ -41,11 +41,11 @@ Single Band Display and Relative Brightness
 
 In general, remote sensing images can be displayed using |ltb| `Pseudo colour`_  and |ltb| `Colour composite`_. A common colour composite is the so called |ltb| `True Colour`_. Single band display uses **pseudo colour**.
 
-Task 2.1 
+Task 2
    Create a new QGIS project and open the ``topo34f.img``. 
    If required, change the colour composite for this layer such that Hydrographic elements like water bodies display in cyan colours (use the legend in the right down corner as reference). Do right-click on the layer, select Properties. In the Symbology panel change the band selection for Red, Green and Blue to *Layer_1,  Layer_2, and Layer_3.*
 
-Task 2.2 
+Task 3
    Add the  ``Spot270611.img`` to the project.   Change the display from the default *Multiband colour* to *Singleband Gray* and select ‘Band 1’ as the *gray band*. Right-click the *Layer name > Properties > Symbology tab > Render type > Singleband gray*.  Click Apply. The band will be displayed in a greyscale with poor contrast. Figure :numref:`fig-greyscale`
 
    .. _fig-greyscale:
@@ -75,10 +75,10 @@ Task 2.2
    .. image:: _static/img/task-copy-layer.png 
       :align: center
 
-Task 2.5 
+Task 4
    Compare the result of each band by toggling the visibility of the layers off and on.  Give special attention to the comparison of band 3 and band 2. These two bands are displayed with similar composition, and jet they look quite different from the others. This proof that different spectral properties are measured in such spectral bands.
 
- Task 2.6 
+Task 5
    Use the topographic map ``topo34f.img`` to find areas with Water (Cyan), Buildings (Purple) and Evergreen Forest (Green with overprinted symbols). Then, identify the brightness in each of the four bands associated with the types of areas listed above. Complete the table below.
 
    .. image:: _static/img/task-cover-table.png 
@@ -111,7 +111,7 @@ Suppose you have a **SPOT XS** image which includes land cover the types: soil, 
       :align: center
 
 
-Task
+Task 6
    Copy RGB brightness values that you estimated into the table.  Then use an  `RGB calculator  <https://www.w3schools.com/colors/colors_rgb.asp>`_ to determine the approximated colour of each land cover type in this colour composite.
 
    ================  ===============   =================    ================     ===================
@@ -131,7 +131,7 @@ Multiband Display: Applying Colour Composites
 
 In the previous section, you determine the relative brightness for three types of land cover. Then, you determined the theoretical colour in a specific colour composite. In this section, we will compare the theoretical colour for water and vegetation with the actual colour in the colour composite.
 
-Task 4.1 
+Task 7
    Open the ``Spot270611.img`` in QGIS and use a band combination of 3, 4 and 2 for Red, Green and Blue. Set the contrast enhancement to :math:`35%` and :math:`98%` for all bands using the Actual (slower) Accuracy, as shown below.
 
    .. image:: _static/img/task-spot-composite.png
@@ -161,14 +161,14 @@ To experiment with contrast enhancement, we will use a TM image of the 24th of a
 Contrast Stretching
 ^^^^^^^^^^^^^^^^^^^
 
- Task 5.2 
+ Task 8
    Display the  ``tm24aug99.img`` using the band combination 4, 5 and 3. Set the *Stretch to MinMax* to a *Mean +/- standard deviation* of  2.0, and the *Accuracy* to **Actual (slower)**; as shown below.
 
 
    .. image:: _static/img/task-sdeviation-stretch.png
       :align: center
 
-Task 5.3 
+Task 9
    Zoom in to an area covered by clouds over the mainland (centre right). Open the **Layer Properties** dialogue and select the **Symbology** panel. Then change the **Statistics extent** to *Current canvas* and apply.
 
    Select to **Zoom Full** to zoom out to see the whole image. Instead of seeing clouds in whites and pinks,  you now can see clouds in several colours. 
@@ -187,7 +187,7 @@ Task 5.3
    **Question.**
    Do you also think that mainland displaying in a not-so-good way?
 
-Task 5.4 
+Task 10
    Zoom into an area with mostly land and some water,  and re-apply the same  *Contrast enhancement* method as before. You can use the context-sensitive option **Stretch using current extent** as shown below, but verify that it does what you intended.
 
    .. image:: _static/img/task-apply-stretch.png
@@ -195,7 +195,7 @@ Task 5.4
 
 You will notice a change in contrast in the image. This is because the part of the image that is currently visible include different types of land cover; thus, different statistics. The results of a contrast stretch based on statistics changes when the range of values used in the computation of such statistics changes.
 
-Task 5.5 
+Task 11
    Set the **Contrast enhancement** back to *Mean +/- standard deviations* and the **Statistics extent** to  *Whole raster*. Then, right-click the *’ tm24aug99’* layer and select *Export > Save as...*. For  **Output mode** select *Rendered image* and enter a self-explanatory name for the output file. Save the file to an existing folder. The file will automatically be added to the Map View.
 
 
@@ -214,7 +214,7 @@ Choosing Min and Max values
 
 To choose the *min* and *max* values for a contrast stretch, the user has to consider which areas of an image are of interest, or which types of land cover are relevant for certain purposes. To help this choice, we built a model which you can to extract the local statistics for an area of interest.  In this section, you will experiment with such a model.
 
-Task 5.7 
+Task 12
    To use the model, you first have to import it to QGIS. In the **Processing Toolbox**, click on the *Model icon* and select **Add Model to Toolbox**. Select the model ``Raster_Statistics_By_Extent.model3`` that is included with the dataset. Click Open. The model will be imported and shown in the *Models section*. 
 
    .. figure:: _static/img/task-add-model.png
@@ -223,7 +223,7 @@ Task 5.7
 
       Adding a model to the Processing Toolbox
 
-Task 5.6 
+Task 13 
    Remove the exported image from the project; keep only the original image. Zoom into an area on the mainland which is primarily dark orange/brown; they represent areas with forest.
 
    Then, use the *’Statistics of Raster by extent’* model to calculate the local statistics. Double click the model and provide an *Extent* and an *Input raster file*. Run the model. The model creates a rectangle from the input Extent, which contains an attribute table with the computed statistics for each band of the Input raster. 
@@ -239,17 +239,17 @@ Task 5.6
 To correctly apply contrast enhancement for specific types of land covers, you need to know which are the types of interest. Which their spectral signatures are; the specifications of the spectral bands of the sensor which you have chosen; and you need knowledge of additive colour mixture.
 
 
-Task 5.9 
+Task 14
    Add the ``tm25aug99_sub.img`` to the project, and display it using a band combination 4, 5 and 3. this image covers shallow water and land with various types of land cover. Analyse the histograms of the three bands of this image; * right-click on the layer > select Properties > Histogram tab*. Compute the histogram is necessary. Then, select *Prefs/Actions > Show selected band* and choose the band want to inspect.
 
 .. attention:: 
    **Question.** 
    In which band on display do you expect a major difference in DN Values between water and land? Use your knowledge on EM radiation. A bi or tri-modal trend in the histogram is an important clue.
 
-Task 5.10
+Task 15
    Use the histograms to identify approximate values for a *contrast stretch* which will enhance the contrasts between types of coverage on the part of the image with the land. Save the result using the **Export As..**  and  *Rendered image* options. Remove the resulting layer from the project.
  
-Task 5.12
+Task 16
    Repeat the previous task. This time use the histograms to set a contrast that will enhance the image specifically for distinguishing shallow water.
 
 .. note:: 
@@ -277,10 +277,10 @@ Image Enhancement by Filter Operations
 QGIS offers the possibility to apply all kind of filter kernels on images which are displayed in a viewer. In this exercise, we will make use of tools which apply some filters and store the output as temporary files. In such a way, we can easily compare different results.
 
 
-Task 1.1 
+Task 17
    Install the **Profile tool** plugin. *Go to Plugins > Manage* and Install Plugins, and install the plugin.
 
-Task 1.2 
+Task 18
    Set the default contrast stretch to use the 2% and 98% cumulative pixel count for grayscale images. In the Settings menu, select *Options > Rendering tab*. Scroll down to **Contrast enhancement settings**, and set the default for **Single band gray** to *Stretch To MinMax*. Then, set **Limits (minimum/maximum)** to *Cumulative pixel count cut*. Make sure that the cut limits are set to :math:`2.0` and :math:`98.0%`. Select OK.
 
 .. note::
@@ -295,7 +295,7 @@ Task 1.2
          <source src="https://player.vimeo.com/video/204013568?color=007e83&portrait=0">
       </video>
 
-Task 1.3 
+Task 19
    In the Settings menu, go to *Options > Processing* and check that you have the SAGA and GRASS providers enabled.
 
 
@@ -307,7 +307,7 @@ Smoothing Filter
 ****************
 
 
- Task 2.1 
+ Task 20
    Apply a linear filter to the *’tm1999_b4’* image. In QGIS, open the  ``tm1999_b4.tif``. Your project should assume the same Spatial Reference System as the image (*EPSG:32632 WGS84/UTM zone 32N*). In the **Processing Toolbox**, open the SAGA tool called *’User defined filter’*. 
 
    Confirm that *’tm1999_b4’* is the input and click **Default filter matrix (3x3)** to open an empty filter kernel. Enter the weights of an *average filter kernel*. Ensure that the sum of weights is equal to 1. Confirm with OK. In the **User defined filter dialogue** execute the kernel by clicking OK. The output is added to the Map View as a temporary file. 
@@ -323,7 +323,7 @@ Smoothing Filter
       :align: center
 
 
-Task 2.5 
+Task 21
    Explore the filter results around the Twente Airport. Reset the zoom to fit the image to the **Map View**. Next, change the scale, in the textbox at the bottom of the Map View, to :math:`1: 75,000`.  Zoom in to the major runway of the *Twente Airport*. See Figure x.
 
    We will use the **Profile tool** to compare the results of the average filter and original image. If you do not know how to install the *Profile Tool* plugin, watch the video tutorial on installing plugins in QGIS.
@@ -347,13 +347,13 @@ Task 2.5
    **Question.**
    Just by looking at the graph of the Profile tool,  can you tell which profile belongs to the layer with the average filter?
 
-Task 2.8 
+Task 22
    Draw profiles at different locations, and confirm your knowledge of the effects of applying an average filter (smoothing).
   
 Gradient Filter
 ***************
 
- Task 2.9 
+ Task 23 
    Use the **User defined filter** tool to apply a filter using the weights in the figure below, on the original image *’tm1999_b4 layer’*. Rename the resulting layer to ‘*Laplace’*.
 
    .. image:: _static/img/laplace-kernel.png
@@ -366,14 +366,14 @@ Gradient Filter
    + Is kernel above a detection kernel? If yes, what does it detect?
    + Does the layer resulting from the previous task contain the same brightness as the original image for area objects?
 
-Task 2.11 
+Task 24 
    Examine the result of the Laplace filter. Toggle on and off the visibility of the *’Laplace’* layer to visually check what happened. Zoom in to the edge of the image until you see individual pixels.  Toggle the visibility of the *’Laplace’* layer again.
 
 .. attention:: 
    **Question.**
    What phenomena do you observe? Can you explain it?
 
-Task 2.12 
+Task 25
    Open the histogram of the ‘*Laplace’* layer. Go to *Properties > Histogram*; check the values in the image.
 
 .. attention:: 
@@ -381,7 +381,7 @@ Task 2.12
    Around which value does the histogram has its centre?
 
 
-Task 2.13 
+Task 26 
    In the **Profile** tool add *’Laplace’* layer and toggle the visibility for the other layers. Confirm that the filter kernel detected two edges, i.e. both sides of the runway.
 
 The *’Laplace’* layer looks rather artificial. The brightness of the original image is gone; the lighter and darker areas in the original have now a common grey tone and high contrasting pixels at their edges. This filter has detected the changes (edges) between local lighter and darker pixels. The circular build of the kernel that you applied, i.e. all negative weights around the centre with positive weight,  detected changes in all directions.
@@ -399,7 +399,7 @@ The *’Laplace’* layer looks rather artificial. The brightness of the origina
 Edge Enhancement
 ****************
 
-Task 
+Task 27
    Repeat the steps of the previous task, but this time use kernels with the following values of the centre: 12, 16 and 200. Increasing the centre value will increase the weight of the centre pixel in the original image. When using a value of about 16 for the centre pixel; the kernel will calculate the Laplace enhancement of the image. Then, the resulting layer will look like the original image.
 
 One could use the output DN value to discriminate between strong/steep edges (high *absolute* DN values) and weak/low edges (low DN values, close to 0) and between positive edges which correlate positively with the kernel (positive DN values) and negative edges which correlate negatively with the kernel (negative DN values). [CHECK WITH ANDRE]
@@ -417,7 +417,7 @@ The Laplace kernel detects edges in all directions. We can also define kernels w
       :width: 160px
       :align: center
 
-Task 2.14 
+Task 28 
    In the Processing Toolbox, use the **r.mfilter** tool of GRASS  to detect edges in a specific direction.  Use the file ``NW-SE_3x3.txt`` as *Filter file*.  
 
    Check the results and confirm that one of the runways of the *Twente Airport*  was not detected at all! Also, confirm that the edges of the main runway were detected. The result should show positive values on one side of the runway and a negative on the other. This is because of the correlation of the results with the positive and negative weights in the kernel. 
@@ -430,7 +430,7 @@ Enhancement using Non-linear Filters
 Rank-Order Filter
 *****************
 
-Task 3.1  
+Task 29  
    In the Processing Tools, look for the SAGA  **Rank filter**.  Select the *’tm1999_b4’* layer as the input grid. Set the *Search Mode* to *Square* and a Radius of 1. Use a *Rank (Percent)* of 50. This settings essentially define a **median filter**. Execute the filter.
    
    Use the **Profile tool** to inspect the results and confirm the difference between the original image and the result of the  Average and Median filters. Pay special attention to locations where you expect variations, for instance, around the edges between areas. 
@@ -438,7 +438,7 @@ Task 3.1
 Majority Filter 
 ***************
 
-Task 3.3 
+Task 30 
    Add the ``tm_xs_ml_classification.tif`` into the Map View; this layer contains a set of classes representing land cover. You will notice that there are many isolated pixels inside some homogeneous areas. For example, the yellow pixels identify maise, which usually does not grow in such small parcels.
  
    In the **Processing Toolbox**, open the **r.neighbors** tool. Select *’tm1999_xs_ml_classifciation’* as input raster and set the neighbourhood operation as *’mode’* (also known as majority filter).
@@ -455,14 +455,14 @@ Task 3.3
    Copying the style between two raster layers in QGIS
 
 
-Task 3.6 
+Task 31
    Toggle the visibility of the filtered result and compare it with the original landcover layer. Confirm that most isolated pixels have disappeared, and that thin lines of pixels surrounded by homogeneous areas also disappeared (e.g. a runway in the Twente Airport). The main runway should still be distinguishable.
  
 .. attention:: 
    **Question.**
    Can you explain why one of the small runways of the Twente Airport disappeared after applying a majority filter?
 
-Task 3.7 
+Task 32
    Use the **r.neighbor** to compute another mode filter on the *’tm1999_xs_ml_classifciation’* layer. This time use neighbourhood of size :math:`5`; which means to apply a 5x5 kernel. Compare the result of this filter with the 3x3 majority filter.
 
 .. attention:: 
@@ -470,14 +470,12 @@ Task 3.7
    What do you observe when comparing results of a 3x3 and 5x5 majority filters around the main runway of the Twente Airport?
 
 
-Task 3.8 
+Task 33
    Experiment with the application of consecutive filters. Apply a the 3x3 majority filter to the results of the existing *’3x3 majority’* filter layer. Compare these results with the result of applying a single 5x5 majority filter. You will notice that the results are not the same.
 
 .. note:: 
    **Reflection.**
    In summary, you should acknowledge that in the case of neighbour operations, the results will change depending on the size of the kernel and the number of time a filter is applied to an input raster.
-
-
 
 
 .. sectionauthor:: Wan Bakx

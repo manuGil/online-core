@@ -31,7 +31,7 @@ Haze correction
 ---------------
 
 
-Task 2.1 
+Task 1 
    Use the `Satellite and sensor database <https://webapps.itc.utwente.nl/sensor/default.aspx?view=searchsat>`_ and the file and metadata information to find the information for the spectral specifications of *SPOT PAN, Landsat TM B1 to B4* and *Landsat ETM B1 to B4*. Then, complete the table below.
 
 =====================       ============    ====    ===========================     ==============
@@ -48,7 +48,7 @@ Landsat-7/ETM+              ETM99
    Are the spectral characteristics of the TM and ETM sensors different? 
 
 
-Task 2.2 
+Task 2 
    Open  ``etm99.img``, ``pan.img``, and ``tm89.img`` in QGIS. and take a look at the images. Display all images using **bands 4, 3, 2 for RGB** and *No Stretch*. Open the **Value tool** to get pixel information. 
     
    Haze has an additive effect to the overall image, resulting in higher DN values. As a result, it is reducing the contrast of the image. Because this effect is :math:`\lambda`  dependent, its influence differs per band. 
@@ -87,7 +87,7 @@ ETM99                                                       **n.a.**
    +  What about the *'PAN'* image? What range on the spectrum does it cover? Does this relate to the observed difference between *'ETM99'* channels and the panchromatic channel? 
 
 
-Task 
+Task 3
    Correct the images for haze by subtraction values using the Raster calculator. In QGIS go to **Raster > Raster Calculator**. Specify the formula to subtract the Haze value from Band 4 and specify the name of the output file. 
 
    Select the newly created *Band 4 with haze correction* on the **Layers Panel**.  Go to  Properties of the layer and modify the contrast stretch as follows, minimum: 0,  maximum: 255. Do the same for the *Band 4  without haze correction.*
@@ -98,10 +98,10 @@ Task
 
 Verify that the histograms of the haze-corrected bands have shifted towards the origin. Both histograms have the same shape before and after haze correction but a different location. It also shows that there are apparently some pixels with DN values lower than the small lake on the island. These negative values should not exist in EO images but are caused by the fact that we use a GIS to do the calculation. Before continuing, we have to correct this artefact.
 
-Task 2.8 
+Task 4
    From the **Processing Toolbox**, use the SAGA module **Reclassify values (simple)** to set all negative values to 0. Select condition  ``[0] Low value <= grid value < high value``. Edit the Lookup table; delete two rows and enter :math:`-255` for *Low Value*. This will replace all values in the range  :math:`[-255,0]` with 0.
 
-Task 2.9 
+Task 5
    Calculate the Haze correction for all bands of *‘ETM99’*, for band 4 of *'TM89*' and *'Spot PAN'*, including the reclassification.
 
 .. attention:: 
@@ -144,10 +144,10 @@ Usually, you will find the sun elevation angle :math:` \sigma` in the header fil
    PAN      :math:`58.9^{\circ}`
    ======   ======================     ===================
 
-Task 3.2 
+Task 6
    Use the **Raster Calculator** to calculate to correct for the sun angle on the *’haze-corrected SPOT PAN’* image. 
 
-Task 3.3 
+Task 7
    Locate some particularly dark and bright pixels with the **Value tool** in the *’SPOT PAN’*, and examine the difference between *haze-corrected* and *haze-and-sun-angle-corrected* values.
 
 .. attention:: 
