@@ -315,7 +315,8 @@ By now, you should understand what topology is, but you may wonder how it can be
    .. image:: _static/img/geldrop-table.png
       :align: center
 
-   Topology can also be used to ensure consistency of the geometries in a vector layer. There are five rules of  |ltb| `Topological consistency`_, which you should know about.
+
+Topology can also be used to ensure consistency of the geometries in a vector layer. There are five rules of  |ltb| `Topological consistency`_, which you should know about.
   
 
 Task 15
