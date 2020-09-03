@@ -63,7 +63,7 @@ Task 3
    Using the :math:`x,y` coordinates from the previous task, calculate  **manually** the distance between the two points in meters. See :numref:`fig-comp-dist` 
 
 .. _fig-comp-dist:
-.. figure:: _static/img/task-compute-distance.png
+.. figure:: _static/img/task-compute-distance2.png
    :alt: task compute distance
    :figclass: align-center
 
