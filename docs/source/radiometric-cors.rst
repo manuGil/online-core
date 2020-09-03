@@ -2,6 +2,8 @@
 Radiometric Corrections
 =======================
 
+.. TODO: Looks ok to me even though you could use some filter kernels for imperfect sensor calibration and noise suppression (which is in your classification ‘correction’).
+
 
 The procedures describe in this section fall within the “pre-processing” group of image processing techniques, and they focus on radiometric corrections. 
 
