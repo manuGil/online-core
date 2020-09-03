@@ -53,20 +53,24 @@ Task 1
 Distance
 ^^^^^^^^
 
-Another geometric measurement is distance. Computing the distance between two points in a straight line is a basic operation that you can solve using applying basic math.
+Another geometric measurement is distance. Computing the distance between two points in a straight line is a basic operation that you can solve using basic math.
 
-Task 2 
-   Observe the picture below, :numref:`fig-comp-dist` Calculate the distance between the two points. Assume the units are meters.
+Task 2
+   Open QGIS and use the **Add Geometry attributes** tool to find the exact coordinates of the poings in the *'DistancePoints'* layer. :guilabel:`Processing toolbox` > :guilabel:`Vector geometry` > :guilabel:`Add geometry attributes`. *The* :math:`x` *and* :math:`y` *coordinates will be added to the attribute table.*     
+
+
+Task 3
+   Using the :math:`x,y` coordinates from the previous task, calculate  **manually** the distance between the two points in meters. See :numref:`fig-comp-dist` 
 
 .. _fig-comp-dist:
 .. figure:: _static/img/task-compute-distance.png
    :alt: task compute distance
    :figclass: align-center
 
-   Measuring distances in vector data
+   Straight distance between points in the 'DistancePoints' layer
 
 
-Task 3 
+Task 4 
    Using the **Measure Line** tool |measure|, measure the distance between the points in the *'DistancePoints'* layer. :numref:`fig-measure-tool`
 
 .. _fig-measure-tool:
@@ -88,7 +92,7 @@ Task 3
 Another type of geometric measurement discussed is the *minimal bounding box* of a feature.
 
 
-Task 4  
+Task 5 
    Use the **Bounding boxes** tool from the **Processing Toolbox** to visualise the minimal bounding boxes of the features of the *'overlay2'* layer.
 
 -----------------------------------------
@@ -105,7 +109,7 @@ Overlays
 Some overlay operators perform both an intersection of the geometry and a spatial join of the attribute tables in combination with deriving a certain output extent. Still, others only join attribute tables or perform spatial intersections.  
 
 
-Task 5 
+Task 6 
    Using the three polygons overlay operators discussed in the Living Textbook complete the table below.
 
    =====================  ===============================    ======================  ============== 
@@ -121,7 +125,7 @@ Task 5
    .. [#] There are many other vector operators besides the operators discussed in the Living Textbook.
 
 
-Task 6
+Task 7
    Find the **Union Intersect** and **Clip** tools in the **Processing Toolbox** and use them to compute the overlay operations using the *'overlay1'* and *'overlay2'* layers as inputs. Compare the result with the table above.
 
 * "The fundamental operator of all these vector operations is polygon intersection. The other operators can be defined in terms of it, usually in combination with polygon selection and/or classification".* Below you see the result of an overlay operation called: **Symmetrical Difference** between the *'overlay1'*  and *'overlay2'* data layers. :numref:`fig-symdif` 
@@ -146,7 +150,7 @@ We will cover two proximity operations: |ltb| `Buffer`_ and |ltb| `Thiessen Poly
 
 You create a buffer using point, line and polygon layers as inputs. Buffers can be created for all the features in a layer or selected features only. We can use fixed buffer distance; in which case, a buffer of the same size will be created for all the features in a data layer. However, we can also use a variable buffer distance for each feature; in which case such the buffer distances need to be stored in the attribute table of the layer. 
 
-Task 7
+Task 8
    Check the attribute table of the *'linebuf'* layer.  You will find an attribute called **Bufdist**. Use this attribute to generate buffers with different buffer distances. Go to :guilabel:`Processing Toolbox` > :guilabel:`Variable distance buffer`. 
 
    Then, create a zonated buffer for the *'linebuf'* layer using a fix buffer distance. :guilabel:`Processing Toolbox` > :guilabel:`Multiring buffer (constant distance)`.
@@ -158,14 +162,14 @@ Task 7
 
 Another example in proximity operations is the Thiessen Polygons. If you are familiar with the concept of *Voronoi Map*, Thiessen polygons are the same. They identify the areas that are closest (in *Euclidean distance*) to each point in a dataset.
 
-Task 8
+Task 9
    Below you see some points and a corresponding TIN (triangulated irregular network). Select 2 or 3 points and draw their corresponding Thiessen polygon. 
 
    .. image:: _static/img/task-tin-tp.png 
       :align: center
 
 
-Task 9
+Task 10
    In the **Processing toolbox** search for a way to generate Thiessen polygons in QGIS.  Remember that Thiessen polygons are also called Voronoi Maps and to find the correct tool in QGIS you might search for this term.
 
 
@@ -192,7 +196,7 @@ Characteristics of Networks
 There are two critical aspects in a |ltb| `Network`_; the directionality of the network and the degree in which the network is planar. When you understand these two concepts you know why different types of networks are modelled in a different way and why not all |ltb| `analysis techniques <Network Analysis_>`_ are relevant for all types of networks. 
 
 
-Task 10
+Task 11
    Complete the table below to create an overview of the different types of networks.
 
    ===================    =======================    ======================    ======================
@@ -213,7 +217,7 @@ Networks consist of points (nodes) and lines (edges or segments). What is very i
 
 In data modelling, we already learned that a line has a **'start node'** and an **‘end node'**. Because of this, the network segments have direction. When discussion the directionality in a network, we usually called the start and end nodes as **'from node'** and **'to node'**, respectively. In network analysis, we use a **cost function** to represent *'impedance'*;  i.e. *a function that determines the cost of moving from one node to another in the network*. Cost functions are stored as an attribute indicating the cost to travel each edge in the network. |ltb| `Optimal Path Finding`_ is an example of network analysis using cost functions.
 
-Task 11
+Task 12
    Determine the optimal path of a network. Below you see a road network (left) with the IDs for each line segment. On the left size, you see an (attribute) table with the cost associated with each line segments. **What is the least cost path from the start-point to the end-point?**
 
    .. image:: _static/img/task-cost.png 
@@ -221,7 +225,7 @@ Task 11
 
 In the previous task, there was only one cost function, and it was applied in any direction. There are many reasons why the cost might be different for different directions —for example, different speed limits, different number of lanes, or less traffic.
 
-Task 12
+Task 13
    Determine the optimal path of the **directed network** below. This time consider two cost functions; a 'to-from' cost (TF-Cost) when moving on the direction of the arrows, and a 'from-to' cost (FT-Cost) when moving in the opposite direction. *Re-evaluate the route, this time the start and end points are different.*  **What is the least cost path from the start-point to the end-point? Is it the same as the previous one?**
 
    .. image:: _static/img/task-dir-cost.png 
@@ -238,7 +242,7 @@ More advance topics on network analysis are |ltb| `Network Partitioning`_, |ltb|
    In your own words, what are the differences and similarities between Thiessen polygons and Network allocation?
 
 
-Task 13
+Task 14
    :numref:`fig-buffer-network` shows you see the results of applying  two vector analyses:
 
    1. The result of a zonated (multiring) buffer around a point (yellow dot). Each ring is separated by a distance of :math:`500 \ m`. 
