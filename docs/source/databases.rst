@@ -161,7 +161,7 @@ Having the necessary datasets is the starting point to be able to extract releva
 
 
 Task 7
-   Read the about |ltb| `querying a spatial database with SQL <Querying SQL_>`_. You should understand what |ltb| `Tuple selection`_ means; what is  |ltb| `Attribute projection`_; and how can we |ltb| `join <Join_>`_ two or more than two relations.  Such understanding is necessary for solving query-formulation problems, using a |ltb| `Join condition`_. 
+   Read about |ltb| `querying a spatial database with SQL <Querying SQL_>`_. You should understand what |ltb| `Tuple selection`_ means; what is  |ltb| `Attribute projection`_; and how can we |ltb| `join <Join_>`_ two or more than two relations.  Such understanding is necessary for solving query-formulation problems, using a |ltb| `Join condition`_. 
 
 
 .. _`sec-select-attrib`:
@@ -177,7 +177,7 @@ A tuple selection written in SQL has the following structure:
 .. code-block:: postgresql
    :linenos:
    
-   Select *                /* attributes to be projected */
+   SELECT *                /* attributes to be projected */
    FROM Parcel             /* relation(s) to be queried */
    WHERE area_m2 > 1000    /* condition(s) */
 
@@ -217,9 +217,9 @@ In SQL, a join can be defined by structuring statements in the following way:
 .. code-block:: postgresql
    :linenos:
 
-   Select *
-   From TitleDeed, Parcel
-   Where TitleDeed.Plot = Parcel.ID
+   SELECT *
+   FROM TitleDeed, Parcel
+   WHERE TitleDeed.Plot = Parcel.ID
 
 
 .. attention:: 
@@ -228,7 +228,7 @@ In SQL, a join can be defined by structuring statements in the following way:
  
  
 Task 9
-   Examine the attribute tables of ``countries.shp`` and  ``countries_data.shp``. You will certainly note that the data contained in the attribute table of *countries_data* data layer complements the data provided by *countries* data layer.
+   Examine the attribute tables of ``countries.shp`` and  ``countries_data.shp``. You will certainly note that the data contained in the attribute table of *'countries_data'* data layer complements the data provided by *'countries'* data layer.
  
 Task 10 
    Write a joining condition for the datasets above. The following SQL statement will help get you started.
@@ -236,9 +236,9 @@ Task 10
    .. code-block:: postgresql   
       :linenos:
 
-      Select *
-      From countries, countries_Data
-      Where /* Here goes your condition */
+      SELECT *
+      FROM countries, countries_Data
+      WHERE /* Here goes your condition */
 
 
 QGIS (and other GIS packages) provides a graphical interface from where you can define a join without having to type the SQL statements.
@@ -255,7 +255,7 @@ Task 11
 
 .. note:: 
    **QGIS.**
-   *Joins only exist in the scope of a project*. Notice that the countries dataset is now richer in attributes as long as the table *countries_data* is in the same project, and as long as the join condition remains active. If you open the countries in a different QGIS project, you will see that the attribute table does not include the attributes from the *countries* table. To make the results of a join permanent, you have to create a dataset by exporting the joined dataset to a new file. This procedure is common to any GIS software. *Also, be aware that filtering will not take into account the joined attributes, unless you the results to a new dataset,  or create a virtual field (check the next task).*
+   *Joins only exist in the scope of a project*. Notice that the countries dataset is now richer in attributes as long as the table *'countries_data'* is in the same project, and as long as the join condition remains active. If you open the countries in a different QGIS project, you will see that the attribute table does not include the attributes from the *'countries'* table. To make the results of a join permanent, you have to create a dataset by exporting the joined dataset to a new file. This procedure is common to any GIS software. *Also, be aware that filtering will not take into account the joined attributes, unless you the results to a new dataset,  or create a virtual field (check the next task).*
 
 Now that the attribute table of the *'countries'* layer is extended, we can revisit **Task 8** and make more interesting queries. 
 
@@ -267,7 +267,7 @@ Task 12
 
    \
 
-   Once you are in the filter menu, try to solve the following query formulation problems. Remember to click the :guilabel:`Clear` button before proceeding to the next query problem. 
+   Once you are in the filter menu, formulate  queries to answer the following questions. Remember to click the :guilabel:`Clear` button before proceeding to the next query problem. 
 
    .. attention:: 
       **Question.**
@@ -309,16 +309,16 @@ Task 13
       .. code-block:: postgresql   
          :linenos:
 
-         Select u.*                             /* project only the attributes of relation u */
-         From urban_areas as u, railroads as r  /* relation aliases */
-         Where st_intersects(u.geom, r.geom)    /* spatial relation */
+         SELECT u.*                             /* project only the attributes of relation u */
+         FROM urban_areas as u, railroads as r  /* relation aliases */
+         WHERE st_intersects(u.geom, r.geom)    /* spatial relation: intersection */
 
 .. _sec-spatialsql:
 
 Using Spatial SQL
 ^^^^^^^^^^^^^^^^^
 
-If our data is a spatial database, we can access all sort of spatial functions using SQL  to obtain answers to simple or complicated questions in a straightforward manner. 
+If our data is in a spatial database, we can access all sort of spatial functions using SQL, and obtain answers to simple or complicated questions in a straightforward manner. 
 
 To explore spatial functions using SQL, we will use the capabilities of *SpatiaLite*, a file-based database engine. This means you don’t need to install any database software. All data is contained in a single file that can be copied from one computer to another without losing information.
 
@@ -364,6 +364,8 @@ Task 14
 
    Executing a query in the DB Manager
 
+\
+
    .. attention:: 
       **Question.**
       Analyze the SQL code and try to understand how it works.
@@ -386,14 +388,14 @@ Task 15
       **Question.**
       This is a  variation of the previous SQL query. Can you tell what is the difference and why the query below is better?
 
-   .. code-block:: postgresql   
-      :linenos:
-      
-      SELECT r.id, st_area(st_union((st_buffer(st_transform(r.geom,3577), 50))))/1000000 AS area_km2
-      FROM countries AS c, railroads AS r
-      WHERE c.sovereignt = 'Australia' AND st_intersects (r.geom, c.geom)
+      .. code-block:: postgresql   
+         :linenos:
+         
+         SELECT r.id, st_area(st_union((st_buffer(st_transform(r.geom,3577), 50))))/1000000 AS area_km2
+         FROM countries AS c, railroads AS r
+         WHERE c.sovereignt = 'Australia' AND st_intersects (r.geom, c.geom)
 
 .. important:: 
-   This exercise is not meant to provide training on SQL, and we do not expect you to become proficient in it from this exercise. The main thing to retain is that spatial databases are powerful tools and that if you want to take advantage of it, you will have to learn a bit of SQL. If you never had contact with SQL, it might seem intimidating at first, but it is not very hard to learn the basics. A good resource for that can be found at https://www.w3schools.com/sql 
+   This exercise is not meant to provide training on SQL, and we do not expect you to become proficient in it. The main point is that spatial databases are powerful tools and that if you want to take advantage of it, you will have to learn a bit of SQL. If you never had contact with SQL, it might seem intimidating at first, but it is not very hard to learn the basics. A good resource for learning is https://www.w3schools.com/sql 
 
 .. sectionauthor:: Andre da Silva Mano, Parya Pasha & Manuel Garcia Alvarez
