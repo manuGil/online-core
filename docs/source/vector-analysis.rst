@@ -94,9 +94,9 @@ Task 4
 
    .. note:: 
       **QGIS.**
-      The **Distance to Nearest Hub (points)** tool computes the distance between the features in the **origin** layer (for this task the points in the *'DistancePoints'*) and the *closest features* the **destination** layer. The Distance calculations are based on the centroid of the features.
-      
-      The resulting layer contains the features centre point in the destination layer, with additional attributes indicating the identifier of the nearest features in the destination layer, and the distance to it.
+      The **Distance to Nearest Hub (points)** tool computes the distance between the features in the **origin layer** (for this task the points in the *'DistancePoints'*) and the *closest features* in the **destination layer**. The Distance calculations are based on the centroid of the features.
+
+      *The resulting layer contains the features centre point in the origin layer, with additional attributes indicating the identifier of the nearest features in the destination layer, and the distance to it.*
    
 
 Another type of geometric measurement discussed is the *minimal bounding box* of a feature.
