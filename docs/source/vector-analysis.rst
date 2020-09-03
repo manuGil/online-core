@@ -85,18 +85,6 @@ Task 3
    + The distance between the centroids of the features? or
    + The distance between the two closest vertices?
 
-Task 4 
-   Use the **Distance to Nearest Hub (points)** tool from the **Processing Toolbox** to compute the distances between the points *'DistancePoints'* layer and the  closests objects in the following layers:
-
-   + *'Linebuf'*
-   + *'Overlay1'*
-   + *'Overlay2'*
-
-   .. note:: 
-      **QGIS.**
-      The **Distance to Nearest Hub (points)** tool computes the distance between the features in the **origin layer** (for this task the points in the *'DistancePoints'*) and the *closest features* in the **destination layer**. The Distance calculations are based on the centroid of the features.
-
-      *The resulting layer contains the features centre point in the origin layer, with additional attributes indicating the identifier of the nearest features in the destination layer, and the distance to it.*
    
 
 Another type of geometric measurement discussed is the *minimal bounding box* of a feature.
