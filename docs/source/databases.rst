@@ -391,7 +391,8 @@ Task 15
       .. code-block:: postgresql   
          :linenos:
          
-         SELECT r.id, st_area(st_union((st_buffer(st_transform(r.geom,3577), 50))))/1000000 AS area_km2
+         SELECT r.id, st_area(st_union((st_buffer(st_transform(r.geom,3577), 50))))/1000000 
+                AS area_km2
          FROM countries AS c, railroads AS r
          WHERE c.sovereignt = 'Australia' AND st_intersects (r.geom, c.geom)
 
