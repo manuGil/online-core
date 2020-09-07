@@ -228,7 +228,7 @@ In the previous task, there was only one cost function, and it was applied in an
 Task 13
    Determine the optimal path of the **directed network** below. This time consider two cost functions; a 'to-from' cost (TF-Cost) when moving on the direction of the arrows, and a 'from-to' cost (FT-Cost) when moving in the opposite direction. *Re-evaluate the route, this time the start and end points are different.*  **What is the least cost path from the start-point to the end-point? Is it the same as the previous one?**
 
-   .. image:: _static/img/task-dir-cost.png 
+   .. image:: _static/img/task-dir-cost2.png 
       :align: center
 
 .. attention:: 
