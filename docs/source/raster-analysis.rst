@@ -258,7 +258,7 @@ There are several questions related to |ltb| `Raster Measurements`_ that can be 
    
    + ``surface_analysis.qgs`` – a QGIS project preloaded with the datasets described below;
    
-      + ``dem(srtm).tif`` – a Digital Elevation model
+      + ``mount_etna_dem.tif`` – a Digital Elevation Model
 
 Distance
 ^^^^^^^^
@@ -372,7 +372,7 @@ Surface Analysis
 |ltb| `Surface Analysis`_ consists of computations such as Slope angle, Slope aspect, Hillshading, etc. A common factor among these computations is they require continuous input surfaces (e.g., elevation), and they can tell the user something about the change or shape of this surface. 
 
 Task 14
-   Open the project ``surface_analysis.qgis`` and use your software to compute the *slope angle, slope aspect and hillshade* of the elevation raster *'dem_srtm'*. Use the tools under **Raster terrain analysis** in the Processing toolbox, :numref:`fig-ras-terrain`. Once you have the outputs, use the **Value Tool** to analyse the results.
+   Open the project ``surface_analysis.qgis`` and use your software to compute the *slope angle, slope aspect and hillshade* of the elevation raster *'mount_etna_dem'*. We recently updated the dataset, *if you cannot find this file download the dataset* `raster-analysis.zip <raster_analysis_>`_ *again*.  Use the tools under **Raster terrain analysis** in the Processing toolbox, :numref:`fig-ras-terrain`. Once you have the outputs, use the **Value Tool** to analyse the results.
 
 .. _fig-ras-terrain:
 .. figure:: _static/img/ras-terrain.png
