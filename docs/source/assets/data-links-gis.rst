@@ -11,6 +11,9 @@
 .. _database_queries:       https://canvas.utwente.nl/files/1792647/download?download_frd=1
 .. _data_georeferencing:    https://canvas.utwente.nl/files/1804172/download?download_frd=1
 .. _processing_modeling:    https://canvas.utwente.nl/files/1792648/download?download_frd=1
-.. _raster_analysis:        https://canvas.utwente.nl/files/1833560/download?download_frd=1
+.. _raster_analysis:        https://canvas.utwente.nl/files/1835195/download?download_frd=1
 .. _vector_analysis:        https://canvas.utwente.nl/files/1792650/download?download_frd=1
 .. _visualisation:          https://canvas.utwente.nl/files/1792651/download?download_frd=1
+
+
+
