@@ -1,6 +1,9 @@
 Data Quality
 ============
 
+.. attention:: The dataset and description of this exercise was updated on **Monday 14th September at 01:45 GTM.** 
+
+
 
 Accuracy
 --------
