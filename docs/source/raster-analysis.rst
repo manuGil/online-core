@@ -341,8 +341,9 @@ Flow Computation
 
 Flow computation calculates the flow along the least-cost path for each cell. Contrary to diffusion, which computes the spread of some material in all directions, flow computation is suitable to calculate the path that water will take when flowing downhill.
 The procedure consists of two steps: 
-+ Calculation of the flow direction raster
-+ Calculation of the accumulated flow
+   
+   1. Calculation of the flow direction raster
+   2. Calculation of the accumulated flow
 
 
 The input for flow computation is a continuous field (raster), e.g. a DEM. The computation of the **flow direction** goes as follows. See :numref:`fig-flow-comp` 
