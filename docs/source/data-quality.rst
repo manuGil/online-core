@@ -12,13 +12,9 @@ The main goal of this exercise is to provide you with the first-hand experience 
    You will require the latest LTR version of `QGIS (A Coruna 3.10) <https://qgis.org/en/site/forusers/download.html>`_, plus the dataset `data_quality.zip <data_quality_>`_ which you can download from CANVAS.  For this section, you will need the following files: 
 
     + ``accuracy.qgs`` – a QGIS project preloaded with the datasets described below;
-    + ``geodesic_marks.gpgk`` – peaks signaled by geodetic marks;
-    + ``peaks.gpgk`` – geomorphological features (peaks);
-    + ``bias.qgs`` – a QGIS project preloaded with the datasets described below;
-    
-        + ``extent.gpgk``;
-        + ``aereal_photo.tif``;
-    + ``road.gpkg`` – a vector dataset representing a road;
+      
+      + ``geodesic_marks.gpgk`` – peaks signaled by geodetic marks;
+      + ``peaks.gpgk`` – geomorphological features (peaks);
     + ``rmse.xls`` – a spreadsheet to calculate the rmse.
 
 
@@ -44,9 +40,9 @@ A way of assessing the positional accuracy of a dataset is calculating the Root 
 
 
 Task 1
-   Open the project ``accuracy assessment.qgs``.  The project has two layers:
-   *'geodesic_marks'* and *'peaks'*.  Use the  **Identify tool** |identify| to find the coordinates of two points that fall close to each other, :numref:`fig-find-coor`. You can draw a small rectangle over the features you want, or you can click.
-   Make sure that in the Identify window that will pop up the option Mode is set to Top-down.
+   Open the project ``accuracy.qgs``.  The project has two layers:
+   *'geodesic_marks'* and *'peaks'*.  Use the  **Identify Features** |identify| to find the coordinates of two points that fall close to each other, :numref:`fig-find-coor`. You can draw a small rectangle over the features you want, or you can click.
+   Make sure that in the Identify window that will pop up, the option Mode is set to Top-down.
    You may need to resize or rearrange your panels to make room for the **Identify Results** window.
 
 
@@ -59,7 +55,7 @@ Task 1
  
 Task 2
    Copy the coordinates from the Identity Results dialog and paste them in the spreadsheet ``rmse.xls`` :numref:`fig-rmse` 
-   You will need Microsoft Excel or Libre Office to open the file. Remember that true values are the ones associated with the *geodesic_marks* layer and that the measured values are the ones associated with the peaks layer. Repeat this process for more points (minimum 4, maximum 8). The RMSE will be computed automatically a the bottom of the table.
+   You will need Microsoft Excel or Libre Office to open the file. Remember that true values are the ones associated with the *'geodesic_marks'* layer and that the measured values are the ones associated with the *'peaks'* layer. Repeat this process for more points (minimum 4, maximum 8). The RMSE will be computed automatically a the bottom of the table.
 
 .. _fig-rmse:
 .. figure:: _static/img/task-rmse.png
@@ -95,9 +91,18 @@ Biased Data
 
 Another possible problem with your data is **bias**. Biased data is systematically inaccurate data, usually for technical reasons. A classic example of biased data is the case of features that were digitised over a badly georeferenced base map. *Because the digitising process comes after georeferencing; any displacements introduced during the georeferencing propagate to all the features that are digitised.*
 
+.. important:: 
+   **Resources.**
+   You will require the latest LTR version of `QGIS (A Coruna 3.10) <https://qgis.org/en/site/forusers/download.html>`_, plus the dataset `data_quality.zip <data_quality_>`_ which you can download from CANVAS.  For this section, you will need the following files: 
+
+   + ``bias.qgs`` – a QGIS project preloaded with the datasets described below;
+    
+      + ``road.gpkg`` – a vector dataset representing a road;
+      + ``aereal_photo.tif``;
+
 Task 4
    Open the project ``bias.qgs`` and use the satellite image to digitise the highway that crosses the image. Refer to the section :ref:`sec-digitising` if need to. 
-   When you are done with digitising, load the road layer into the project, compare the results.
+   When you are done with digitising, turn on the *'road'* layer and compare the results.
  
 
 .. attention:: 
@@ -125,9 +130,9 @@ A common source of errors occurs during the spatial acquisition phase. Errors or
    **Resources.**
    You will require the latest LTR version of `QGIS (A Coruna 3.10) <https://qgis.org/en/site/forusers/download.html>`_, plus the dataset `data_quality.zip <data_quality_>`_ which you can download from CANVAS.  For this section, you will need the following files: 
 
-    + ``Acquisition_errors.qgs`` – a QGIS project preloaded with the datasets described below;
-        + ``Buildings_porto.gpgk``– the footprint of urban buildings from Porto (Portugal);
-        + ``Porto.tif`` – a raster base layer covering the streets of Porto.
+    + ``acquisition_errors.qgs`` – a QGIS project preloaded with the datasets described below;
+        + ``porto_buildings.gpgk``– the footprint of urban buildings from Porto (Portugal);
+        + ``porto.tif`` – a raster base layer covering the streets of Porto.
 
 
 Conversion Operations Leading to Quality Loss
@@ -136,7 +141,7 @@ Conversion Operations Leading to Quality Loss
 Conversion can have different meanings in the GIS world. In the scope of this exercise **conversion** refers to format conversion (raster to vector and vice-versa). Vector and raster data are usually associated with the representation of discrete and continuous phenomena, respectively. Having to convert between formats is a common operation in the GIS world, however, these operations always imply some type of compromise regarding what we get and what we lose, especially in the case |ltb| `Rasterisation`_.
 
 Task 5
-   Open the project "rasterisation .qgis ". From the Processing Toolbox, use the **Rasterise tool** to convert the *porto_buildings* layer to a raster using a resolution of :math:`15 \ m`. :numref:`fig-rasterisation`
+   Open the project ``acquisition_errors.qgs``. From the Processing Toolbox, use the **Rasterise tool** to convert the *'porto_buildings'* layer to a raster using a resolution of :math:`15 \ m`. :numref:`fig-rasterisation`
 
 .. _fig-rasterisation:
 .. figure:: _static/img/task-rasterisation.png
@@ -151,18 +156,18 @@ Task 5
 
 .. attention:: 
    **Question.**
-   Convert the porto_buildings layer to a raster once more; this time use a resolution of :math: `2 m`.
+   Convert the *'porto_buildings'* layer to a raster once more; this time use a resolution of :math:`2 \ m`.
     
-   + Does the :math:`2 m` resolution raster has enough quality?
+   + Does the :math:`2 \ m` resolution raster has enough quality?
    + What do you lose and what do you gain when you rasterise?
-   + Does the :math:`2 m` resolution raster preserves all the original vector features,  i.e. at least one pixel per building? How can you tell?
+   + Does the :math:`2 \ m` resolution raster preserves all the original vector features,  i.e. at least one pixel per building? How can you tell?
 
 Converting from vector to raster usually means to give up of your semantic information, the attribute table. Nevertheless, having an attribute table associated with a raster is possible with certain software products. Still, in such cases, the attribute table can only be used from within that specific software product.  In other words, it is software dependent.
 
 A compromised solution to preserve attribute information is to create a raster layer using the numeric values of a single attribute in the vector layer. In such a case, attribute values are converted to pixel or cell values in the resulting raster layer. For example, in a vector layer representing land cover, usually, every type of land cover has a unique numeric code (e.g. :math:`forest = 100, road = 400, water= 700`). If you set an attribute when converting to a raster layer, cells inherit the values from that attribute.  Then, the cell values have an implicit semantic meaning; for this example, that is the type of land cover.
   
 Task 6
-   Repeat the vector to raster conversion for the porto_buildings layer. This time feed the attribute fid into the option **Field to use for a burn-in value.** :numref:`fig-burn-values`
+   Repeat the vector to raster conversion for the *'porto_buildings'* layer. This time feed the attribute fid into the option **Field to use for a burn-in value.** :numref:`fig-burn-values`
 
 .. _fig-burn-values:
 .. figure:: _static/img/burn-values.png
@@ -180,7 +185,7 @@ Task 6
       :alt: raster porto buildings
       :figclass: align-center
 
-      The porto_buildings  layer rasterised using burn-in values
+      The 'porto_buildings'  layer rasterised using burn-in values
 
 Digitising Operations Leading to Errors
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -215,24 +220,24 @@ When |ltb| `combining spatial data from multiple sources <combining data from mu
 
     + ``error_propagation.qgs`` – a QGIS project preloaded with the datasets described below;
 
-      + ``Buildings_porto.gpkg``  – footprint of urban buildings from Porto (Portugal);
-      + ``Porto_meadows.gpkg`` – landuse (meadows) of Porto;
-      + ``Porto_roads.gpkg`` – road network of Porto;
+      + ``porto_buildings.gpkg``  – footprint of urban buildings from Porto (Portugal);
+      + ``porto_landuse.gpkg`` – landuse (meadows) of Porto;
+      + ``porto_roads.gpkg`` – road network of Porto;
 
 Errors Generated by Geoprocessing Routines
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The project ``error_propagation.qgs`` has a layer named *'porto_meadows'* that contains areas classified as **'meadows'**; and another layer named *'porto_buildings'* We want to merge these two layers so that:
+The project ``error_propagation.qgs`` has a layer named *'porto_landuse'* that contains areas classified as **'meadows'**; and another layer named *'porto_buildings'* We want to merge these two layers so that:
 
    #. We obtain a layer whose polygons represent either buildings or meadows, and 
    #. Look for inconsistencies – areas that are both building and a meadow.
   
   
 Task 8
-   Open the project ``error_propagation.qgis``. From the :guilabel:`Processing Toolbox`, use the :guilabel:`Union tool` to create a  new layer which merges the *'porto_buildings'* and *'porto_meadows'* layers. :numref:`fig-union`.
+   Open the project ``error_propagation.qgis``. From the :guilabel:`Processing Toolbox`, use the :guilabel:`Union tool` to create a  new layer which merges the *'porto_buildings'* and *'porto_landuse'* layers. :numref:`fig-union`.
 
 .. _fig-union:
-.. figure:: _static/img/task-union.png
+.. figure:: _static/img/task-union2.png
    :alt: union tool
    :figclass: align-center
 
@@ -247,10 +252,10 @@ Now, we could filter the union-layer to find out if any of the resulting polygon
    + Do you think you could also find silver polygons before the union operation? How?
 
 Task 9
-   Sliver polygons are usually very small. Go the layer :guilabel:`Properties..` > :guilabel:`Source fields`. Once there, add a field to the attribute table of the vector layer that resulted from the union operation, this will store the area of the polygons. Use the **Field Calucalor** :numref:`fig-field-calculator`.
+   Sliver polygons are usually very small. In the layer that resulted from the union operation; go the layer :guilabel:`Properties..` > :guilabel:`Fields` > :guilabel:`Field Calculator` . Add a new field to comptue the area of the polygons using the **Field Calucator** :numref:`fig-field-calculator`.
 
 .. _fig-field-calculator:
-.. figure:: _static/img/field-calculator.png
+.. figure:: _static/img/field-calculator2.png
    :alt: field calculator
    :figclass: align-center
 
@@ -351,7 +356,7 @@ There are standards and directives for metadata of spatial data. In Europe, an i
 
 From a practical point of view, it is not easy to maintain all necessary metadata, mainly if you aim at being :math:`100 \%` compliant with a particular standard or recommendation. Additionally, each software package has its metadata management system, which makes the interoperability of metadata difficult.
 
-This is not the same as saying that we should care about metadata. However, we can be pragmatic and consider at least the following principles:
+This is not the same as saying that we should not care about metadata. However, we can be pragmatic and consider at least the following principles:
 
 #. Save metadata in a format that is not software-dependent (a simple *Readme* file is often enough).
 #. Include the lineage of the data:
