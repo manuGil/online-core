@@ -127,7 +127,7 @@ Bias can also have political reasons. Maps can be statements of power and there 
 Data Acquisition Errors
 -----------------------
 
-A common source of errors occurs during the spatial acquisition phase. Errors originating in this phase |ltb| `propagate <Error propagation>`_ if not corrected immediately.
+A common source of errors occurs during the spatial acquisition phase. Errors originating in this phase |ltb| `propagate <Error propagation_>`_ if not corrected immediately.
 
 .. important:: 
    **Resources.**
