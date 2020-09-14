@@ -50,7 +50,7 @@ Task 1
 
 
 .. _fig-find-coor:
-.. figure:: _static/img/task-find-coor.png
+.. figure:: _static/img/task-find-coor2.png
    :alt: find coordinate in identity tool
    :figclass: align-center
 
