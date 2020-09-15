@@ -135,19 +135,19 @@ Map Making
 Task 4
    Open the QGIS project ``topographic_map.qgs``. It contains all the layers you will need. Make a topographic map of this part of Switzerland (the "Berner Oberland", highlands of Kanton Bern), that adheres to the  following requirements:
 
-   A. The map shall present data in the information categories mentioned below. The visualisation shall be correct for the type of data,  and it shall also be tailored for the specific combination. The required information categories are:
+   1. The map shall present data in the information categories mentioned below. The visualisation shall be correct for the type of data,  and it shall also be tailored for the specific combination. The required information categories are:
 
-      + **Terrain**. The shape of the terrain shall be visualised using hill-shading in conjunction with layer tints. Consult the appendix :ref:`shaded-models`  to know how to create such a model. Refer to the theory in the Living Textbook and lecture slides to find examples of how to achieve such depiction. Give priority to the design of a sensible and readable visualisation. Something that gives the user a good impression of the shape of the mountains, in the country.
-      + **Infrastructure**: *roads and railways*. The map shall show the number for the important roads.
-      + **Cities and towns**. Place names shall be included for at least the larger cities.
-      + **Hydrography**: *lakes and rivers*. The most important rivers and lakes shall show their names.
-      + Optionally, the map shall include additional data that you gather from other sources (e.g., the  Internet, atlases, and other). Useful additional information might be the *names of mountain tops*, the *famous tourist sites*, and others.
+      a. **Terrain**. The shape of the terrain shall be visualised using hill-shading in conjunction with layer tints. Consult the appendix :ref:`shaded-models`  to know how to create such a model. Refer to the theory in the Living Textbook and lecture slides to find examples of how to achieve such depiction. Give priority to the design of a sensible and readable visualisation. Something that gives the user a good impression of the shape of the mountains, in the country.
+      b. **Infrastructure**: *roads and railways*. The map shall show the number for the important roads.
+      c. **Cities and towns**. Place names shall be included for at least the larger cities.
+      d. **Hydrography**: *lakes and rivers*. The most important rivers and lakes shall show their names.
+      e. Optionally, the map shall include additional data that you gather from other sources (e.g., the  Internet, atlases, and other). Useful additional information might be the *names of mountain tops*, the *famous tourist sites*, and others.
 
-   B. The map shall fit on an *A4 landscape paper* sheet. The outer bounds of the map shall be rectangular and match the extent of the DEM. The projection of the data shall be Universal Transverse Mercator **(UTM) Zone 32N** on the **WGS84** datum. The data is already provided in that projection.
+   2. The map shall fit on an *A4 landscape paper* sheet. The outer bounds of the map shall be rectangular and match the extent of the DEM. The projection of the data shall be Universal Transverse Mercator **(UTM) Zone 32N** on the **WGS84** datum. The data is already provided in that projection.
 
-   C. The map shall contain all necessary marginal information, such as title, legend, scale bar, etc.
+   3. The map shall contain all necessary marginal information, such as title, legend, scale bar, etc.
 
-   D. The map shall be created for colour printing. The resulting map shall be exported as a PDF file. Use the **Print Composer** of QGIS to achieve this.
+   4. The map shall be created for colour printing. The resulting map shall be exported as a PDF file. Use the **Print Composer** of QGIS to achieve this.
 
    .. important:: 
       This is a complex task! Please do not be satisfied too easily. Make tests of your results so far and study them critically. Ask family and friends, supervisors and your fellow students to give their opinion. 
