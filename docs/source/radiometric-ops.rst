@@ -8,11 +8,8 @@ A |ltb| `Radiometric operation`_ uses or changes the values the pixes in an imag
 Image Display
 -------------
 
-
-
 .. important::
    **Resources.**
-
    You will require the latest LTR version of `QGIS (A Coruna 3.10) <https://qgis.org/en/site/forusers/download.html>`_, plus the dataset `data_histogram_operations.zip <data_histogram_ops_>`_ which you can download from CANVAS.  When you unzip the dataset, you will find the following files inside: 
    
    + ``SPOT270611.img`` – SPOT 5 image with 4 spectral bands.
@@ -158,7 +155,6 @@ One method to enhance images, for interpretation or analysis, uses |ltb| `Histog
 
 .. important::
    **Resources.**
-
    You will require the same dataset as in the previous section: `data_histogram_operations.zip <data_histogram_ops_>`_. 
    
    + To experiment with contrast enhancement, we will use a TM image of the 24th of august 1999, ``tm24aug99.img``. This image covers a large water body and different types of land cover,  and it has clouds-covered areas. 

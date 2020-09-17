@@ -6,6 +6,6 @@
 
 .. _data_histogram_ops:       https://canvas.utwente.nl/files/1850359/download?download_frd=1
 .. _data_filter_ops:          https://canvas.utwente.nl/files/1850391/download?download_frd=1 
-.. _data_athmospheric_corr:   https://canvas.utwente.nl/files/1850332/download?download_frd=1
+.. _data_atmospheric_corr:   https://canvas.utwente.nl/files/1850332/download?download_frd=1
 
 
