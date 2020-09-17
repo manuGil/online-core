@@ -13,7 +13,7 @@ Image Display
 .. important::
    **Resources.**
 
-   You will require the latest LTR version of `QGIS (A Coruna 3.10) <https://qgis.org/en/site/forusers/download.html>`_, plus the dataset `data.zip <#>`_ which you can download from CANVAS.  When you unzip the dataset, you will find the following files inside: 
+   You will require the latest LTR version of `QGIS (A Coruna 3.10) <https://qgis.org/en/site/forusers/download.html>`_, plus the dataset `data_histogram_operations.zip <data_histogram_ops_>`_ which you can download from CANVAS.  When you unzip the dataset, you will find the following files inside: 
    
    + ``SPOT270611.img`` – SPOT 5 image with 4 spectral bands.
    + ``tm24aug99.img``  – TM image of the 24th of august 1999.
@@ -156,7 +156,13 @@ Image Enhancement by Histogram Operations
 |ltb| `Image enhancement`_ describes a set of operations that aim to improve the way certain features in an image are displayed. 
 One method to enhance images, for interpretation or analysis, uses |ltb| `Histogram operations <Histogram operation_>`_. These operations use the |ltb| `Histogram`_ of an image to control how it is displayed, and they are usually known as **global contrast enhancement operations**.
 
-To experiment with contrast enhancement, we will use a TM image of the 24th of august 1999, ``tm24aug99.img``. This image covers a large water body and different types of land cover,  and it has clouds-covered areas. 
+.. important::
+   **Resources.**
+
+   You will require the same dataset as in the previous section: `data_histogram_operations.zip <data_histogram_ops_>`_. 
+   
+   + To experiment with contrast enhancement, we will use a TM image of the 24th of august 1999, ``tm24aug99.img``. This image covers a large water body and different types of land cover,  and it has clouds-covered areas. 
+
 
 Contrast Stretching
 ^^^^^^^^^^^^^^^^^^^
@@ -291,9 +297,7 @@ Task 18
 
    .. raw:: html
 
-      <video width="560" height="315" controls>
-         <source src="https://player.vimeo.com/video/204013568?color=007e83&portrait=0">
-      </video>
+      <div style="padding:52.29% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/204013568?color=007e83&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 
 Task 19
    In the Settings menu, go to *Options > Processing* and check that you have the SAGA and GRASS providers enabled.
@@ -326,15 +330,16 @@ Smoothing Filter
 Task 21
    Explore the filter results around the Twente Airport. Reset the zoom to fit the image to the **Map View**. Next, change the scale, in the textbox at the bottom of the Map View, to :math:`1: 75,000`.  Zoom in to the major runway of the *Twente Airport*. See Figure x.
 
-   We will use the **Profile tool** to compare the results of the average filter and original image. If you do not know how to install the *Profile Tool* plugin, watch the video tutorial on installing plugins in QGIS.
+   We will use the **Profile tool** to compare the results of the average filter and original image. If you do not know how to install the *Profile Tool* plugin, watch the video tutorial on `installing plugins in QGIS <https://vimeo.com/showcase/4389527/video/201997421>`_.
 
-   .. raw:: html
+.. raw:: html
 
-      <video width="560" height="315" controls>
-         <source src="https://player.vimeo.com/video/201997421?color=007e83&portrait=0">
-      </video>
+   <div style="padding:53.54% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/201997421?color=007e83&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+
+\
 
    Start the Profile tool. Select one of the layers in the **Layer Panel**. Zoom into the centre of the image and draw a profile (line) across the major runway. Click on **Add Layer**. Select the other layer in the **Layers panel** and click on *Add Layer* again.
+
 
 .. figure:: _static/img/task-smooth-result.png
    :alt: smoothing filter result

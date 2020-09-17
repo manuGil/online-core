@@ -64,14 +64,15 @@ exclude_patterns = ['assets/ltb-links-gis.rst', 'assets/data-links-gis.rst', 'as
 rst_epilog=""
 
 # Target link-files
-link_file = ['assets/ltb-links-gis.rst',
+link_files = ['assets/ltb-links-gis.rst',
             'assets/data-links-gis.rst',
+            'assets/data-links-eo.rst',
             'assets/ltb-links-eo.rst',
             'substitutions.txt'
             ]
 
 # Read links in the from the target files
-for file in link_file:
+for file in link_files:
     with open(file) as f:
         rst_epilog += f.read()
 
