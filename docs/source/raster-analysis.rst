@@ -58,11 +58,11 @@ Task 2
 Manual Classification
 ---------------------
 
-You can also manually control the number of classes and the ranges of values belonging to each class. You can do this from the same menu as before, :numref:`fig-manual-class`; or you can define reclassification rules that will create a new raster.
+You can also manually control the number of classes and the ranges of values belonging to each class. You can do this using the controls in the same menu as before, and for example, change the **mode** or the number of **classes**. You can directly type different values for each class. :numref:`fig-manual-class`.  Additionally, you could define reclassification rules that will create a new raster.
 
 
 .. _fig-manual-class:
-.. figure:: _static/img/task-auto-class.png
+.. figure:: _static/img/manual-class2.png
    :alt: automatic classification
    :figclass: align-center
 
@@ -182,14 +182,14 @@ Then, values of distance would be continuous (floating point), and values of saf
 
 
 .. _fig-safety-school:
-.. figure:: _static/img/ras-safety-school.png
+.. figure:: _static/img/ras-safety-school2.png
    :alt: safety school rasters
    :figclass: align-center
 
    Raster layers representing safety of neighbourhoods (left), and distance to schools (right)
 
 Task 5
-   Write down an expression to combine rater layers in :numref:`fig-safety-school`, using comparison and logical operators. Note that the size of these layers is not the same, but they do overlap. Assume that for the raster on the left (safety), pixels with values of 3 and 7 are suitable. For the raster on the right (distance to schools), pixels with values below :math:`1000` are suitable.
+   Write down an expression to combine the raster layers in :numref:`fig-safety-school`, using comparison and logical operators. Note that the size of these layers is not the same, but they do overlap. Assume that for the raster on the left (safety), pixels with values of 3 and 7 are suitable. For the raster on the right (distance to schools), pixels with values below :math:`1000` are suitable.
 
 Task 6
    The layers are available in the exercise’s dataset: ``classes.tif`` (safety) and ``dist2.tif`` (distance to schools). Try out your expression in the **Raster Calculator.**
@@ -258,7 +258,7 @@ There are several questions related to |ltb| `Raster Measurements`_ that can be 
    
    + ``surface_analysis.qgs`` – a QGIS project preloaded with the datasets described below;
    
-      + ``dem(srtm).tif`` – a Digital Elevation model
+      + ``mount_etna_dem.tif`` – a Digital Elevation Model
 
 Distance
 ^^^^^^^^
@@ -341,8 +341,9 @@ Flow Computation
 
 Flow computation calculates the flow along the least-cost path for each cell. Contrary to diffusion, which computes the spread of some material in all directions, flow computation is suitable to calculate the path that water will take when flowing downhill.
 The procedure consists of two steps: 
-+ Calculation of the flow direction raster
-+ Calculation of the accumulated flow
+   
+   1. Calculation of the flow direction raster
+   2. Calculation of the accumulated flow
 
 
 The input for flow computation is a continuous field (raster), e.g. a DEM. The computation of the **flow direction** goes as follows. See :numref:`fig-flow-comp` 
@@ -369,10 +370,10 @@ Task 13
 Surface Analysis
 ----------------
 
-`Surface Analysis`_ consists of computations such as Slope angle, Slope aspect, Hillshading, etc. A common factor among these computations is they require continuous input surfaces (e.g., elevation), and they can tell the user something about the change or shape of this surface. 
+|ltb| `Surface Analysis`_ consists of computations such as Slope angle, Slope aspect, Hillshading, etc. A common factor among these computations is they require continuous input surfaces (e.g., elevation), and they can tell the user something about the change or shape of this surface. 
 
 Task 14
-   Open the project ``surface_analysis.qgis`` and use your software to compute the *slope angle, slope aspect and hillshade* of the elevation raster *'dem_srtm'*. Use the tools under **Raster terrain analysis** in the Processing toolbox, :numref:`fig-ras-terrain`. Once you have the outputs, use the **Value Tool** to analyse the results.
+   Open the project ``surface_analysis.qgis`` and use your software to compute the *slope angle, slope aspect and hillshade* of the elevation raster *'mount_etna_dem'*. We recently updated the dataset, *if you cannot find this file download the dataset* `raster-analysis.zip <raster_analysis_>`_ *again*.  Use the tools under **Raster terrain analysis** in the Processing toolbox, :numref:`fig-ras-terrain`. Once you have the outputs, use the **Value Tool** to analyse the results.
 
 .. _fig-ras-terrain:
 .. figure:: _static/img/ras-terrain.png

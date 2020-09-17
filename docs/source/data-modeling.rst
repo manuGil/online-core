@@ -90,11 +90,9 @@ Although all computer representations store data as finite representations, it i
 Computer Representations 
 ------------------------
 
-The previous exercise did not contain any software tasks. This should not have surprised you because the focus of that exercise was to understand geographic phenomena and their characteristics, and not to show the way we represent phenomena.  In this exercise, we will focus on the latter. However, a good understanding of geographic phenomena will help you in choosing a suitable computer representation.  
+The previous tasks did not use any software. This should not have surprised you because the focus, so far, was on understanding geographic phenomena and their characteristics. In this section, we will focus on showing how computers represent geographic phenomena. *A good understanding of geographic phenomena will help you in choosing a suitable computer representation.*  
 
-In this exercise, you will explore different types of computer representations for geographic phenomena available in a  GIS,  and how to select the most suitable computer representation for a specific phenomenon.   
-
-To get an overview of the different ways we can store geographic phenomena in a GIS, we are going to use the concept map of your Living textbook. 
+Here, you will explore different types of computer representations for geographic phenomena available in a  GIS,  and how to select the most suitable computer representation for a specific phenomenon. To get an overview of the different ways we can store geographic phenomena in a GIS, we are going to use the concept map of your Living textbook. 
 
 .. attention:: 
    **Question.**
@@ -117,7 +115,7 @@ Tesselations
 
 Tessellations are a way to represent geographic phenomena in a GIS. A tessellation splits the geographic space into small cells in such a way that the complete area is covered by them. They are like tiles on a floor or a wall. In most cases, such tiles are square cells, and when all cells are equal in size, we call this a regular tessellation. 
 
-In a |ltb| `Regular tesselation`_, each cell is associated with a value (cell value). This value has a data type, such as integer or floating-point. 
+In a |ltb| `Regular tesselation`_, **all cell have the same size** and each cell is associated with a value (cell value). This value has a data type, such as integer or floating-point. 
 
 An integer data type is a number that does not contain any decimals. They are often used to indicate codes in a discrete field (e.g. a land use class). A float or floating-point data type is a number that may contain decimals. A floating-point data type that can store very big numbers (64bit) is known to have ‘double precision’, and it is often called “Double”. The table below shows a list of very common data types used in a GIS. 
 
@@ -166,9 +164,9 @@ There are also |ltb| `Irregular tesselations <Irregular tesselation_>`_. In irre
    It is often stated that irregular tessellations are more adaptive compared to regular tessellations. What exactly is meant by this?
    
 Task 7 
-   Although there are multiple examples of irregular tessellations, you only have to study one example: “the Quadtree”. When you are not familiar with Quadtrees yet, refer to your Living Textbook for more information. The best way to learn how Quadtrees work is to construct one manually. 
+   Although there are multiple examples of irregular tessellations, you only have to study one example: “the Quadtree”. If you are not familiar with Quadtrees yet, refer to your Living Textbook for more information. The best way to learn how Quadtrees work is to construct one manually. 
 
-   Construct the Quadtree for the raster layer shown below. Upload a picture of your Quadtree in the discussion board. 
+   Construct the Quadtree for the raster layer shown below. 
 
    .. image:: _static/img/quad-tree.png 
 
@@ -178,7 +176,7 @@ Task 7
 
 
 Task 8
-   Calculate the area of the green, blue and white cells in the Quadtree above using the levels of the regions Quadtree.
+   Calculate the area of the green, blue and white cells in the Quadtree in each level of the Quadtree. Assume the size of each original cell is :math:`100 \times 100 \ m`.
 
 Vector Data Model 
 ^^^^^^^^^^^^^^^^^
@@ -192,7 +190,7 @@ We start with the |ltb| `Triangulated Irregular Networks <TINs_>`_. (TINs) becau
 
 
 Task 9
-   From the picture below, manually create a TIN from the given input points.
+   Using the picture below, manually create a TIN from the given points.
 
    .. image:: _static/img/make-tin.png 
       :align: center
@@ -229,8 +227,7 @@ Task 11
    **QGIS.**
    QGIS does not perform ‘on the fly interpolation’ – meaning that any point you click within your interpolated surface will have its value calculated on the spot. Instead, what QGIS does is to generate a tessellation of predefined cell size where each cell as a fixed value. ‘On the fly’ interpolations are supported in ArcGIS, for example; however, it is a functionality that will only exist within ArcGIS – the resulting data structure cannot be exported and used in other software packages.
 
-We can, however, explore the concept of ‘on the fly interpolation' with a simple paper and pencil exercise. 
-
+.. We can, however, get familiar with the computations behind an ‘on the fly interpolation' with a simple paper and pencil exercise. 
 
 .. Task 2.9 
    Place a point on the TIN (on one of the triangles) below and manually calculate the value at this point. What you are performing is and “On the Fly Interpolation”. 
@@ -259,7 +256,7 @@ Another way of representing geographic phenomenon in the vector data model is us
    **Question.**
    What is the difference between nodes and vertices, and how can we know the direction of a line? 
 
-The last representation in the vector data model is using **polygons**. Polygons are one of the most well-known and commonly used vector data models. There are two important parts when using a polygon data model: the boundary model and the Topological model.  
+The last representation in the vector data model is **polygons**. Polygons are one of the most well-known and commonly used vector data models. There are two important parts when using a polygon data model: the boundary model and the Topological model.  
 
 The boundary model explains how areas are represented and by storing the closed boundary that defines an area. A closed boundary is defined by a closed line (consisting of nodes and vertices, where the start and end vertices intersect). When representing the footprints of houses or the borders between countries, the boundary of each feature (house/country) is stored individually. 
 
@@ -318,7 +315,8 @@ By now, you should understand what topology is, but you may wonder how it can be
    .. image:: _static/img/geldrop-table.png
       :align: center
 
-   Topology can also be used to ensure consistency of the geometries in a vector layer. There are five rules of  |ltb| `Topological consistency`_, which you should know about.
+
+Topology can also be used to ensure consistency of the geometries in a vector layer. There are five rules of  |ltb| `Topological consistency`_, which you should know about.
   
 
 Task 15

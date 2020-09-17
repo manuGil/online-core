@@ -103,3 +103,4 @@ latex_elements = {
         \\usepackage{float}
         ''',
 }
+
