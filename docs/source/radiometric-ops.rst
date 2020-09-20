@@ -1,14 +1,16 @@
 Radiometric Operations
 ======================
 
+A |ltb| `Radiometric operation`_ uses or changes the values the pixes in an image. In this seccion, you will apply some of the most common radiometric operations in image processing. But first, you need to get familiar with how sensors capture  |ltb| `Electromagnetic radiation`_; how we can |ltb| `Display an image <Image display_>`_ based on how  humans see colour according to th |ltb| `Tri-stimuli theory`_;  and how we represent colour on paper using the principle of |ltb| `Subtractive colour system`_.
 
-Image Enhancement: Histogram Operations
----------------------------------------
+
+
+Image Display
+-------------
 
 .. important::
    **Resources.**
-
-   You will require the latest LTR version of `QGIS (A Coruna 3.10) <https://qgis.org/en/site/forusers/download.html>`_, plus the dataset `data.zip <#>`_ which you can download from CANVAS.  When you unzip the dataset, you will find the following files inside: 
+   You will require the latest LTR version of `QGIS (A Coruna 3.10) <https://qgis.org/en/site/forusers/download.html>`_, plus the dataset `data_histogram_operations.zip <data_histogram_ops_>`_ which you can download from CANVAS.  When you unzip the dataset, you will find the following files inside: 
    
    + ``SPOT270611.img`` – SPOT 5 image with 4 spectral bands.
    + ``tm24aug99.img``  – TM image of the 24th of august 1999.
@@ -16,13 +18,10 @@ Image Enhancement: Histogram Operations
    + ``topo34f.img`` – scan of a topographic map in RGB.
 
 
-Preparation
-^^^^^^^^^^^
-
 Through well-known plugins and providers, QGIS offers the possibility to apply all kind image enhancements for visualisation purposes. In this exercise, we will make use of such tools. Note that none of these tools changes the actual values stored in the raster datasets. They simply change the way the image is being displayed to highlight features that are not so obvious when using the default rendering settings.
  
 
-Task 1.2 
+Task 1
    Disable the default contrast stretch. Go to *Settings > Options > Rendering* tab and scroll down to Contrast enhancement. Set the algorithms   *Single band grey, Multiband colour (byte/band) and Multiband colour (> byte/band)* to **No Stretch**. Set the *Cumulative pixel count cut*  to :math:`2.0` and :math:`98.0%`. Click OK to confirm. See Figure :numref:`fig-set-render` 
 
 
@@ -37,11 +36,13 @@ Task 1.2
 Single Band Display and Relative Brightness
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Task 2.1 
+In general, remote sensing images can be displayed using |ltb| `Pseudo colour`_  and |ltb| `Colour composite`_. A common colour composite is the so called |ltb| `True Colour`_. Single band display uses **pseudo colour**.
+
+Task 2
    Create a new QGIS project and open the ``topo34f.img``. 
    If required, change the colour composite for this layer such that Hydrographic elements like water bodies display in cyan colours (use the legend in the right down corner as reference). Do right-click on the layer, select Properties. In the Symbology panel change the band selection for Red, Green and Blue to *Layer_1,  Layer_2, and Layer_3.*
 
-Task 2.2 
+Task 3
    Add the  ``Spot270611.img`` to the project.   Change the display from the default *Multiband colour* to *Singleband Gray* and select ‘Band 1’ as the *gray band*. Right-click the *Layer name > Properties > Symbology tab > Render type > Singleband gray*.  Click Apply. The band will be displayed in a greyscale with poor contrast. Figure :numref:`fig-greyscale`
 
    .. _fig-greyscale:
@@ -71,10 +72,10 @@ Task 2.2
    .. image:: _static/img/task-copy-layer.png 
       :align: center
 
-Task 2.5 
+Task 4
    Compare the result of each band by toggling the visibility of the layers off and on.  Give special attention to the comparison of band 3 and band 2. These two bands are displayed with similar composition, and jet they look quite different from the others. This proof that different spectral properties are measured in such spectral bands.
 
- Task 2.6 
+Task 5
    Use the topographic map ``topo34f.img`` to find areas with Water (Cyan), Buildings (Purple) and Evergreen Forest (Green with overprinted symbols). Then, identify the brightness in each of the four bands associated with the types of areas listed above. Complete the table below.
 
    .. image:: _static/img/task-cover-table.png 
@@ -107,7 +108,7 @@ Suppose you have a **SPOT XS** image which includes land cover the types: soil, 
       :align: center
 
 
-Task
+Task 6
    Copy RGB brightness values that you estimated into the table.  Then use an  `RGB calculator  <https://www.w3schools.com/colors/colors_rgb.asp>`_ to determine the approximated colour of each land cover type in this colour composite.
 
    ================  ===============   =================    ================     ===================
@@ -127,7 +128,7 @@ Multiband Display: Applying Colour Composites
 
 In the previous section, you determine the relative brightness for three types of land cover. Then, you determined the theoretical colour in a specific colour composite. In this section, we will compare the theoretical colour for water and vegetation with the actual colour in the colour composite.
 
-Task 4.1 
+Task 7
    Open the ``Spot270611.img`` in QGIS and use a band combination of 3, 4 and 2 for Red, Green and Blue. Set the contrast enhancement to :math:`35%` and :math:`98%` for all bands using the Actual (slower) Accuracy, as shown below.
 
    .. image:: _static/img/task-spot-composite.png
@@ -144,24 +145,32 @@ By now, you have to realise that by knowing the relative *spectral reflectance* 
 
 Some land cover types might have similar or the same spectral reflectance property in specific ranges of the Electromagnetic (EM) spectrum. The integration of more bands in the analysis,  and the assessment of the spectral properties in other ranges of the EM spectrum, can result in the successful discrimination of more types of land cover. This is true not only in the case of land cover but also for many other objects in a remote sensing image.
 
+-----------------------------
 
 Image Enhancement by Histogram Operations
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-----------------------------------------
 
-One method to enhance images, for interpretation or analysis, uses histogram operations. These operations are usually referred to as **global contrast enhancement operations**.
-To experiment with contrast enhancement, we will use a TM image of the 24th of august 1999, ``tm24aug99.img``. This image covers a large water body and different types of land cover,  and it has clouds-covered areas. 
+|ltb| `Image enhancement`_ describes a set of operations that aim to improve the way certain features in an image are displayed. 
+One method to enhance images, for interpretation or analysis, uses |ltb| `Histogram operations <Histogram operation_>`_. These operations use the |ltb| `Histogram`_ of an image to control how it is displayed, and they are usually known as **global contrast enhancement operations**.
+
+.. important::
+   **Resources.**
+   You will require the same dataset as in the previous section: `data_histogram_operations.zip <data_histogram_ops_>`_. 
+   
+   + To experiment with contrast enhancement, we will use a TM image of the 24th of august 1999, ``tm24aug99.img``. This image covers a large water body and different types of land cover,  and it has clouds-covered areas. 
+
 
 Contrast Stretching
-*******************
+^^^^^^^^^^^^^^^^^^^
 
- Task 5.2 
+ Task 8
    Display the  ``tm24aug99.img`` using the band combination 4, 5 and 3. Set the *Stretch to MinMax* to a *Mean +/- standard deviation* of  2.0, and the *Accuracy* to **Actual (slower)**; as shown below.
 
 
    .. image:: _static/img/task-sdeviation-stretch.png
       :align: center
 
-Task 5.3 
+Task 9
    Zoom in to an area covered by clouds over the mainland (centre right). Open the **Layer Properties** dialogue and select the **Symbology** panel. Then change the **Statistics extent** to *Current canvas* and apply.
 
    Select to **Zoom Full** to zoom out to see the whole image. Instead of seeing clouds in whites and pinks,  you now can see clouds in several colours. 
@@ -180,7 +189,7 @@ Task 5.3
    **Question.**
    Do you also think that mainland displaying in a not-so-good way?
 
-Task 5.4 
+Task 10
    Zoom into an area with mostly land and some water,  and re-apply the same  *Contrast enhancement* method as before. You can use the context-sensitive option **Stretch using current extent** as shown below, but verify that it does what you intended.
 
    .. image:: _static/img/task-apply-stretch.png
@@ -188,7 +197,7 @@ Task 5.4
 
 You will notice a change in contrast in the image. This is because the part of the image that is currently visible include different types of land cover; thus, different statistics. The results of a contrast stretch based on statistics changes when the range of values used in the computation of such statistics changes.
 
-Task 5.5 
+Task 11
    Set the **Contrast enhancement** back to *Mean +/- standard deviations* and the **Statistics extent** to  *Whole raster*. Then, right-click the *’ tm24aug99’* layer and select *Export > Save as...*. For  **Output mode** select *Rendered image* and enter a self-explanatory name for the output file. Save the file to an existing folder. The file will automatically be added to the Map View.
 
 
@@ -203,11 +212,11 @@ Task 5.5
       :align: center
 
 Choosing Min and Max values
-***************************
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To choose the *min* and *max* values for a contrast stretch, the user has to consider which areas of an image are of interest, or which types of land cover are relevant for certain purposes. To help this choice, we built a model which you can to extract the local statistics for an area of interest.  In this section, you will experiment with such a model.
 
-Task 5.7 
+Task 12
    To use the model, you first have to import it to QGIS. In the **Processing Toolbox**, click on the *Model icon* and select **Add Model to Toolbox**. Select the model ``Raster_Statistics_By_Extent.model3`` that is included with the dataset. Click Open. The model will be imported and shown in the *Models section*. 
 
    .. figure:: _static/img/task-add-model.png
@@ -216,7 +225,7 @@ Task 5.7
 
       Adding a model to the Processing Toolbox
 
-Task 5.6 
+Task 13 
    Remove the exported image from the project; keep only the original image. Zoom into an area on the mainland which is primarily dark orange/brown; they represent areas with forest.
 
    Then, use the *’Statistics of Raster by extent’* model to calculate the local statistics. Double click the model and provide an *Extent* and an *Input raster file*. Run the model. The model creates a rectangle from the input Extent, which contains an attribute table with the computed statistics for each band of the Input raster. 
@@ -232,17 +241,17 @@ Task 5.6
 To correctly apply contrast enhancement for specific types of land covers, you need to know which are the types of interest. Which their spectral signatures are; the specifications of the spectral bands of the sensor which you have chosen; and you need knowledge of additive colour mixture.
 
 
-Task 5.9 
+Task 14
    Add the ``tm25aug99_sub.img`` to the project, and display it using a band combination 4, 5 and 3. this image covers shallow water and land with various types of land cover. Analyse the histograms of the three bands of this image; * right-click on the layer > select Properties > Histogram tab*. Compute the histogram is necessary. Then, select *Prefs/Actions > Show selected band* and choose the band want to inspect.
 
 .. attention:: 
    **Question.** 
    In which band on display do you expect a major difference in DN Values between water and land? Use your knowledge on EM radiation. A bi or tri-modal trend in the histogram is an important clue.
 
-Task 5.10
+Task 15
    Use the histograms to identify approximate values for a *contrast stretch* which will enhance the contrasts between types of coverage on the part of the image with the land. Save the result using the **Export As..**  and  *Rendered image* options. Remove the resulting layer from the project.
  
-Task 5.12
+Task 16
    Repeat the previous task. This time use the histograms to set a contrast that will enhance the image specifically for distinguishing shallow water.
 
 .. note:: 
@@ -251,28 +260,29 @@ Task 5.12
 
 ------------------------------------
 
-Image Enhancement: Filter Operations
-------------------------------------
+Image Enhancement by Filter Operations
+--------------------------------------
+
+|ltb| `Filtering`_ discribes a set of radiometric operation used to enhance images.  Filters are applied to images for the sake of |ltb| `Noise reduction`_, |ltb| `Edge Detection`_, and |ltb| `Edge enhancement`_.
+
 
 .. important::
    **Resources.**
 
-   You will require the latest LTR version of `QGIS (A Coruna 3.10) <https://qgis.org/en/site/forusers/download.html>`_, plus the dataset `data.zip <#>`_ which you can download from CANVAS.  When you unzip the dataset, you will find the following files inside: 
+   You will require the latest LTR version of `QGIS (A Coruna 3.10) <https://qgis.org/en/site/forusers/download.html>`_, plus the dataset `Data_Filter_Operations <data_filter_ops_>`_ which you can download from CANVAS.  When you unzip the dataset, you will find the following files inside: 
    
    + ``tm1999_b4.tif`` – A scene from band 4 of the Landsat TM. Enschede in 1999.
    + ``tm1999_xs_ml_classification.tif`` – Classification of the types of land cover in Enschede. From Landsat TM 1999.
    + ``NW-SE_3x3.txt`` – Definition of a custom filter.
 
-Preparation
-^^^^^^^^^^^
 
 QGIS offers the possibility to apply all kind of filter kernels on images which are displayed in a viewer. In this exercise, we will make use of tools which apply some filters and store the output as temporary files. In such a way, we can easily compare different results.
 
 
-Task 1.1 
+Task 17
    Install the **Profile tool** plugin. *Go to Plugins > Manage* and Install Plugins, and install the plugin.
 
-Task 1.2 
+Task 18
    Set the default contrast stretch to use the 2% and 98% cumulative pixel count for grayscale images. In the Settings menu, select *Options > Rendering tab*. Scroll down to **Contrast enhancement settings**, and set the default for **Single band gray** to *Stretch To MinMax*. Then, set **Limits (minimum/maximum)** to *Cumulative pixel count cut*. Make sure that the cut limits are set to :math:`2.0` and :math:`98.0%`. Select OK.
 
 .. note::
@@ -283,11 +293,9 @@ Task 1.2
 
    .. raw:: html
 
-      <video width="560" height="315" controls>
-         <source src="https://player.vimeo.com/video/204013568?color=007e83&portrait=0">
-      </video>
+      <div style="padding:52.29% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/204013568?color=007e83&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 
-Task 1.3 
+Task 19
    In the Settings menu, go to *Options > Processing* and check that you have the SAGA and GRASS providers enabled.
 
 
@@ -299,7 +307,7 @@ Smoothing Filter
 ****************
 
 
- Task 2.1 
+ Task 20
    Apply a linear filter to the *’tm1999_b4’* image. In QGIS, open the  ``tm1999_b4.tif``. Your project should assume the same Spatial Reference System as the image (*EPSG:32632 WGS84/UTM zone 32N*). In the **Processing Toolbox**, open the SAGA tool called *’User defined filter’*. 
 
    Confirm that *’tm1999_b4’* is the input and click **Default filter matrix (3x3)** to open an empty filter kernel. Enter the weights of an *average filter kernel*. Ensure that the sum of weights is equal to 1. Confirm with OK. In the **User defined filter dialogue** execute the kernel by clicking OK. The output is added to the Map View as a temporary file. 
@@ -315,18 +323,19 @@ Smoothing Filter
       :align: center
 
 
-Task 2.5 
+Task 21
    Explore the filter results around the Twente Airport. Reset the zoom to fit the image to the **Map View**. Next, change the scale, in the textbox at the bottom of the Map View, to :math:`1: 75,000`.  Zoom in to the major runway of the *Twente Airport*. See Figure x.
 
-   We will use the **Profile tool** to compare the results of the average filter and original image. If you do not know how to install the *Profile Tool* plugin, watch the video tutorial on installing plugins in QGIS.
+   We will use the **Profile tool** to compare the results of the average filter and original image. If you do not know how to install the *Profile Tool* plugin, watch the video tutorial on `installing plugins in QGIS <https://vimeo.com/showcase/4389527/video/201997421>`_.
 
-   .. raw:: html
+.. raw:: html
 
-      <video width="560" height="315" controls>
-         <source src="https://player.vimeo.com/video/201997421?color=007e83&portrait=0">
-      </video>
+   <div style="padding:53.54% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/201997421?color=007e83&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+
+\
 
    Start the Profile tool. Select one of the layers in the **Layer Panel**. Zoom into the centre of the image and draw a profile (line) across the major runway. Click on **Add Layer**. Select the other layer in the **Layers panel** and click on *Add Layer* again.
+
 
 .. figure:: _static/img/task-smooth-result.png
    :alt: smoothing filter result
@@ -339,13 +348,13 @@ Task 2.5
    **Question.**
    Just by looking at the graph of the Profile tool,  can you tell which profile belongs to the layer with the average filter?
 
-Task 2.8 
+Task 22
    Draw profiles at different locations, and confirm your knowledge of the effects of applying an average filter (smoothing).
   
 Gradient Filter
 ***************
 
- Task 2.9 
+ Task 23 
    Use the **User defined filter** tool to apply a filter using the weights in the figure below, on the original image *’tm1999_b4 layer’*. Rename the resulting layer to ‘*Laplace’*.
 
    .. image:: _static/img/laplace-kernel.png
@@ -358,14 +367,14 @@ Gradient Filter
    + Is kernel above a detection kernel? If yes, what does it detect?
    + Does the layer resulting from the previous task contain the same brightness as the original image for area objects?
 
-Task 2.11 
+Task 24 
    Examine the result of the Laplace filter. Toggle on and off the visibility of the *’Laplace’* layer to visually check what happened. Zoom in to the edge of the image until you see individual pixels.  Toggle the visibility of the *’Laplace’* layer again.
 
 .. attention:: 
    **Question.**
    What phenomena do you observe? Can you explain it?
 
-Task 2.12 
+Task 25
    Open the histogram of the ‘*Laplace’* layer. Go to *Properties > Histogram*; check the values in the image.
 
 .. attention:: 
@@ -373,15 +382,25 @@ Task 2.12
    Around which value does the histogram has its centre?
 
 
-Task 2.13 
+Task 26 
    In the **Profile** tool add *’Laplace’* layer and toggle the visibility for the other layers. Confirm that the filter kernel detected two edges, i.e. both sides of the runway.
 
 The *’Laplace’* layer looks rather artificial. The brightness of the original image is gone; the lighter and darker areas in the original have now a common grey tone and high contrasting pixels at their edges. This filter has detected the changes (edges) between local lighter and darker pixels. The circular build of the kernel that you applied, i.e. all negative weights around the centre with positive weight,  detected changes in all directions.
 
+
+.. note:: 
+   **Reflection.**
+   We can use the output values of an edge detection kernel to discriminate **edges with high contrast** and **edges with low contrast**. For example,  a field with relatively low values and a neighbouring field with relatively high values will result in edges with high contrast. In comparison, edges with low contrast may be the result of adjacent pixels which have a different value. You could use a threshold to select only edges with high contrast and delimit the edges between areas/fields.
+
+   Detection filter kernels have **positive** and **negative** weights, and their output values could be positive or negative. Positive values represent edges which correlate positively with the kernel, negative values represent edges which correlate negatively – ‘ are opposite to’ –. We can also use the sign of the values to discriminate different classes or types of edges. 
+   
+   If you do not understand these statements, review the lecture material once more.
+
+
 Edge Enhancement
 ****************
 
-Task 
+Task 27
    Repeat the steps of the previous task, but this time use kernels with the following values of the centre: 12, 16 and 200. Increasing the centre value will increase the weight of the centre pixel in the original image. When using a value of about 16 for the centre pixel; the kernel will calculate the Laplace enhancement of the image. Then, the resulting layer will look like the original image.
 
 One could use the output DN value to discriminate between strong/steep edges (high *absolute* DN values) and weak/low edges (low DN values, close to 0) and between positive edges which correlate positively with the kernel (positive DN values) and negative edges which correlate negatively with the kernel (negative DN values). [CHECK WITH ANDRE]
@@ -399,7 +418,7 @@ The Laplace kernel detects edges in all directions. We can also define kernels w
       :width: 160px
       :align: center
 
-Task 2.14 
+Task 28 
    In the Processing Toolbox, use the **r.mfilter** tool of GRASS  to detect edges in a specific direction.  Use the file ``NW-SE_3x3.txt`` as *Filter file*.  
 
    Check the results and confirm that one of the runways of the *Twente Airport*  was not detected at all! Also, confirm that the edges of the main runway were detected. The result should show positive values on one side of the runway and a negative on the other. This is because of the correlation of the results with the positive and negative weights in the kernel. 
@@ -412,7 +431,7 @@ Enhancement using Non-linear Filters
 Rank-Order Filter
 *****************
 
-Task 3.1  
+Task 29  
    In the Processing Tools, look for the SAGA  **Rank filter**.  Select the *’tm1999_b4’* layer as the input grid. Set the *Search Mode* to *Square* and a Radius of 1. Use a *Rank (Percent)* of 50. This settings essentially define a **median filter**. Execute the filter.
    
    Use the **Profile tool** to inspect the results and confirm the difference between the original image and the result of the  Average and Median filters. Pay special attention to locations where you expect variations, for instance, around the edges between areas. 
@@ -420,7 +439,7 @@ Task 3.1
 Majority Filter 
 ***************
 
-Task 3.3 
+Task 30 
    Add the ``tm_xs_ml_classification.tif`` into the Map View; this layer contains a set of classes representing land cover. You will notice that there are many isolated pixels inside some homogeneous areas. For example, the yellow pixels identify maise, which usually does not grow in such small parcels.
  
    In the **Processing Toolbox**, open the **r.neighbors** tool. Select *’tm1999_xs_ml_classifciation’* as input raster and set the neighbourhood operation as *’mode’* (also known as majority filter).
@@ -437,14 +456,14 @@ Task 3.3
    Copying the style between two raster layers in QGIS
 
 
-Task 3.6 
+Task 31
    Toggle the visibility of the filtered result and compare it with the original landcover layer. Confirm that most isolated pixels have disappeared, and that thin lines of pixels surrounded by homogeneous areas also disappeared (e.g. a runway in the Twente Airport). The main runway should still be distinguishable.
  
 .. attention:: 
    **Question.**
    Can you explain why one of the small runways of the Twente Airport disappeared after applying a majority filter?
 
-Task 3.7 
+Task 32
    Use the **r.neighbor** to compute another mode filter on the *’tm1999_xs_ml_classifciation’* layer. This time use neighbourhood of size :math:`5`; which means to apply a 5x5 kernel. Compare the result of this filter with the 3x3 majority filter.
 
 .. attention:: 
@@ -452,168 +471,12 @@ Task 3.7
    What do you observe when comparing results of a 3x3 and 5x5 majority filters around the main runway of the Twente Airport?
 
 
-Task 3.8 
+Task 33
    Experiment with the application of consecutive filters. Apply a the 3x3 majority filter to the results of the existing *’3x3 majority’* filter layer. Compare these results with the result of applying a single 5x5 majority filter. You will notice that the results are not the same.
 
 .. note:: 
    **Reflection.**
    In summary, you should acknowledge that in the case of neighbour operations, the results will change depending on the size of the kernel and the number of time a filter is applied to an input raster.
 
---------------------------------------
-
-Correction of Atmospheric Disturbances 
---------------------------------------
-
-The procedures describe in this section fall within the “pre-processing” group of image processing techniques, and they focus on radiometric corrections.
-
-
-.. figure:: _static/img/corrections-wkf.png
-   :scale: 50% 
-   :alt: corrections workflow
-   :figclass: align-center
-
-   A sequence of possible corrections on optical imagery
-
-.. important::
-   **Resources.**
-
-   You will require the latest LTR version of `QGIS (A Coruna 3.10) <https://qgis.org/en/site/forusers/download.html>`_, plus the dataset `data.zip <#>`_ which you can download from CANVAS.  When you unzip the dataset, you will find the following files inside: 
-   
-   + ``etm99.img`` – Scene from Landsat Enhanced Thematic Mapper, bands 1 to 4. Wadden islands, 1999.
-   + ``pan.img``  – Scene from SPOT, panchromatic band.
-   + ``tm89.img`` – Scene from  Landsat Thematic Mapper.
-
-   These three images are provided with almost cloud-free skies. 
-
-
-Haze correction
-^^^^^^^^^^^^^^^
-
-
-Task 2.1 
-   Use the `Satellite and sensor database <https://webapps.itc.utwente.nl/sensor/default.aspx?view=searchsat>`_ and the file and metadata information to find the information for the spectral specifications of *SPOT PAN, Landsat TM B1 to B4* and *Landsat ETM B1 to B4*. Then, complete the table below.
-
-=====================       ============    ====    ===========================     ==============
-Satellite/sensor            Filename(s)     Date    Approx. time of acquisition     Resolution GSD
-=====================       ============    ====    ===========================     ==============
-SPOT/HRG panchromatic       PAN        
-Landsat-5/TM                TM89       
-Landsat-7/ETM+              ETM99         
-=====================       ============    ====    ===========================     ==============
-
-
-.. attention:: 
-   **Question.**
-   Are the spectral characteristics of the TM and ETM sensors different? 
-
-
-Task 2.2 
-   Open  ``etm99.img``, ``pan.img``, and ``tm89.img`` in QGIS. and take a look at the images. Display all images using **bands 4, 3, 2 for RGB** and *No Stretch*. Open the **Value tool** to get pixel information. 
-    
-   Haze has an additive effect to the overall image, resulting in higher DN values. As a result, it is reducing the contrast of the image. Because this effect is :math:`\lambda`  dependent, its influence differs per band. 
-    
-   We will assume that there is a real *blackbody* present in the images; therefore, we can simply subtract to a minimum of zero. Assume that the blackbody, in this case, is *deep, clear and unpolluted water*. Complete the table below with the **minimum values** that you can find in such water body. Some hints are given below.
-
-=====   =============   =========   =========   =========   =========
-Image   Band 1 DN       Band 2 DN   Band 3 DN   Band 4 DN   Pan DN
-=====   =============   =========   =========   =========   =========
-PAN     **n.a.** [#]_   **n.a.**    **n.a.**    **n.a.**
-TM89    **n.a.**        **n.a.**    **n.a.**                **n.a.**
-ETM99                                                       **n.a.**            
-=====   =============   =========   =========   =========   =========
-
-.. [#] Not applicable
-
-\
-
-   Use the **Value tool** to read DN values. Note that the tool shows pixel values for all bands of the multispectral image. *Read the value for the proper band!*
-
-   The island is surrounded by a tidal flat, which causes tidal currents with a tidal frequency. It is quite difficult to locate clear water in such situations. We recommend using a body with following water, rather small lake on the island as assumed-blackbody.
-
-   1. Select the *'ETM99'* image, go to Properties and change the symbology to single band grayscale for Band 4. Set minimum to 0 and maximum to around 40 to increase the contrast for the lowest DN values (these are objects with the lowest reflectance properties, which are more likely to be water).
-
-   2. Zoom into the area around :math:`[lat, long] = [53.46145,5.652432 ] or [x, y] = [676191, 5927074]` for comparison. This location is a small lake on the island and shows much lower values than most of the sea in the images. Search in the lake for the lowest DN value. Keep a list of lowest values on scratch paper and copy these to the table.
-
-.. attention:: 
-   **Question.** Compare the minimal value found in the lake or tidal flat with the minimum value in that band. 
-   
-   + Why is there a discrepancy between the values? Think about the spectral and spatial characteristics of the band and the spatial dimensions and spectral property of the object.
-
-   + Why are there decreasing values for haze for *'ETM99'* from Band 1 to Band 4?
- 
-   + How can you explain the difference between the Haze values of the different images?
-
-   +  What about the *'PAN'* image? What range on the spectrum does it cover? Does this relate to the observed difference between *'ETM99'* channels and the panchromatic channel? 
-
-
-Task 
-   Correct the images for haze by subtraction values using the Raster calculator. In QGIS go to **Raster > Raster Calculator**. Specify the formula to subtract the Haze value from Band 4 and specify the name of the output file. 
-
-   Select the newly created *Band 4 with haze correction* on the **Layers Panel**.  Go to  Properties of the layer and modify the contrast stretch as follows, minimum: 0,  maximum: 255. Do the same for the *Band 4  without haze correction.*
-
-.. attention:: 
-   **Question.**
-   Compare the two versions of band 4  of *‘ETM99’*. Do they look different?
-
-Verify that the histograms of the haze-corrected bands have shifted towards the origin. Both histograms have the same shape before and after haze correction but a different location. It also shows that there are apparently some pixels with DN values lower than the small lake on the island. These negative values should not exist in EO images but are caused by the fact that we use a GIS to do the calculation. Before continuing, we have to correct this artefact.
-
-Task 2.8 
-   From the **Processing Toolbox**, use the SAGA module **Reclassify values (simple)** to set all negative values to 0. Select condition  ``[0] Low value <= grid value < high value``. Edit the Lookup table; delete two rows and enter :math:`-255` for *Low Value*. This will replace all values in the range  :math:`[-255,0]` with 0.
-
-Task 2.9 
-   Calculate the Haze correction for all bands of *‘ETM99’*, for band 4 of *'TM89*' and *'Spot PAN'*, including the reclassification.
-
-.. attention:: 
-   **Question.**
-   Suppose you had a SPOT image with the values for the channels that correspond to R, G, and B. Would the Haze values be different than those in the TM scene? Why or why not?
-
-Sun Angle Correction
-^^^^^^^^^^^^^^^^^^^^
-
-So far we have corrected for haze by simplifying the illumination formula, such as:
-
-.. math::
-
-   DN = (T\sigma +  T\delta_i)R_i 
-
-
-The sun angle determines the amount of irradiance per unit area on the ground. We can correct for sun angle attenuation by normalising the sun angle to a zenith situation.  We do this by dividing the image values by the sine of its sun elevation angle (in degrees). This correction will result in slightly higher values: 
-
-.. math::
-   DN' = \frac{DN}{sin(\sigma)}
-
-Where :math:`DN` is the input pixel, :math:`DN’` is the output pixel value, and :math:`\sigma` is the sun angle. Note that because the angle is smaller than :math:`90˚` the sine will be smaller than 1 and as a result :math:`DN’ > DN`.
-
-In case you have many images with various sun angles, you can calibrate them to the zenith.  Or you can select one of the images, which serves as a reference for sun angle correction, and correct to others to match the reference sun angle.
-
-Absolute Sun Angle Correction
-*****************************
-
-Usually, you will find the sun elevation angle :math:` \sigma` in the header file of the images. However, this time, we provide the angle below for the *'SPOT PAN'* image.
-
-
-.. attention:: 
-   **Question.**
-   What is the sine for the :math:`\sigma`  of the *’SPOT PAN’* image you used  in the previous section
-   Write the answer in the table below.
-
-   ======   ======================     ===================
-   Scene    :math:`\sigma`             :math:`sin(\sigma)` 
-   ======   ======================     ===================
-   PAN      :math:`58.9^{\circ}`
-   ======   ======================     ===================
-
-Task 3.2 
-   Use the **Raster Calculator** to calculate to correct for the sun angle on the *’haze-corrected SPOT PAN’* image. 
-
-Task 3.3 
-   Locate some particularly dark and bright pixels with the **Value tool** in the *’SPOT PAN’*, and examine the difference between *haze-corrected* and *haze-and-sun-angle-corrected* values.
-
-.. attention:: 
-   **Question.**
-
-   + In which way have the values of the *haze-corrected* and *haze-and-sun-angle-corrected* images changed? Are the changes constant, linear, or exponential? Were the changes predictable?
-   + Why did we apply haze correction before sun angle correction? Does the other of these corrections make a difference?
-   + In case of multiband images, we do not need to calculate the sun-angle separately for each of the bands. Why not?
 
 .. sectionauthor:: Wan Bakx

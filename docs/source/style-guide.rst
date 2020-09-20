@@ -14,10 +14,10 @@ Structure
 
 Titles must be written by capitilizing each of the main words. Exceptions: ``the, in, at, etc.``
 
-=============================================   ============================================    ========================================= 
-Content                                         Style                                           Example
-=============================================   ============================================    ========================================= 
-Section (main title, one per RST file)          underlined section with ``=``                   .. code-block:: rst
+=============================================   ============================================    =========================================    
+Content                                         Style                                           Example                                      
+=============================================   ============================================    =========================================    
+Section (main title, one per RST file)          underlined section with ``=``                   .. code-block:: rst                                                                                                                          
                                                                                                    
                                                                                                    Section Title
                                                                                                    =============
@@ -28,7 +28,7 @@ Sub-section                                     underlined section with ``-``   
 Sub-sub-section                                 underlined section with ``*``                   .. code-block:: rst
                                                                                                    
                                                                                                    Sub-subsection Title
-                                                                                                   ********************
+                                                                                                   ^^^^^^^^^^^^^^^^^^^^
 Sub-section divider                             horizontal line using at least 5 ``-``          .. code-block:: rst
                                                                                                    
                                                                                                    A Sub-section
@@ -41,7 +41,7 @@ Sub-section divider                             horizontal line using at least 5
                                                                                                    -------------------
                                                                                                    Some text after divider
                                                               
-=============================================   ============================================    ========================================= 
+=============================================   ============================================    =========================================
 
 ------------------
 
@@ -254,7 +254,7 @@ Except inside admonitions, *video* are declared without any spacing to the left,
 Text Formatting Guidelines
 --------------------------
 
-This section describe a list of formating convention used in the online core exercise. These should be followed to maitain consistency in 
+This section describe a list of formating the main text. These must be followed to maitain consistency and easy use. 
 
 =============================================   ==================================================    ====================================================
 Content                                         Style                                                 Example

@@ -57,18 +57,22 @@ templates_path = ['_templates']
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = ['assets/ltb-links-gis.rst', 'assets/data-links-gis.rst', 'radiometric-ops.rst', 'styling.rst', 'styling copy.rst' ]
+
+exclude_patterns = ['assets/ltb-links-gis.rst', 'assets/data-links-gis.rst', 'assets/ltb-links-eo.rst', 'assets/data-links-eo.rst', 'style-demo.rst', 'style-guide.rst', ]
 
 # Allows storing external links in separated rst
 rst_epilog=""
 
 # Target link-files
-link_file = ['assets/ltb-links-gis.rst',
+link_files = ['assets/ltb-links-gis.rst',
             'assets/data-links-gis.rst',
+            'assets/data-links-eo.rst',
+            'assets/ltb-links-eo.rst',
             'substitutions.txt'
             ]
+
 # Read links in the from the target files
-for file in link_file:
+for file in link_files:
     with open(file) as f:
         rst_epilog += f.read()
 
