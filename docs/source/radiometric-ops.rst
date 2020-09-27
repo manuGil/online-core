@@ -214,27 +214,28 @@ Task 11
 Choosing Min and Max values
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To choose the *min* and *max* values for a contrast stretch, the user has to consider which areas of an image are of interest, or which types of land cover are relevant for certain purposes. To help this choice, we built a model which you can to extract the local statistics for an area of interest.  In this section, you will experiment with such a model.
+To choose the *min* and *max* values for a contrast stretch, the user has to consider which areas of an image are of interest, or which types of land cover are relevant for certain purposes.
+..  To help this choice, we built a model which you can to extract the local statistics for an area of interest.  In this section, you will experiment with such a model.
 
-Task 12
-   To use the model, you first have to import it to QGIS. In the **Processing Toolbox**, click on the *Model icon* and select **Add Model to Toolbox**. Select the model ``Raster_Statistics_By_Extent.model3`` that is included with the dataset. Click Open. The model will be imported and shown in the *Models section*. 
+.. Task 12
+..    To use the model, you first have to import it to QGIS. In the **Processing Toolbox**, click on the *Model icon* and select **Add Model to Toolbox**. Select the model ``Raster_Statistics_By_Extent.model3`` that is included with the dataset. Click Open. The model will be imported and shown in the *Models section*. 
 
-   .. figure:: _static/img/task-add-model.png
-      :alt: add model
-      :figclass: align-center
+..    .. figure:: _static/img/task-add-model.png
+..       :alt: add model
+..       :figclass: align-center
 
-      Adding a model to the Processing Toolbox
+..       Adding a model to the Processing Toolbox
 
-Task 13 
-   Remove the exported image from the project; keep only the original image. Zoom into an area on the mainland which is primarily dark orange/brown; they represent areas with forest.
+.. Task 13 
+..    Remove the exported image from the project; keep only the original image. Zoom into an area on the mainland which is primarily dark orange/brown; they represent areas with forest.
 
-   Then, use the *’Statistics of Raster by extent’* model to calculate the local statistics. Double click the model and provide an *Extent* and an *Input raster file*. Run the model. The model creates a rectangle from the input Extent, which contains an attribute table with the computed statistics for each band of the Input raster. 
+..    Then, use the *’Statistics of Raster by extent’* model to calculate the local statistics. Double click the model and provide an *Extent* and an *Input raster file*. Run the model. The model creates a rectangle from the input Extent, which contains an attribute table with the computed statistics for each band of the Input raster. 
 
-   Copy the min and max values for each band to the **Band Rendering** dialogue on the *Symbology* window and apply the changes. This would enhance the contrast for the areas that contain forests.
+..    Copy the min and max values for each band to the **Band Rendering** dialogue on the *Symbology* window and apply the changes. This would enhance the contrast for the areas that contain forests.
 
-.. note:: 
-   **QGIS.**
-   The  *'Statistics of Raster by extent'* model will always list the result using the name *Band 1, Band 2 and Band 3*. These numbers do not correspond to the number in *Input raster file*; instead, they correspond to the order in which the bands are were displayed in RGB when running the model. For example, in this case, Band 1 contains the statistics that correspond to the band assigned to the Red channel, that is *Band 5* of the...
+.. .. note:: 
+..    **QGIS.**
+..    The  *'Statistics of Raster by extent'* model will always list the result using the name *Band 1, Band 2 and Band 3*. These numbers do not correspond to the number in *Input raster file*; instead, they correspond to the order in which the bands are were displayed in RGB when running the model. For example, in this case, Band 1 contains the statistics that correspond to the band assigned to the Red channel, that is *Band 5* of the...
 
 
 To correctly apply contrast enhancement for specific types of land covers, you need to know which are the types of interest. Which their spectral signatures are; the specifications of the spectral bands of the sensor which you have chosen; and you need knowledge of additive colour mixture.
@@ -279,10 +280,10 @@ QGIS offers the possibility to apply all kind of filter kernels on images which 
 
 
 Task 17
-   Install the **Profile tool** plugin. *Go to Plugins > Manage* and Install Plugins, and install the plugin.
+   Install the **Profile tool** plugin. Go to :guilabel:`Plugins` > :guilabel:`Manage Install Plugins`, and install the plugin.
 
 Task 18
-   Set the default contrast stretch to use the 2% and 98% cumulative pixel count for grayscale images. In the Settings menu, select *Options > Rendering tab*. Scroll down to **Contrast enhancement settings**, and set the default for **Single band gray** to *Stretch To MinMax*. Then, set **Limits (minimum/maximum)** to *Cumulative pixel count cut*. Make sure that the cut limits are set to :math:`2.0` and :math:`98.0%`. Select OK.
+   Set the default contrast stretch to use the :math:`2 \%` and :math:`98 \%` of cumulative pixel count for grayscale images. In the Settings menu, select :guilabel:`Options` > :guilabel:`Rendering` tab. Scroll down to **Contrast enhancement settings**, and set the default for **Single band gray** to *Stretch To MinMax*. Then, set **Limits (minimum/maximum)** to *Cumulative pixel count cut*. Make sure that the cut limits are set to :math:`2.0 \%` and :math:`98.0 \%`. Select OK.
 
 .. note::
    **QGIS**
@@ -295,7 +296,7 @@ Task 18
       <div style="padding:52.29% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/204013568?color=007e83&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 
 Task 19
-   In the Settings menu, go to *Options > Processing* and check that you have the SAGA and GRASS providers enabled.
+   In the Settings menu, go to :guilabel:`Options` > :guilabel:`Processing` and check that you have the SAGA and GRASS providers enabled.
 
 
 
@@ -354,7 +355,7 @@ Gradient Filter
 ***************
 
  Task 23 
-   Use the **User defined filter** tool to apply a filter using the weights in the figure below, on the original image *’tm1999_b4 layer’*. Rename the resulting layer to ‘*Laplace’*.
+   Use the **User defined filter** tool to apply a filter using the weights in the figure below, on the original image *'tm1999_b4'* layer. Rename the resulting layer to *'Laplace'*.
 
    .. image:: _static/img/laplace-kernel.png
       :width: 160px
@@ -367,14 +368,14 @@ Gradient Filter
    + Does the layer resulting from the previous task contain the same brightness as the original image for area objects?
 
 Task 24 
-   Examine the result of the Laplace filter. Toggle on and off the visibility of the *’Laplace’* layer to visually check what happened. Zoom in to the edge of the image until you see individual pixels.  Toggle the visibility of the *’Laplace’* layer again.
+   Examine the result of the Laplace filter. Toggle on and off the visibility of the *'Laplace'* layer to visually check what happened. Zoom in to the edge of the image until you see individual pixels.  Toggle the visibility of the *'Laplace'* layer again.
 
 .. attention:: 
    **Question.**
    What phenomena do you observe? Can you explain it?
 
 Task 25
-   Open the histogram of the ‘*Laplace’* layer. Go to *Properties > Histogram*; check the values in the image.
+   Open the histogram of the ‘*Laplace’* layer. Go to :guilabel:`Properties` > :guilabel:`Histogram`; check the values in the image.
 
 .. attention:: 
    **Question.**
@@ -389,9 +390,9 @@ The *’Laplace’* layer looks rather artificial. The brightness of the origina
 
 .. note:: 
    **Reflection.**
-   We can use the output values of an edge detection kernel to discriminate **edges with high contrast** and **edges with low contrast**. For example,  a field with relatively low values and a neighbouring field with relatively high values will result in edges with high contrast. In comparison, edges with low contrast may be the result of adjacent pixels which have a different value. You could use a threshold to select only edges with high contrast and delimit the edges between areas/fields.
+   We can use the output values of an edge detection kernel to discriminate **edges with high contrast** and **edges with low contrast**. For example,  a field with relatively low values and a neighbouring field with relatively high values will result in edges with high contrast. In comparison, edges with low contrast may be the result of adjacent pixels which have slightly different value. You could use a threshold to select only edges with high contrast and delimit the edges between areas or fields.
 
-   Detection filter kernels have **positive** and **negative** weights, and their output values could be positive or negative. Positive values represent edges which correlate positively with the kernel, negative values represent edges which correlate negatively – ‘ are opposite to’ –. We can also use the sign of the values to discriminate different classes or types of edges. 
+   Detection filter kernels have **positive** and **negative** weights, and their output values could be positive or negative. Positive values represent edges which correlate positively with the kernel, negative values represent edges which correlate negatively – ‘ they are opposite to’ –. We can also use the sign of the values to discriminate different classes or types of edges. 
    
    If you do not understand these statements, review the lecture material once more.
 
@@ -402,7 +403,6 @@ Edge Enhancement
 Task 27
    Repeat the steps of the previous task, but this time use kernels with the following values of the centre: 12, 16 and 200. Increasing the centre value will increase the weight of the centre pixel in the original image. When using a value of about 16 for the centre pixel; the kernel will calculate the Laplace enhancement of the image. Then, the resulting layer will look like the original image.
 
-One could use the output DN value to discriminate between strong/steep edges (high *absolute* DN values) and weak/low edges (low DN values, close to 0) and between positive edges which correlate positively with the kernel (positive DN values) and negative edges which correlate negatively with the kernel (negative DN values). [CHECK WITH ANDRE]
 
 Custom Filters
 **************
@@ -463,15 +463,15 @@ Task 31
    Can you explain why one of the small runways of the Twente Airport disappeared after applying a majority filter?
 
 Task 32
-   Use the **r.neighbor** to compute another mode filter on the *’tm1999_xs_ml_classifciation’* layer. This time use neighbourhood of size :math:`5`; which means to apply a 5x5 kernel. Compare the result of this filter with the 3x3 majority filter.
+   Use the **r.neighbor** to compute another mode filter on the *’tm1999_xs_ml_classifciation’* layer. This time use neighbourhood of size :math:`5`; which means to apply a :math:`5 \times 5` kernel. Compare the result of this filter with the :math:`3 \times 3` majority filter.
 
 .. attention:: 
    **Question.**
-   What do you observe when comparing results of a 3x3 and 5x5 majority filters around the main runway of the Twente Airport?
+   What do you observe when comparing results of a :math:`3 \times 3` and :math:`5 \times 5` majority filters around the main runway of the Twente Airport?
 
 
 Task 33
-   Experiment with the application of consecutive filters. Apply a the 3x3 majority filter to the results of the existing *’3x3 majority’* filter layer. Compare these results with the result of applying a single 5x5 majority filter. You will notice that the results are not the same.
+   Experiment with the application of consecutive filters. Apply a :math:`3~\times~3` majority filter to the results of the existing *'3x3 majority'* filter layer. Compare these results with the result of applying a single :math:`5 \times 5` majority filter. You will notice that the results are not the same.
 
 .. note:: 
    **Reflection.**
