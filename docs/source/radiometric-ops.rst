@@ -234,8 +234,7 @@ Task 13
 
 .. note:: 
    **QGIS.**
-   [CHECK WITH ANDRE]
-   The  *’Statistics of Raster by extent’* model will always list the result using the name *Band 1, Band 2 and Band 3*. These numbers do not correspond to the number in *Input raster file*; instead, they correspond to the order in which the bands are were displayed in RGB when running the model. For example, in this case, Band 1 contains the statistics that correspond to the band assigned to the Red channel, that is *Band 5* of the...
+   The  *'Statistics of Raster by extent'* model will always list the result using the name *Band 1, Band 2 and Band 3*. These numbers do not correspond to the number in *Input raster file*; instead, they correspond to the order in which the bands are were displayed in RGB when running the model. For example, in this case, Band 1 contains the statistics that correspond to the band assigned to the Red channel, that is *Band 5* of the...
 
 
 To correctly apply contrast enhancement for specific types of land covers, you need to know which are the types of interest. Which their spectral signatures are; the specifications of the spectral bands of the sensor which you have chosen; and you need knowledge of additive colour mixture.
