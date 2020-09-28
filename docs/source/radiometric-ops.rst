@@ -127,10 +127,9 @@ Task 6
    **Reflection.**
    *Based on only theoretical knowledge, you can predict the colour of a land cover type in a colour composite. This is assuming there are no other land cover types present in an image, which may have a lower or higher reflectance*. Take the time to understand this statement and study the topic once more if necessary. You could also discuss this topic further in the virtual classroom.
 
-Multiband Display: Applying Colour Composites
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-In the previous section, you determine the relative brightness for three types of land cover. Then, you determined the theoretical colour in a specific colour composite. In this section, we will compare the theoretical colour for water and vegetation with the actual colour in the colour composite.
+
+In the previous task, you determined the relative brightness for three types of land cover. Then, you determined the theoretical colour in a specific colour composite. In the following task, you will compare the theoretical colour for water and vegetation with the actual colour in the image when using  a colour composite.
 
 Task 7
    Open the ``Spot270611.img`` in QGIS and use a band combination of 3, 4 and 2 for Red, Green and Blue. Set the contrast enhancement to :math:`35%` and :math:`98%` for all bands using the Actual (slower) Accuracy, as shown below.
