@@ -1,8 +1,7 @@
 Radiometric Operations
 ======================
 
-A |ltb| `Radiometric operation`_ uses or changes the values the pixes in an image. In this seccion, you will apply some of the most common radiometric operations in image processing. But first, you need to get familiar with how sensors capture  |ltb| `Electromagnetic radiation`_; how we can |ltb| `Display an image <Image display_>`_ based on how  humans see colour according to th |ltb| `Tri-stimuli theory`_;  and how we represent colour on paper using the principle of |ltb| `Subtractive colour system`_.
-
+A |ltb| `Radiometric operation`_ uses or changes the values the pixes in an image. In this seccion, you will apply some of the most common radiometric operations in image processing. But first, you need to get familiar with how sensors capture  |ltb| `Electromagnetic radiation`_; how we can |ltb| `Display an image <Image display_>`_ based on how  humans see colour according to the |ltb| `Tri-stimuli theory`_;  and how we represent colour on paper using the principles of the |ltb| `Subtractive colour system`_.
 
 
 Image Display
@@ -18,11 +17,13 @@ Image Display
    + ``topo34f.img`` – scan of a topographic map in RGB.
 
 
-Through well-known plugins and providers, QGIS offers the possibility to apply all kind image enhancements for visualisation purposes. In this exercise, we will make use of such tools. Note that none of these tools changes the actual values stored in the raster datasets. They simply change the way the image is being displayed to highlight features that are not so obvious when using the default rendering settings.
+We can **enhance** the visualization of images through well-known plugins and providers available in QGIS. In this exercise, we will make use of some of the QGIS tools. *Note that none of these tools changes the actual values stored in the raster datasets*. They simply change the way the image is displayed to highlight features that are not obvious when using the default visualisation settings.
  
 
 Task 1
-   Disable the default contrast stretch. Go to *Settings > Options > Rendering* tab and scroll down to Contrast enhancement. Set the algorithms   *Single band grey, Multiband colour (byte/band) and Multiband colour (> byte/band)* to **No Stretch**. Set the *Cumulative pixel count cut*  to :math:`2.0` and :math:`98.0\%`. Click OK to confirm. See Figure :numref:`fig-set-render` 
+   Disable the default contrast stretch. Go to :guilabel:`Settings`  > :guilabel:`Options` > :guilabel:`Rendering` tab and scroll down to Contrast enhancement. 
+   
+   Set the algorithms  *Single band grey, Multiband colour (byte/band) and Multiband colour (> byte/band)* to **No Stretch**. Set the *Cumulative pixel count cut*  to :math:`2.0` and :math:`98.0\%`. Click :guilabel:`OK` to confirm. See Figure :numref:`fig-set-render` 
 
 
 .. _fig-set-render:
@@ -33,17 +34,17 @@ Task 1
    Changing the default settings of contrast enhancement to 'No Stretch'
 
 
-Single Band Display and Relative Brightness
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Single Band Display & Relative Brightness
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 In general, remote sensing images can be displayed using |ltb| `Pseudo colour`_  and |ltb| `Colour composite`_. A common colour composite is the so called |ltb| `True Colour`_. Single band display uses **pseudo colour**.
 
 Task 2
    Create a new QGIS project and open the ``topo34f.img``. 
-   If required, change the colour composite for this layer such that Hydrographic elements like water bodies display in cyan colours (use the legend in the right down corner as reference). Do right-click on the layer, select Properties. In the Symbology panel change the band selection for Red, Green and Blue to *Layer_1,  Layer_2, and Layer_3.*
+   If required, change the colour composite for this layer such that Hydrographic elements like water bodies display in cyan colours (use the legend in the right down corner as reference). :guilabel:`Right-click` on the layer > :guilabel:`Properties` >  :guilabel:`Symbology`; change the band selection for Red, Green and Blue to *Layer_1,  Layer_2, and Layer_3.*
 
 Task 3
-   Add the  ``Spot270611.img`` to the project.   Change the display from the default *Multiband colour* to *Singleband Gray* and select ‘Band 1’ as the *gray band*. Right-click the *Layer name > Properties > Symbology tab > Render type > Singleband gray*.  Click Apply. The band will be displayed in a greyscale with poor contrast. Figure :numref:`fig-greyscale`
+   Add the  ``Spot270611.img`` to the project.   Change the display from the default *Multiband colour* to *Singleband Gray* and select ‘Band 1’ as the *gray band*. :guilabel:`Right-click on the layer` > :guilabel:`Properties` > :guilabel:`Symbology` > :guilabel:`Render type` > :guilabel:`Singleband gray` > :guilabel:`Apply`. The band will be displayed in a greyscale with poor contrast. See Figure :numref:`fig-greyscale`
 
    .. _fig-greyscale:
    .. figure:: _static/img/task-greyscale-b1.png
@@ -52,7 +53,7 @@ Task 3
 
       Displaying band 1 of ‘Spot270611.img’ as greyscale
 
-   Then, set min and max values for the contrast stretch. Set **contrast enhancement** to *Stecht to MinMax*. Select *Cumulative pixel count cut* and set the limits to 35% and 98%. Set **Accuracy** to  *Actual (slow)*. Figure :numref:`fig-minmax`. Click apply. This will copy the DN values associated with 35 and 98 cumulative percentage to respectively the Min and Max of the contrast.
+   Then, set min and max values for the contrast stretch. Set **contrast enhancement** to *Stecht to MinMax*. Select *Cumulative pixel count cut* and set the limits to :math:`35\%` and :math:`98\%`. Set **Accuracy** to  *Actual (slow)*. See Figure :numref:`fig-minmax`. Click :guilabel:`Apply`. This will copy the DN values associated with 35 and 98 cumulative percentages the Min and Max of the contrast, respectively.
 
    .. _fig-minmax:
    .. figure:: _static/img/contrast-minmax.png
@@ -61,36 +62,39 @@ Task 3
 
       Contrast enhancement with ‘Stretch to MinMax’
 
-   We chose a :math:`35%` for the minimum because the rectangular raster file does not contain image data values for the whole scene. Approximately :math:`35%` of the image includes pixels with a DN Value of 0, which in this case means **No Data**. After applying the settings above, the image will look like this.
+   We chose a :math:`35\%` for the minimum because the  raster file does not contain image data values for3 the whole scene. Approximately :math:`35%` of the image includes pixels with a DN Value of 0, which in this case means **No Data**. After applying the settings above, the image will look like this:
 
    .. image:: _static/img/contrast-minmax-result.png 
       :align: center
 
-   Repeat the previous task, and apply a *MinMax Stretch* to all bands of  ``Spot270611.img``. You can copy a layer by doing right-click on the *’Spot270611.img’* and then choose *Duplicate*.  Rename each layer such that it includes the band number. 
+\
+
+   Repeat the previous task. This time apply a *MinMax Stretch* to all bands of  ``Spot270611.img``. You can copy a layer by doing right-click on the *’Spot270611.img’* and then choose *Duplicate*.  Rename each layer name such that it includes the band number, see the example below.
 
 
    .. image:: _static/img/task-copy-layer.png 
       :align: center
 
 Task 4
-   Compare the result of each band by toggling the visibility of the layers off and on.  Give special attention to the comparison of band 3 and band 2. These two bands are displayed with similar composition, and jet they look quite different from the others. This proof that different spectral properties are measured in such spectral bands.
+   Compare the results of each band by toggling the visibility of the layers off and on.  Give special attention to the comparison of band 3 and band 2. These two bands are displayed with similar composition, and jet they look quite different from the others. This proves that different spectral properties were measured in those spectral bands.
 
 Task 5
-   Use the topographic map ``topo34f.img`` to find areas with Water (Cyan), Buildings (Purple) and Evergreen Forest (Green with overprinted symbols). Then, identify the brightness in each of the four bands associated with the types of areas listed above. Complete the table below.
+   Use the topographic map ``topo34f.img`` to find areas in the ``Spot270611.img`` with Water (Cyan), Buildings (Purple) and Evergreen Forest (Green with overprinted symbols). Then, identify the relative brightness in each of the four bands associated with the areas listed above. Fill in the table below.
+
+   Do not spend too much time in identifying representative objects and filling the table. Remember that the decision, whether something is grey or light grey is subjective; thus use the same subjectivity when you fill in the table. If you think a class is represented with more than one brightness, you may select more boxes.
 
    .. image:: _static/img/task-cover-table.png 
       :align: center
 
-   Do not spend too much time in identifying representative objects and filling the table above. Remember that the decision, whether something is grey or light grey is subjective; thus use the same subjectivity when you fill in the table. If you think a class is represented with more than one brightness, you may select more boxes.
+
 
 .. note:: 
    **Reflection.**
-   While completing the previous task, you should have noticed that different classes of land cover may have similar or different brightness within a specific spectral band. Moreover, the same class of land cover may have different brightness in different bands. 
+   While working on the previous task, you should have noticed that different classes of land cover may have similar or different brightness within a specific spectral band. Moreover, the same class of land cover may have different brightness in different bands. 
 
 
-
-Multiband Display: Understanding Colour Composites
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Multiband Display: Colour Composites
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This section will help you to understand the relationship between the spectral property of a class, the selection of spectral bands for visualisation, and the choice of spectral bands in a colour composite. 
 Suppose you have a **SPOT XS** image which includes land cover the types: soil, vegetation and water. Such an image will be displayed with a *contrast stretch* with the band combination of 3, 4 and 2 for RGB. 
@@ -215,9 +219,11 @@ Choosing Min and Max values
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To choose the *min* and *max* values for a contrast stretch, the user has to consider which areas of an image are of interest, or which types of land cover are relevant for certain purposes.
+
+[remove]
 ..  To help this choice, we built a model which you can to extract the local statistics for an area of interest.  In this section, you will experiment with such a model.
 
-.. Task 12
+.. Task 12 [remove]
 ..    To use the model, you first have to import it to QGIS. In the **Processing Toolbox**, click on the *Model icon* and select **Add Model to Toolbox**. Select the model ``Raster_Statistics_By_Extent.model3`` that is included with the dataset. Click Open. The model will be imported and shown in the *Models section*. 
 
 ..    .. figure:: _static/img/task-add-model.png
@@ -233,11 +239,14 @@ To choose the *min* and *max* values for a contrast stretch, the user has to con
 
 ..    Copy the min and max values for each band to the **Band Rendering** dialogue on the *Symbology* window and apply the changes. This would enhance the contrast for the areas that contain forests.
 
-.. .. note:: 
+.. .. note:: [remove]
 ..    **QGIS.**
 ..    The  *'Statistics of Raster by extent'* model will always list the result using the name *Band 1, Band 2 and Band 3*. These numbers do not correspond to the number in *Input raster file*; instead, they correspond to the order in which the bands are were displayed in RGB when running the model. For example, in this case, Band 1 contains the statistics that correspond to the band assigned to the Red channel, that is *Band 5* of the...
 
+[new task by andre]
 
+
+[add as admonition , give emphasis]
 To correctly apply contrast enhancement for specific types of land covers, you need to know which are the types of interest. Which their spectral signatures are; the specifications of the spectral bands of the sensor which you have chosen; and you need knowledge of additive colour mixture.
 
 

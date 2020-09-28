@@ -1,11 +1,11 @@
 
-Radiometric Corrections
-=======================
+Atmospheric Corrections
+=====================
 
 .. TODO: Looks ok to me even though you could use some filter kernels for imperfect sensor calibration and noise suppression (which is in your classification ‘correction’).
 
 
-The procedures describe in this section fall within the “pre-processing” group of image processing techniques, and they focus on radiometric corrections. 
+The procedures describe in this section fall within the group of“pre-processing” techniques in image processing, and they focus on correcting artifacts in the images originated from atmospheric distubances. 
 
 As shown in :numref:`fig-corrections-wkf`, correction techniques fall within three groups: |ltb| `Imperfect sensor correction <Correction of imperfections of a sensor_>`_, |ltb| `Sun angle correction`_ and |ltb| `Atmospheric correction`_. A common technique for atmospheric correction is |ltb| `Haze correction`_.
 
