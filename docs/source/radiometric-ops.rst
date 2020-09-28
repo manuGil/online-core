@@ -204,10 +204,10 @@ Task 10
 
 You will notice a change in contrast in the image. This is because the part of the image that is currently visible include different types of land cover; thus, different local statistics. The results of a contrast stretch based on local statistics changes when the range of values used in the computation changes.
 
-[CONTINURE HERE]
+
 
 Task 11
-   Set the **Contrast enhancement** back to *Mean +/- standard deviations* and the **Statistics extent** to  *Whole raster*. Then, right-click the *’ tm24aug99’* layer and select *Export > Save as...*. For  **Output mode** select *Rendered image* and enter a self-explanatory name for the output file. Save the file to an existing folder. The file will automatically be added to the Map View.
+   Set the **Contrast enhancement** back to *Mean +/- standard deviations* and the **Statistics extent** to  *Whole raster*. Then, right-click on the *’ tm24aug99’* layer and do :guilabel:`Export` > :guilabel:`Save as...` For  **Output mode** select *Rendered image* and enter a self-explanatory name for the output file. Save the file to an existing folder. The file will automatically be added to the Map View.
 
 
 
@@ -215,7 +215,7 @@ Task 11
    **Question.** 
    Is the exported image different from the original ``tm24aug99.img``? 
    
-   Compare the properties of the two files, especially the histogram. Determine whether they only look alike, but are not the same. You can use the **Value tool** for the comparison by setting it up in such a way that the tool shows the values of one band for both images, as shown below.
+   Compare the properties of the two files, especially the histograms. Determine whether they only look alike, or if they are the same. You can use the **Value tool** for the comparison by setting it up in such a way that the tool shows the values of the same band for both images, as shown below.
 
    .. image:: _static/img/value-tool-byband.png
       :align: center
