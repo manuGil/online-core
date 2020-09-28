@@ -225,12 +225,20 @@ Choosing Min and Max values
 
 To choose the *min* and *max* values for a contrast stretch, the user has to consider which areas of an image are of interest, or which types of land cover are relevant for certain purposes.
 
+Task 12
 
-[new task by andre]
+   Remove the exported image from the project; keep only the original image. Zoom into an area on the mainland which is primarily dark orange/brown; they represent areas with forest.
+   Then, on Layers Panel, :guilabel:`right-click` the original image > :guilabel:`Properties` > :guilabel:`Symbology` > :guilabel:`Min / Max Value Settings`.  Set the :guilabel:`Statistic extent` to **Canvas extent**. See Figure  :numref:`fig-canvas-extent`. Click :guilabel:`Apply`. This will compute the histogram statistics only of the par to the image that it is visuble in the Map View. Notice that there are other options to compute statistics than just *Min/Max*. For example *'Mean +/- standard deviation'*.
 
+.. _fig-canvas-extent:
+.. figure:: _static/img/task12.png
+   :alt: canvas extent stretching
+   :figclass: align-center
 
-[add as admonition , give emphasis]
-To correctly apply contrast enhancement for specific types of land covers, you need to know which are the types of interest. Which their spectral signatures are; the specifications of the spectral bands of the sensor which you have chosen; and you need knowledge of additive colour mixture.
+   Applying local statistics for histrogram stretching based on the 'Canvas extent'.
+
+.. note:: **Reflection.**
+   To correctly apply contrast enhancement for specific types of land covers, you need to know which are the types of interest. What their spectral signatures are; the specifications of the spectral bands of the sensor which you have chosen; and you need knowledge of additive colour mixture.
 
 
 Task 14
