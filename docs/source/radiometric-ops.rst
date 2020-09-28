@@ -4,7 +4,7 @@ Radiometric Operations
 .. attention:: The dataset and description of this exercise was updated on **Monday 28th September at 17:30 GMT**. 
 
    + The original Task 13 was removed.
-   + All tasks after Task 12 have been renumbed.
+   + All tasks after Task 12 have been re-numbered.
 
 
 A |ltb| `Radiometric operation`_ uses or changes the values the pixes in an image. In this section, you will apply some of the most common radiometric operations in image processing. But first, you need to get familiar with how sensors capture  |ltb| `Electromagnetic radiation`_ and how we can |ltb| `Display an image <Image display_>`_ based on the |ltb| `Tri-stimuli theory`_. And how we represent colour on paper using the principles of the |ltb| `Subtractive colour system`_.
