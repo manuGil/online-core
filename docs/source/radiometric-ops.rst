@@ -1,7 +1,7 @@
 Radiometric Operations
 ======================
 
-A |ltb| `Radiometric operation`_ uses or changes the values the pixes in an image. In this seccion, you will apply some of the most common radiometric operations in image processing. But first, you need to get familiar with how sensors capture  |ltb| `Electromagnetic radiation`_; how we can |ltb| `Display an image <Image display_>`_ based on how  humans see colour according to the |ltb| `Tri-stimuli theory`_;  and how we represent colour on paper using the principles of the |ltb| `Subtractive colour system`_.
+A |ltb| `Radiometric operation`_ uses or changes the values the pixes in an image. In this section, you will apply some of the most common radiometric operations in image processing. But first, you need to get familiar with how sensors capture  |ltb| `Electromagnetic radiation`_ and how we can |ltb| `Display an image <Image display_>`_ based on the |ltb| `Tri-stimuli theory`_. And how we represent colour on paper using the principles of the |ltb| `Subtractive colour system`_.
 
 
 Image Display
@@ -17,7 +17,7 @@ Image Display
    + ``topo34f.img`` – scan of a topographic map in RGB.
 
 
-We can **enhance** the visualization of images through well-known plugins and providers available in QGIS. In this exercise, we will make use of some of the QGIS tools. *Note that none of these tools changes the actual values stored in the raster datasets*. They simply change the way the image is displayed to highlight features that are not obvious when using the default visualisation settings.
+We can **enhance** the visualisation of images through well-known plugins and providers available in QGIS. In this exercise, we will make use of some of the QGIS tools. *Note that none of these tools changes the actual values stored in the raster datasets*. They simply change the way the image is displayed to highlight features that are not obvious when using the default visualisation settings.
  
 
 Task 1
@@ -37,7 +37,7 @@ Task 1
 Single Band Display & Relative Brightness
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-In general, remote sensing images can be displayed using |ltb| `Pseudo colour`_  and |ltb| `Colour composite`_. A common colour composite is the so called |ltb| `True Colour`_. Single band display uses **pseudo colour**.
+In general, remote sensing images can be displayed using |ltb| `Pseudo colour`_  and |ltb| `Colour composite`_. A common colour composite is the so-called |ltb| `True Colour`_. Single-band display uses **pseudo colour**.
 
 Task 2
    Create a new QGIS project and open the ``topo34f.img``. 
@@ -46,23 +46,27 @@ Task 2
 Task 3
    Add the  ``Spot270611.img`` to the project.   Change the display from the default *Multiband colour* to *Singleband Gray* and select ‘Band 1’ as the *gray band*. :guilabel:`Right-click on the layer` > :guilabel:`Properties` > :guilabel:`Symbology` > :guilabel:`Render type` > :guilabel:`Singleband gray` > :guilabel:`Apply`. The band will be displayed in a greyscale with poor contrast. See Figure :numref:`fig-greyscale`
 
-   .. _fig-greyscale:
-   .. figure:: _static/img/task-greyscale-b1.png
-      :alt: greyscale
-      :figclass: align-center
+.. _fig-greyscale:
+.. figure:: _static/img/task-greyscale-b1.png
+   :alt: greyscale
+   :figclass: align-center
 
-      Displaying band 1 of ‘Spot270611.img’ as greyscale
+   Displaying band 1 of ‘Spot270611.img’ as greyscale
+
+\
 
    Then, set min and max values for the contrast stretch. Set **contrast enhancement** to *Stecht to MinMax*. Select *Cumulative pixel count cut* and set the limits to :math:`35\%` and :math:`98\%`. Set **Accuracy** to  *Actual (slow)*. See Figure :numref:`fig-minmax`. Click :guilabel:`Apply`. This will copy the DN values associated with 35 and 98 cumulative percentages the Min and Max of the contrast, respectively.
 
-   .. _fig-minmax:
-   .. figure:: _static/img/contrast-minmax.png
-      :alt: contrast minmax
-      :figclass: align-center
+.. _fig-minmax:
+.. figure:: _static/img/contrast-minmax.png
+   :alt: contrast minmax
+   :figclass: align-center
 
-      Contrast enhancement with ‘Stretch to MinMax’
+   Contrast enhancement with ‘Stretch to MinMax’
 
-   We chose a :math:`35\%` for the minimum because the  raster file does not contain image data values for3 the whole scene. Approximately :math:`35%` of the image includes pixels with a DN Value of 0, which in this case means **No Data**. After applying the settings above, the image will look like this:
+\
+
+   We chose a :math:`35\%` for the minimum because the raster file does not contain image data values for3 the whole scene. Approximately :math:`35%` of the image includes pixels with a DN Value of 0, which in this case means **No Data**. After applying the settings above, the image will look like this:
 
    .. image:: _static/img/contrast-minmax-result.png 
       :align: center
@@ -76,7 +80,7 @@ Task 3
       :align: center
 
 Task 4
-   Compare the results of each band by toggling the visibility of the layers off and on.  Give special attention to the comparison of band 3 and band 2. These two bands are displayed with similar composition, and jet they look quite different from the others. This proves that different spectral properties were measured in those spectral bands.
+   Compare the results of each band by toggling the visibility of the layers off and on.  Give special attention to the comparison of band 3 and band 2. These two bands are displayed with similar composition, and jet they look quite different from the others. This proves that those bands captured different spectral properties.
 
 Task 5
    Use the topographic map ``topo34f.img`` to find areas in the ``Spot270611.img`` with Water (Cyan), Buildings (Purple) and Evergreen Forest (Green with overprinted symbols). Then, identify the relative brightness in each of the four bands associated with the areas listed above. Fill in the table below.
@@ -90,7 +94,7 @@ Task 5
 
 .. note:: 
    **Reflection.**
-   While working on the previous task, you should have noticed that different classes of land cover may have similar or different brightness within a specific spectral band. Moreover, the same class of land cover may have different brightness in different bands. 
+   While working on the previous task, you should have noticed that different classes of land cover may have similar or different brightness within a specific spectral band. Moreover, the same class of land cover may have different brightness in other bands. 
 
 
 Multiband Display: Colour Composites
@@ -118,7 +122,7 @@ Task 6
    ================  ===============   =================    ================     ===================
    Major land cover  Band 3 (Red)      Band 4 (Green)       Band 2 (Blue)        Colour in composite
    ================  ===============   =================    ================     ===================
-   Dry bare soil
+   Dry-bare soil
    Vegetation
    Water
    ================  ===============   =================    ================     ===================
@@ -129,7 +133,7 @@ Task 6
 
 
 
-In the previous task, you determined the relative brightness for three types of land cover. Then, you determined the theoretical colour in a specific colour composite. In the following task, you will compare the theoretical colour for water and vegetation with the actual colour in the image when using  a colour composite.
+In the previous task, you determined the relative brightness for three types of land cover. Then, you determined the theoretical colour in a specific colour composite. In the following task, you will compare the theoretical colour for water and vegetation with the actual colour in the image when using a colour composite.
 
 Task 7
    Open the ``Spot270611.img`` in QGIS and use a band combination of 3, 4 and 2 for Red, Green and Blue. Set the contrast enhancement to :math:`35\%` and :math:`98\%` for all bands. Use **Actual (slower)** for *Accuracy*, as shown below.
@@ -137,12 +141,14 @@ Task 7
    .. image:: _static/img/task-spot-composite.png
       :align: center
 
+\
+
    Zoom in to the image so that you can easily confirm what colour was assigned to water. Also verify whether the theoretical colours, determined in the previous section, match the colours that you see in this colour composite.
 
 
 .. attention:: 
    **Question.**
-   When comparing the theoretical colours and the result of  the colour composite,  you will find out that there are discrepancies. **What could be the courses behind such discrepancies?**
+   When comparing the theoretical colours and the result of the colour composite,  you will find out that there are discrepancies. **What could be the courses behind such discrepancies?**
 
 
 .. note:: 
@@ -150,7 +156,7 @@ Task 7
 
    You should realise that by knowing the relative **spectral reflectance** of a class in every spectral band helps to understand and interpret images. Such spectral reflectance is visualised as relative brightness. Moreover, you could predict, for a given sensor, the ranges of DN values for a specific object, if you know and understand the spectral properties of such objects.
 
-   Some type of land cover  might have similar or the same spectral reflectance property in specific ranges of the Electromagnetic (EM) spectrum. The integration of more bands in the analysis,  and the assessment of the spectral properties in other ranges of the EM spectrum, can result in the successful discrimination of more types of land cover. This is true not only in the case of land cover but also for many other objects in a remote sensing image.
+   Some type of land cover might have similar or the same spectral reflectance property in specific ranges of the Electromagnetic (EM) spectrum. The integration of more bands in the analysis,  and the assessment of the spectral properties in other ranges of the EM spectrum, can result in the successful discrimination of more types of land cover. This is true not only in the case of land cover but also for many other objects in a remote sensing image.
 
 -----------------------------
 
@@ -182,19 +188,19 @@ Task 9
 
    Click on **Zoom Full** |zoomFullExtent| to zoom out to see the whole image. Instead of seeing clouds in whites and pinks,  you now can see clouds in several colours. 
 
-   .. image:: _static/img/task-cloud1.png
-      :align: center
+.. image:: _static/img/task-cloud1.png
+   :align: center
    
-   .. figure:: _static/img/task-cloud2.png
-      :alt: contrast stretch to clouds
-      :figclass: align-center
+.. figure:: _static/img/task-cloud2.png
+   :alt: contrast stretch to clouds
+   :figclass: align-center
 
-      Top: Image 'tm24aug99' with global contrast enhancement. Bottom: Image 'tm24aug99' with local contrast enhancement for clouds
+   Top: Image 'tm24aug99' with global contrast enhancement. Bottom: Image 'tm24aug99' with local contrast enhancement for clouds
 
 
 .. attention:: 
    **Question.**
-   Do you also think that the mainland is displayes in a not-so-good way?
+   Do you also think that the mainland is displayed in a not-so-good way?
 
 Task 10
    Zoom into an area with mostly land and some water,  and re-apply the same  *Contrast enhancement* method as before. You can use the context-sensitive option **Stretch using current extent** as shown below, but verify that it does what you intend.
@@ -215,7 +221,7 @@ Task 11
    **Question.** 
    Is the exported image different from the original ``tm24aug99.img``? 
    
-   Compare the properties of the two files, especially the histograms. Determine whether they only look alike, or if they are the same. You can use the **Value tool** for the comparison by setting it up in such a way that the tool shows the values of the same band for both images, as shown below.
+   Compare the properties of the two files, especially the histograms. Determine whether they only look-alike, or if they are the same. You can use the **Value tool** for the comparison by setting it up in such a way that the tool shows the values of the same band for both images, as shown below.
 
    .. image:: _static/img/value-tool-byband.png
       :align: center
@@ -223,18 +229,18 @@ Task 11
 Choosing Min and Max values
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To choose the *min* and *max* values for a contrast stretch, the user has to consider which areas of an image are of interest, or which types of land cover are relevant for certain purposes.
+To choose the *min* and *max* values for a contrast stretch, the user has to consider which areas of an image are of interest, or which types of land cover are relevant for specific purposes.
 
 Task 12
    Remove the exported image from the project; keep only the original image. Zoom into an area on the mainland which is primarily dark orange/brown; they represent areas with forest.
-   Then, on Layers Panel, :guilabel:`right-click` the original image > :guilabel:`Properties` > :guilabel:`Symbology` > :guilabel:`Min / Max Value Settings`.  Set the :guilabel:`Statistic extent` to **Canvas extent**. See Figure  :numref:`fig-canvas-extent`. Click :guilabel:`Apply`. This will compute the histogram statistics only of the par to the image that it is visuble in the Map View. Notice that there are other options to compute statistics than just *Min/Max*. For example *'Mean +/- standard deviation'*.
+   Then, on Layers Panel, :guilabel:`right-click` the original image > :guilabel:`Properties` > :guilabel:`Symbology` > :guilabel:`Min / Max Value Settings`.  Set the :guilabel:`Statistic extent` to **Canvas extent**. See Figure  :numref:`fig-canvas-extent`. Click :guilabel:`Apply`. This will compute the histogram statistics only of the par to the image that it is visible in the Map View. Notice that there are other options to compute statistics than just *Min/Max*. For example *'Mean +/- standard deviation'*.
 
 .. _fig-canvas-extent:
 .. figure:: _static/img/task12.png
    :alt: canvas extent stretching
    :figclass: align-center
 
-   Applying local statistics for histrogram stretching based on the 'Canvas extent'.
+   Applying local statistics for histogram stretching based on the 'Canvas extent'.
 
 .. note:: **Reflection.**
    To correctly apply contrast enhancement for specific types of land covers, you need to know which are the types of interest. What their spectral signatures are; the specifications of the spectral bands of the sensor which you have chosen; and you need knowledge of additive colour mixture.
@@ -245,7 +251,7 @@ Task 14
 
 .. attention:: 
    **Question.** 
-   In which band on display do you expect a major difference in DN Values between water and land? Use your knowledge on EM radiation. A bi or tri-modal trend in the histogram is an important clue.
+   In which band on display do you expect a significant difference in DN Values between water and land? Use your knowledge on EM radiation. A bi or tri-modal trend in the histogram is an important clue.
 
 Task 15
    Use the histograms to identify approximate values for a *contrast stretch* which will enhance the contrasts between types of coverage on the part of ``tm25aug99_sub.img`` with land. Save the result using :guilabel:`Export As..` > :guilabel:`Rendered image`. Remove the resulting layer from the project.
@@ -262,7 +268,7 @@ Task 16
 Image Enhancement by Filter Operations
 --------------------------------------
 
-|ltb| `Filtering`_ discribes a set of radiometric operations used to enhance images.  Filters are applied to images for the sake of |ltb| `Noise reduction`_, |ltb| `Edge Detection`_, and |ltb| `Edge enhancement`_.
+|ltb| `Filtering`_ describes a set of radiometric operations used to enhance images.  Filters are applied to images for the sake of |ltb| `Noise reduction`_, |ltb| `Edge Detection`_, and |ltb| `Edge enhancement`_.
 
 
 .. important::
@@ -275,7 +281,7 @@ Image Enhancement by Filter Operations
    + ``SW-NE_3x3.txt`` – Definition of a custom filter.
 
 
-QGIS offers the possibility to apply all kind of filter kernels on images which are displayed in a viewer. In this exercise, we will use tools that apply  filters and store the output as temporary files. In such a way, we can easily compare different results.
+QGIS offers the possibility to apply all kind of filter kernels on images which are displayed in a viewer. In this exercise, we will use tools that apply filters and store the output as temporary files. In such a way, we can easily compare different results.
 
 
 Task 17
@@ -286,7 +292,7 @@ Task 18
 
 .. note::
    **QGIS.**
-   QGIS is not specifically tailored for Remote Sensing and does not provide filter tools directly. Such filtering tools are  available through the processing toolbox using external providers like *SAGA* and *GRASS*.
+   QGIS is not specifically tailored for Remote Sensing and does not provide filter tools directly. Such filtering tools are available through the processing toolbox using external providers like *SAGA* and *GRASS*.
 
    *For an overview on how to use the Processing Tools in QGIS, watch the* `introduction to processing <https://vimeo.com/album/4389527/video/204013568>`_ video tutorial.
 
@@ -363,7 +369,7 @@ Task 23
       :align: center
 
 .. error:: 
-   You will notice that the output of the laplace filter contains many pixes with *No Data* (hollow pixels). Possibly, you also noticed an error message when executing the filter. This is an issue with the tool itself, possibly a bug. Please, ignore the *No Data* pixels this time and concentrate on the outcome in the rest of the image.
+   You will notice that the output of the Laplace filter contains many pixes with *No Data* (hollow pixels). Possibly, you also noticed an error message when executing the filter. This is an issue with the tool itself, possibly a bug. Please, ignore the *No Data* pixels this time and concentrate on the outcome in the rest of the image.
 
 .. attention:: 
    **Question.**
@@ -372,7 +378,7 @@ Task 23
    + Does the layer resulting from the previous task contain the same brightness as the original image for area objects?
 
 Task 24 
-   Examine the result of the Laplace filter. Toggle on and off the visibility of the *'Laplace'* layer to  check what has happened. Zoom in to the edge of the image until you see individual pixels.  Toggle the visibility of the *'Laplace'* layer again.
+   Examine the result of the Laplace filter. Toggle on and off the visibility of the *'Laplace'* layer to check what has happened. Zoom in to the edge of the image until you see individual pixels.  Toggle the visibility of the *'Laplace'* layer again.
 
 .. attention:: 
    **Question.**
@@ -394,9 +400,9 @@ The *’Laplace’* layer looks rather artificial. The brightness of the origina
 
 .. note:: 
    **Reflection.**
-   We can use the output values of an edge detection kernel to discriminate **edges with high contrast** and **edges with low contrast**. For example,  a field with relatively low values and a neighbouring field with relatively high values will result in edges with high contrast. In comparison, edges with low contrast may be the result of adjacent pixels which have slightly different value. You could use a threshold to select only edges with high contrast and delimit the edges between areas or fields.
+   We can use the output values of an edge detection kernel to discriminate **edges with high contrast** and **edges with low contrast**. For example,  a field with relatively low values and a neighbouring field with relatively high values will result in edges with high contrast. In comparison, edges with low contrast may be the result of adjacent pixels which have a slightly different value. You could use a threshold to select only edges with high contrast and delimit the edges between areas or fields.
 
-   Detectional filter kernels have **positive** and **negative** weights, and their output values could be positive or negative. Positive values represent edges which correlate positively with the kernel, negative values represent edges which correlate negatively – ‘ they are opposite to’ –. We can also use the sign of the values to discriminate different classes or types of edges. 
+   Directional filter kernels have **positive** and **negative** weights, and their output values could be positive or negative. Positive values represent edges which correlate positively with the kernel, negative values represent edges which correlate negatively – ‘ they are opposite to’ –. We can also use the sign of the values to discriminate different classes or types of edges. 
    
    If you do not understand these statements, review the lecture material once more.
 
@@ -424,9 +430,9 @@ The Laplace kernel detects edges in all directions. We can also define kernels w
 Task 28 
    In the Processing Toolbox, use the **r.mfilter** tool of GRASS  to detect edges in a specific direction.  Use the file ``SW-NE_3x3.txt`` as *Filter file*.  
 
-   Check the results and confirm that one of the runways of the *Twente Airport*  was not detected at all! Also, confirm that the edges of the main runway were detected. The result should show positive values on one side of the runway and a negative on the other. This is because of the correlation of the results with the positive and negative weights in the kernel. 
+   Check the results and confirm that one of the runways of the *Twente Airport*  was not detected at all! Also, ensure that the edges of the main runway were detected. The result should show positive values on one side of the runway and a negative on the other. This is because of the correlation of the results with the positive and negative weights in the kernel. 
 
-   Notice also, that the edges in the resulting layer have a slope and a direction. In this case the kernel has detected edges in the SW-NE direction. 
+   Notice also, that the edges in the resulting layer have a slope and a direction. In this case, the kernel has detected edges in the SW-NE direction. 
 
 Enhancement using Non-linear Filters
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -437,19 +443,19 @@ Rank-Order Filter
 Task 29  
    In the Processing Tools, look for the SAGA  **Rank filter**.  Select the *’tm1999_b4’* layer as the input grid. Set the *Search Mode* to *Square* and a Radius of 1. Use a *Rank (Percent)* of 50. This settings essentially define a **median filter**. Execute the filter.
    
-   Use the **Profile tool** to inspect the results and confirm the difference between the original image and the result of the  Average and Median filters. Pay special attention to locations where you expect variations, for instance, around the edges between areas. 
+   Use the **Profile tool** to inspect the results and confirm the difference between the original image and the result of the *Average and Median* filters. Pay special attention to locations where you expect variations, for instance, around the edges between areas. 
 
 Majority Filter 
 ***************
 
 Task 30 
-   Add the ``tm_xs_ml_classification.tif`` into the Map View; this layer contains a set of classes representing land cover. You will notice that there are many isolated pixels inside some homogeneous areas. For example, the yellow pixels identify maise, which usually does not grow in such small parcels.
+   Add the ``tm1999_tm_xs_ml_classification.tif`` into the Map View; this layer contains a set of classes representing land cover. You will notice that there are many isolated pixels inside some homogeneous areas. For example, the yellow pixels identify maise, which usually does not grow in such small parcels.
  
-   In the **Processing Toolbox**, open the **r.neighbors** tool. Select *’tm1999_xs_ml_classifciation’* as input raster and set the neighbourhood operation as *’mode’* (also known as majority filter).
+   In the **Processing Toolbox**, open the **r.neighbors** tool. Select *’tm1999_xs_ml_classifciation’* as input raster and set the neighbourhood operation as *’mode’* (also known as **majority filter**).
    
    The results will be shown as greyscale or black and white. You can apply a pseudocolour to visualise the results properly. Copy the style of the  *’tm1999_xs_ml_classifciation’* into the result of the majority filter layer. See :numref:`fig-copy-style`  
 
-   In the **Layer panel**, right-click on the *’tm1999_xs_ml_classifciation’*  layer and copy the style. Then right-click on the majority filter layer and paste the style. 
+   In the **Layer panel**, right-click on the *’tm1999_xs_ml_classifciation’*  layer and copy the style. Then, right-click on the majority filter layer and paste the style. 
 
 .. _fig-copy-style:
 .. figure:: _static/img/copy-style.png
@@ -467,19 +473,19 @@ Task 31
    Can you explain why one of the small runways of the Twente Airport disappeared after applying a majority filter?
 
 Task 32
-   Use the **r.neighbor** to compute another mode filter on the *’tm1999_xs_ml_classifciation’* layer. This time use neighbourhood of size :math:`5`; which means to apply a :math:`5 \times 5` kernel. Compare the result of this filter with the :math:`3 \times 3` majority filter.
+   Use the **r.neighbor** to compute another mode filter on the *’tm1999_xs_ml_classifciation’* layer. This time use a neighbourhood of size :math:`5`; which is to apply a :math:`5 \times 5` kernel. Compare the result of this filter with the :math:`3 \times 3` majority filter.
 
 .. attention:: 
    **Question.**
-   What do you observe when comparing results of a :math:`3 \times 3` and :math:`5 \times 5` majority filters around the main runway of the Twente Airport?
+   What do you observe when comparing results of  :math:`3 \times 3` and  :math:`5 \times 5` majority filters around the main runway of the Twente Airport?
 
 
 Task 33
-   Experiment with the application of consecutive filters. Apply a :math:`3~\times~3` majority filter to the results of the existing *'3x3 majority'* filter layer. Compare these results with the result of applying a single :math:`5 \times 5` majority filter. You will notice that the results are not the same.
+   Experiment with the application of consecutive filters. Apply a :math:`3 ~\times~ 3` majority filter to the results of the already existing *'3x3 majority'* filter layer. Compare these results with the result of applying a single :math:`5 \times 5` majority filter. You should see that the results are not the same.
 
 .. note:: 
    **Reflection.**
-   In summary, you should acknowledge that in the case of neighbour operations, the results will change depending on the size of the kernel and the number of time a filter is applied to an input raster.
+   In summary. You should acknowledge that in the case of neighbour operations, such as the majority filter. The results change depending on the size of the kernel, and the number of times a filter is applied to a dataset.
 
 
 .. sectionauthor:: Wan Bakx
