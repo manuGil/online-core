@@ -226,7 +226,6 @@ Choosing Min and Max values
 To choose the *min* and *max* values for a contrast stretch, the user has to consider which areas of an image are of interest, or which types of land cover are relevant for certain purposes.
 
 Task 12
-
    Remove the exported image from the project; keep only the original image. Zoom into an area on the mainland which is primarily dark orange/brown; they represent areas with forest.
    Then, on Layers Panel, :guilabel:`right-click` the original image > :guilabel:`Properties` > :guilabel:`Symbology` > :guilabel:`Min / Max Value Settings`.  Set the :guilabel:`Statistic extent` to **Canvas extent**. See Figure  :numref:`fig-canvas-extent`. Click :guilabel:`Apply`. This will compute the histogram statistics only of the par to the image that it is visuble in the Map View. Notice that there are other options to compute statistics than just *Min/Max*. For example *'Mean +/- standard deviation'*.
 
@@ -242,17 +241,17 @@ Task 12
 
 
 Task 14
-   Add the ``tm25aug99_sub.img`` to the project, and display it using a band combination 4, 5 and 3. this image covers shallow water and land with various types of land cover. Analyse the histograms of the three bands of this image; * right-click on the layer > select Properties > Histogram tab*. Compute the histogram is necessary. Then, select *Prefs/Actions > Show selected band* and choose the band want to inspect.
+   Add the ``tm25aug99_sub.img`` to the project, and display it using a band combination 4, 5 and 3. this image covers shallow water and land with various types of land cover. Analyse the histograms of the three bands for this image; :guilabel:`right-click` on the layer > :guilabel:`Properties` > :guilabel:`Histogram`. Compute the histogram if necessary. Then, :guilabel:`Prefs/Actions` > :guilabel:`Show selected band` and choose the band you want to inspect.
 
 .. attention:: 
    **Question.** 
    In which band on display do you expect a major difference in DN Values between water and land? Use your knowledge on EM radiation. A bi or tri-modal trend in the histogram is an important clue.
 
 Task 15
-   Use the histograms to identify approximate values for a *contrast stretch* which will enhance the contrasts between types of coverage on the part of the image with the land. Save the result using the **Export As..**  and  *Rendered image* options. Remove the resulting layer from the project.
+   Use the histograms to identify approximate values for a *contrast stretch* which will enhance the contrasts between types of coverage on the part of ``tm25aug99_sub.img`` with land. Save the result using :guilabel:`Export As..` > :guilabel:`Rendered image`. Remove the resulting layer from the project.
  
 Task 16
-   Repeat the previous task. This time use the histograms to set a contrast that will enhance the image specifically for distinguishing shallow water.
+   Repeat the previous task. This time use the histograms to set a contrast that will enhance the image for distinguishing shallow water.
 
 .. note:: 
    **Reflection.**
@@ -263,7 +262,7 @@ Task 16
 Image Enhancement by Filter Operations
 --------------------------------------
 
-|ltb| `Filtering`_ discribes a set of radiometric operation used to enhance images.  Filters are applied to images for the sake of |ltb| `Noise reduction`_, |ltb| `Edge Detection`_, and |ltb| `Edge enhancement`_.
+|ltb| `Filtering`_ discribes a set of radiometric operations used to enhance images.  Filters are applied to images for the sake of |ltb| `Noise reduction`_, |ltb| `Edge Detection`_, and |ltb| `Edge enhancement`_.
 
 
 .. important::
@@ -273,21 +272,21 @@ Image Enhancement by Filter Operations
    
    + ``tm1999_b4.tif`` – A scene from band 4 of the Landsat TM. Enschede in 1999.
    + ``tm1999_xs_ml_classification.tif`` – Classification of the types of land cover in Enschede. From Landsat TM 1999.
-   + ``NW-SE_3x3.txt`` – Definition of a custom filter.
+   + ``SW-NE_3x3.txt`` – Definition of a custom filter.
 
 
-QGIS offers the possibility to apply all kind of filter kernels on images which are displayed in a viewer. In this exercise, we will make use of tools which apply some filters and store the output as temporary files. In such a way, we can easily compare different results.
+QGIS offers the possibility to apply all kind of filter kernels on images which are displayed in a viewer. In this exercise, we will use tools that apply  filters and store the output as temporary files. In such a way, we can easily compare different results.
 
 
 Task 17
    Install the **Profile tool** plugin. Go to :guilabel:`Plugins` > :guilabel:`Manage Install Plugins`, and install the plugin.
 
 Task 18
-   Set the default contrast stretch to use the :math:`2 \%` and :math:`98 \%` of cumulative pixel count for grayscale images. In the Settings menu, select :guilabel:`Options` > :guilabel:`Rendering` tab. Scroll down to **Contrast enhancement settings**, and set the default for **Single band gray** to *Stretch To MinMax*. Then, set **Limits (minimum/maximum)** to *Cumulative pixel count cut*. Make sure that the cut limits are set to :math:`2.0 \%` and :math:`98.0 \%`. Select OK.
+   Set the default contrast stretch to use the :math:`2 \%` and :math:`98 \%` of  the cumulative pixel count for grayscale images. In the :guilabel:`Settings` menu, go to :guilabel:`Options` > :guilabel:`Rendering` tab. Scroll down to :guilabel:`Contrast enhancement settings`, and set the default value for **Single band gray** to *Stretch To MinMax*. Then, set **Limits (minimum/maximum)** to *Cumulative pixel count cut*. Make sure that the cut limits are set to :math:`2.0 \%` and :math:`98.0 \%`. Click :guilabel:`OK`.
 
 .. note::
-   **QGIS**
-   QGIS is not specifically tailored for Remote Sensing and does not provide standard filter tools. Such filtering tools are made available through the processing toolbox using external providers like *SAGA* and *GRASS*.
+   **QGIS.**
+   QGIS is not specifically tailored for Remote Sensing and does not provide filter tools directly. Such filtering tools are  available through the processing toolbox using external providers like *SAGA* and *GRASS*.
 
    *For an overview on how to use the Processing Tools in QGIS, watch the* `introduction to processing <https://vimeo.com/album/4389527/video/204013568>`_ video tutorial.
 
@@ -296,7 +295,7 @@ Task 18
       <div style="padding:52.29% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/204013568?color=007e83&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 
 Task 19
-   In the Settings menu, go to :guilabel:`Options` > :guilabel:`Processing` and check that you have the SAGA and GRASS providers enabled.
+   In the :guilabel:`Settings` menu, go to :guilabel:`Options` > :guilabel:`Processing` and check that you have the SAGA and GRASS providers enabled.
 
 
 
@@ -308,7 +307,7 @@ Smoothing Filter
 
 
  Task 20
-   Apply a linear filter to the *’tm1999_b4’* image. In QGIS, open the  ``tm1999_b4.tif``. Your project should assume the same Spatial Reference System as the image (*EPSG:32632 WGS84/UTM zone 32N*). In the **Processing Toolbox**, open the SAGA tool called *’User defined filter’*. 
+   Apply a linear filter to the *’tm1999_b4’* image. In QGIS, open the  ``tm1999_b4.tif``. Your project should assume the same Spatial Reference System as the image (*EPSG:32632 WGS84/UTM zone 32N*). In the **Processing Toolbox**, open the SAGA tool called **User defined filter**. 
 
    Confirm that *’tm1999_b4’* is the input and click **Default filter matrix (3x3)** to open an empty filter kernel. Enter the weights of an *average filter kernel*. Ensure that the sum of weights is equal to 1. Confirm with OK. In the **User defined filter dialogue** execute the kernel by clicking OK. The output is added to the Map View as a temporary file. 
 
@@ -324,7 +323,9 @@ Smoothing Filter
 
 
 Task 21
-   Explore the filter results around the Twente Airport. Reset the zoom to fit the image to the **Map View**. Next, change the scale, in the textbox at the bottom of the Map View, to :math:`1: 75,000`.  Zoom in to the major runway of the *Twente Airport*. See Figure x.
+   Explore the filter results around the Twente Airport. Reset the zoom to fit the image to the **Map View**. Next, change the scale, in the box at the bottom of the Map View, to :math:`1:75,000`.  
+   
+   Zoom in to the major runway of the *Twente Airport*. See Figure :numref:`fig-smoothing`.
 
    We will use the **Profile tool** to compare the results of the average filter and original image. If you do not know how to install the *Profile Tool* plugin, watch the video tutorial on `installing plugins in QGIS <https://vimeo.com/showcase/4389527/video/201997421>`_.
 
@@ -336,7 +337,7 @@ Task 21
 
    Start the Profile tool. Select one of the layers in the **Layer Panel**. Zoom into the centre of the image and draw a profile (line) across the major runway. Click on **Add Layer**. Select the other layer in the **Layers panel** and click on *Add Layer* again.
 
-
+.. _fig-smoothing:
 .. figure:: _static/img/task-smooth-result.png
    :alt: smoothing filter result
    :figclass: align-center
@@ -349,26 +350,29 @@ Task 21
    Just by looking at the graph of the Profile tool,  can you tell which profile belongs to the layer with the average filter?
 
 Task 22
-   Draw profiles at different locations, and confirm your knowledge of the effects of applying an average filter (smoothing).
+   Draw profiles at different locations, and confirm your knowledge of the effects of applying an average filter (smoothing) to the image.
   
 Gradient Filter
 ***************
 
- Task 23 
-   Use the **User defined filter** tool to apply a filter using the weights in the figure below, on the original image *'tm1999_b4'* layer. Rename the resulting layer to *'Laplace'*.
+Task 23 
+   Use the **User defined filter** tool to apply a filter using the weights in the figure below, to the original *'tm1999_b4'* layer. Rename the resulting layer to *'Laplace'*.
 
    .. image:: _static/img/laplace-kernel.png
       :width: 160px
       :align: center
 
+.. error:: 
+   You will notice that the output of the laplace filter contains many pixes with *No Data* (hollow pixels). Possibly, you also noticed an error message when executing the filter. This is an issue with the tool itself, possibly a bug. Please, ignore the *No Data* pixels this time and concentrate on the outcome in the rest of the image.
+
 .. attention:: 
    **Question.**
    
-   + Is kernel above a detection kernel? If yes, what does it detect?
+   + Is the kernel above a detection kernel? If yes, what does it detect?
    + Does the layer resulting from the previous task contain the same brightness as the original image for area objects?
 
 Task 24 
-   Examine the result of the Laplace filter. Toggle on and off the visibility of the *'Laplace'* layer to visually check what happened. Zoom in to the edge of the image until you see individual pixels.  Toggle the visibility of the *'Laplace'* layer again.
+   Examine the result of the Laplace filter. Toggle on and off the visibility of the *'Laplace'* layer to  check what has happened. Zoom in to the edge of the image until you see individual pixels.  Toggle the visibility of the *'Laplace'* layer again.
 
 .. attention:: 
    **Question.**
@@ -383,16 +387,16 @@ Task 25
 
 
 Task 26 
-   In the **Profile** tool add *’Laplace’* layer and toggle the visibility for the other layers. Confirm that the filter kernel detected two edges, i.e. both sides of the runway.
+   In the **Profile** tool add the *’Laplace’* layer and toggle the visibility for the other layers. Confirm that the filter kernel detected two edges, i.e. both sides of the runway.
 
-The *’Laplace’* layer looks rather artificial. The brightness of the original image is gone; the lighter and darker areas in the original have now a common grey tone and high contrasting pixels at their edges. This filter has detected the changes (edges) between local lighter and darker pixels. The circular build of the kernel that you applied, i.e. all negative weights around the centre with positive weight,  detected changes in all directions.
+The *’Laplace’* layer looks rather artificial. The brightness of the original image is gone; the lighter and darker areas in the original have now a common grey tone and high contrasting pixels at the edges. This filter has detected the changes (edges) between local lighter and darker pixels. The circular build of the kernel that you applied, i.e. all negative weights around the centre with positive weight,  detected changes in all directions.
 
 
 .. note:: 
    **Reflection.**
    We can use the output values of an edge detection kernel to discriminate **edges with high contrast** and **edges with low contrast**. For example,  a field with relatively low values and a neighbouring field with relatively high values will result in edges with high contrast. In comparison, edges with low contrast may be the result of adjacent pixels which have slightly different value. You could use a threshold to select only edges with high contrast and delimit the edges between areas or fields.
 
-   Detection filter kernels have **positive** and **negative** weights, and their output values could be positive or negative. Positive values represent edges which correlate positively with the kernel, negative values represent edges which correlate negatively – ‘ they are opposite to’ –. We can also use the sign of the values to discriminate different classes or types of edges. 
+   Detectional filter kernels have **positive** and **negative** weights, and their output values could be positive or negative. Positive values represent edges which correlate positively with the kernel, negative values represent edges which correlate negatively – ‘ they are opposite to’ –. We can also use the sign of the values to discriminate different classes or types of edges. 
    
    If you do not understand these statements, review the lecture material once more.
 
@@ -401,24 +405,24 @@ Edge Enhancement
 ****************
 
 Task 27
-   Repeat the steps of the previous task, but this time use kernels with the following values of the centre: 12, 16 and 200. Increasing the centre value will increase the weight of the centre pixel in the original image. When using a value of about 16 for the centre pixel; the kernel will calculate the Laplace enhancement of the image. Then, the resulting layer will look like the original image.
+   Repeat the steps of the previous task, but this time use kernels with the following values for the centre: 12, 16 and 200. Increasing the centre value will increase the weight of the centre pixel in the original image. When using a value of about 16 for the centre pixel; the kernel will calculate the Laplace enhancement of the image. Then, the resulting layer will look like the original image.
 
 
 Custom Filters
 **************
 
-The Laplace kernel detects edges in all directions. We can also define kernels which detect edges in specific directions. In the next task, you will use a costume filter defined in a text file. Check the content of  ``NW-SE_3x3.txt`` by opening in a text editor.
+The Laplace kernel detects edges in all directions. We can also define kernels which detect edges in specific directions. In the next task, you will use a costume filter defined in a text file. Check the content of  ``SW-NE_3x3.txt`` by opening in a text editor.
 
 .. attention:: 
    **Question.**
-   Which are the weight of the filter define in ``NW-SE_3x3.txt``?  Write them down.
+   Which are the weight of the filter define in ``SW-NE_3x3.txt``?  Write them down.
 
    .. image:: _static/img/3by3.png
       :width: 160px
       :align: center
 
 Task 28 
-   In the Processing Toolbox, use the **r.mfilter** tool of GRASS  to detect edges in a specific direction.  Use the file ``NW-SE_3x3.txt`` as *Filter file*.  
+   In the Processing Toolbox, use the **r.mfilter** tool of GRASS  to detect edges in a specific direction.  Use the file ``SW-NE_3x3.txt`` as *Filter file*.  
 
    Check the results and confirm that one of the runways of the *Twente Airport*  was not detected at all! Also, confirm that the edges of the main runway were detected. The result should show positive values on one side of the runway and a negative on the other. This is because of the correlation of the results with the positive and negative weights in the kernel. 
 

@@ -1,6 +1,6 @@
 
 Atmospheric Corrections
-=====================
+=======================
 
 .. TODO: Looks ok to me even though you could use some filter kernels for imperfect sensor calibration and noise suppression (which is in your classification ‘correction’).
 
