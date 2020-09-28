@@ -125,28 +125,32 @@ Task 6
 
 .. note:: 
    **Reflection.**
-   *Based on only theoretical knowledge, you can predict the colour of a land cover type in a colour composite. This is assuming there are no other land cover types present in an image, which may have a lower or higher reflectance*. Take the time to understand this statement and study the topic once more if necessary. You could also discuss this topic further in the virtual classroom.
+   *Based on only theoretical knowledge, you can predict the colour of a land cover type in a colour composite.* This is assuming there are no other land cover types present in an image, which may have a lower or higher reflectance. Take the time to understand this statement and study the topic once more if necessary. You could also discuss this topic further in the virtual classroom.
 
 
 
 In the previous task, you determined the relative brightness for three types of land cover. Then, you determined the theoretical colour in a specific colour composite. In the following task, you will compare the theoretical colour for water and vegetation with the actual colour in the image when using  a colour composite.
 
 Task 7
-   Open the ``Spot270611.img`` in QGIS and use a band combination of 3, 4 and 2 for Red, Green and Blue. Set the contrast enhancement to :math:`35%` and :math:`98%` for all bands using the Actual (slower) Accuracy, as shown below.
+   Open the ``Spot270611.img`` in QGIS and use a band combination of 3, 4 and 2 for Red, Green and Blue. Set the contrast enhancement to :math:`35\%` and :math:`98\%` for all bands. Use **Actual (slower)** for *Accuracy*, as shown below.
 
    .. image:: _static/img/task-spot-composite.png
       :align: center
 
-   Zoom in to the image so that you can easily confirm what colour was assigned to water. Also verify whether the theoretical colours, you determined in the previous section, math colours that you see in this colour composite.
+   Zoom in to the image so that you can easily confirm what colour was assigned to water. Also verify whether the theoretical colours, determined in the previous section, match the colours that you see in this colour composite.
 
 
 .. attention:: 
    **Question.**
-   When comparing the theoretical colours and the result of applying the colour composite,  you will find out that there are some discrepancies. What could be the courses behind such discrepancies?
+   When comparing the theoretical colours and the result of  the colour composite,  you will find out that there are discrepancies. **What could be the courses behind such discrepancies?**
 
-By now, you have to realise that by knowing the relative *spectral reflectance* of a class in every spectral band helps to understand and interpret images. That such spectral reflectance is visualised as relative brightness. Finally, that you can predict, for a given sensor, the ranges of DN values for a specific object, if you know and understand the spectral properties of such objects.
 
-Some land cover types might have similar or the same spectral reflectance property in specific ranges of the Electromagnetic (EM) spectrum. The integration of more bands in the analysis,  and the assessment of the spectral properties in other ranges of the EM spectrum, can result in the successful discrimination of more types of land cover. This is true not only in the case of land cover but also for many other objects in a remote sensing image.
+.. note:: 
+   **Reflection.**
+
+   You should realise that by knowing the relative **spectral reflectance** of a class in every spectral band helps to understand and interpret images. Such spectral reflectance is visualised as relative brightness. Moreover, you could predict, for a given sensor, the ranges of DN values for a specific object, if you know and understand the spectral properties of such objects.
+
+   Some type of land cover  might have similar or the same spectral reflectance property in specific ranges of the Electromagnetic (EM) spectrum. The integration of more bands in the analysis,  and the assessment of the spectral properties in other ranges of the EM spectrum, can result in the successful discrimination of more types of land cover. This is true not only in the case of land cover but also for many other objects in a remote sensing image.
 
 -----------------------------
 
@@ -160,23 +164,23 @@ One method to enhance images, for interpretation or analysis, uses |ltb| `Histog
    **Resources.**
    You will require the same dataset as in the previous section: `data_histogram_operations.zip <data_histogram_ops_>`_. 
    
-   + To experiment with contrast enhancement, we will use a TM image of the 24th of august 1999, ``tm24aug99.img``. This image covers a large water body and different types of land cover,  and it has clouds-covered areas. 
+   + To experiment with contrast enhancement, we will use a TM image of the 24th of august 1999, ``tm24aug99.img``. This image covers a large water body and different types of land cover,  and it has areas covered by clouds. 
 
 
 Contrast Stretching
 ^^^^^^^^^^^^^^^^^^^
 
  Task 8
-   Display the  ``tm24aug99.img`` using the band combination 4, 5 and 3. Set the *Stretch to MinMax* to a *Mean +/- standard deviation* of  2.0, and the *Accuracy* to **Actual (slower)**; as shown below.
+   Display the  ``tm24aug99.img`` using the band combination 4, 5 and 3. Set the *Stretch to MinMax* to a *Mean +/- standard deviation* of  :math:`2.0`, and the *Accuracy* to **Actual (slower)**; as shown below.
 
 
    .. image:: _static/img/task-sdeviation-stretch.png
       :align: center
 
 Task 9
-   Zoom in to an area covered by clouds over the mainland (centre right). Open the **Layer Properties** dialogue and select the **Symbology** panel. Then change the **Statistics extent** to *Current canvas* and apply.
+   Zoom in to an area covered by clouds over the mainland (centre right). Go to :guilabel:`Layer Properties` >  :guilabel:`Symbology`. Change the :guilabel:`Statistics extent` to *Current canvas* and :guilabel:`click OK`.
 
-   Select to **Zoom Full** to zoom out to see the whole image. Instead of seeing clouds in whites and pinks,  you now can see clouds in several colours. 
+   Click on **Zoom Full** |zoomFullExtent| to zoom out to see the whole image. Instead of seeing clouds in whites and pinks,  you now can see clouds in several colours. 
 
    .. image:: _static/img/task-cloud1.png
       :align: center
@@ -190,15 +194,17 @@ Task 9
 
 .. attention:: 
    **Question.**
-   Do you also think that mainland displaying in a not-so-good way?
+   Do you also think that the mainland is displayes in a not-so-good way?
 
 Task 10
-   Zoom into an area with mostly land and some water,  and re-apply the same  *Contrast enhancement* method as before. You can use the context-sensitive option **Stretch using current extent** as shown below, but verify that it does what you intended.
+   Zoom into an area with mostly land and some water,  and re-apply the same  *Contrast enhancement* method as before. You can use the context-sensitive option **Stretch using current extent** as shown below, but verify that it does what you intend.
 
    .. image:: _static/img/task-apply-stretch.png
       :align: center
 
-You will notice a change in contrast in the image. This is because the part of the image that is currently visible include different types of land cover; thus, different statistics. The results of a contrast stretch based on statistics changes when the range of values used in the computation of such statistics changes.
+You will notice a change in contrast in the image. This is because the part of the image that is currently visible include different types of land cover; thus, different local statistics. The results of a contrast stretch based on local statistics changes when the range of values used in the computation changes.
+
+[CONTINURE HERE]
 
 Task 11
    Set the **Contrast enhancement** back to *Mean +/- standard deviations* and the **Statistics extent** to  *Whole raster*. Then, right-click the *’ tm24aug99’* layer and select *Export > Save as...*. For  **Output mode** select *Rendered image* and enter a self-explanatory name for the output file. Save the file to an existing folder. The file will automatically be added to the Map View.
