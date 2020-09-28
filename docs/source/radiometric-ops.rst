@@ -225,28 +225,6 @@ Choosing Min and Max values
 
 To choose the *min* and *max* values for a contrast stretch, the user has to consider which areas of an image are of interest, or which types of land cover are relevant for certain purposes.
 
-[remove]
-..  To help this choice, we built a model which you can to extract the local statistics for an area of interest.  In this section, you will experiment with such a model.
-
-.. Task 12 [remove]
-..    To use the model, you first have to import it to QGIS. In the **Processing Toolbox**, click on the *Model icon* and select **Add Model to Toolbox**. Select the model ``Raster_Statistics_By_Extent.model3`` that is included with the dataset. Click Open. The model will be imported and shown in the *Models section*. 
-
-..    .. figure:: _static/img/task-add-model.png
-..       :alt: add model
-..       :figclass: align-center
-
-..       Adding a model to the Processing Toolbox
-
-.. Task 13 
-..    Remove the exported image from the project; keep only the original image. Zoom into an area on the mainland which is primarily dark orange/brown; they represent areas with forest.
-
-..    Then, use the *’Statistics of Raster by extent’* model to calculate the local statistics. Double click the model and provide an *Extent* and an *Input raster file*. Run the model. The model creates a rectangle from the input Extent, which contains an attribute table with the computed statistics for each band of the Input raster. 
-
-..    Copy the min and max values for each band to the **Band Rendering** dialogue on the *Symbology* window and apply the changes. This would enhance the contrast for the areas that contain forests.
-
-.. .. note:: [remove]
-..    **QGIS.**
-..    The  *'Statistics of Raster by extent'* model will always list the result using the name *Band 1, Band 2 and Band 3*. These numbers do not correspond to the number in *Input raster file*; instead, they correspond to the order in which the bands are were displayed in RGB when running the model. For example, in this case, Band 1 contains the statistics that correspond to the band assigned to the Red channel, that is *Band 5* of the...
 
 [new task by andre]
 
