@@ -246,17 +246,17 @@ Task 12
    To correctly apply contrast enhancement for specific types of land covers, you need to know which are the types of interest. What their spectral signatures are; the specifications of the spectral bands of the sensor which you have chosen; and you need knowledge of additive colour mixture.
 
 
-Task 14
+Task 13
    Add the ``tm25aug99_sub.img`` to the project, and display it using a band combination 4, 5 and 3. this image covers shallow water and land with various types of land cover. Analyse the histograms of the three bands for this image; :guilabel:`right-click` on the layer > :guilabel:`Properties` > :guilabel:`Histogram`. Compute the histogram if necessary. Then, :guilabel:`Prefs/Actions` > :guilabel:`Show selected band` and choose the band you want to inspect.
 
 .. attention:: 
    **Question.** 
    In which band on display do you expect a significant difference in DN Values between water and land? Use your knowledge on EM radiation. A bi or tri-modal trend in the histogram is an important clue.
 
-Task 15
+Task 14
    Use the histograms to identify approximate values for a *contrast stretch* which will enhance the contrasts between types of coverage on the part of ``tm25aug99_sub.img`` with land. Save the result using :guilabel:`Export As..` > :guilabel:`Rendered image`. Remove the resulting layer from the project.
  
-Task 16
+Task 15
    Repeat the previous task. This time use the histograms to set a contrast that will enhance the image for distinguishing shallow water.
 
 .. note:: 
@@ -284,10 +284,10 @@ Image Enhancement by Filter Operations
 QGIS offers the possibility to apply all kind of filter kernels on images which are displayed in a viewer. In this exercise, we will use tools that apply filters and store the output as temporary files. In such a way, we can easily compare different results.
 
 
-Task 17
+Task 16
    Install the **Profile tool** plugin. Go to :guilabel:`Plugins` > :guilabel:`Manage Install Plugins`, and install the plugin.
 
-Task 18
+Task 17
    Set the default contrast stretch to use the :math:`2 \%` and :math:`98 \%` of  the cumulative pixel count for grayscale images. In the :guilabel:`Settings` menu, go to :guilabel:`Options` > :guilabel:`Rendering` tab. Scroll down to :guilabel:`Contrast enhancement settings`, and set the default value for **Single band gray** to *Stretch To MinMax*. Then, set **Limits (minimum/maximum)** to *Cumulative pixel count cut*. Make sure that the cut limits are set to :math:`2.0 \%` and :math:`98.0 \%`. Click :guilabel:`OK`.
 
 .. note::
@@ -300,7 +300,7 @@ Task 18
 
       <div style="padding:52.29% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/204013568?color=007e83&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 
-Task 19
+Task 18
    In the :guilabel:`Settings` menu, go to :guilabel:`Options` > :guilabel:`Processing` and check that you have the SAGA and GRASS providers enabled.
 
 
@@ -312,7 +312,7 @@ Smoothing Filter
 ****************
 
 
- Task 20
+ Task 19
    Apply a linear filter to the *’tm1999_b4’* image. In QGIS, open the  ``tm1999_b4.tif``. Your project should assume the same Spatial Reference System as the image (*EPSG:32632 WGS84/UTM zone 32N*). In the **Processing Toolbox**, open the SAGA tool called **User defined filter**. 
 
    Confirm that *’tm1999_b4’* is the input and click **Default filter matrix (3x3)** to open an empty filter kernel. Enter the weights of an *average filter kernel*. Ensure that the sum of weights is equal to 1. Confirm with OK. In the **User defined filter dialogue** execute the kernel by clicking OK. The output is added to the Map View as a temporary file. 
@@ -328,7 +328,7 @@ Smoothing Filter
       :align: center
 
 
-Task 21
+Task 20
    Explore the filter results around the Twente Airport. Reset the zoom to fit the image to the **Map View**. Next, change the scale, in the box at the bottom of the Map View, to :math:`1:75,000`.  
    
    Zoom in to the major runway of the *Twente Airport*. See Figure :numref:`fig-smoothing`.
@@ -355,13 +355,13 @@ Task 21
    **Question.**
    Just by looking at the graph of the Profile tool,  can you tell which profile belongs to the layer with the average filter?
 
-Task 22
+Task 21
    Draw profiles at different locations, and confirm your knowledge of the effects of applying an average filter (smoothing) to the image.
   
 Gradient Filter
 ***************
 
-Task 23 
+Task 22
    Use the **User defined filter** tool to apply a filter using the weights in the figure below, to the original *'tm1999_b4'* layer. Rename the resulting layer to *'Laplace'*.
 
    .. image:: _static/img/laplace-kernel.png
@@ -377,14 +377,14 @@ Task 23
    + Is the kernel above a detection kernel? If yes, what does it detect?
    + Does the layer resulting from the previous task contain the same brightness as the original image for area objects?
 
-Task 24 
+Task 23
    Examine the result of the Laplace filter. Toggle on and off the visibility of the *'Laplace'* layer to check what has happened. Zoom in to the edge of the image until you see individual pixels.  Toggle the visibility of the *'Laplace'* layer again.
 
 .. attention:: 
    **Question.**
    What phenomena do you observe? Can you explain it?
 
-Task 25
+Task 24
    Open the histogram of the ‘*Laplace’* layer. Go to :guilabel:`Properties` > :guilabel:`Histogram`; check the values in the image.
 
 .. attention:: 
@@ -392,7 +392,7 @@ Task 25
    Around which value does the histogram has its centre?
 
 
-Task 26 
+Task 25
    In the **Profile** tool add the *’Laplace’* layer and toggle the visibility for the other layers. Confirm that the filter kernel detected two edges, i.e. both sides of the runway.
 
 The *’Laplace’* layer looks rather artificial. The brightness of the original image is gone; the lighter and darker areas in the original have now a common grey tone and high contrasting pixels at the edges. This filter has detected the changes (edges) between local lighter and darker pixels. The circular build of the kernel that you applied, i.e. all negative weights around the centre with positive weight,  detected changes in all directions.
@@ -410,7 +410,7 @@ The *’Laplace’* layer looks rather artificial. The brightness of the origina
 Edge Enhancement
 ****************
 
-Task 27
+Task 26
    Repeat the steps of the previous task, but this time use kernels with the following values for the centre: 12, 16 and 200. Increasing the centre value will increase the weight of the centre pixel in the original image. When using a value of about 16 for the centre pixel; the kernel will calculate the Laplace enhancement of the image. Then, the resulting layer will look like the original image.
 
 
@@ -427,7 +427,7 @@ The Laplace kernel detects edges in all directions. We can also define kernels w
       :width: 160px
       :align: center
 
-Task 28 
+Task 27 
    In the Processing Toolbox, use the **r.mfilter** tool of GRASS  to detect edges in a specific direction.  Use the file ``SW-NE_3x3.txt`` as *Filter file*.  
 
    Check the results and confirm that one of the runways of the *Twente Airport*  was not detected at all! Also, ensure that the edges of the main runway were detected. The result should show positive values on one side of the runway and a negative on the other. This is because of the correlation of the results with the positive and negative weights in the kernel. 
@@ -440,7 +440,7 @@ Enhancement using Non-linear Filters
 Rank-Order Filter
 *****************
 
-Task 29  
+Task 28  
    In the Processing Tools, look for the SAGA  **Rank filter**.  Select the *’tm1999_b4’* layer as the input grid. Set the *Search Mode* to *Square* and a Radius of 1. Use a *Rank (Percent)* of 50. This settings essentially define a **median filter**. Execute the filter.
    
    Use the **Profile tool** to inspect the results and confirm the difference between the original image and the result of the *Average and Median* filters. Pay special attention to locations where you expect variations, for instance, around the edges between areas. 
@@ -448,7 +448,7 @@ Task 29
 Majority Filter 
 ***************
 
-Task 30 
+Task 29 
    Add the ``tm1999_tm_xs_ml_classification.tif`` into the Map View; this layer contains a set of classes representing land cover. You will notice that there are many isolated pixels inside some homogeneous areas. For example, the yellow pixels identify maise, which usually does not grow in such small parcels.
  
    In the **Processing Toolbox**, open the **r.neighbors** tool. Select *’tm1999_xs_ml_classifciation’* as input raster and set the neighbourhood operation as *’mode’* (also known as **majority filter**).
@@ -465,14 +465,14 @@ Task 30
    Copying the style between two raster layers in QGIS
 
 
-Task 31
+Task 30
    Toggle the visibility of the filtered result and compare it with the original landcover layer. Confirm that most isolated pixels have disappeared, and that thin lines of pixels surrounded by homogeneous areas also disappeared (e.g. a runway in the Twente Airport). The main runway should still be distinguishable.
  
 .. attention:: 
    **Question.**
    Can you explain why one of the small runways of the Twente Airport disappeared after applying a majority filter?
 
-Task 32
+Task 31
    Use the **r.neighbor** to compute another mode filter on the *’tm1999_xs_ml_classifciation’* layer. This time use a neighbourhood of size :math:`5`; which is to apply a :math:`5 \times 5` kernel. Compare the result of this filter with the :math:`3 \times 3` majority filter.
 
 .. attention:: 
@@ -480,7 +480,7 @@ Task 32
    What do you observe when comparing results of  :math:`3 \times 3` and  :math:`5 \times 5` majority filters around the main runway of the Twente Airport?
 
 
-Task 33
+Task 32
    Experiment with the application of consecutive filters. Apply a :math:`3 ~\times~ 3` majority filter to the results of the already existing *'3x3 majority'* filter layer. Compare these results with the result of applying a single :math:`5 \times 5` majority filter. You should see that the results are not the same.
 
 .. note:: 
