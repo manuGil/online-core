@@ -22,7 +22,7 @@ Through well-known plugins and providers, QGIS offers the possibility to apply a
  
 
 Task 1
-   Disable the default contrast stretch. Go to *Settings > Options > Rendering* tab and scroll down to Contrast enhancement. Set the algorithms   *Single band grey, Multiband colour (byte/band) and Multiband colour (> byte/band)* to **No Stretch**. Set the *Cumulative pixel count cut*  to :math:`2.0` and :math:`98.0%`. Click OK to confirm. See Figure :numref:`fig-set-render` 
+   Disable the default contrast stretch. Go to *Settings > Options > Rendering* tab and scroll down to Contrast enhancement. Set the algorithms   *Single band grey, Multiband colour (byte/band) and Multiband colour (> byte/band)* to **No Stretch**. Set the *Cumulative pixel count cut*  to :math:`2.0` and :math:`98.0\%`. Click OK to confirm. See Figure :numref:`fig-set-render` 
 
 
 .. _fig-set-render:

@@ -35,6 +35,7 @@ The Core Course: Exercises
 
    radiometric-ops
    radiometric-cors
+   dic
 
 .. toctree::
    :maxdepth: 2
