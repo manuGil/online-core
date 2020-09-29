@@ -31,17 +31,16 @@ As shown in :numref:`fig-corrections-wkf`, correction techniques fall within thr
 Haze correction
 ---------------
 
-
 Task 1 
-   Use the `Satellite and sensor database <https://webapps.itc.utwente.nl/sensor/default.aspx?view=searchsat>`_ and the file and metadata information to find information about the spectral specifications of *SPOT PAN, Landsat TM B1 to B4* and *Landsat ETM B1 to B4*. Then, complete the table below.
+   Use the `Satellite and sensor database <https://webapps.itc.utwente.nl/sensor/default.aspx?view=searchsat>`_ and the file-properties to find information about the spectral specifications of *SPOT PAN, Landsat TM B1 to B4* and *Landsat ETM B1 to B4*. Then, complete the table below.
 
-=====================       ============    ====    ===========================     ==============
-Satellite/sensor            Filename(s)     Date    Approx. time of acquisition     Resolution GSD
-=====================       ============    ====    ===========================     ==============
-SPOT/HRG panchromatic       PAN        
-Landsat-5/TM                TM89       
-Landsat-7/ETM+              ETM99         
-=====================       ============    ====    ===========================     ==============
+=====================       ============    ===========    ==============
+Satellite/sensor            Filename(s)     Date            Resolution GSD
+=====================       ============    ===========    ==============
+SPOT/HRG panchromatic       PAN             03-Jul-1989
+Landsat-5/TM                TM89            21-Dec-1989
+Landsat-7/ETM+              ETM99           03-Nov-1999
+=====================       ============    ===========    ==============
 
 
 .. attention:: 
@@ -49,34 +48,40 @@ Landsat-7/ETM+              ETM99
    Are the spectral characteristics of the TM and ETM sensors different? 
 
 
+
+**Haze has an additive effect to the overall image, which results in higher DN values.** Therefore, haze reduces the contrast of the image. Because this effect depends on :math:`\lambda`, its influence differs for each band. 
+    
+In the following task, we will assume that there is a real *blackbody* present in the images; and do a subtractraction to reduce pixel values to a minimum of zero.
+
 Task 2 
    Open  ``etm99.img``, ``pan.img``, and ``tm89.img`` in QGIS. and take a look at the images. Display all images using **bands 4, 3, 2 for RGB** and *No Stretch*. Open the **Value tool** to explore the pixel values. 
     
-   Haze has an additive effect to the overall image, which results in higher DN values. Therefore, haze reduces the contrast of the image. Because this effect depends on :math:`\lambda`, its influence differs for each band. 
-    
-   We will assume that there is a real *blackbody* present in the images; therefore, we can subtract to a minimum of zero.
+   Assume that the blackbody in these images is *deep, clear and unpolluted water*. 
+   The island in the images is surrounded by a tidal flat, which causes tidal currents with a tidal frequency. It is not easy to locate clear water around the island in such situations. We recommend using a body with following water as assumed-blackbody, for example the small lake on the island.
+   
+   Follow the steps below to complete the following table. You have to determine the **minimum values** for the assumed-blackbody (lake) on the images. 
 
- Assume that the blackbody, in this case, is *deep, clear and unpolluted water*. Complete the table below with the **minimum values** that you can find in such water body. Some hints are given below.
+   =====   =============   =========   =========   =========   ==============
+   Image   Band 1 DN       Band 2 DN   Band 3 DN   Band 4 DN   Pan DN
+   =====   =============   =========   =========   =========   ==============
+   PAN     **n.a.** [1]_   **n.a.**    **n.a.**    **n.a.**
+   TM89                                                        **n.n.** [2]_
+   ETM99                                                       **n.n.**            
+   =====   =============   =========   =========   =========   ==============
 
-=====   =============   =========   =========   =========   =========
-Image   Band 1 DN       Band 2 DN   Band 3 DN   Band 4 DN   Pan DN
-=====   =============   =========   =========   =========   =========
-PAN     **n.a.** [#]_   **n.a.**    **n.a.**    **n.a.**
-TM89                                                        **n.a.**
-ETM99                                                       **n.a.**            
-=====   =============   =========   =========   =========   =========
-
-.. [#] Not applicable
+.. [1] Not available
+.. [2] Not necessary
 
 \
 
-   Use the **Value tool** to read DN values. Note that the tool shows pixel values for all bands of the multispectral image. *Read the value for the proper band!*
+   1. Use the **Value tool** to read DN values. Note that the tool shows pixel values for all bands of the multispectral image. *Read the value for the proper band!*
 
-   The island in the image is surrounded by a tidal flat, which causes tidal currents with a tidal frequency. It is not easy to locate clear water in such situations. We recommend using a body with following water, rather than a small lake on the island as assumed-blackbody.
+   2. Select the *'ETM99'* image, go to Properties and change the symbology to single band grayscale for Band 4. Set minimum to 0 and maximum to around 40 to increase the contrast for the lowest DN values (these are objects with the lowest reflectance properties, which are more likely to be water).
 
-   1. Select the *'ETM99'* image, go to Properties and change the symbology to single band grayscale for Band 4. Set minimum to 0 and maximum to around 40 to increase the contrast for the lowest DN values (these are objects with the lowest reflectance properties, which are more likely to be water).
+   3. Zoom into the area around :math:`[lat, long] = [53.46145,5.652432 ] or [x, y] = [676191, 5927074]`, for comparison. This location is a small lake on the island and shows much lower values than most of the sea in the image. Search the lake for the lowest DN value. Keep a list of lowest values on scratch paper and copy these to the table.
 
-   2. Zoom into the area around :math:`[lat, long] = [53.46145,5.652432 ] or [x, y] = [676191, 5927074]`, for comparison. This location is a small lake on the island and shows much lower values than most of the sea in the image. Search the lake for the lowest DN value. Keep a list of lowest values on scratch paper and copy these to the table.
+   4. Repeat steps 2 and 3 for images *'PAN'* and *'TM89'*.
+
 
 .. attention:: 
    **Question.** Compare the minimal value found in the lake or tidal flat with the minimum value in that band. 
@@ -91,7 +96,7 @@ ETM99                                                       **n.a.**
 
 
 Task 3
-   Correct the images for haze by subtraction values using the Raster calculator. In QGIS go to :guilabel:`Raster` > :guilabel:`Raster Calculator`. Specify the formula to subtract the Haze value from Band 4 and specify the name of the output file. 
+   Correct the image for haze by subtraction values using the Raster calculator. In QGIS go to :guilabel:`Raster` > :guilabel:`Raster Calculator`. Specify the formula to subtract the Haze value from Band 4  of the *'ETM99'* image, and specify the name of the output file. 
 
    Select the newly created *Band 4 with haze correction* on the **Layers Panel**.  Go to  Properties and modify the contrast stretch as follows: **minimum: 0,  maximum: 255**. Do the same for the *Band 4  without haze correction.*
 
