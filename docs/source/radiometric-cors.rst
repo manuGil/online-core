@@ -25,7 +25,7 @@ As shown in :numref:`fig-corrections-wkf`, correction techniques fall within thr
    + ``pan.img``  – Scene from SPOT, panchromatic band.
    + ``tm89.img`` – Scene from  Landsat Thematic Mapper.
 
-   These three images are provided with almost cloud-free skies. 
+   These three images are provided with almost cloud-free skies, and the coordinate system is **EPSG: 32631**.
 
 
 Haze correction
