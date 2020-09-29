@@ -62,7 +62,7 @@ Task 2
 Image   Band 1 DN       Band 2 DN   Band 3 DN   Band 4 DN   Pan DN
 =====   =============   =========   =========   =========   =========
 PAN     **n.a.** [#]_   **n.a.**    **n.a.**    **n.a.**
-TM89    **n.a.**        **n.a.**    **n.a.**                **n.a.**
+TM89                                                        **n.a.**
 ETM99                                                       **n.a.**            
 =====   =============   =========   =========   =========   =========
 
@@ -102,10 +102,17 @@ Task 3
 Verify that the histograms of the haze-corrected bands have shifted towards the origin. Both histograms have the same shape before and after haze correction, but a different location. It also shows that there are some pixels with DN values lower than the small lake on the island. These negative values should not exist in EO images, but they are caused by the fact that we use a GIS to do the calculation. Before continuing, we have to correct this artefact.
 
 Task 4
-   From the **Processing Toolbox**, use the SAGA module **Reclassify values (simple)** to set all negative values to 0. Select condition  ``[0] Low value <= grid value < high value``. Edit the Lookup table; delete two rows and enter :math:`-255` for *Low Value*. This will replace all values in the range  :math:`[-255,0]` with 0.
+   From the **Processing Toolbox**, use the SAGA module **Reclassify values (simple)** to set all negative values to 0. For :guilabel:`Grid` choose the *'haze-corrected'* layer, and for :guilabel:`Replace Condition` choose   ``[0] Low value <= grid value < high value``. 
+   
+   Edit the Lookup table; add a row and enter :math:`-255` for *Low Value*, :math:`0` for *High Value* and :math:`0` for *Replace with*. Just like int he table below. Click :guilabel:`OK` > :guilabel:`Run`.   This will replace all values in the range  :math:`[-255,0]` with 0, and produce a new raster layer.
+
+   .. image:: _static/img/task-fix-table.png 
+      :width: 360px
+      :align: center
+
 
 Task 5
-   Calculate the Haze correction for all bands of *‘ETM99’*, for band 4 of *'TM89*' and *'Spot PAN'*, including the reclassification.
+   Calculate the Haze correction for all bands of *‘ETM99’*, for band 4 of *'TM89*' and the *'Spot PAN'*, including the reclassification.
 
 .. attention:: 
    **Question.**
