@@ -180,6 +180,7 @@ Watch the video tutorial on `Creating training sets <https://vimeo.com/showcase/
 
    <div style="padding:53.75% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/340426030?color=007e83&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 
+\
 
 .. note:: 
    **QGIS.**
@@ -223,5 +224,38 @@ Supervised Image Classification
 -------------------------------
 
 In this exercise, we will use the **Maximum Likelihood** classifier for the supervised classification, but we encourage you to experiment with other classifiers and compare the results.
+
+Task 4.1 
+   Use the **Semi-automatic classification** plugin to test your first training sample set. Configure the *'Classification algorithm'*  as shown below. 
+   Then use the  **Active classification preview pointer** |previewPointer|  to generate a temporary classification. Then,  visually inspect the classification results. 
+
+   .. image:: _static/img/task-semi-auto-classification.png 
+      :align: center
+      :width: 360px
+
+Watch the video tutorial on `Running a supervised classification  <https://vimeo.com/340426053>`_ to complete this task.
+
+.. raw:: html
+
+   <div style="padding:53.75% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/340426053?color=007e83&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+
+\
+
+Inspect Results & Improve the Classification
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Task 4.2 
+   Based on the visual inspection of your first classification results, add additional ROIs that capture areas where the algorithm fails to classify the image correctly.
+
+   Then, inspect the classification results again, and if necessary add more ROIs until you are satisfied with the results. 
+
+ Task 4.3 
+   Run the final classification, by clickin on the button |runClassification|
+
+Task 4.4 
+   Generate a shapefile from the ROIs you used to classify the image. [HOW? GIVE SOME HINT?]
+
+ Task 4.5 
+   Make sure you save your training samples for later use. In the **Semi-automatic classification** plugin, this is done automatically.
 
 
