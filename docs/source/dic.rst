@@ -77,13 +77,13 @@ The interpretation legend defines a list of *legend units* in terms of the chara
 Task 2
    Start QGIS and open the ``s2_25_sept_2016.tif``, display it  with the band combination **7,8,3**.
 
-   Define between 10 to 15 legend units for this dataset. After  you have established a legend, you can start with the  visual interpretation.
+   Define between 5 to 10 legend units for this dataset. After  we established a legend, we can start with the  visual interpretation.
 
 
 Visual Interpretation
 ^^^^^^^^^^^^^^^^^^^^^
 
-One the purposes of visual image interpretation is to identify objects in the image dataset. For this we use the legen units defined in above and the ability of the human eye to recognize certain objects. For example, a legend unit defined as *black and dark-blue pixels* can be recognized, after considering the size, shape and texture of the objects , as **water**.
+One the purposes of |ltb| `Visual image interpretation`_ is to identify objects in the image dataset. For this we use the legen units defined in above and the ability of the human eye to recognize certain objects. For example, a legend unit defined as *black and dark-blue pixels* can be recognized, after considering the size, shape and texture of the objects , as **water**.
 
 .. attention:: 
    **Question.**
@@ -101,13 +101,127 @@ During the survey we have to visit and check different locations for all the leg
 In this course, it is not  possible to conduct a fieldwork. Instead, we provide you with a dataset  with observations made during a fieldwork for interpreting the Sentinel-II image in Enschede, NL. The datasets contains locations and photos for each visited site. If  you  were to conduct a field surves, you should collect similar data.
 
 
+Task 3
+   Add the ``training_areas.shp`` to QGIS. Use the **Identify tool** to inspect the location of visited sites during the fieldwork over the  *'s2_25_sept_2016'* image.  Put attention to the  attributes **TA_ID**, it tells the file name of the photo(s) that belong to that location; for example. *AV_1*. If more than one photo is available for a location, files names contain also a literal; for example *AV_1a* and *AV_1b*. See :numref:`fig-field-data` 
+
+.. _fig-field-data:
+.. figure:: _static/img/task-field-data.png
+   :alt: field data
+   :figclass: align-center
+
+   Field data: training data and photos.
+
+---------------------
+
+Organising Field data
+---------------------
+
+After fieldwork, we have to structure the fieldwork data, define classes and relate  such classes to the image. Thus we have to define **field classes**  using the fieldwork data. Filed classes are classes recognizable in the field based on certain criteria. In our case the creteria is related to land cover and land use. Field classes should define at same level of detail. 
+
+Task 2.3 
+   Compare the field classes, as defined in the attribute **Landcvr** of the *'training_areas'* layer, with the colours on the satellite image when displaying bands 7,8,3. Make a list of up to 10 map classes you would like to classify, and write down which colour(s) corresponds them. See the example in the table below.
+
+   ======   ====================
+   Class       Colour (7-8-3)	
+   ======   ====================
+   Water       Black/dark blue
+   \           \
+   \           \
+   \           \
+   ======   ====================
+
+------------------------
+
+Defining Mapping Classes
+------------------------
+
+In the previous task, you practiced how to define  field classes and associate colours. However,  for the remainder of this exercise, we will use the following list of macroclasses (MC_info) and ID codes (MC_ID). 
+
+=========   ==================
+MC_ID	      MC_Info 
+=========   ==================
+1	         water
+2	         maize
+3	         evergreen
+4	         grass
+5	         bare
+6	         buildings
+7	         tarmac
+8	         heath
+9	         deciduous
+10	         rapeseed
+=========   ==================
+
+It is *fundamental* that you follow the nomenclature above, because the accuracy assessment assumes that the classification results contain such classes.
+
+-----------------
+
+Defining Spectral Signatures & ROI
+----------------------------------
+
+.. note:: 
+   **QGIS.**
+   The QGIS **Semi-automatic Classification** plugin uses the term ‘Region of Interest’ (ROI) instead of ‘training sample’ which is the term you will see in the reading materials. *These terms are equivalent and have exactly the same meaning.* 
+
+Task 3.1 
+   Install the plugin **Semi-automatic classification**. If necessary, open the ``s2_25_sept_2016.tif``.
+
+Task 3.3  
+   Use the **Semi-automatic classification** plugin to create the first training sample. While you are at it,  follow these recommendations:
+
+   +  Make sure that you take samples from homogenous areas, and that the *standard deviation* is kept low (check the statistics of the ROI).
+   +  It is advisable to make several subclasses for the same macroclass. For example, you will notice that not all pixels with water have exactly the same colour. Some areas with water have black pixels and some others have dark-blue pixels. Instead of collecting samples under the macroclass *water*, it is better to split water in two subclases, for examples *water_black* and *water_blue*, and take samples for each subclass separatly. The set of all pixels associated to an specific class is what we call a **spectral signature**. 
+
+   +  Give subclases distinct class names (e.g. grass_yellow, grass_orange).
+
+Watch the video tutorial on `Creating training sets <https://vimeo.com/showcase/5716094/video/340426030>`_ to know how to complete this task in QGIS.
+
+.. raw:: html
+
+   <div style="padding:53.75% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/340426030?color=007e83&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 
 
+.. note:: 
+   **QGIS.**
+   We will apply a classification base on macroclasses (information class), and not on subclasses (spectral classes). 
+   When we classify according to macroclasses, the classification algorithm will group subclasses and label the resuls according to macroclass. However, *the classification algorithm will nto merge the spectral signatures.*
+
+.. attention:: 
+   **Question.**
+   Why is it advisable to make separted (spectral) subclasses when taking training samples?
+ 
+Task 3.4 
+   Define ROIs for all macroclasses in the table above and for all relevant subclases. Remember to group  subclases with the correct macroclass.
+
+----------------------
+
+Evaluate Spectral Signatures (ROI)
+-----------------------------------
+
+You can visualise spectral signatures (ROI) statistics. One option to evaluate signatures (ROI) are |ltb| `feature space images <Feature Space_>`_ , which are two-dimensional histograms. 
+
+Task 3.5 
+   Create and analyze feature spaces. Click on :guilabel:`Add highlighted items to scatterplot`.  
+   Insepect the feature spaces and evaluate the separability of your ROIs. 
 
 
+.. attention:: 
+   **Question.**
+   What band combination creates a suitable feature space to evaluate the separability of your training samples? 
 
 
+To evaluate the quality of the training samples, we  can the standard deviation as reference.
 
+Task 3.6 
+   Analyse the standard deviation for each of your ROI. Click on :guilabel:`Add highlighted signatures to spectral signature plot` > :guilabel:`Signature details`.
 
+When you are satisfied with the signatures (ROI) of your training samples, you can move to perfom a digital image classification.
+
+-------------------
+
+Supervised Image Classification
+-------------------------------
+
+In this exercise, we will use the Maximum Likelihood classifier for the supervised classification, but we encourage you to experiment with other classifiers.
 
 

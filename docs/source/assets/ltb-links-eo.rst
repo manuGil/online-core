@@ -44,3 +44,5 @@
 .. about digital image classification
 
 .. _Digital Image Classification: https://ltb.itc.utwente.nl/page/481/concept/78585
+.. _Visual image interpretation: https://ltb.itc.utwente.nl/page/481/concept/78655
+.. _Feature Space: https://ltb.itc.utwente.nl/page/481/concept/78648
