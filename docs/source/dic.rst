@@ -13,7 +13,7 @@ In this exercise, we use a **Sentinel-2** satellite image covering Enschede and 
    + ``Field_Photos_201``, a folder containing photos of the surroundings of training areas.
 
 
-The methodology for mapping land cover  using satellite images consist of the following steps:
+The methodology for mapping land cover  using satellite images consist of the following general steps:
 
 1.	Interpretation of satellite image 
 2.	Field data collection
@@ -21,7 +21,8 @@ The methodology for mapping land cover  using satellite images consist of the fo
 4.	Supervised Classification
 5.	Accuracy assessment
 
-In this exercise, you will conduct the steps mentioned above except for **Field data collection**. The workflow in :numref:`fig-dic-workflow`  summarized the process of applying *digitial image classification* for land cover mapping.
+In this exercise, you will conduct the steps mentioned above except for the **Field data collection**. However, we briefly explain that step in the sections :ref:`field-survey` and :ref:`field-data`.   
+The workflow in :numref:`fig-dic-workflow`  summarized the process of applying *digitial image classification* for land cover mapping.
 
 .. _fig-dic-workflow:
 .. figure:: _static/img/dic-workflow.png
@@ -64,8 +65,8 @@ Task 1
 
 --------------------------------
 
-Legend & Image Interpretation
------------------------------
+Legend & Visual Interpretation
+--------------------------------
 
 The interpretation process  involves to visually examine the image dataset that will be use in the classification, and define a set of classes of interest. In this case we will focus on the definition of classes of land cover. For example, *forest, buil-up areas, water bodies, grass fields, etc.*
 
@@ -91,6 +92,8 @@ One the purposes of |ltb| `Visual image interpretation`_ is to identify objects 
 
 ------------------
 
+.. _field-survey:
+
 Field Survey
 ------------
 
@@ -100,7 +103,7 @@ During the survey we have to visit and check different locations for all the leg
 
 In this course, it is not  possible to conduct a fieldwork. Instead, we provide you with a dataset  with observations made during a fieldwork for interpreting the Sentinel-II image in Enschede, NL. The datasets contains locations and photos for each visited site. If  you  were to conduct a field surves, you should collect similar data.
 
-[SHALL WE SAY SOMETHIG ABOUT SPLITNG THE FIELD DATA IN 2 PARTS: training data and referece data?]
+
 
 Task 3
    Add the ``training_areas.shp`` to QGIS. Use the **Identify tool** to inspect the location of visited sites during the fieldwork over the  *'s2_25_sept_2016'* image.  Put attention to the  attributes **TA_ID**, it tells the file name of the photo(s) that belong to that location; for example. *AV_1*. If more than one photo is available for a location, files names contain also a literal; for example *AV_1a* and *AV_1b*. See :numref:`fig-field-data` 
@@ -114,10 +117,14 @@ Task 3
 
 ---------------------
 
+.. _field-data:
+
 Organising Field data
 ---------------------
 
 After fieldwork, we have to structure the fieldwork data, define classes and relate  such classes to the image. Thus we have to define **field classes**  using the fieldwork data. Filed classes are classes recognizable in the field based on certain criteria. In our case the creteria is related to land cover and land use. Field classes should define at same level of detail. 
+
+[SHALL WE SAY SOMETHIG ABOUT SPLITNG THE FIELD DATA IN 2 PARTS: training data and referece data?]
 
 Task 4
    Compare the field classes, as defined in the attribute **Landcvr** of the *'training_areas'* layer, with the colours on the satellite image when displaying bands 7,8,3. Make a list of up to 10 map classes you would like to classify, and write down which colour(s) corresponds them. See the example in the table below.
@@ -157,8 +164,8 @@ It is *fundamental* that you follow the nomenclature above, because the accuracy
 
 -----------------
 
-Defining Spectral Signatures & ROI
-----------------------------------
+Defining Spectral Signatures (ROIs)
+------------------------------------
 
 .. note:: 
    **QGIS.**
@@ -170,12 +177,12 @@ Task 5
 Task 6 
    Use the **Semi-automatic classification** plugin to create the first training sample. While you are at it,  follow these recommendations:
 
-   +  Make sure that you take samples from homogenous areas, and that the *standard deviation* is kept low (check the statistics of the ROI).
-   +  It is advisable to make several subclasses for the same macroclass. For example, you will notice that not all pixels with water have exactly the same colour. Some areas with water have black pixels and some others have dark-blue pixels. Instead of collecting samples under the macroclass *water*, it is better to split water in two subclases, for examples *water_black* and *water_blue*, and take samples for each subclass separatly. The set of all pixels associated to an specific class is what we call a **spectral signature**. 
+      +  Make sure that you take samples from homogenous areas, and that the *standard deviation* is kept low (check the statistics of the ROI).
+      +  It is advisable to make several subclasses for the same macroclass. For example, you will notice that not all pixels with water have exactly the same colour. Some areas with water have black pixels and some others have dark-blue pixels. Instead of collecting samples under the macroclass *water*, it is better to split water in two subclases, for examples *water_black* and *water_blue*, and take samples for each subclass separatly. The set of all pixels associated to an specific class is what we call a **spectral signature**. 
 
-   +  Give subclases distinct class names (e.g. grass_yellow, grass_orange).
+      +  Give subclases distinct class names (*e.g. grass_yellow, grass_orange*).
 
-Watch the video tutorial on `Creating training sets <https://vimeo.com/showcase/5716094/video/340426030>`_ to know how to complete this task in QGIS.
+   Watch the video tutorial on `Creating training sets <https://vimeo.com/showcase/5716094/video/340426030>`_ to know how to complete this task in QGIS.
 
 .. raw:: html
 
@@ -197,10 +204,12 @@ Task 7
 
 ----------------------
 
-Evaluate Spectral Signatures (ROI)
+Evaluation of Spectral Signatures 
 -----------------------------------
 
 You can visualise spectral signatures (ROI) statistics. One option to evaluate signatures (ROI) are |ltb| `feature space images <Feature Space_>`_ , which are two-dimensional histograms. 
+
+   [SHOULDN'T WE GIVE MORE DETAILS ON HOW DO CREATE AND INTERPRET FEATURE SPACES?]
 
 Task 8
    Create and analyze feature spaces. Click on :guilabel:`Add highlighted items to scatterplot`.  
@@ -234,7 +243,7 @@ Task 10
       :align: center
       :width: 360px
 
-Watch the video tutorial on `Running a supervised classification  <https://vimeo.com/340426053>`_ to complete this task.
+   Watch the video tutorial on `Running a supervised classification  <https://vimeo.com/340426053>`_ to complete this task.
 
 .. raw:: html
 
@@ -271,7 +280,7 @@ Accuracy assessment
   
    + ``reference_data.shp``, dataset containing the locations and types of land cover for the accuracy assessment.
 
-Data for Accuracy assessment
+Data for Accuracy Assessment
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 For this exercise, the data for the accuracy assessment have been collected for you. The ``reference_data.shp`` contains the **ground truth** information of 187 locations, that we will use in assessing the accuracy of the supervised classification. 
@@ -303,7 +312,7 @@ The accuracy of the classification can be improved by  identifying the sources o
 Task 17
    Locate and inspect areas which you suspect are soruces in your classification result. Then, try to improve the *overal accuracy* by adding or excluding ROIs. [DO WE EXCLUDE ROI FROM THE CLASSIFICATION OF FROM THE Accuracy REPORT? IS SUCH CLARIFICATION NEED IT HERE?]
 
-   Once the accuracy of the supervised classification is *acceptable*, you have completed the digital image classification process and generated a **land cover map**.
+   Once the accuracy of the supervised classification is *acceptable*, you have completed the digital image classification process and generated a **land cover map**. Save all your results.
 
 .. attention:: 
    **Question.**
@@ -311,7 +320,8 @@ Task 17
 
 .. important:: 
    **Assignment Submission**
-   Read the instruction of the `Digital Image Classification Assignment <https://canvas.utwente.nl/courses/6641/assignments/43605>`_, and submit your results before **7th October 23:59 (GMT+2)**.
+
+   Read the instructions of the `Digital Image Classification Assignment <https://canvas.utwente.nl/courses/6641/assignments/43605>`_, and submit your results before **7th October 23:59 (GMT+2)**.
 
 
 .. sectionauthor:: Monika Kuffer, Andre Mano & E. Westinga
