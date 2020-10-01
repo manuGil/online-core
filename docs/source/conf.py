@@ -58,7 +58,14 @@ templates_path = ['_templates']
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
 
-exclude_patterns = ['assets/ltb-links-gis.rst', 'assets/data-links-gis.rst', 'assets/ltb-links-eo.rst', 'assets/data-links-eo.rst', 'style-demo.rst', 'style-guide.rst', ]
+exclude_patterns = ['assets/ltb-links-gis.rst', 
+'assets/data-links-gis.rst',
+'assets/data-links-di.rst', 
+'assets/ltb-links-eo.rst', 
+'assets/data-links-eo.rst',
+'assets/ltb-links-di.rst',  
+'style-demo.rst', 
+'style-guide.rst', ]
 
 # Allows storing external links in separated rst
 rst_epilog=""

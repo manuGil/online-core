@@ -1,6 +1,13 @@
 
+
 .. |ltb| image:: _static/img/ltb.png
    :width: 1.3em
+
+.. |previewPointer| image:: _static/img/class-preview-pointer.png
+   :width: 1.5em
+
+.. |runClassification| image:: _static/img/class-run.png
+   :width: 4em
 
 .. |25dSymbol| image:: _static/qgis-common/renderer25dSymbol.png
    :width: 1.5em
