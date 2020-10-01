@@ -119,7 +119,7 @@ Organising Field data
 
 After fieldwork, we have to structure the fieldwork data, define classes and relate  such classes to the image. Thus we have to define **field classes**  using the fieldwork data. Filed classes are classes recognizable in the field based on certain criteria. In our case the creteria is related to land cover and land use. Field classes should define at same level of detail. 
 
-Task 2.3 
+Task 4
    Compare the field classes, as defined in the attribute **Landcvr** of the *'training_areas'* layer, with the colours on the satellite image when displaying bands 7,8,3. Make a list of up to 10 map classes you would like to classify, and write down which colour(s) corresponds them. See the example in the table below.
 
    ======   ====================
@@ -164,10 +164,10 @@ Defining Spectral Signatures & ROI
    **QGIS.**
    The QGIS **Semi-automatic Classification** plugin uses the term ‘Region of Interest’ (ROI) instead of ‘training sample’ which is the term you will see in the reading materials. *These terms are equivalent and have exactly the same meaning.* 
 
-Task 3.1 
+Task 5
    Install the plugin **Semi-automatic classification**. If necessary, open the ``s2_25_sept_2016.tif``.
 
-Task 3.3  
+Task 6 
    Use the **Semi-automatic classification** plugin to create the first training sample. While you are at it,  follow these recommendations:
 
    +  Make sure that you take samples from homogenous areas, and that the *standard deviation* is kept low (check the statistics of the ROI).
@@ -192,7 +192,7 @@ Watch the video tutorial on `Creating training sets <https://vimeo.com/showcase/
    **Question.**
    Why is it advisable to make separted (spectral) subclasses when taking training samples?
  
-Task 3.4 
+Task 7
    Define ROIs for all macroclasses in the table above and for all relevant subclases. Remember to group  subclases with the correct macroclass.
 
 ----------------------
@@ -202,7 +202,7 @@ Evaluate Spectral Signatures (ROI)
 
 You can visualise spectral signatures (ROI) statistics. One option to evaluate signatures (ROI) are |ltb| `feature space images <Feature Space_>`_ , which are two-dimensional histograms. 
 
-Task 3.5 
+Task 8
    Create and analyze feature spaces. Click on :guilabel:`Add highlighted items to scatterplot`.  
    Insepect the feature spaces and evaluate the separability of your ROIs. 
 
@@ -214,7 +214,7 @@ Task 3.5
 
 To evaluate the quality of the training samples, we  can the standard deviation as reference.
 
-Task 3.6 
+Task 9
    Analyse the standard deviation for each of your ROI. Click on :guilabel:`Add highlighted signatures to spectral signature plot` > :guilabel:`Signature details`.
 
 When you are satisfied with the signatures (ROI) of your training samples, you can move to perfom a digital image classification.
@@ -226,7 +226,7 @@ Supervised Image Classification
 
 In this exercise, we will use the **Maximum Likelihood** classifier for the supervised classification, but we encourage you to experiment with other classifiers and compare the results.
 
-Task 4.1 
+Task 10
    Use the **Semi-automatic classification** plugin to test your first training sample set. Configure the *'Classification algorithm'*  as shown below. 
    Then use the  **Active classification preview pointer** |previewPointer|  to generate a temporary classification. Then,  visually inspect the classification results. 
 
@@ -245,18 +245,18 @@ Watch the video tutorial on `Running a supervised classification  <https://vimeo
 Inspect Results & Improve the Classification
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Task 4.2 
+Task 11
    Based on the visual inspection of your first classification results, add additional ROIs that capture areas where the algorithm fails to classify the image correctly.
 
    Then, inspect the classification results again, and if necessary add more ROIs until you are satisfied with the results. 
 
-Task 4.3 
+Task 12 
    Run the final classification, by clickin on the button |runClassification|
 
-Task 4.4 
+Task 13
    Generate a shapefile from the ROIs you used to classify the image. [HOW? GIVE SOME HINT?]
 
-Task 4.5 
+Task 14 
    Make sure you save your training samples for later use. In the **Semi-automatic classification** plugin, this is done automatically.
 
 
@@ -278,7 +278,7 @@ For this exercise, the data for the accuracy assessment have been collected for 
 
 The areas in the ``reference_data.shp`` were randomly selected. Areas which fell on the edge of two or more classes were considered.
 
- Task 4.1 
+ Task 15
    Add reference_data.shp to QGIS and open its attribute table. Make sure the values for **MC_ID** and **MC_Info** attributes match the ones you used for the macroclasses during the supervied classification of the *'s2_25_sept_2016'* image.
 
 Accuracy Report
@@ -286,7 +286,7 @@ Accuracy Report
 
 In the accuracy assessment, we generate an |ltb| `Error matrix`_ between the classification results and the reference data.  The accuracy report will provide the *overall accuracy* of the classification, as well as  *user and producer accuracies*.  
 
- Task 4.2 
+ Task 16
    Perform the accuracy assessment. Watch the video tutorial on `Accuracy assessment of supervised classuification <https://vimeo.com/340426011>`_.
 
 .. raw:: html
@@ -300,7 +300,7 @@ Improve Accuracy
  
 The accuracy of the classification can be improved by  identifying the sources of errors in the process of supervised classification, and then minizing their effects on the classification results.
 
-Task 4.3 
+Task 17
    Locate and inspect areas which you suspect are soruces in your classification result. Then, try to improve the *overal accuracy* by adding or excluding ROIs. [DO WE EXCLUDE ROI FROM THE CLASSIFICATION OF FROM THE Accuracy REPORT? IS SUCH CLARIFICATION NEED IT HERE?]
 
    Once the accuracy of the supervised classification is *acceptable*, you have completed the digital image classification process and generated a **land cover map**.
