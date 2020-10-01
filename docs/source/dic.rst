@@ -222,6 +222,6 @@ When you are satisfied with the signatures (ROI) of your training samples, you c
 Supervised Image Classification
 -------------------------------
 
-In this exercise, we will use the Maximum Likelihood classifier for the supervised classification, but we encourage you to experiment with other classifiers.
+In this exercise, we will use the **Maximum Likelihood** classifier for the supervised classification, but we encourage you to experiment with other classifiers.
 
 
