@@ -494,4 +494,4 @@ Task 32
    In summary. You should acknowledge that in the case of neighbour operations, such as the majority filter. The results change depending on the size of the kernel, and the number of times a filter is applied to a dataset.
 
 
-.. sectionauthor:: Wan Bakx
+.. sectionauthor:: Wan Bakx, André Mano & Manuel Garcia Alvarez

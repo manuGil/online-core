@@ -109,7 +109,7 @@ Task 3
    Add the ``training_areas.shp`` to QGIS. Use the **Identify tool** to inspect the location of visited sites during the fieldwork over the  *'s2_25_sept_2016'* image.  Put attention to the  attributes **TA_ID**, it tells the file name of the photo(s) that belong to that location; for example. *AV_1*. If more than one photo is available for a location, files names contain also a literal; for example *AV_1a* and *AV_1b*. See :numref:`fig-field-data` 
 
 .. _fig-field-data:
-.. figure:: _static/img/task-field-data.png
+.. figure:: _static/img/dic_training_areas_inspection.gif
    :alt: field data
    :figclass: align-center
 
@@ -124,7 +124,6 @@ Organising Field data
 
 After fieldwork, we have to structure the fieldwork data, define classes and relate  such classes to the image. Thus we have to define **field classes**  using the fieldwork data. Filed classes are classes recognizable in the field based on certain criteria. In our case the creteria is related to land cover and land use. Field classes should define at same level of detail. 
 
-[SHALL WE SAY SOMETHIG ABOUT SPLITNG THE FIELD DATA IN 2 PARTS: training data and referece data?]
 
 Task 4
    Compare the field classes, as defined in the attribute **Landcvr** of the *'training_areas'* layer, with the colours on the satellite image when displaying bands 7,8,3. Make a list of up to 10 map classes you would like to classify, and write down which colour(s) corresponds them. See the example in the table below.
@@ -192,8 +191,8 @@ Task 6
 
 .. note:: 
    **QGIS.**
-   We will apply a classification base on macroclasses (information class), and not on subclasses (spectral classes). 
-   When we classify according to macroclasses, the classification algorithm will group subclasses and label the resuls according to macroclass. However, *the classification algorithm will nto merge the spectral signatures.*
+   We will apply a classification based on macroclasses (information class), and not on subclasses (spectral classes).
+   When we classify according to macroclasses, the classification algorithm will group subclasses and label the results according to macroclass. However, *the classification algorithm will not merge the spectral signatures.*
 
 .. attention:: 
    **Question.**
@@ -209,10 +208,8 @@ Evaluation of Spectral Signatures
 
 You can visualise spectral signatures (ROI) statistics. One option to evaluate signatures (ROI) are |ltb| `feature space images <Feature Space_>`_ , which are two-dimensional histograms. 
 
-   [SHOULDN'T WE GIVE MORE DETAILS ON HOW DO CREATE AND INTERPRET FEATURE SPACES?]
-
 Task 8
-   Create and analyze feature spaces. Click on :guilabel:`Add highlighted items to scatterplot`.  
+   Create and analyze feature spaces. Click on :guilabel:`Add highlighted items to scatterplot` as shown in minute 11:15 onwards of the video tutorial on `Creating training sets <https://vimeo.com/showcase/5716094/video/340426030>`_.
    Insepect the feature spaces and evaluate the separability of your ROIs. 
 
 
@@ -236,12 +233,15 @@ Supervised Image Classification
 In this exercise, we will use the **Maximum Likelihood** classifier for the supervised classification, but we encourage you to experiment with other classifiers and compare the results.
 
 Task 10
-   Use the **Semi-automatic classification** plugin to test your first training sample set. Configure the *'Classification algorithm'*  as shown below. 
+   Use the **Semi-automatic classification** plugin to test your first training sample set. Configure the *'Classification algorithm'*  as shown in :numref:`fig-setting_maximum_likelihood`.
    Then use the  **Active classification preview pointer** |previewPointer|  to generate a temporary classification. Then,  visually inspect the classification results. 
 
+    .. _fig-setting_maximum_likelihood:
    .. image:: _static/img/task-semi-auto-classification.png 
       :align: center
       :width: 360px
+
+    Setting a classifier
 
    Watch the video tutorial on `Running a supervised classification  <https://vimeo.com/340426053>`_ to complete this task.
 
@@ -310,7 +310,7 @@ Improve Accuracy
 The accuracy of the classification can be improved by  identifying the sources of errors in the process of supervised classification, and then minizing their effects on the classification results.
 
 Task 17
-   Locate and inspect areas which you suspect are soruces in your classification result. Then, try to improve the *overal accuracy* by adding or excluding ROIs. [DO WE EXCLUDE ROI FROM THE CLASSIFICATION OF FROM THE Accuracy REPORT? IS SUCH CLARIFICATION NEED IT HERE?]
+   Locate and inspect areas which you suspect are soruces in your classification result. Then, try to improve the *overal accuracy* by adding or excluding ROIs from your training dataset.
 
    Once the accuracy of the supervised classification is *acceptable*, you have completed the digital image classification process and generated a **land cover map**. Save all your results.
 
@@ -324,5 +324,5 @@ Task 17
    Read the instructions of the `Digital Image Classification Assignment <https://canvas.utwente.nl/courses/6641/assignments/43605>`_, and submit your results before **7th October 23:59 (GMT+2)**.
 
 
-.. sectionauthor:: Monika Kuffer, Andre Mano & E. Westinga
+.. sectionauthor:: Monika Kuffer, Andre Mano & Manuel Garcia Alvarez
 
