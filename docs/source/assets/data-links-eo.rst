@@ -9,3 +9,4 @@
 .. _data_atmospheric_corr:    https://canvas.utwente.nl/files/1850332/download?download_frd=1
 .. _data_digital_image_classfication:    https://canvas.utwente.nl/files/1880612/download?download_frd=1
 
+.. _reference_data: https://canvas.utwente.nl/files/1850392/download?download_frd=1

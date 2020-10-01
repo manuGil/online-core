@@ -100,6 +100,7 @@ During the survey we have to visit and check different locations for all the leg
 
 In this course, it is not  possible to conduct a fieldwork. Instead, we provide you with a dataset  with observations made during a fieldwork for interpreting the Sentinel-II image in Enschede, NL. The datasets contains locations and photos for each visited site. If  you  were to conduct a field surves, you should collect similar data.
 
+[SHALL WE SAY SOMETHIG ABOUT SPLITNG THE FIELD DATA IN 2 PARTS: training data and referece data?]
 
 Task 3
    Add the ``training_areas.shp`` to QGIS. Use the **Identify tool** to inspect the location of visited sites during the fieldwork over the  *'s2_25_sept_2016'* image.  Put attention to the  attributes **TA_ID**, it tells the file name of the photo(s) that belong to that location; for example. *AV_1*. If more than one photo is available for a location, files names contain also a literal; for example *AV_1a* and *AV_1b*. See :numref:`fig-field-data` 
@@ -249,13 +250,69 @@ Task 4.2
 
    Then, inspect the classification results again, and if necessary add more ROIs until you are satisfied with the results. 
 
- Task 4.3 
+Task 4.3 
    Run the final classification, by clickin on the button |runClassification|
 
 Task 4.4 
    Generate a shapefile from the ROIs you used to classify the image. [HOW? GIVE SOME HINT?]
 
- Task 4.5 
+Task 4.5 
    Make sure you save your training samples for later use. In the **Semi-automatic classification** plugin, this is done automatically.
 
+
+----------------------------
+
+Accuracy assessment
+--------------------
+
+.. important:: 
+   **Resources.**
+   In this section, you will will require the dataset `reference_data.zip <reference_data_>`_, which you can download from CANVAS.  This dataset contains the following file: 
+  
+   + ``reference_data.shp``, dataset containing the locations and types of land cover for the accuracy assessment.
+
+Data for Accuracy assessment
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+For this exercise, the data for the accuracy assessment have been collected for you. The ``reference_data.shp`` contains the **ground truth** information of 187 locations, that we will use in assessing the accuracy of the supervised classification. 
+
+The areas in the ``reference_data.shp`` were randomly selected. Areas which fell on the edge of two or more classes were considered.
+
+ Task 4.1 
+   Add reference_data.shp to QGIS and open its attribute table. Make sure the values for **MC_ID** and **MC_Info** attributes match the ones you used for the macroclasses during the supervied classification of the *'s2_25_sept_2016'* image.
+
+Accuracy Report
+^^^^^^^^^^^^^^^
+
+In the accuracy assessment, we generate an |ltb| `Error matrix`_ between the classification results and the reference data.  The accuracy report will provide the *overall accuracy* of the classification, as well as  *user and producer accuracies*.  
+
+ Task 4.2 
+   Perform the accuracy assessment. Watch the video tutorial on `Accuracy assessment of supervised classuification <https://vimeo.com/340426011>`_.
+
+.. raw:: html
+
+   <div style="padding:53.75% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/340426011?color=007e83&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+
+\
+
+Improve Accuracy
+^^^^^^^^^^^^^^^^
+ 
+The accuracy of the classification can be improved by  identifying the sources of errors in the process of supervised classification, and then minizing their effects on the classification results.
+
+Task 4.3 
+   Locate and inspect areas which you suspect are soruces in your classification result. Then, try to improve the *overal accuracy* by adding or excluding ROIs. [DO WE EXCLUDE ROI FROM THE CLASSIFICATION OF FROM THE Accuracy REPORT? IS SUCH CLARIFICATION NEED IT HERE?]
+
+   Once the accuracy of the supervised classification is *acceptable*, you have completed the digital image classification process and generated a **land cover map**.
+
+.. attention:: 
+   **Question.**
+   What determines if the accuracy of the digital image classification is acceptable or not?
+
+.. important:: 
+   **Assignment Submission**
+   Read the instruction of the `Digital Image Classification Assignment <https://canvas.utwente.nl/courses/6641/assignments/43605>`_, and submit your results before **7th October 23:59 (GMT+2)**.
+
+
+.. sectionauthor:: Monika Kuffer, Andre Mano & E. Westinga
 
