@@ -75,6 +75,8 @@ link_files = ['assets/ltb-links-gis.rst',
             'assets/data-links-gis.rst',
             'assets/data-links-eo.rst',
             'assets/ltb-links-eo.rst',
+            'assets/ltb-links-di.rst',
+            'assets/data-links-di.rst',
             'substitutions.txt'
             ]
 
