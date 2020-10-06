@@ -16,7 +16,7 @@ In this section, we will explore the *Publiek Dienstverlening Op de Kaart* (PDOK
 
 The PDOK integrates the metadata from the ` <https://www.nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/home>`_ (NGR), and several tools and web services that easier to find and use geospatial data from many government agencies in the Netherlands.
 
-For a quick overview on the PDOK geoportal, you can watch the video below (Audio in Dutch). Activate the subtitles :guilabel:`CC`. Then, anable auto translation: :guilabel:`Settings` > :guilabel:`Subtitles/CC` > :guilabel:`Auto-translate` > :guilabel:`English`. 
+For a quick overview on the PDOK geoportal, you can watch the video below (Audio in Dutch). Activate the subtitles :guilabel:`CC`. Then, enable auto translation: :guilabel:`Settings` > :guilabel:`Subtitles/CC` > :guilabel:`Auto-translate` > :guilabel:`English`. 
 
 .. raw:: html
 
