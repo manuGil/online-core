@@ -31,7 +31,7 @@ Task
    Make sure you have the **Value Tool** and  the **Temporal/spectral profile** plugins installed. 
 
 Task 1.2 
-   Configure QGIS to render layers multiple CPU cores. Go to 
+   Make sure that QGIS is cofigured to render layers  using multiple CPU cores. Go to 
    :guilabel:`Settings` > :guilabel:`Options` > :guilabel:`Rendering` and make sure the option *Render Layers in parallel using many CPU cores* in on. Set :guilabel:`Max Cores` to the number of CPU cores in your computer, use at least 4 for better performance. See below.
 
    .. image:: _static/img/qgis-rendering-options.png 
