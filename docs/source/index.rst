@@ -42,7 +42,7 @@ The Core Course: Exercises
    :numbered:
    :caption: Data Integration
 
-   netlogo
+   systems-model
    sdi
    mono-vs-multi
    resampling
