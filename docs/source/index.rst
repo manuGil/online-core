@@ -41,12 +41,19 @@ The Core Course: Exercises
    :maxdepth: 2
    :caption: Data Integration
 
+   netlogo
+   sdi
+   mono-vs-multi
+   resampling
+   change-detection
+
 .. toctree::
    :maxdepth: 2
    :caption: Appendices
 
    apendices/gis-formats
    apendices/shaded-terrain-models
+   apendices/sistan-image-dataset
 
 
 .. Indices and tables

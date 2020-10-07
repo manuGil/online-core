@@ -1,7 +1,7 @@
 Digital Image Classification
 ============================
 
-In this exercise, we use a **Sentinel-2** satellite image covering Enschede and its surroundings from September, 2016. Before going forward with the exercise read about |ltb| `<Digital Image Classification_>`_.
+In this exercise, we use a **Sentinel-2** satellite image covering Enschede and its surroundings from September, 2016. Before going forward with the exercise read about |ltb| `<Digital Image Classification>`_.
 
 .. important:: 
    **Resources.**
@@ -236,12 +236,12 @@ Task 10
    Use the **Semi-automatic classification** plugin to test your first training sample set. Configure the *'Classification algorithm'*  as shown in :numref:`fig-setting_maximum_likelihood`.
    Then use the  **Active classification preview pointer** |previewPointer|  to generate a temporary classification. Then,  visually inspect the classification results. 
 
-    .. _fig-setting_maximum_likelihood:
-   .. image:: _static/img/task-semi-auto-classification.png 
+   .. _fig-setting_maximum_likelihood:
+   .. figure:: _static/img/task-semi-auto-classification.png 
       :align: center
       :width: 360px
 
-    Setting a classifier
+      Setting a classifier
 
    Watch the video tutorial on `Running a supervised classification  <https://vimeo.com/340426053>`_ to complete this task.
 
