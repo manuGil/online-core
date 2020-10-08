@@ -1,5 +1,5 @@
-SDI & Geoportals
-===========================
+Spatial Data Infrastructure
+============================
 
 An |ltb| `Spatial Data Infrastructure`_ (SDI) refers to the collection of technologies and policies to make geospatial data accessible across institutions and countries.  
 
