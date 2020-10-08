@@ -14,9 +14,9 @@ The PDOK Geoportal
 
 In this section, we will explore the *Publiek Dienstverlening Op de Kaart* (PDOK). These geoportals provide access to geospatial data in the Netherlands. The datasets available through these geoportals can be accessed mostly as OGC-based services (Open Geospatial Consortium) services, but sometimes also as direct data downloads.  
 
-The PDOK integrates the metadata from the ` <https://www.nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/home>`_ (NGR), and several tools and web services that easier to find and use geospatial data from many government agencies in the Netherlands.
+The PDOK integrates the metadata from the `National Registry <https://www.nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/home>`_ (NGR), and several tools and web services that easier to find and use geospatial data from many government agencies in the Netherlands.
 
-For a quick overview on the PDOK geoportal, you can watch the video below (Audio in Dutch). Activate the subtitles :guilabel:`CC`. Then, enable auto translation: :guilabel:`Settings` > :guilabel:`Subtitles/CC` > :guilabel:`Auto-translate` > :guilabel:`English`. 
+For a quick overview on the PDOK geoportal, you may want to watch the video below (Audio in Dutch). Activate the subtitles :guilabel:`CC`. Then, enable auto translation: :guilabel:`Settings` > :guilabel:`Subtitles/CC` > :guilabel:`Auto-translate` > :guilabel:`English`. 
 
 .. raw:: html
 
