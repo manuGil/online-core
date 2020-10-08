@@ -9,6 +9,9 @@ It is essential to realise that implementing an SDIs is not just a matter of tec
 
 **Geoportals**  are a key component of SDIs; they provide a way to find and access geospatial data via the Internet.
 
+------------------------
+
+
 The PDOK Geoportal
 ------------------
 

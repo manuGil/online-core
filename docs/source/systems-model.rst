@@ -5,6 +5,9 @@ In this section, you will get familiar with some of the basic concept of |ltb| `
 
 A |ltb| `System`_ is defined as *"a combination of parts that interact and produce some new quality or function in their interaction."*
 
+
+---------------------
+
 Systems
 ---------
 
@@ -52,6 +55,8 @@ Systems and their elements do not always change immediately in reaction to inter
 
 Although thinking about the different elements and interactions of a system may seem very abstract. Such activity provides the starting point for building models, and models help us to gain understanding about the world we live in.
 
+---------------
+
 Models
 -------
 
@@ -93,6 +98,8 @@ When |ltb| `modelling a system <System Modelling_>`_, the components of a concep
    + Can you define the boundary of the model, a variable and a parameter? 
    + Is the variable you defined, a state variable?
 
+---------------------------
+
 
 Purpose of a Model 
 --------------------
@@ -113,6 +120,8 @@ The *purpose* of the model refers to whether the model is **descriptive, prescri
    + An example of a deterministic model could be the hydrological flow in a watershed. **Why do you think hydrological models are deterministic?**
 
    + When a model is stochastic, we usually run such model many times with the same input parameters, and present then present the average or a range of the modelling results. **Why is this necessary in stochastic models?**
+
+------------------------
 
 
 Modelling Processes
@@ -182,6 +191,8 @@ Common in models used for description            Can be used for prediction
 .. attention:: 
    **Question.**
    When would prefer to use an inductive over a deductive approach? 
+
+---------------------------
 
 
 Evaluating Systems Models
