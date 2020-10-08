@@ -13,7 +13,7 @@ The objective of the exercise is to make you aware of the relevance of **users**
 
 
 
- Task
+Task
    Read the document on *Use and Users*.  Answer the questions below, and take your answers to the virtual classroom.
    
 .. attention:: 
