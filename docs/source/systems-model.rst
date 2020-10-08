@@ -212,9 +212,9 @@ Now, we will experiment with the following models:
 Task 7
    We will start with the Flocking. This model demonstrates how spatial patterns (Flocks) emerge based on three simple behavioural rules: *alignment, separation and cohesion*.  Go to :guilabel:`Seach the Models Library` > search for :guilabel:`Sample Models/Biology/Flocking` > click :guilabel:`setup` > :guilabel:`go`.    
    
-.. important:: 
-   **Resources.**
-   The Flocking model is an `agent-based model <Agent-Based_>`_. Agent-based models consist of three components: *agents* (with behaviour), the *environment* in which these agents exist and *time*. 
+   .. note:: 
+      **Reflection.**
+      The Flocking model is an `agent-based model <Agent-Based_>`_. Agent-based models consist of three components: *agents* (with behaviour), the *environment* in which these agents exist and *time*. 
 
 .. attention:: 
    **Question.**
