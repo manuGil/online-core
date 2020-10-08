@@ -44,6 +44,7 @@ The Core Course: Exercises
 
    systems-model
    sdi
+   users
    mono-vs-multi
    resampling
    change-detection
