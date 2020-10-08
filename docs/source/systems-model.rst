@@ -1,8 +1,7 @@
 Systems and Models
 ==================
-[WHAT IS THE CORRECT TITLE OF THIS EXERCISE?]
 
-In this seccion, you will get familiar with some of the basic concept of |ltb| `Systems Modelling <Systems model_>`_. A |ltb| `System`_ is defined by Voinov [DO WE ADD A PROPER REFERENCE INSTEAD? DO WE ASSUME THAT THE REFERENCE TO ltb IS ENOUGH?] as *a combination of parts that interact and produce some new quality or function in their interaction.*
+In this seccion, you will get familiar with some of the basic concept of |ltb| `Systems Modelling <Systems model_>`_. A |ltb| `System`_ is defined as *"a combination of parts that interact and produce some new quality or function in their interaction."*
 
 Systems
 ---------
@@ -12,7 +11,6 @@ A Systems consist of:
 + Parts or elements
 + Interaction between these elements
 + Emergent properties
-
 
 .. attention:: 
    **Question.**
@@ -59,14 +57,9 @@ Modelling is a very “confusing” term. It can be used at different abstractio
 
 The models we refere in this section describe processes that happen on the Earth's surface at various scales. Such model aim to represent systems. Modelling the Earth as a system may require to capture its natural components, e.g. we could portrait the system Earth as the combination of four subsystems: *atmosphere (air), litho-sphere (land), hydrosphere (water) and biosphere (life)*. However, we may also model the Earth as human induced systems, such as *urbanisation, human health and agriculture.*
 
-
 .. attention:: 
    **Question.**
    + Can you define a system that takes place on the Earth's surface, and it is interesting for studying during your MSc research project?. What makes such system relevant or interesting?
-
-
-Besides the fact that we have different interests in system earth, we all study different sub-systems. There are also different ways to describe these models or implement these models in software. [THIS PARAGRAPH ADD VERY FEW TO THE EXERCISE, AND IT ADD MANY TERMS. REMOVE IT?]
-
 
 
 Many modelling processes start with a conceptual |ltb| `Model`_. A conceptual model is often written on a piece of paper, but it can also be a mental picture of some phenomenon.
@@ -84,7 +77,6 @@ Task 1
    In many universities they teach conceptual modelling by asking the students to create a conceptual model for making a cup of tea or coffee. 
    Create your own conceptual model for making tea or coffee.
 
-   [REMOVE THIS?] -> and upload a picture of your model in the discussion board.
 
 A conceptual model serve as the first step towards creating such a computer model. A  conceptual model for making tea represents a non-spatial model. However, as a geo-scientist are interested in spatial and temporal models. You are also interested in implementing your model in a modelling software, using your spatial data.
 
@@ -92,7 +84,7 @@ When `modelling a system <System Modelling_>`_, the components of a conceptual m
 
 .. attention:: 
    **Question.**
-   For the flowchart [WE NEVER ASK FOR A FLOWCHART, DO WE MEAN THE TEA-MODEL?] you created in the previous task.
+   For the conceptual model you created in the task 1.
 
    + Can you define the boundary of the model, a variable and a parameter? 
    + Is the variable you defined, a state variable?
@@ -100,10 +92,8 @@ When `modelling a system <System Modelling_>`_, the components of a conceptual m
 
 Purpose of a Model 
 --------------------
-[THE TITLE IS MISLEADING. CHANGE TO 'CLASSIFYING MODELS'?]
 
-
-Model are use in many application, and they can be classified in various ways. Here, we identify five ways of classifying models in  GIS-based applications based on their characteristics:
+Model are used in many application, and they can be classified in various ways. Here, we identify five ways of classifying models in  GIS-based applications based on their characteristics:
 
    + Purpose of the model
    + The methodology underlying the model
@@ -140,7 +130,7 @@ You see this for example in the pictures below taken from the Living Textbook:
 Task 
    Define in your own words, why the modelling process is iterative? and what will induce you to make another iteration? or when would you stop iterating a model)?
 
-Four  of the stemps in :numref:`fig-modelling-process` deserve some attention:
+Four  of the steps in :numref:`fig-modelling-process` deserve some attention:
 
    + Verification
    + Calibration
@@ -150,15 +140,16 @@ Four  of the stemps in :numref:`fig-modelling-process` deserve some attention:
 **Verification**, in the context of computer simulation,  is the process of confirming that the conceptual model was correctly implemented. It may seem obvious that when you made the conceptual model you know how to implement it. Yet, a lot of things can go wrong, therfore we need verification.
 
 **Calibration** is the process of adjustmenting of the model parameters. 
+
 In the introduction [WAS THAT SHOWED IN THIS COURSE?] of this topic you watched the ITC evacuation model. 
+.. check recorde lecture, if not remove ITC model
+.. keep in table and make generic, evacuation of any building
+
 
 Task 
    Give an example of a problem during the implementation of a model that can be detected during verification.
 
-Task 
-   Name at least one parameter that you would like to calibrate for this model. [WHICH MODEL? THE EVACUATION MODEL?]
-
-When you look at the diagram you see that there is a line between calibration and model definition [NOT CLEAR IN THE DIAGRAM. MODIFY DIAGRAM?]. **Validation** is the most difficult task; validation is the  process of proving that the model is a good representation of reality. Many models are not fully validated. Note that the diagram  shows that calibration and validation use two different datasets.
+When you look at the diagram you see that there is a line between calibration and model definition. **Validation** is the most difficult task; validation is the  process of proving that the model is a good representation of reality. Many models are not fully validated. Note that the diagram  shows that calibration and validation use two different datasets.
 
 
 .. attention:: 
@@ -185,17 +176,17 @@ In an *inductive approach,* the teacher presents students many examples that sho
 .. [CT22020] Olenka Bilash. (2009, June). Best of Bilash. Improving second language education. Retrieved October 7, 2020, from https://bestofbilash.ualberta.ca/inductivedeductive.html
 
 
+.. Add table as examples of inductive and deductive
 [TABLE page 9. WHAT DOES THE TABLE SHOW?]
 
 
 .. attention:: 
    **Question.**
-   When would prefer to use an inductive over an deductive approach? [DOES THIS QUESTION REQUIRE CLARIFICATION?]
+   When would prefer to use an inductive over an deductive approach? 
 
 
 Evaluating Systems Models
 --------------------------
-
 
 The best way to learn about systems modelling is to experiment with a number of existing models and determine which characteristics they replicate. In this section,  you will use the web version of  Netlogo. Netlogo is a software designed to create agent-based simulation models and Cellular Automata (CA) models. You will see  some examples and then reflect about their similarities and differences.
 
@@ -222,12 +213,10 @@ You will experiment with the following models:
 Task
    We will start with the Flocking. This model demonstrates how spatial patterns (Flocks) emerge based on three very simple behavior rules: *alignment, separation and cohesion*.  Go to :guilabel:`Seach the Models Library` > search for :guilabel:`Sample Models/Biology/Flocking` > click :guilabel:`setup` > :guilabel:`go`.    
    
-   The Flocking model is an `agent-based model <Agent-Based_>`_. Agent-based models consist of three components: *agents* (with behavior), the *environment* in which these agents exist and *time*. [ARE THIS DETAILS RELEVANT FOR THIS COURSE? ROMOVE?]
+.. make reflection
+   The Flocking model is an `agent-based model <Agent-Based_>`_. Agent-based models consist of three components: *agents* (with behavior), the *environment* in which these agents exist and *time*. 
    
-
-   There are several ways to implement systems models. Some of these types of models, like mathematical models, you may already be familiar with. Others perhaps are new to you. We refer to this as the Implementation Logic (Living textbook page: Implementation logic).   [IS THIS PARAGRAPH VERY RELEVANT FOR THIS EXERCISE? REMOVE? the reference to LTB is already in a sentence above]
-
-
+ 
 .. attention:: 
    **Question.**
    Open the :guilabel:`Model Info` tab underneath the model window.  Answer the following questions regarding the Flocking model:
@@ -253,10 +242,10 @@ Task
 
 .. attention:: 
    **Question.**
-   One of the items [ElEMENTS?] of CA models is the *state variable*. 
+   One of the items of CA models is the *state variable*. 
 
-   +  Do you think this model [WHICH MODEL, THE ONE IN THE LATTICE?] has a state variable? 
-   +  Do you think this model [WHICH?] will ever reach a *steady state*, where the output does no longer change?
+   +  Do you think this model [the lattice one] has a state variable? 
+   +  Do you think this model [the lattic model] will ever reach a *steady state*, where the output does no longer change?
 
 
 Now that you have gained some understanding of how a CA model works, it is time to experiment with a CA model in NetLogo.
@@ -319,6 +308,4 @@ Task
 
    The 'Wolf Sheep Predation' model showing yellow sheep, larger wolves, and blue grass
 
-
-Upload a screenshot of your model in the discussion board. [IS THIS REQUIRED IN THIS COURSE?]
 
