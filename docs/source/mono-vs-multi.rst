@@ -46,6 +46,8 @@ Bi-Temporal Classification
    + ``mono_bi-temporal_classification.qgs`` - a QGIS project loaded with the data above.
 
 
+-----------------------------------
+
 Setting Up the Analysis Environment
 -------------------------------------
 
@@ -72,6 +74,7 @@ In the following sections, we will conduct a data analysis to compare the differ
 
    A flowchart for the comparison of 'mono' and 'bi' temporal image classification
 
+---------------------------
 
 Band Subsetting
 ----------------
@@ -133,17 +136,101 @@ Task  2.1
    Moreover, *avoid having all the layers turned on.* Especially the original Landsat and ASTER layers; they will consume resources every time you zoom or pan over the map view.
 
 
+----------------------
+
 Band Stacking
 -------------
 
 As a next step, you will build three band stacks usign the subsets created above:
 
-+ A first stack with Landsat bands 2, 3 and 4
-+ A second stack with ASTER bands 1, 2 and 3N
-+ A multi spectral and multi temporal stack with Landsat bands 2, 3, 4  and ASTER bands 1, 2 and 3N
++ A first stack with Landsat bands :math:`2, 3` and :math:`4`
++ A second stack with ASTER bands :math:`1, 2` and :math:`3N`
++ A multi spectral and multi temporal stack with Landsat bands :math:`2, 3, 4`  and ASTER bands :math:`1, 2, 3N`
 
 
-CONITNUE with
-Create new band set for each tack > band stack
+Task
+   Create a new band stack for Lansat. Go to :guilabel:`SCP` > :guilabel:`Band set`. Then :guilabel:`Add a new band set` > :guilabel:`Select` bands :math:`2,3,4` from Landsat (**clip version**) > :guilabel:`Add band to Band set` > **check that bands are in the correct oder** > tick :guilabel:`Create raster or band set` > :guilabel:`Run`. See :numref:`fig-scp-band-stack`. Save the stack to the **Output** directory.
+
+.. _fig-scp-band-stack:
+.. figure:: _static/img/scp-band-stack.png
+   :alt: new bandset
+   :figclass: align-center
+
+   Creating a new `band stack`  in the SCP plugin
+
+\
+   
+.. note:: 
+   **QGIS.**
+   The QGIS does not preserve the original numering of the bands in the new stack. This means you have to keep track of which bands in the *new stack*  correspond to the *original* dataset. 
+   
+   For the stack you just created, that means:
+
+   ==============================     =========================
+   Original band number (Landsat)	  Band number (New Stack)
+   ==============================     =========================
+   2                                   1 
+   3                                   2 
+   4                                   3 
+   ==============================     =========================
+
+\
+
+You can verify the the *new stack*  combined the correct bands and in the correct order, using  the **Value tool** plugin.
+
+Task 2.6 
+   Open the **Value Tool** panel.  Go to :guilabel:`View` > :guilabel:`Panels` > tick the :guilabel:`Value Tool`. Enable the panel; make sure only active layers are the three Landsat subsets and the *new stack*.  Hover your mouse over the image and check tha the pixel values correspond between the subsets and the new stack. See :numref:`fig-stack-values` 
+   
+.. _fig-stack-values:
+.. figure:: _static/img/stack-values.png
+   :alt: new bandset
+   :figclass: align-center
+
+   Comparing pixe values between the 'Lansat subsets' and the 'Landsat 2,3,4 stack'
+
+
+Task 2.7 
+   Repeat the procedure in the previous Task, and create two more stacks. One for ASTER bands :math:`1, 2,  3N`. And one for the *'multi spectral and multi temporal'*, bands Landsat :math:`2, 3, 4`  and ASTER :math:`1, 2,  3N`  *Remember to keep track of order of the bands in the stacks.* We suggest the following arrangement:
+
++-----------------------------+-----------------------------+
+| For ASTER band stack                                      |
++-----------------------------+-----------------------------+
+|Original band number (ASTER) |  Band number (ASTER stack)  |
++=============================+=============================+
+| 1                           |        1                    |
++-----------------------------+-----------------------------+
+| 2                           |        2                    |
++-----------------------------+-----------------------------+
+| 3N                          |        3                    |
++-----------------------------+-----------------------------+
+
+
++-----------------------------+-----------------------------+
+| For ASTER band stack                                      |
++-----------------------------+-----------------------------+
+|Original band number (ASTER) |  Band number (ASTER stack)  |
++=============================+=============================+
+| Landsat 2                   |        1                    |
++-----------------------------+-----------------------------+
+| Landsat 3                   |        2                    |
++-----------------------------+-----------------------------+
+| Landsat 4                   |        3                    |
++-----------------------------+-----------------------------+
+| ASTER 1                     |        4                    |
++-----------------------------+-----------------------------+
+| ASTER 2                     |        5                    |
++-----------------------------+-----------------------------+
+| ASTER 3N                    |        6                    |
++-----------------------------+-----------------------------+
+
+Now, you should have  three band stacks in your project. We recommend you rename them in the **Layer panel**, so that  you can easily distinguish them. See below.
+
+.. image:: _static/img/renamed-stacks.png 
+   :align: center
+
+---------------------------
+
+Classification
+----------------
 
 
