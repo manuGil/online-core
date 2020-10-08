@@ -178,7 +178,7 @@ Task
    The evacuation model of ITC                   \
    ======================================    =======================
 
-The **implementation logic** of a model refers to two groups of approaches: *deductive* approaches and *inductive* approaches. To explain the difference between those groups, we will use an example from education. The concepts 'deductive' and 'inductive' can also be applied to learning and teaching.  In a *deductive approach,* the teacher presents students a new concept, explains how it works, and then makes the students  to practice using the concept.
+The |ltb| `Implementation logic`_ of a model refers to two groups of approaches: *deductive* approaches and *inductive* approaches. To explain the difference between those groups, we will use an example from education. The concepts 'deductive' and 'inductive' can also be applied to learning and teaching.  In a *deductive approach,* the teacher presents students a new concept, explains how it works, and then makes the students  to practice using the concept.
 In an *inductive approach,* the teacher presents students many examples that show how the concept is used; the students should 'notice and realise', by way of the examples, how the concept works [CT22020]_.
 
 
@@ -192,4 +192,133 @@ In an *inductive approach,* the teacher presents students many examples that sho
    **Question.**
    When would prefer to use an inductive over an deductive approach? [DOES THIS QUESTION REQUIRE CLARIFICATION?]
 
+
+Evaluating Systems Models
+--------------------------
+
+
+The best way to learn about systems modelling is to experiment with a number of existing models and determine which characteristics they replicate. In this section,  you will use the web version of  Netlogo. Netlogo is a software designed to create agent-based simulation models and Cellular Automata (CA) models. You will see  some examples and then reflect about their similarities and differences.
+
+Task
+   Open the web-version of `NetLogo <www.netlogoweb.org>`_ > click on :guilabel:`NetLogo Web` 
+   You can load existing model by selecting it from :guilabel:`Search the Models Library` dropdown list. See :numref:`fig-netlogo-gui`
+
+
+.. _fig-netlogo-gui:
+.. figure:: _static/img/netlogo-gui.png
+   :alt: modelling process
+   :figclass: align-center
+
+   The NetLogo web interface
+
+
+You will experiment with the following models: 
+
++ Flocking (Sample Models - biology), 
++ Wolf Sheep Predation (Sample models - biology), and  
++ The CA 1D Rule 30 (Sample Models- Computer Science)
+
+
+Task
+   We will start with the Flocking. This model demonstrates how spatial patterns (Flocks) emerge based on three very simple behavior rules: *alignment, separation and cohesion*.  Go to :guilabel:`Seach the Models Library` > search for :guilabel:`Sample Models/Biology/Flocking` > click :guilabel:`setup` > :guilabel:`go`.    
    
+   The Flocking model is an `agent-based model <Agent-Based_>`_. Agent-based models consist of three components: *agents* (with behavior), the *environment* in which these agents exist and *time*. [ARE THIS DETAILS RELEVANT FOR THIS COURSE? ROMOVE?]
+   
+
+   There are several ways to implement systems models. Some of these types of models, like mathematical models, you may already be familiar with. Others perhaps are new to you. We refer to this as the Implementation Logic (Living textbook page: Implementation logic).   [IS THIS PARAGRAPH VERY RELEVANT FOR THIS EXERCISE? REMOVE? the reference to LTB is already in a sentence above]
+
+
+.. attention:: 
+   **Question.**
+   Open the :guilabel:`Model Info` tab underneath the model window.  Answer the following questions regarding the Flocking model:
+
+   + Is this a spatial model? Explain your answer.
+   + Do you think this model contains any agents? If so, which agents and how are they represented in the model?
+   + What happens when you change the :guilabel:`minimum-separation` from 1 to 2 patches?
+   + If you were  to calibrate this model, which elements would you calibrate?
+
+
+The second type of model we will evaluate is a CA model. Before we open the example model in Netlogo, you will first practice how this type of model works via a pencil and paper exercise. 
+
+Task 
+   Below you see a lattice (raster) where each cell has a value. This raster represents the starting values of a CA model simulation. With each iteration of the model, the value of the cells will be determined by considering their 8 neighbouring cells, according with the following rules:
+
+   + If current value is :math:`1`. Change to 0 if less than four neighbors are :math:`1`
+   + If current value is :math:`0`. Change to :math:`1` if less than four neighbors are :math:`0`
+
+   For the raster on the left, *compute the values for the next iteration of the model, using the rules listed above.* Write down the value on the raster on the right.
+
+   .. image:: _static/img/lattice-raster.png 
+      :align: center
+
+.. attention:: 
+   **Question.**
+   One of the items [ElEMENTS?] of CA models is the *state variable*. 
+
+   +  Do you think this model [WHICH MODEL, THE ONE IN THE LATTICE?] has a state variable? 
+   +  Do you think this model [WHICH?] will ever reach a *steady state*, where the output does no longer change?
+
+
+Now that you have gained some understanding of how a CA model works, it is time to experiment with a CA model in NetLogo.
+
+Task 
+   :guilabel:`Open` the model  :guilabel:`CA 1D Rule 30`, check the :guilabel:`Model Info`,  and  run the model. Then, describe how this model differs from the pencil and paper model above.  
+
+   .. _fig-netlogo-camodel:
+   .. figure:: _static/img/netlogo-camodel.png
+      :alt: modelling process
+      :figclass: align-center
+
+      The 'CA 1D Rule 30' in NetLogo
+
+.. attention:: 
+   **Question.**
+   This *'CA 1D Rule 30'* model represents a very “synthetic” implementation of a CA model. 
+   *Can you think of an example of a CA model that is more realistic and aligns with your interests?*
+
+
+Task 
+   Finally, we will explore  *'Wolf Sheep Predation'* model. Go to NetLogo and load :guilabel:`Wolf Sheep Predation` > :guilabel:`model-version`, choose ``sheep-wolves-grass``. Run the model, and put attention to the simulation.
+   
+.. _fig-wolf-sheep-model:
+.. figure:: _static/img/wolf-sheep-model.png
+   :alt: modelling process
+   :figclass: align-center
+
+   The 'Wolf Sheep Predation' model, version sheep-wolves-grass 
+
+
+In this model, you see some similarities with a agent-based model, the *'Flocking'* model, it has agents: wolf and sheep. You also see some similarities with a CA model. The grass has two states: *grass or no-grass*, and the way the grass regrows is triggered by rules that are similar to the transition rules typical of a CA model. 
+
+Task
+   Open the :guilabel:`Netlogo Code` tab,  read the code and to determine how the grass regrows in the *'Wolf Sheep Predation'* model.
+
+
+.. attention:: 
+   **Question.**
+   Run the *'Wolf Sheep Predation'* model once more and anwer the following questions:
+
+   +  Why is this model an example of a model with *delayed effects*?  
+   +  Is this model descriptive, prescriptive or predictive? Explain your answer.
+   +  What happens when you increase the energy the sheep gain from eating grass?
+   +  Explain why this model can also be seen as an example of *counter intuitive effects*? For example, what happens when you double the number of wolf at the beginning of the model? Does such change improve their chances of survival?
+
+Task
+   Open the :guilabel:`Netlogo Code` tab again and make changes to the model. To apply the changes to the model, click on :guilabel:`Recompile Code` > :guilabel:`model-version` choose ``sheep-wolves-grass`` >   :guilabel:`setup` > :guilabel:`Go`. Try add the following changes one at the time.
+   
+   + Change the color of sheep to *yellow*.
+   + Make the wolf *twice as large*.
+   + Make the grass *blue*. You will have to change the code in multiple places.
+
+   After all changes, the *'Wolf Sheep Predation'* model should look like this:
+
+.. _fig-wolf-sheep-model-blue:
+.. figure:: _static/img/wolf-sheep-model-blue.png
+   :alt: modelling process
+   :figclass: align-center
+
+   The 'Wolf Sheep Predation' model showing yellow sheep, larger wolves, and blue grass
+
+
+Upload a screenshot of your model in the discussion board. [IS THIS REQUIRED IN THIS COURSE?]
+

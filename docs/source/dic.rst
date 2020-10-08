@@ -260,7 +260,7 @@ Task 11
    Then, inspect the classification results again, and if necessary add more ROIs until you are satisfied with the results. 
 
 Task 12 
-   Run the final classification, by clickin on the button |runClassification|
+   Run the final classification, by clickin on the button |runSCP|
 
 Task 13
    Generate a shapefile from the ROIs you used to classify the image. [HOW? GIVE SOME HINT?]

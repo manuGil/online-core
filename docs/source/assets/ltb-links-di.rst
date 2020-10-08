@@ -17,3 +17,8 @@
 .. _Model: https://ltb.itc.utwente.nl/page/481/concept/78702
 
 .. _System Modelling: https://ltb.itc.utwente.nl/page/481/concept/78791
+
+.. _Implementation logic: https://ltb.itc.utwente.nl/page/481/concept/78545
+
+
+.. _Agent-Based: https://ltb.itc.utwente.nl/page/481/concept/78544
