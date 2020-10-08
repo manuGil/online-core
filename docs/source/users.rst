@@ -11,8 +11,6 @@ The video-lectures stressed the importance of being aware of the requirements of
 
 The objective of the exercise is to make you aware of the relevance of **users** and **uses** of geo-information. Here, you will read about a case study where geo-information plays a key role. Then you will answer some questions. Finally, you will discuss your answers in the during the *virtual classroom*.
 
-
-
 Task
    Read the document on *Use and Users*.  Answer the questions below, and take your answers to the virtual classroom.
    
