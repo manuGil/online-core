@@ -1,7 +1,7 @@
 Spatial Data Infrastructure
 ============================
 
-An |ltb| `Spatial Data Infrastructure`_ (SDI) refers to the collection of technologies and policies to make geospatial data accessible across institutions and countries.  
+A |ltb| `Spatial Data Infrastructure`_ (SDI) refers to the collection of technologies and policies to make geospatial data accessible across institutions and countries.  
 
 An SDI aims to coordinate the collection of various geospatial data, and to foster their integrated use at different spatial levels: *local, regional or global.* 
 
@@ -23,7 +23,9 @@ For a quick overview on the PDOK geoportal, you may want to watch the video belo
 
 .. raw:: html
 
-   <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ssPsUnVfHMc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+   <div style="padding:56.25% 0 0 0;position:relative;">
+   <iframe style="position:absolute;top:0;left:0;width:100%;height:100%;" src="https://www.youtube-nocookie.com/embed/ssPsUnVfHMc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+   </div>
 
 \
 
@@ -32,11 +34,10 @@ For a quick overview on the PDOK geoportal, you may want to watch the video belo
    **Resources.**
    You will require the latest LTR version of `QGIS (A Coruna 3.10) <https://qgis.org/en/site/forusers/download.html>`_. 
 
-   This exercise does not require any data files. However, it would be best if you have a web browser. We recommend **Google Chrome** because you will need to translate some webpages to English.
+   This exercise does not require any data files. However, you need a web browser. We recommend **Google Chrome** because you will need to translate some webpages to English.
 
 Task 1
-   Start a web browser and navigate to the `PDOK website <https://www.pdok.nl/>`_ and explore its contents. Take your time to explore the website’s interface.
-
+   Start a web browser and navigate to the `PDOK website <https://www.pdok.nl/>`_ and explore its contents. Take some time to explore the website’s interface.
 
 Task 2
    In the PDOK home page, click on :guilabel:`Bekijk alle dataset` or :guilabel:`See all datasets`. See :numref:`fig-pdok-homepage`  This will take you to a webpage where you can search the NGR metadata repository.
@@ -53,9 +54,9 @@ Task 2
 Task 3
    Suppose we need data about the  *railroad network* in the Netherlands. Then, we can use the search bar to find all available datasets. 
 
-.. note:: 
-   **Reflection.**
-   Any good search starts with the right choice of keywords. For this task, it is very relevant to know that, the railroad datasets are part of the Dutch national transport database, called *“Nationaal Wegenbestand”*; abbreviated as *'nwb'*. The Dutch word for railroads is *'spoorwegen'*.
+   .. note:: 
+      **Reflection.**
+      Any good search starts with the right choice of keywords. For this task, it is very relevant to know that, the railroad datasets are part of the Dutch national transport database, called *“Nationaal Wegenbestand”*; abbreviated as *'nwb'*. The Dutch word for railroads is *'spoorwegen'*.
 
 \
 
@@ -105,12 +106,12 @@ Task 6
 
    Do not worry if you do not understand what you see. The *capabilities document* is not meant to be read by humans; rather it should be understood by computers across the Internet.
    
-.. _fig-get-capabilities-request:
-.. figure::  _static/img/get-capabilities-request.png 
-   :alt: get capabilies spoorwegen
-   :figclass: align-center
+   .. _fig-get-capabilities-request:
+   .. figure::  _static/img/get-capabilities-request.png 
+      :alt: get capabilies spoorwegen
+      :figclass: align-center
 
-   'Get-capabilies' XML document for the 'Spoorwegen' dataset
+      'Get-capabilies' XML document for the 'Spoorwegen' dataset
 
 
 .. note:: 
@@ -138,7 +139,6 @@ Task 6
 We visualise the data available in this geo service, by using adding additional parameters to the root URL, such that the web browser requests the data in the proper format.
 
 Task 7
-
    Paste the following  URL (an HTTP request) in the web browser and hit :guilabel:`Enter`. 
 
    .. code-block:: ruby
@@ -157,6 +157,9 @@ Task 7
 
    .. image:: _static/img/get-map-request.png 
       :align: center
+      :width: 400px
+
+\
 
    The request above retrieves the railways from an area in The Hague. 
    The ``LAYERS`` parameter defines the name of the data layer that is displayed, here **spooras**. The extend of the map is controlled by the ``BBOX`` parameter, which is declared by defining an extent such as :math:`min(x), min(y), max(x), max(y)`. For example:
@@ -173,8 +176,7 @@ Task 7
 
 
  Task 8 
- 
-   Use QGIS to visualise the data provided by this WMS service. To do so, watch the video tutorial on `Using WMS Services <https://vimeo.com/showcase/4709163/video/228940872>`
+   Use QGIS to visualise the data provided by this WMS service. To do so, watch the video tutorial on `Using WMS Services <https://vimeo.com/showcase/4709163/video/228940872>`_.
 
 .. raw:: html
 
@@ -190,3 +192,7 @@ Task 7
    +  Who are the targeted user groups? 
    +  Which organisation is ultimately responsible for the Portal? 
    +  What services can PDOK provide for your discipline? Explain. 
+
+
+
+.. sectionauthor:: André Mano & Manuel Garcia Alvarez
