@@ -1,3 +1,5 @@
+.. _sec-dic:
+
 Digital Image Classification
 ============================
 
