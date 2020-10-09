@@ -239,7 +239,7 @@ Task 7
 Classification
 ----------------
 
-Next, you will perform an `unsupervised classification <Unsupervised Image Classification Algorithm>`_ using the band stacks you created. We will use a  *k-means* clustering algorithm to identify different classes of land cover. *For the sake of simplicity, we will name each class of land cover using numbers.*
+Next, you will perform |ltb| `unsupervised classification <Unsupervised Image Classification Algorithm_>`_ using the band stacks you created. We will use a  *k-means* clustering algorithm to identify different classes of land cover. *For the sake of simplicity, we will name each class of land cover using numbers.*
 
 You will apply unsupervised classification to each band stack: *Landsat stack, ASTER stack,* and m*ulti-spectral and multi-temporal stack*.
 
@@ -301,6 +301,7 @@ Task 11
 .. figure:: _static/img/zonal-statistics.png
    :alt: unsupervised classification
    :figclass: align-center
+   :scale: 70%
 
    Computing zonal statistics for the classification maps
 
@@ -320,7 +321,7 @@ Task 12
    Open the attribute of the *'evaluation'* layer and examine the columns containing the result of *zonal statistics*. Remember, that such columns show the predominant class for each evaluation polygon (e.i., the class with more pixels inside each polygon) and each polygon in the *'evaluation'* layer represent a distinct class of land cover.
 
 
-   Write in the table below, the total number of distinct classes that were identified in each *classification map*.
+   Write in the table below, the total number of **distinct classes** that were identified in each *classification map*.
 
    ==============================        ==========================
    Classification Map                     Number distinct Classes 
