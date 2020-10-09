@@ -25,3 +25,4 @@
 
 .. _Unsupervised Image Classification Algorithm: https://ltb.itc.utwente.nl/page/481/concept/78808
 
+.. _Multi concept: https://ltb.itc.utwente.nl/page/481/concept/78879
