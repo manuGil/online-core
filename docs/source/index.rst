@@ -39,8 +39,12 @@ The Core Course: Exercises
 
 .. toctree::
    :maxdepth: 2
+   :numbered:
    :caption: Data Integration
 
+   systems-model
+   sdi
+   users
 
 .. toctree::
    :maxdepth: 2
