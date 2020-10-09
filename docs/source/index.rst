@@ -45,7 +45,7 @@ The Core Course: Exercises
    systems-model
    sdi
    users
-   mono-vs-multi
+..   mono-vs-multi
    resampling
    change-detection
 
@@ -55,7 +55,7 @@ The Core Course: Exercises
 
    apendices/gis-formats
    apendices/shaded-terrain-models
-   apendices/sistan-image-dataset
+..   apendices/sistan-image-dataset
 
 
 .. Indices and tables
