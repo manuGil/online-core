@@ -22,3 +22,6 @@
 
 
 .. _Agent-Based: https://ltb.itc.utwente.nl/page/481/concept/78544
+
+.. _Unsupervised Image Classification Algorithm: https://ltb.itc.utwente.nl/page/481/concept/78808
+

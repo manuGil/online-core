@@ -233,4 +233,40 @@ Task 2.7
 Classification
 ----------------
 
-[CONTINUE PAGE 11]
+In this section, we will perform a `unsupervised classification <Unsupervised Image Classification Algorithm>`_ to the band stacks you created in the last section. We will use a  *k-means* clustering algorithm in the classification. 
+
+The unsupervised classification will be applied to each band stack: *Landsat stack, ASTER stack,* and m*ulti-spectral and multi-temporal stack*.
+
+Task 3.1 
+   Uncluter your project by removing the layers you will not need  anymore. Remove the groups *'Landsat'* and *'ASTER'*; keep only the shapefiles and the band stacks.
+
+Task 3.2 
+   From the **Processing** toolbox, open the tool **K-means clustering for grids**, and provide the following parameters (:numref:`fig-unsupervised-classification`): 
+
+   + For :guilabel:`Grids` select the *'Landsat234'* stack;
+
+   + For :guilabel:`Method` keep ``Hill-Climbing``, set :guilabel:`Clusters` to :math:`15`, and :guilabel:`Maximun Iterations` to  :math:`50`.
+
+   + Save the classification results to a file named *'Landsat234_class'*, in the *'Output'* folder; [ONLY sda FORMAT IS ALLOWED. IS IT OK?]
+
+   + Click :guilabel:`Run` to execute the classification.
+
+.. _fig-unsupervised-classification:
+.. figure:: _static/img/unsupervised-classification.png
+   :alt: unsupervised classification
+   :figclass: align-center
+
+   Unsupervised classification using the 'K-Means clustering' tool
+
+Task
+   Repeat the *Unsupervised classification* for the *'ASTER123N'* and the *'Landsat234_+_ASTER123N'* stack.
+   Name the resulting files as *ASTER123N_class* and *Landsat234_ASTER123N_class*, respectively.
+
+   You should now have three distinct Classifications. 
+
+----------------------
+
+Analysis
+------------
+
+[CONTINUE]
