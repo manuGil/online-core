@@ -3,13 +3,13 @@ Systems and Models
 
 In this section, you will get familiar with some of the basic concept of |ltb| `Systems Modelling <Systems model_>`_. 
 
-A |ltb| `System`_ is defined as *"a combination of parts that interact and produce some new quality or function in their interaction."*
-
-
 ---------------------
 
 Systems
 ---------
+
+A |ltb| `System`_ is defined as *"a combination of parts that interact and produce some new quality or function in their interaction."*
+
 
 A System consists of:
 
@@ -31,7 +31,7 @@ An example of a *positive feedback* is population growth. The larger the populat
 
 
 Task 1
-   The table below contains a few examples of *interactions*. Identify such interactions result in positive or negative feedback.
+   The table below contains a few examples of *interactions*. Identify if such interactions result in *positive* or *negative* feedback.
 
    +--------------------------------------------------------------------+---------------------+
    | Example                                                            |  Type of Feedback   |
@@ -46,7 +46,7 @@ Task 1
    |  | population decreases.                                           |                     |
    +--------------------------------------------------------------------+---------------------+
    
-Systems and their elements do not always change immediately in reaction to internal or external influences. When the effects of changes in some of the elements do not affect other elements immediately, we referred to them as the *delayed effects*.
+Systems and their elements do not always change immediately in reaction to internal or external influences. When the effects of changes in some of the elements of a system, do not affect other elements immediately, we referred to them as the *delayed effects*.
 
 .. attention:: 
    **Question.**
@@ -60,7 +60,7 @@ Although thinking about the different elements and interactions of a system may 
 Models
 -------
 
-Modelling is a very “confusing” term. It can be used at different abstraction levels, and it may refer to modelling different types of information or systems. Many things we do or products we produce can be regarded as a model. If we take a picture of a landscape, this can be regarded as a model. A printed map is also a model. In the exercise on *Data Modelling*, you created a model of reality as a  point-vector layer or a continuous raster. 
+Modelling is a very broadly used term, which may cause “confusion”. It can be used at different abstraction levels, and it may refer to modelling different types of information or systems. Many things we do or products we produce can be regarded as a model. If we take a picture of a landscape, this can be regarded as a model. A printed map is also a model. In the exercise on *Data Modelling*, you created a model of reality as a  point-vector layer or a continuous raster. 
 
 The models we refer to, in this section, describe processes that happen on the Earth's surface at various scales. Such models aim to represent systems. Modelling the Earth as a system may require to capture its natural components.  For example, we could portrait the system Earth as the combination of four subsystems: *atmosphere (air), lithosphere (land), hydrosphere (water) and biosphere (life)*. However, we may also model the Earth as human-induced systems, such as *urbanisation, human health and agriculture.*
 
@@ -75,9 +75,9 @@ Many modelling processes start with a conceptual |ltb| `Model`_. A conceptual mo
 
 You can create a conceptual model by following these steps:
 
-   + Define the goal (write it on the bottom of the page)
-   + Describe the input of your model (write it on the top of the page)
-   + Fill in all the steps (processes) needed to go from input (top) to goal (bottom)
+   1. Define the goal (write it on the bottom of the page)
+   2. Describe the input of your model (write it on the top of the page)
+   3. Fill in all the steps (processes) needed to go from input (top) to goal (bottom)
 
 
 
@@ -101,8 +101,8 @@ When |ltb| `modelling a system <System Modelling_>`_, the components of a concep
 ---------------------------
 
 
-Purpose of a Model 
---------------------
+The Purpose of a Model 
+-----------------------------
 
 Models are used in many application, and they can be classified in various ways. Here, we recognise five ways of classifying models in  GIS-based applications based on their characteristics:
 
@@ -127,7 +127,7 @@ The *purpose* of the model refers to whether the model is **descriptive, prescri
 Modelling Processes
 ------------------------------
 
-The process of building models is more complicated than defining the elements of models and their relationships, capturing them in a conceptual model, and implementing such conceptual model in software, see :numref:`fig-modelling-process`  The |ltb| `Modelling`_ process is often described as being *iterative.* 
+The process of building models is more complicated than defining their elements and relationships, capturing them in a conceptual model, and implementing such conceptual model in software, see :numref:`fig-modelling-process`  The |ltb| `Modelling`_ is an **iterative** process. 
 
 
 .. _fig-modelling-process:
@@ -173,7 +173,7 @@ Task 5
    =========================================       =======================
 
 The |ltb| `Implementation logic`_ of a model refers to two groups of approaches: *deductive* approaches and *inductive* approaches. To explain the difference between those groups, we will use an example from education. The concepts 'deductive' and 'inductive' can also be applied to learning and teaching.  In a *deductive approach,* the teacher presents students a new concept, explains how it works, and then makes the students practice using the concept.
-In an *inductive approach,* the teacher presents students many examples that show how the concept is used; the students should 'notice and realise', by way of the examples, how the concept works [CT22020]_.
+In an *inductive approach,* the teacher presents students many examples that show how the concept is used; the students should 'notice and realise', by way of the examples, how the concept works [OB2009]_.
 
 The table below shows some differences and examples for inductive and deductive approaches.
 
@@ -185,12 +185,12 @@ Hypothesis is defined by the researcher          E.g., machine learning
 Common in models used for description            Can be used for prediction
 =============================================    ====================================================
 
-.. [CT22020] Olenka Bilash. (2009, June). Best of Bilash. Improving second language education. Retrieved October 7, 2020, from https://bestofbilash.ualberta.ca/inductivedeductive.html
+.. [OB2009] Olenka Bilash. (2009, June). Best of Bilash. Improving second language education. Retrieved October 7, 2020, from https://bestofbilash.ualberta.ca/inductivedeductive.html
 
 
 .. attention:: 
    **Question.**
-   When would prefer to use an inductive over a deductive approach? 
+   When would you prefer to use an inductive over a deductive approach? 
 
 ---------------------------
 
@@ -201,7 +201,7 @@ Evaluating Systems Models
 The best way to learn about systems modelling is to experiment with a number of existing models and determine which characteristics they replicate. In this section,  you will use the web version of  Netlogo. Netlogo is a software designed to create agent-based simulation models and Cellular Automata (CA) models. You will see some examples and then reflect on their similarities and differences.
 
 Task 6
-   Open the web-version of `NetLogo <www.netlogoweb.org>`_ > click on :guilabel:`NetLogo Web`.
+   Open the web-version of `NetLogo <www.netlogoweb.org>`_. Then, click on :guilabel:`NetLogo Web`.
    You can load an existing model by selecting it from :guilabel:`Search the Models Library` dropdown list. See :numref:`fig-netlogo-gui`
 
 
@@ -233,7 +233,7 @@ Task 7
 
    + Is this a spatial model? Explain your answer.
    + Do you think this model contains any agents? If so, which agents and how are they represented in the model?
-   + What happens when you change the :guilabel:`minimum-separation` from 1 to 2 patches?
+   + What happens when you change the :guilabel:`minimum-separation` from :math:`1` to :math:`2` patches?
    + If you were to calibrate this model, which elements would you calibrate?
 
 
@@ -273,7 +273,7 @@ Task 9
 .. attention:: 
    **Question.**
    This *'CA 1D Rule 30'* model represents a very “synthetic” implementation of a CA model. 
-   *Can you think of an example of a CA model that is more realistic and aligns with your interests?*
+   **Can you think of an example of a CA model that is more realistic and aligns with your interests?**
 
 
 Task 10
@@ -303,13 +303,13 @@ Task 11
    +  Explain why this model is an example of *counter-intuitive effects*? For example, what happens when you double the number of wolves at the beginning of the model? Does such change improve their chances of survival?
 
 Task 12
-   Open the :guilabel:`NetLogo Code` tab again and make changes to the model. To apply the changes to the model, click on :guilabel:`Recompile Code` > :guilabel:`model-version` choose ``sheep-wolves-grass`` >   :guilabel:`setup` > :guilabel:`Go`. Try add the following changes one at the time.
+   Open the :guilabel:`NetLogo Code` tab again and make changes to the model. To apply the changes to the model, click on :guilabel:`Recompile Code` > :guilabel:`model-version` choose ``sheep-wolves-grass`` >   :guilabel:`setup` > :guilabel:`Go`. Try to make the following changes one at the time.
    
    + Change the colour of sheep to *yellow*.
    + Make the wolf *twice as big*.
    + Make the grass *blue*. You will have to change the code in multiple places.
 
-   After all changes, the *'Wolf Sheep Predation'* model should look like this:
+   After all the changes, the *'Wolf Sheep Predation'* model should look like this:
 
 .. _fig-wolf-sheep-model-blue:
 .. figure:: _static/img/wolf-sheep-model-blue.png
@@ -318,4 +318,7 @@ Task 12
 
    The 'Wolf Sheep Predation' model showing yellow sheep, bigger wolves, and blue grass
 
+
+
+.. sectionauthor:: Ellen-Wien Augustjin, André Mano & Manuel Garcia Alvarez
 
