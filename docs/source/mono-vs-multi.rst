@@ -76,8 +76,12 @@ In the following sections, we will conduct a data analysis to compare the differ
 
 ---------------------------
 
+Data Preparation
+-----------------
+
+
 Band Subsetting
-----------------
+^^^^^^^^^^^^^^^^^^
 
 We will start by stacking bands in three different combinations. One stack will combine three bands from Landsat-TM from  the 23-Apr-2010. Anothe stack  will combine three bands from ASTER, taken on the 23-Jun-2010. Finally, the last stack will combine all 6 bands in the previous two stacks. Three Landsat bands and three ASTER bands. 
 
@@ -136,10 +140,10 @@ Task  2.1
    Moreover, *avoid having all the layers turned on.* Especially the original Landsat and ASTER layers; they will consume resources every time you zoom or pan over the map view.
 
 
-----------------------
+
 
 Band Stacking
--------------
+^^^^^^^^^^^^^^^^^^
 
 As a next step, you will build three band stacks usign the subsets created above:
 
@@ -269,4 +273,64 @@ Task
 Analysis
 ------------
 
-[CONTINUE]
+At this point, you have results of  *unsupervised classification* for three stacks. Namely,
+
+#. **Landsat234_class** - a mono-temporal and multi-spectral classification map, using Landsat bands from April 2010
+#. **ASTER123N_class**  - a mono-temporal and multi-spectral classification map, using ASTER bands from June 2010
+#. **Landsat234_ASTER123N_class** - a multi-temporal and multi-spectral classification map, using bands from Lansat and ASTER for April and June 2010
+
+In this part of the exercise, we answer the question **which of the classificaiton maps above, distinguishes better the land cover classes we have on remote sensing data we were given?** [LAND COVER CLASSES WERE NO GIVEN BEFORE, WHICH CLASSES ARE WE LOOKING FOR?]
+
+Calculating Basic Statistics
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+**Zonal statistics** will help us to know what is the predominant pixel value (i.e. class) within for an specific area.
+We will use the polygos in the *'evaluation'* layer to compute *zonal statistics* and find out the predominat class for each polygon.
+
+
+Task 4.2 
+   From the **Processing toolbox**, open the  **Zonal Statistics** tool. 
+   Compute *zonal statistics* for each of the classification maps. For :guilabel:`Statistics to calculate` select only ``majority``. Type a meaningful and *distinct* prefix in :guilabel:`Output column prefix` each time. See :numref:`fig-zonal-statistics` *The tool will create columns with names that start with such prefixes.*
+
+
+.. _fig-zonal-statistics:
+.. figure:: _static/img/zonal-statistics.png
+   :alt: unsupervised classification
+   :figclass: align-center
+
+   Computing zonal statistics for the classification maps
+
+\
+
+   The statistics (majority) should now be in the attribute table of the *'evaluation'* layer:
+
+
+   .. image:: _static/img/evaluation-attribute-table.png 
+      :align: center
+
+
+Comparison of Classification Results
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Task 4.3 
+   Read out the dominant class identifiers (ID numbers) for each polygon from
+   Each classification result and fill the following table: 
+   [HOW TO INTERPRET THE TABLE ABOVE?]
+
+================================   =============================    ==============================   ===================================
+Polygon                            ID dominant class (Landsat)      ID dominant class (ASTER)        ID dominant class (Landsat+ASTER)
+================================   =============================    ==============================   ===================================
+1
+2
+3
+**How many different classes?**
+================================   =============================    ==============================   ===================================
+
+
+
+
+
+.. attention:: 
+   **Question.**
+   Which classification provided a better separation between classes? Why?
