@@ -45,9 +45,6 @@ The Core Course: Exercises
    systems-model
    sdi
    users
-..   mono-vs-multi
-   resampling
-   change-detection
 
 .. toctree::
    :maxdepth: 2
@@ -55,7 +52,6 @@ The Core Course: Exercises
 
    apendices/gis-formats
    apendices/shaded-terrain-models
-..   apendices/sistan-image-dataset
 
 
 .. Indices and tables
