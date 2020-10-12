@@ -17,7 +17,7 @@ The image you will be working on is a subset taken from band 1 of Landsat 5 sens
    + ``Resampling.qgs`` - a qgis project file loaded with data layers and styles.
 
 
-Task 1.1 
+Task 1
    Make sure you have the **Map swipe tool** and **Value Tool** plugins installed.
 
 Task 2 [THIS IS REPEATED IN MONO vs MULTI AND CHANGE DETECTION. DO WE KEEP IT IN ALL OF THEM?]
@@ -127,7 +127,7 @@ Task  2.6
 
 
 Task 2.8 
-   Compute the histogram for all bands of the *'stack_50'* stack. :guilabel:`Right click` over  *'stack_50'* layer >:guilabel:`Properties` > :guilabel:`Histogram` > :guilabel:`Compute histogram`. You should see a histogram like the one below:
+   Compute the histogram for all bands of the *'stack_50'* stack. :guilabel:`Right click` over  *'stack_50'* layer > :guilabel:`Properties` > :guilabel:`Histogram` > :guilabel:`Compute histogram`. You should see a histogram like the one below:
 
    .. image:: _static/img/histogram-stack50.png 
       :align: center
