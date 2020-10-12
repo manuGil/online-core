@@ -1,6 +1,7 @@
 Resampling
 ==========
 
+
 In data integration, **resampling** of images is an important pre-processing step, especially when we are dealing with datasets with different spatial resolutions and scales. When the differences in the spatial resolution between the input and the output are *small*, simple interpolation methods are good enough for estimating pixel values. However, when such differences are significant,  then we need to apply  *aggregation*.
 
 The image you will be working on is a subset taken from band 1 of Landsat 5 sensor, and it has a pixel size of :math:`30 \ m`.
@@ -196,3 +197,4 @@ Task 13
 
    + When comparing the resampled images with and without aggregation. **Which one shows a ‘smoother’ image? Why?**
    + Which resampled images has a smaller value range? Why?
+
