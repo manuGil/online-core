@@ -145,10 +145,52 @@ Advanced resampling
 For many practical applications, you have to resample an image to *much larger pixel sizes* than the original. In thi section, you will resample the image to a  pixel size of :math:`200 \ m`. For the sake of comparison, you will use a **optimal** and a **sub-optimal** method.
 
 
-3.1	Resampling with aggregation
+Optimal Resampling: with Aggregation
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The much larger pixel size (for the coming example we will be using 200 m) means that the radiation should be integrated from a much larger surface area then the original pixel size (200 m * 200 m instead of 30 m * 30 m). Thus, first an aggregation (i.e. a convolution filter) has to be applied with a kernel of this size, and only after that we resample the image
+Resampling to a such relatively large pixel size means that the **radiation** values in the orginal image must be integrated [IS integrated THE RIGHT WORD HERE?] from a much larger surface area then the original pixel size (200 m * 200 m instead of 30 m * 30 m). [ASK ANDRE]
 
- Task 3.1 From the processing toolbox, open the tool r.mfilter to run a low-pass kernel of 7x7. This kernel will average the data over a 7 by 7 pixels area (since 30 m is the pixel size of the Landsat image, this means an area of 210 by 210 meters). The input(s) of this tool are the layer l5_20100627_band1 and the filter file we provided you with the exercise data [Figure 8].
+Therefore, in such case, we first have to apply an *aggregation* (i.e. a convolution filter) an do the resampling only after that.
 
+Task 3.1 
+   From the :guilabel:`Processing toolbox`, open the tool **r.mfilter**  and apply a  *low-pass kernel* of :math:`7x7`. Such kernel will average the data over a 7 by 7 pixels area, that is  :math:`30 \times 7 = 210  \ m`. Thefore the kernel filter aggregate the radiation value for an area of :math:`210 \ m`   by :math:`210 \ m`.
+
+   As :guilabel:`Input layer` choose *'l5_20100627_band1'* > for :guilabel:`Filter file` use the ``average.txt`` > for :guilabel:`Filtered` type ``average_7x7.tif`` > :guilabel:`Run`.  See :numref:`fig-rmfilter` 
    
+
+.. _fig-rmfilter:
+.. figure:: _static/img/rmfilter.png
+   :alt: rm filter tool
+   :figclass: align-center
+
+   Aggregation of radiation values using the 'r.mfiltr' tool
+
+
+Task 3.2 
+   Use the **r.resamp.interp** tool and resample the ``average_7x7.tif`` to a pixel size of :math:`200 \ m`. Use the **nearest** interpolation method. Refer to Task [#] is you need to.
+
+
+Sub-Optimal Resampling: without Aggregation
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To understand the reason why we should aggregate prior a resampling  whe the resampling resolution is  *much more larger* than the original pixel size. Now, you willapply only a resampling.
+
+Task 3.3 
+   Use the **r.resamp.interp** just like you did in the previous tasks. Use the *'l5_20100627_band1'* as input layer, **nearest** as interpolation method, and  :math:`200 \ m` for pixel size.
+
+Comparing Optima and Sub-Optimal Results
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Task 3.4 
+   Compare the *resampled* layers with and without aggration. Use the technique you used in Task [#].
+
+Task 3.5 
+   Plot the histograms for the *resampled* layers with and without aggration. If necessary, save the histogram(s) to a file so that you can look at both of them at the same time.
+
+
+
+.. attention:: 
+   **Question.**
+
+   + When comparing the resampled images with  and without aggregation. **Which one shows a ‘smoother’ image? Why?**
+   + Which resampled images has the smaller value range? Why?
