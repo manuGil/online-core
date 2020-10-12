@@ -45,8 +45,8 @@ The Core Course: Exercises
    systems-model
    sdi
    users
-   resampling
    mono-vs-multi
+   resampling
    change-detection
 
 .. toctree::

@@ -18,7 +18,7 @@ Morbi pretium arcu ut risus molestie, id eleifend eros dapibus. Nunc eget orci n
 -----------------------
 
 Images and Figures
-------------------
+--------------------
 
 Image
    This is an image with no caption.
