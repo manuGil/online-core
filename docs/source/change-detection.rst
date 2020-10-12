@@ -3,7 +3,8 @@ Change Detection
 
 In this section and the following sections, we will focus on polishing the skills that you acquired in the previous exercises. For this, we will focus on how to apply GIS and Remote sension for specific application cases. Such cases will demand the integration of several data sources, and the application of both Remote Sensing techniques and Spatial Data Analysis.
  
-In this first exercise, we will focuse on how to integrate data for the purpose of |ltb| `<Change detection>`_.
+In this first exercise, we will focuse on how to integrate data for the purpose of detectin change using remote sesing. Read about it on the learning path |ltb| `Change Detection <Path Change Detection_>`_.
+
 
 The Sistan Basin
 ----------------
@@ -19,9 +20,9 @@ In this exercise, you will work with maps from the Sistan Basin; a wetland area 
 
 
 The lowest parts of the basin are covered by wetlands. The wetlands cover about :math:`4500 \ km^2`, which is one of the driest regions in the world, and it suffers from prolonged droughts. 
-The droughts endanger the livelihood of about half a million inhabitants including fishermen, farmers, and others. The monitoring of the water and vegetation is of prime important, in such wetlands [CT12020]_.
+The droughts endanger the livelihood of about half a million inhabitants including fishermen, farmers, and others. The monitoring of the water and vegetation is of prime important, in such wetlands [WC2020]_.
 
-.. [CT12020] Wikipedia contributors. (2020, September 14). Sistan Basin. In Wikipedia, The Free Encyclopedia. Retrieved 12:08, October 5, 2020, from https://en.wikipedia.org/w/index.php?title=Sistan_Basin&oldid=978368838
+.. [WC2020] Wikipedia contributors. (2020, September 14). Sistan Basin. In Wikipedia, The Free Encyclopedia. Retrieved 12:08, October 5, 2020, from https://en.wikipedia.org/w/index.php?title=Sistan_Basin&oldid=978368838
 
 .. note:: 
    **Reflection.**
@@ -30,14 +31,12 @@ The droughts endanger the livelihood of about half a million inhabitants includi
 Task 
    Make sure you have the **Value Tool** and  the **Temporal/spectral profile** plugins installed. 
 
-Task 1.2 
+Task 1.2  [THIS IS REPEATED IN MONO vs MULTI AND CHANGE DETECTION. DO WE KEEP IT IN ALL OF THEM?]
    Make sure that QGIS is cofigured to render layers  using multiple CPU cores. Go to 
    :guilabel:`Settings` > :guilabel:`Options` > :guilabel:`Rendering` and make sure the option *Render Layers in parallel using many CPU cores* in on. Set :guilabel:`Max Cores` to the number of CPU cores in your computer, use at least 4 for better performance. See below.
 
    .. image:: _static/img/qgis-rendering-options.png 
       :align: center
-
-
 
 .. important:: 
    **Resources.**
@@ -62,8 +61,21 @@ Task 1.2
    
    The appendix :ref:`sistan-dates` contains a table with the acquicition dates of of each band. The dates are also available as a table in the *'change_detection'* project.
 
+-----------------------------
 
-   
+
+Inspecting the Data
+--------------------
+
+The four images [WHICH ONE?] contain a time series with 37 steps [speps= TIMESTAMPS?] (each band is one step). The first step will be to get a closer look such time series datasets.
+
+General overview
+
+Before inspecting the time series, it is a good idea to take a look at what is the initial scenario of our time series. [A STEP BEFORE THE FIRST STEP? SHOULD NOT THIS BE THE FIRST STEP?]
+
+Task 1.1 
+
+   Open the QGIS project change_detection.qgis and make sure you have the Value Tool plugin visible and active.
 
 
 

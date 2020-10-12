@@ -20,7 +20,7 @@ The image you will be working on is a subset taken from band 1 of Landsat 5 sens
 Task 1
    Make sure you have the **Map swipe tool** and **Value Tool** plugins installed.
 
-Task 2 [THIS IS REPEATED IN MONO vs MULTI AND CHANGE DETECTION. DO WE KEEP IT IN ALL OF THEM?]
+Task 2 [KEEP IT!]
    Configure QGIS to render layers using multiple CPU cores. Go to 
    :guilabel:`Settings` > :guilabel:`Options` > :guilabel:`Rendering` and make sure the option *Render Layers in parallel using many CPU cores* in on. Set :guilabel:`Max Cores` to the number of CPU cores in your computer, use at least 4 for better performance. See below.
 
@@ -63,7 +63,9 @@ Task 2.3
 
 .. attention:: 
    **Question.**
-   Resampling relies on interpolation techniques and therefore it relies on Tobler’s first law of geography:  *locations that are closer together are more likely to have similar values than locations that are farther apart.* Keeping this  law in mind and considering the image below, can you think of a use case where one of these resampling techniques should be chosen over the other two and why? [IS THIS ABOUT WHICH INTERPOLATION METHOD TO USE? NEARES OR BILINEAR?]
+   Resampling relies on interpolation techniques and therefore it relies on Tobler’s first law of geography:  *locations that are closer together are more likely to have similar values than locations that are farther apart.* Keeping this  law in mind and considering the image below, can you think of a use case where one of these resampling techniques should be chosen over the other two and why? 
+   [ NEARES OR BILINEAR?] generic question, only in the context of the figure below.
+   figure shows which pixels are considered in resampling.
 
 
    .. image:: _static/img/resampling-techniques.png 
@@ -98,10 +100,11 @@ You should now have four raster layers in your project. The original *Landsat ba
    **Reflection.**
    When you resample an image  to a *lower resolution*, you are not producing data in the sense of previouly unknown information. You are simply creating coarser versions of the original data. This results in a loss of precision that might be acceptable or not depending on what the analysis is about.  [DOES THIS MAKE SENSE? HOW?]
 
+   key idea. tools does not produce information, resampling implies loss of info. is the loss or not? Rephrase. 
+
 Task 2.5 
    Perform a visual comparison on the size and values of the pixels of the four raster layers. :guilabel:`Zoom` into to *'grid'* layer and explore the raster layers usng the  **Value tool** and **Swipe map tool** plugins. Watch the video tutorial on `visually comparing rasters <https://player.vimeo.com/video/235504017>`_.
    
-   [REPLACE IMAGE AND VIDEO FOR ONLY VIDEO?]
 
 .. raw:: html
 
@@ -148,7 +151,9 @@ For many practical applications, you have to resample an image to *much larger p
 Optimal Resampling: with Aggregation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Resampling to a such relatively large pixel size means that the **radiation** values in the orginal image must be integrated [IS integrated THE RIGHT WORD HERE?] from a much larger surface area then the original pixel size (200 m * 200 m instead of 30 m * 30 m). [ASK ANDRE]
+Resampling to a such relatively large pixel size means that the **radiation** values in the orginal image must be integrated [IS integrated THE RIGHT WORD HERE?] from a much larger surface area then the original pixel size (200 m * 200 m instead of 30 m * 30 m). 
+
+[Keep as if, improve if it can be done]
 
 Therefore, in such case, we first have to apply an *aggregation* (i.e. a convolution filter) an do the resampling only after that.
 

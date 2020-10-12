@@ -4,7 +4,6 @@
     Id: 481
 
 
-.. _Change detection:       https://ltb.itc.utwente.nl/page/481/concept/78882
 .. _Spatial Data Infrastructure: https://ltb.itc.utwente.nl/page/481/concept/78894
 .. _Systems model: https://ltb.itc.utwente.nl/page/481/concept/78598
 .. _System:     https://ltb.itc.utwente.nl/page/481/concept/78789
@@ -29,4 +28,5 @@
 
 .. _Geocoding: https://ltb.itc.utwente.nl/page/481/concept/78656
 
+.. _Path Change Detection: https://ltb.itc.utwente.nl/page/481/learningpath/show/602
 
