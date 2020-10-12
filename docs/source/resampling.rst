@@ -191,8 +191,6 @@ Task 12
 Task 13 
    Plot the histograms for the *resampled* layers with and without aggregation. If necessary, save the histogram(s) to a file so that you can look at both of them at the same time.
 
-
-
 .. attention:: 
    **Question.**
 
