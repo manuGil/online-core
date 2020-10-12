@@ -1,6 +1,12 @@
 Resampling
 ==========
 
+.. TODO:
+   - make changes based on feedback
+   - test links
+   - add Task numers
+   - check style
+   - check style
 
 In data integration, **resampling** of images is an important pre-processin step, specially  when we are dealing with datasets with different spatial resolutions and scales. When the  differences in the spatial resolution between the input and the output are *small*, simple interpolation methods are good enough for estimating pixel values. However, when the such differences are big,  then we need to apply  *aggregation*.
 
@@ -12,7 +18,7 @@ The image you will be working on is a subset taken from band 1 of Landsat 5 sens
    You will require the latest LTR version of `QGIS (A Coruna 3.10) <https://qgis.org/en/site/forusers/download.html>`_, plus the dataset `resampling.zip <data_resampling>`_ which you can download from CANVAS.  When you unzip the dataset, you will find the following files inside: 
   
    + ``l5_20100627_band1.tif`` -  an image subset from band 1 of Landsat 5 and spatial resolution of :math:`30 \ m`.
-   + ``grid.shp`` - [some description]
+   + ``grid.shp`` - a vector dataset representing a grid for the origina pixel size of the Landsat 5 image. 
    + ``average.txt`` - a file with a  kernel filter definition.
    + ``Resampling.qgs`` - a qgis project file loaded with data layers and styles.
 
