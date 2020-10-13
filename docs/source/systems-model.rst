@@ -201,7 +201,7 @@ Evaluating Systems Models
 The best way to learn about systems modelling is to experiment with a number of existing models and determine which characteristics they replicate. In this section,  you will use the web version of  Netlogo. Netlogo is a software designed to create agent-based simulation models and Cellular Automata (CA) models. You will see some examples and then reflect on their similarities and differences.
 
 Task 6
-   Open the web-version of `NetLogo <www.netlogoweb.org>`_. Then, click on :guilabel:`NetLogo Web`.
+   Open the web-version of `NetLogo <https://www.netlogoweb.org/>`_. Then, click on :guilabel:`NetLogo Web`.
    You can load an existing model by selecting it from :guilabel:`Search the Models Library` dropdown list. See :numref:`fig-netlogo-gui`
 
 
