@@ -225,7 +225,7 @@ Task 7
    
    .. note:: 
       **Reflection.**
-      The Flocking model is an `agent-based model <Agent-Based_>`_. Agent-based models consist of three components: *agents* (with behaviour), the *environment* in which these agents exist and *time*. 
+      The Flocking model is an |ltb| `agent-based model <Agent-Based_>`_. Agent-based models consist of three components: *agents* (with behaviour), the *environment* in which these agents exist and *time*. 
 
 .. attention:: 
    **Question.**
