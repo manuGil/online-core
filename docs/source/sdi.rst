@@ -146,7 +146,7 @@ Task 7
       https://geodata.nationaalgeoregister.nl/spoorwegen/ows?
       SERVICE=WMS&&SERVICE=WMS&VERSION=1.3.0&
       REQUEST=GetMap&FORMAT=image%2Fpng&TRANSPARENT=false&
-      LAYERS=spooras&STYLES=spoorwegen%3ASpooras
+      LAYERS=spooras&STYLES=spoorwegen%3ASpooras&
       CRS=EPSG%3A28992&
       WIDTH=1020&HEIGHT=866&
       BBOX=113541.12%2C487085.75999999995%2C120395.51999999999%2C492905.27999999997
