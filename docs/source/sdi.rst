@@ -142,6 +142,8 @@ Task 7
    Paste the following  URL (an HTTP request) in the web browser and hit :guilabel:`Enter`. 
 
    .. code-block:: ruby
+      :linenos:
+      :emphasize-lines: 4,7
    
       https://geodata.nationaalgeoregister.nl/spoorwegen/ows?
       SERVICE=WMS&&SERVICE=WMS&VERSION=1.3.0&
