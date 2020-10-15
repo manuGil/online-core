@@ -3,7 +3,7 @@
 Digital Image Classification
 ============================
 
-In this exercise, we use a **Sentinel-2** satellite image covering Enschede and its surroundings from September, 2016. Before going forward with the exercise read about |ltb| `<Digital Image Classification>`_.
+In this exercise, we use a **Sentinel-2** satellite image covering Enschede and its surroundings from September, 2016. Before going forward with the exercise read about |ltb| `<Digital Image Classification_>`_.
 
 .. important:: 
    **Resources.**
@@ -262,7 +262,7 @@ Task 11
    Then, inspect the classification results again, and if necessary add more ROIs until you are satisfied with the results. 
 
 Task 12 
-   Run the final classification, by clickin on the button |runSCP|
+   Run the final classification, by clicking on the button |runSCP|
 
 Task 13
    Generate a shapefile from the ROIs you used to classify the image. [HOW? GIVE SOME HINT?]
