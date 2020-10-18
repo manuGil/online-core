@@ -198,3 +198,4 @@ Task 13
    + When comparing the resampled images with and without aggregation. **Which one shows a ‘smoother’ image? Why?**
    + Which resampled images has a smaller value range? Why?
 
+.. sectionauthor:: Zoltán Vekerdy, André Mano & Manuel Garcia Alvarez

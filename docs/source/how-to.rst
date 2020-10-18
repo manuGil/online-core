@@ -36,11 +36,10 @@ This document is divided into five parts:
 
 + **Part one**, the *Introduction* contains general information about the exercises and GIS software. This is the part you are reading right now. 
 + **Part two** contains exercises related to *GI Science*, where you can learn about Geographic Information Systems and Spatial Analysis. 
-+ **Part three** [1]_ contains exercises related to *Earth Observation*, where you can learn about Remote Sensing and Image Interpretation. 
-+ **Part four** [1]_ contains exercises related to *Data Integration*, where you can learn about system dynamics and approaches to integrate data from multiple sources and perform advanced analysis. 
++ **Part three**  contains exercises related to *Earth Observation*, where you can learn about Remote Sensing and Image Interpretation. 
++ **Part four**  contains exercises related to *Data Integration*, where you can learn about system dynamics and approaches to integrate data from multiple sources and perform advanced analysis. 
 + **Part five**, the *Appendices* contain additional information that will be useful for some of the exercises.
 
-.. [1] This part will become visible as you progress in the course.
 
 
 Conventions
