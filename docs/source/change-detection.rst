@@ -80,7 +80,7 @@ Inspecting the Data
 
 The  *index* datasets, ``vegetation.img``, ``wet_soil.img``, ``dry_soil.img`` and ``water.img``, contain time series with 37 steps [steps= bands = TIMESTAMPS?] (each band is one step).  [THIS IS REPETITION, REMOVE?]
 
-First you need to understand the datasets for this exercise. To do so, we will start by looking at the starting point of our change detection analysis. 
+First you need to understand the datasets for this exercise. To do so, we will start by looking at the starting date of our change detection analysis. 
 
 Task 1.1 
 
@@ -91,7 +91,8 @@ Task 1.1
 
 .. note:: 
    **Reflection.**
-   For the sake of comparison, switch the layers on and off and observe the values. For example, observe how the areas with high *dry soil* values have low *wet soil* values, and vice-versa. The **Value Tool** can help in such comparisons. Do not rush this step, it is important that you understand your datasets before proceding with any analysis.
+   For the sake of comparison, switch the layers on and off and observe the values. For example, observe how the areas with high *dry soil* values have low *wet soil* values, and vice-versa. The **Value Tool** can help in such comparisons. Do not rush this step, it is important that you understand your datasets before proceding with any analysis. Put especial attention to range of value in each layer and their spatial distribution.
+   
 
 .. note:: 
    **QGIS.**
@@ -103,7 +104,7 @@ Task 1.1
 
 By now, you should an idea of where the  the indices of the four variables are higher or lower for  *02/01/2020*. However,  but it does not tell you if those values are equally high or low for the whole period we are analyzing. [WHAT DOES 'equally high or low'  MEANS? OVERAL MIN AND MAX?]
 
-To have an overview over where water, vegetation, dry and wet soil tend to concentrate  over time series; we will aggregate the values of the 37 bands.
+To have an overview over where water, vegetation, dry and wet soil tend to concentrate over time; we will aggregate the values of the 37 bands.
 
 Task 1.2 
 Go to :guilabel:`Raster` > :guilabel:`Raster Calculator...` and **add** the 37 bands of each *index image*. Construct an *Expression* for the raster calculaor using the formula below. Give meaningful names for each output file,  for example *vegetation_sum, water_sum, etc.* See :numref:`fig-vegetation-sum` 
@@ -186,7 +187,11 @@ Task 1.3
    :guilabel:`Right-Click` > :guilabel:`Properties...` > :guilabel:`Symbology` > :guilabel:`Style` > :guilabel:`Load Style...` > search and select for the ``vegetation_sum.qml`` file > :guilabel:`Open` > :guilabel:`OK`.
    See :numref:`fig-load-style` 
    
-   [THE STYLE FILE GAME ME SOMETHING STRANGE. CHECK STYLE FILE?]
+   The styles you applied are only to facilitate a visual analysis. *All the layers are divided into* :math:`5`   *classes but only the highest* :math:`20 \%` *of values are visible.* Such values identify areas where the presence of each index (variable) accumulates over period depicted in the time series.
+   
+   
+
+   [THE STYLE FILE GAVE ME SOMETHING STRANGE. CHECK?]
 
 .. _fig-load-style:
 .. figure:: _static/img/load-style.png
@@ -195,4 +200,157 @@ Task 1.3
 
    Apply a style to the 'vegetation_sum' layer using a style file
 
+Task
+   Repeat the procedure above to change the styles of *'wet_soil_sum', 'dry_soil_sum', and 'water_sum'* layers. Look for the correct style files in your data directory.
+   Your project should now have the four aggregation layer properly styled. See :numref:`fig-aggregated-layers-styled` 
+
+.. _fig-aggregated-layers-styled:
+.. figure:: _static/img/aggregated-layers-styled.png
+   :alt: styled aggregation layers
+   :figclass: align-center
+
+   The 'vegetation_sum', 'wet_soil_sum', 'dry_soil_sum', and 'water_sum' layers with custom styles
+
+--------------------------
+
+Plotting time series
+--------------------
+
+Now that you have an overview on the range and spatial distribution of value for each of the *'index'* image. We will take a look at how the values change over time.
+
+Task 1.6 
+   Use the **Temporal/spectral Profile** plugin to inspect how the values in the  *'water;* layer change over time. Sample two or three points close to the areas where the values in the *'aggregated'* layers are the highest.
+   Whatch the video tutorial on `inspecting time series <https://player.vimeo.com/video/236881857>`_.
+
+.. raw:: html
+
+   <div style="padding:52.42% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/236881857?color=007e83&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+
+\
+
+
+Task 1.7
+   Use the **Temporal/spectral Profile** plugin to further explore how the other *variables* change or relate over time. [VARIABLE=PHENOMENON=INDEX? CONFUSING]
+
+.. attention:: 
+   **Question.**
+   Observe the two plots below. For each plot, **can you explain how the changes in each** *variable* **are related?**
+
+   .. image:: _static/img/change-plot-a.png 
+      :align: center
+   
+   \
+
+   .. image:: _static/img/change-plot-b.png 
+      :align: center
+
+-------------------------
+
+Quantifying differences
+------------------------
+
+You have now a better understanding of the data in this exercise, i.e., what it represents and its ranges and limits. In this part, we will conduct an analysis to quantify the changes in each *'index'* layer.
+
+
+Increase and Decrease in Water
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+In this part of the exercise, we will look at how  the water values increase or decrease between dates. This variable is very important because its behaviour influence the other three variables.
+
+Task 2.1 
+   From the :guilabel:`Processing Toolbox`, :guilabel:`Right-click` on the tool **Raster calculator** > :guilabel:`Edit Rendering Styles for Outputs...`. See :numref:`fig-edit-rendering-styles` :guilabel:`Click` the elipses (``...``) > select the ``Difference_style.qml`` file > :guilabel:`Open` > :guilabel:`OK`.
+
+
+.. _fig-edit-rendering-styles:
+.. figure:: _static/img/edit-rendering-styles.png
+   :alt: edit rendering styles
+   :figclass: align-center
+
+   The 'Raster calculator' in the Processing Toolbox 
+
+.. note:: 
+   **QGIS.**
+   In the following tasks, you will use the **Raster calculator** to generate layers that compute the difference between two adquisition dates. Setting the tools to use the same style to  render the output layers will make easier to compare and understand the results, and it will you save time. 
+
+Task 2.2 
+  Use the **Raster calculator** in the *Processing Toolbox* to compute the difference between **band** :math:`8`  (21/04/2005) and **band** :math:`12`  (22/06/2005) from the *'water'* layer. Use the following formula to compute the difference map:
+  
+   .. math::
+
+      \Delta_{map} = Map_{(final \ state)} - Map_{(initial \ state)}
+
+\
+
+   Do not forget to set the :guilabel:`Reference layer(s)` parameter to  the *'water'* layer, :numref:`fig-calculating-difference` 
+
+.. _fig-calculating-difference:
+.. figure:: _static/img/calculating-difference.png
+   :alt: calculating difference
+   :figclass: align-center
+
+   Computing a difference map between bands of the 'water' layer
+
+
+.. attention:: 
+   **Question.**
+   Look closely at map resuling from the previous task. See below. **What do the values of the difference map mean?**
+
+   .. image:: _static/img/difference-water.png 
+      :align: center
+
+Task 2.3 
+   Repeat the procedure described in the previous task. This time compute the difference between **band** :math:`8`  (21/04/2005) and **band** :math:`20`  (12/09/2005) from the *'water'* layer.
+
+
+.. attention:: 
+   **Question.**
+   Look closely at difference maps from the previous tasks. **What changes occurred between the 21st of April and the 12th of September of 2005?**
+
+
+Detecting Changes in Water
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+In the last part of this exercise, we will assess how the values change globally in the study area over a period of 10 months. From January to October 2005.
+For this analysis, *we consider the percentage of the total area of the basin covered by water*. Earlier in the exercise, we explained that the *index* (:math:`0 \ to \ 1`) 
+represent the percentage of the area of a pixel covered by an specific geographic phenomena, in this case *water*.
+Therefore, the *total percentage of area covered by water* in a band :math:`T_{water}`,  can be computed using the following equation:
+
+.. math::
+
+   T_{water} = \frac{B \times 100}{A}
+
+
+Where :math:`A`  is the total number of pixels in a band, and :math:`B` is the sum of the pixel values in that same band. The constant :math:`100` converts the values to percentage.
+
+
+This analysis requires apply the equation above :math:`10` times (one for each month in the analysis), according to the table below.
+
+===================    ================     ================
+Band (water layer)      Date (Y-M-D)         Date (M-Y)
+===================    ================     ================
+1	                     05-01-02             Jan-05
+3	                     05-02-21            Feb-05
+4	                     05-03-12            Mar-05
+7	                     05-04-03            Apr-05
+10	                     05-05-22            May-05
+11	                     05-06-13            Jun-05
+13	                     05-07-08            Jul-05
+16	                     05-08-09            Aug-05
+19	                     05-09-03            Sep-05
+23	                     05-10-01            Oct-05
+===================    ================     ================
+
+Instead of repeting the procedure to compute :math:`T_{water}` ten time, you will use predefined QGIS model which automate such a task.
+
+[UP TO THIS POINT THE SECTIONS AND TASKS SEEMS DESCONNECTED, AND THE OVERAL OBJECTIVE OF THE analysis IS DOUBTFUL]
+
+Task 3.1 
+   Go to :guilabel:`Processing Toolbox` > :guilabel:`Models` >  :guilabel:`Add Model to Toolbox..`. See :numref:`fig-load-model` . Select the model ``quantifying_change.model3``.
+
+.. _fig-load-model:
+.. figure:: _static/img/load-model.png
+   :alt: load model
+   :figclass: align-center
+
+   Add model to 'Processing Toolbox'
 
