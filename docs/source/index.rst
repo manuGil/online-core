@@ -55,7 +55,7 @@ The Core Course: Exercises
 
    apendices/gis-formats
    apendices/shaded-terrain-models
-..   apendices/sistan-image-dataset
+   apendices/sistan-image-dataset
 
 .. Indices and tables
 .. ==================
