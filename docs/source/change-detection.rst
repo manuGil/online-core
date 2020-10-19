@@ -1,10 +1,6 @@
 Change Detection
 ================================
 
-
-Change Detection
-================================
-
 In this section, we focus on polishing the skills that you acquired in the previous exercises. You will apply Remote Sensing to integrate data for the purpose of detecting changes of geographic phenomena. Read about it on the learning path |ltb| `Change Detection <Path Change Detection_>`_.
 
 
@@ -40,14 +36,14 @@ The lowest parts of the basin are covered by wetlands. The wetlands cover about 
       +  ``wet_soil.img`` - time series for the presence of wet soil.
       +  ``dry_soil.img``  - time series for the presence of dry soil.
       +  ``water.img`` - time series for the pressence of water.
-      +  ``limits.shp``
-      +  ``Difference_style.qml``
-      +  ``Dry_soil_sum.qml``
-      +  ``Vegetation_sum.qml``
-      +  ``Vegetation_sum_3D.qto3settings``	
-      +  ``Water_sum.qml``
-      +  ``Wet_soil_sum.qml``
-      +  ``date-time.csv``
+      +  ``limits.shp`` - layer of the boundary of the Sitan basin.
+      +  ``Difference_style.qml`` - QGIS style file.
+      +  ``Dry_soil_sum.qml`` - QGIS style file.
+      +  ``Vegetation_sum.qml`` - QGIS style file.
+      +  ``Vegetation_sum_3D.qto3settings``	- [NOT USED, REMOVE?]
+      +  ``Water_sum.qml`` - QGIS style file.
+      +  ``Wet_soil_sum.qml`` - QGIS style file.
+      +  ``date-time.csv`` -? [NEVER MENTION IN EXERCISE, ONLY IN VIDEO. IS APPEDIX ENOUGH?]
       +	``change_detection.qgis`` - a QGIS Project loaded most of the dataset listed above.
    
    The spatial data for this exercise consists of four images with 37 bands. Each of the bands represents a different date of acquisition between the 2nd of January, 2005, and the 22nd of April, 2006. Each image contains an **index of the presence** of one of the following geographic phenomena: 
@@ -62,10 +58,10 @@ The lowest parts of the basin are covered by wetlands. The wetlands cover about 
    The appendix :ref:`sistan-dates` contains a table with the acquicition dates of of each band. The dates are also available as a table in the *'change_detection'* project. [ASK ANDRE]
 
 
-Task 
+Task 1
    Make sure you have the **Value Tool** and  the **Temporal/spectral profile** plugins installed. 
 
-Task 1.2  
+Task 2
    Make sure that QGIS is cofigured to render layers  using multiple CPU cores. Go to 
    :guilabel:`Settings` > :guilabel:`Options` > :guilabel:`Rendering` and make sure the option *Render Layers in parallel using many CPU cores* in on. Set :guilabel:`Max Cores` to the number of CPU cores in your computer, use at least 4 for better performance. See below.
 
@@ -82,7 +78,7 @@ The  *index* datasets, ``vegetation.img``, ``wet_soil.img``, ``dry_soil.img`` an
 
 First you need to understand the datasets for this exercise. To do so, we will start by looking at the starting date of our change detection analysis. 
 
-Task 1.1 
+Task 3
 
    Open the QGIS project ``change_detection.qgis`` and make sure you have the **Value Tool** plugin visible and active.
 
@@ -106,7 +102,7 @@ By now, you should an idea of where the  the indices of the four variables are h
 
 To have an overview over where water, vegetation, dry and wet soil tend to concentrate over time; we will aggregate the values of the 37 bands.
 
-Task 1.2 
+Task 4
 Go to :guilabel:`Raster` > :guilabel:`Raster Calculator...` and **add** the 37 bands of each *index image*. Construct an *Expression* for the raster calculaor using the formula below. Give meaningful names for each output file,  for example *vegetation_sum, water_sum, etc.* See :numref:`fig-vegetation-sum` 
 
 .. code-block:: python
@@ -182,7 +178,7 @@ Go to :guilabel:`Raster` > :guilabel:`Raster Calculator...` and **add** the 37 b
       :width: 350px
 
 
-Task 1.3 
+Task 5
    Change the **Style** for each of the layer you produced in the previous task, so that you can easily visualise where the values concentrate [NOT SURE CONCENTRATE IS THE RIGHT WORK]. For the *'vegetation_sum'* layer, go 
    :guilabel:`Right-Click` > :guilabel:`Properties...` > :guilabel:`Symbology` > :guilabel:`Style` > :guilabel:`Load Style...` > search and select for the ``vegetation_sum.qml`` file > :guilabel:`Open` > :guilabel:`OK`.
    See :numref:`fig-load-style` 
@@ -200,7 +196,7 @@ Task 1.3
 
    Apply a style to the 'vegetation_sum' layer using a style file
 
-Task
+Task 6
    Repeat the procedure above to change the styles of *'wet_soil_sum', 'dry_soil_sum', and 'water_sum'* layers. Look for the correct style files in your data directory.
    Your project should now have the four aggregation layer properly styled. See :numref:`fig-aggregated-layers-styled` 
 
@@ -218,7 +214,7 @@ Plotting time series
 
 Now that you have an overview on the range and spatial distribution of value for each of the *'index'* image. We will take a look at how the values change over time.
 
-Task 1.6 
+Task 7
    Use the **Temporal/spectral Profile** plugin to inspect how the values in the  *'water;* layer change over time. Sample two or three points close to the areas where the values in the *'aggregated'* layers are the highest.
    Whatch the video tutorial on `inspecting time series <https://player.vimeo.com/video/236881857>`_.
 
@@ -229,8 +225,8 @@ Task 1.6
 \
 
 
-Task 1.7
-   Use the **Temporal/spectral Profile** plugin to further explore how the other *variables* change or relate over time. [VARIABLE=PHENOMENON=INDEX? CONFUSING]
+Task 8
+   Use the **Temporal/spectral Profile** plugin to  explore how the other *variables* change or compare over time. [VARIABLE=PHENOMENON=INDEX? CONFUSING]
 
 .. attention:: 
    **Question.**
@@ -257,7 +253,7 @@ Increase and Decrease in Water
 
 In this part of the exercise, we will look at how  the water values increase or decrease between dates. This variable is very important because its behaviour influence the other three variables.
 
-Task 2.1 
+Task 9
    From the :guilabel:`Processing Toolbox`, :guilabel:`Right-click` on the tool **Raster calculator** > :guilabel:`Edit Rendering Styles for Outputs...`. See :numref:`fig-edit-rendering-styles` :guilabel:`Click` the elipses (``...``) > select the ``Difference_style.qml`` file > :guilabel:`Open` > :guilabel:`OK`.
 
 
@@ -272,7 +268,7 @@ Task 2.1
    **QGIS.**
    In the following tasks, you will use the **Raster calculator** to generate layers that compute the difference between two adquisition dates. Setting the tools to use the same style to  render the output layers will make easier to compare and understand the results, and it will you save time. 
 
-Task 2.2 
+Task 10
   Use the **Raster calculator** in the *Processing Toolbox* to compute the difference between **band** :math:`8`  (21/04/2005) and **band** :math:`12`  (22/06/2005) from the *'water'* layer. Use the following formula to compute the difference map:
   
    .. math::
@@ -298,7 +294,7 @@ Task 2.2
    .. image:: _static/img/difference-water.png 
       :align: center
 
-Task 2.3 
+Task 11
    Repeat the procedure described in the previous task. This time compute the difference between **band** :math:`8`  (21/04/2005) and **band** :math:`20`  (12/09/2005) from the *'water'* layer.
 
 
@@ -344,7 +340,7 @@ Instead of repeting the procedure to compute :math:`T_{water}` ten time, you wil
 
 [UP TO THIS POINT THE SECTIONS AND TASKS SEEMS DESCONNECTED, AND THE OVERAL OBJECTIVE OF THE analysis IS DOUBTFUL]
 
-Task 3.1 
+Task 12
    Go to :guilabel:`Processing Toolbox` > :guilabel:`Models` >  :guilabel:`Add Model to Toolbox..`. See :numref:`fig-load-model` . Select the model ``quantifying_change.model3``.
 
 .. _fig-load-model:
@@ -353,4 +349,52 @@ Task 3.1
    :figclass: align-center
 
    Add model to 'Processing Toolbox'
+
+Task 13
+   Us the model you just add to the **Processing Tooolbox** to compute :math:`T_{water}` for the bands listed in the table above. Go to :guilabel:`Processing Toolbox` > :guilabel:`Moderls` > :guilabel:`quantifying_changes`, :numref:`fig-quantifying-change` . Double click on the model to open the model. For :guilabel:`Extent` and :guilabel:`Indicator`, select the *'water'* layer. Click :guilabel:`Run` 
+
+.. _fig-quantifying-change:
+.. figure:: _static/img/quantifying-change.png
+   :alt: model quantifying change
+   :figclass: align-center
+
+   The model 'quantifying changes' in the Processing Toolbox
+
+Task 14
+   Use the **Temporal/Spectral Profile** plugin to inspect the values of the band stack created by the model, :numref:`fig-profile-quantifying-change`  Refere to Task  8 if you need to.
+
+.. _fig-profile-quantifying-change:
+.. figure:: _static/img/profile-quantifying-change.png
+   :alt: profile quantifying change
+   :figclass: align-center
+
+   Exploring the values of 'total percentage of area covered by water' with the 'Temporal/Spectral Profile' tool
+
+.. note:: 
+   **QGIS.**
+   QGIS will not preserve the original number of the bands in the output band stack. This means that you have to keep track of which band in the output stack corresponds to the bands in the original dataset. In this case, they correspond as following:
+
+   =================    ========================      ==========
+   Original Band No.    Band No. in Output Stack      Month
+   =================    ========================      ==========
+   1                    1                             January
+   3	                  2	                           February
+   4	                  3	                           March
+   7                    4                             April
+   10                   5                             May
+   11	                  6                             June
+   13	                  7                             July
+   16	                  8	                           August
+   19	                  9	                           September
+   23	                  10	                           October
+   =================    ========================      ==========
+
+
+.. attention:: 
+   **Question.**
+   Look at the line plot in the **Temporal/Spectral Profile**  tool. What does the profile curve show? How do we interprete the values?
+
+Task 15
+   Repeat Tasks 13 and 14 using another variable, for example *vegetation*. Plot the profile curves in the **Temporal/Spectral Profile** plugin. Write down your observations and take them to the virtual classroom.
+
 
