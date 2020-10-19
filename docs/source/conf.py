@@ -42,6 +42,7 @@ master_doc = 'index'
 # ones.
 extensions = [
     "sphinx_rtd_theme",
+    "sphinx_copybutton",
     "helloworld",
     "todo"
 ]
