@@ -47,7 +47,6 @@ extensions = [
     "todo"
 ]
 
-#TODO: fix issue with copybutton extension
 
 todo_include_todos = True
 

@@ -5,6 +5,8 @@ Sistan Image Dataset
 
 [WHY DO WE NEED TWO DATES IN THE TABLE? WHEN IS THE FIRST DATA RELEVENT? WHEN IS THE SECOND DATE RELEVENT?]
 
+{keep date second column}
+
 =====    =============     ===========
 Band     Date (Y-M-D)      Date (M-Y)
 =====    =============     ===========

@@ -1,13 +1,13 @@
 Change Detection
 ================================
 
-In this section, we focus on polishing the skills that you acquired in the previous exercises. You will apply Remote Sensing to integrate data for the purpose of detecting changes of geographic phenomena. Read about it on the learning path |ltb| `Change Detection <Path Change Detection_>`_.
+In this section, you will apply Remote Sensing to integrate data for the purpose of detecting changes of geographic phenomena. Read about it on the learning path |ltb| `Change Detection <Path Change Detection_>`_.
 
 
 The Sistan Basin
 ----------------
 
-In this exercise, you will work with maps from the Sistan basin; a wetland area on the borders of Iran and Afghanistan. The watersheds consists of a system of rivers that flow from the Hindu Kush Mountains in Afghanistan through freshwater lakes, and then a saline depression in Afghanistan; the final destination of the rivers.  See :numref:`fig-sistan-basin` 
+In this exercise, you will work with spatial data from the Sistan basin; a wetland area on the borders of Iran and Afghanistan. The watersheds this basin consist of a system of rivers that flow from the Hindu Kush Mountains in Afghanistan through freshwater lakes, and then to a saline depression in Afghanistan; the final destination of the rivers.  See :numref:`fig-sistan-basin` 
 
 .. _fig-sistan-basin:
 .. figure:: _static/img/sistan-basin.png
@@ -17,49 +17,61 @@ In this exercise, you will work with maps from the Sistan basin; a wetland area 
    The Sistan basin in Afghanistan and Iran
 
 
-The lowest parts of the basin are covered by wetlands. The wetlands cover about :math:`4500 \ km^2`, they are located in one of the driest regions in the world, such an area suffers from prolonged droughts. The droughts endanger the livelihood of about half a million inhabitants including fishermen, farmers, and others. Therefore,  the monitoring of the water and vegetation is of prime important in the wetlands [WC2020]_.
+The lowest parts of the basin are covered by wetlands, known as *Hamoun wetlands*. The wetlands cover about :math:`4500 \ Km^2`, they are located in one of the driest regions in the world, such an area suffers from prolonged droughts. The droughts endanger the livelihood of about half a million inhabitants including fishermen, farmers, and others. Therefore,  the monitoring of the water and vegetation is of prime importance for that ecosystem [WC2020]_.
 
 .. [WC2020] Wikipedia contributors. (2020, September 14). Sistan Basin. In Wikipedia, The Free Encyclopedia. Retrieved 12:08, October 5, 2020, from https://en.wikipedia.org/w/index.php?title=Sistan_Basin&oldid=978368838
 
 .. note:: 
    **Reflection.**
-   Read the report `Monitoring Environmental Change in the Sistan Basin <sistan-report>`_. This is an optional actrivity, but it will give you a broader scope of the Sistan basin, and more context of the case study related with this exercise.
+   Read the report `Monitoring Environmental Change in the Sistan Basin <sistan-report_>`_. This is an optional actrivity, but it will give you a broader scope of the Sistan basin, and more a better context for this exercise.
+
+   The Sistan basis is a large and complex ecosystem. In this exercise, we will only focus on the geographic area occupied by the **Hamoun wetlands**.
 
 
+Questions:
+
+Where do high an low values of the presences of wather, ... concentrate on jan 2005?
+Where do values for the variables concentrate along the time seties?
+What changes occurred during the time series and how they relate to each other?
+
+How the presence of water and vegation changes during the time series? (main questions, it encompases all tasks)
+[from document] 
+   Where did the presence of water and vegation concentrate during jan 2005
 
 .. important:: 
    **Resources.**
-   You will require the latest LTR version of `QGIS (A Coruna 3.10) <https://qgis.org/en/site/forusers/download.html>`_, plus the dataset `change_detection.zip <data_change_detection_>`_ which you can download from CANVAS.  When you unzip the dataset, you  will find several folders containing the following files:  [ALL IMAGES ARE IMG, QGIS WON'T BE ABLE TO READ THE REFERENCE SYSTEM CORRECTLY]:
+   You will require the latest LTR version of `QGIS (A Coruna 3.10) <https://qgis.org/en/site/forusers/download.html>`_, plus the dataset `change_detection.zip <data_change_detection_>`_ which you can download from CANVAS.  When you unzip the dataset, you  will find several folders containing the following files:  
   
-      +  ``Quantifying_change.model3`` - A model of [NEED DESCRIPTION?]
-      +  ``vegetation.img`` - time series for the presence of vegetation.
-      +  ``wet_soil.img`` - time series for the presence of wet soil.
-      +  ``dry_soil.img``  - time series for the presence of dry soil.
-      +  ``water.img`` - time series for the pressence of water.
-      +  ``limits.shp`` - layer of the boundary of the Sitan basin.
+      
+      +  ``vegetation.img`` - time series for the presence of vegetation in the Hamoun wetlands.
+      +  ``wet_soil.img`` - time series for the presence of wet soil in the Hamoun wetlands.
+      +  ``dry_soil.img``  - time series for the presence of dry soil in the Hamoun wetlands.
+      +  ``water.img`` - time series for the pressence of water in the Hamoun wetlands.
+      +  ``limits.shp`` - a boundary of the Hamoun wetlands.
+      +  ``Quantifying_change.model3`` - a model to automate a data processing routine.
       +  ``Difference_style.qml`` - QGIS style file.
       +  ``Dry_soil_sum.qml`` - QGIS style file.
       +  ``Vegetation_sum.qml`` - QGIS style file.
-      +  ``Vegetation_sum_3D.qto3settings``	- [NOT USED, REMOVE?]
       +  ``Water_sum.qml`` - QGIS style file.
       +  ``Wet_soil_sum.qml`` - QGIS style file.
-      +  ``date-time.csv`` -? [NEVER MENTION IN EXERCISE, ONLY IN VIDEO. IS APPEDIX ENOUGH?]
-      +	``change_detection.qgis`` - a QGIS Project loaded most of the dataset listed above.
+      +  ``date-time.csv`` - a table with the adquisition dates for the time series.
+      +	``change_detection.qgis`` - a QGIS Project loaded with some of datasets listed above.
    
-   The spatial data for this exercise consists of four images with 37 bands. Each of the bands represents a different date of acquisition between the 2nd of January, 2005, and the 22nd of April, 2006. Each image contains an **index of the presence** of one of the following geographic phenomena: 
+   The spatial data for this exercise consists of four image dataset with :math:`37` bands. Each of the bands contains a *snapshot* of the *Hamoun wetlands* for different acquisition dates; between the 2nd of January, 2005, and the 22nd of April, 2006. Each image dataset describes an **index of the presence** *of one of four types of land cover used, for this analysis, as variables of environmental change:*
 
    + *vegetation,*
    + *dry soil,* 
    + *wet soil, and*  
    + *water.*
 
-   The **pixel values** range from :math:`0` to :math:`1`, and they represent the **percentage** of the area of a pixel covered by an specific geographic phenomena (or variable). For example, a pixel value of :math:`0.37` in the *'vegetation'* layer means that the pixel is :math:`37\%` covered by vegetation.
+   The **pixel values** in each band range from :math:`0` to :math:`1`, and they represent the **percentage** of the area of a pixel covered by an specific type of land cover. For example, a pixel value of :math:`0.42` in the *'vegetation'* dataset means that such a pixel is :math:`42\%` covered with vegetation.
    
-   The appendix :ref:`sistan-dates` contains a table with the acquicition dates of of each band. The dates are also available as a table in the *'change_detection'* project. [ASK ANDRE]
+   The appendix :ref:`sistan-dates` contains a table with the acquisition dates for each band. The dates are also available in the ``date-time.csv``.
 
 
 Task 1
    Make sure you have the **Value Tool** and  the **Temporal/spectral profile** plugins installed. 
+
 
 Task 2
    Make sure that QGIS is cofigured to render layers  using multiple CPU cores. Go to 
@@ -74,9 +86,10 @@ Task 2
 Inspecting the Data
 --------------------
 
-The  *index* datasets, ``vegetation.img``, ``wet_soil.img``, ``dry_soil.img`` and ``water.img``, contain time series with 37 steps [steps= bands = TIMESTAMPS?] (each band is one step).  [THIS IS REPETITION, REMOVE?]
+A first step in every data analysis is build enough understanding of  the data involved. In this exercise, we will start by looking at the dates for the *change detection analysis*. 
 
-First you need to understand the datasets for this exercise. To do so, we will start by looking at the starting date of our change detection analysis. 
+The datasets: ``vegetation.img``, ``wet_soil.img``, ``dry_soil.img`` and ``water.img``, represent a time series with 37 snapshots, each snapshot is stored as a band, and each band contains values from :math:`0` to :math:`1` which represent indices of coverage.   
+
 
 Task 3
 
@@ -92,18 +105,22 @@ Task 3
 
 .. note:: 
    **QGIS.**
-   The Value Tool allows you to control for which bands to plot the values. Make sure you are plotting only the values for band :math:`1` in each of the images, otherwise you will be plotting values for 148 bands (:math:`4*37=148`). 
+   The Value Tool allows you to control for which bands to plot the values. Make sure you are plotting only the values for band :math:`1` in each of the images, otherwise you will be plotting values for 148 bands (:math:`4 \times 37=148`). 
 
    .. image:: _static/img/valuetool-choosing-bands.png 
       :align: center
 
 
-By now, you should an idea of where the  the indices of the four variables are higher or lower for  *02/01/2020*. However,  but it does not tell you if those values are equally high or low for the whole period we are analyzing. [WHAT DOES 'equally high or low'  MEANS? OVERAL MIN AND MAX?]
 
-To have an overview over where water, vegetation, dry and wet soil tend to concentrate over time; we will aggregate the values of the 37 bands.
+By now, you should an idea of where  the index-values for a particular variable are higher or lower for  *02/Jan/2020*. However,  we should also build understanding on where the index-values are high or low during the total lenght of the time series. This is where such values reach global maximuns and maximuns. 
+
+
+[DETERMINE WHERE GLOBAL MINIMUM AND MAXIMUM OCCURRE]
+
+To know where the presence of water, vegetation, dry and wet soil tend to concentrate during the time series; we will aggregate the values of all :math:`37`  bands.
 
 Task 4
-Go to :guilabel:`Raster` > :guilabel:`Raster Calculator...` and **add** the 37 bands of each *index image*. Construct an *Expression* for the raster calculaor using the formula below. Give meaningful names for each output file,  for example *vegetation_sum, water_sum, etc.* See :numref:`fig-vegetation-sum` 
+   Go to :guilabel:`Raster` > :guilabel:`Raster Calculator...` and **add** the :math:`37` bands of each *index image*. Construct an *Expression* for the raster calculaor using the formula below. Give meaningful names for each output file,  for example *vegetation_sum, water_sum, etc.* See :numref:`fig-vegetation-sum` 
 
 .. code-block:: python
 
@@ -179,7 +196,7 @@ Go to :guilabel:`Raster` > :guilabel:`Raster Calculator...` and **add** the 37 b
 
 
 Task 5
-   Change the **Style** for each of the layer you produced in the previous task, so that you can easily visualise where the values concentrate [NOT SURE CONCENTRATE IS THE RIGHT WORK]. For the *'vegetation_sum'* layer, go 
+   Change the **Style** for each of the layer you produced in the previous task, so that you can easily visualise where the values concentrate (i.e., where they reach their highest and lowest values). For the *'vegetation_sum'* layer, go 
    :guilabel:`Right-Click` > :guilabel:`Properties...` > :guilabel:`Symbology` > :guilabel:`Style` > :guilabel:`Load Style...` > search and select for the ``vegetation_sum.qml`` file > :guilabel:`Open` > :guilabel:`OK`.
    See :numref:`fig-load-style` 
    
@@ -187,7 +204,7 @@ Task 5
    
    
 
-   [THE STYLE FILE GAVE ME SOMETHING STRANGE. CHECK?]
+   [THE STYLE FILE GAVE ME SOMETHING STRANGE. CHECK?] Andre will check
 
 .. _fig-load-style:
 .. figure:: _static/img/load-style.png
@@ -209,7 +226,7 @@ Task 6
 
 --------------------------
 
-Plotting time series
+Plotting time series [HOW THE presence OF WATER AND VEGETATION CHANGE OVER TIME]
 --------------------
 
 Now that you have an overview on the range and spatial distribution of value for each of the *'index'* image. We will take a look at how the values change over time.
@@ -226,11 +243,12 @@ Task 7
 
 
 Task 8
-   Use the **Temporal/spectral Profile** plugin to  explore how the other *variables* change or compare over time. [VARIABLE=PHENOMENON=INDEX? CONFUSING]
+   Use the **Temporal/spectral Profile** plugin to  explore how the other *variables* change or compare over time.
 
 .. attention:: 
    **Question.**
    Observe the two plots below. For each plot, **can you explain how the changes in each** *variable* **are related?**
+
 
    .. image:: _static/img/change-plot-a.png 
       :align: center
@@ -242,13 +260,14 @@ Task 8
 
 -------------------------
 
-Quantifying differences
+
+Quantifying differences [QUANTIFY THE CHANGES IN presence OF WATER]
 ------------------------
 
 You have now a better understanding of the data in this exercise, i.e., what it represents and its ranges and limits. In this part, we will conduct an analysis to quantify the changes in each *'index'* layer.
 
 
-Increase and Decrease in Water
+Increase and Decrease in Water [DIFFERENCES IN THE presence OF WATER]
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 In this part of the exercise, we will look at how  the water values increase or decrease between dates. This variable is very important because its behaviour influence the other three variables.
@@ -295,7 +314,7 @@ Task 10
       :align: center
 
 Task 11
-   Repeat the procedure described in the previous task. This time compute the difference between **band** :math:`8`  (21/04/2005) and **band** :math:`20`  (12/09/2005) from the *'water'* layer.
+   Repeat the procedure described in the previous task. This time compute the difference between **band** :math:`8`  (21/Apr/2005) and **band** :math:`20`  (12/Sep/2005) from the *'water'* layer.
 
 
 .. attention:: 
@@ -303,7 +322,7 @@ Task 11
    Look closely at difference maps from the previous tasks. **What changes occurred between the 21st of April and the 12th of September of 2005?**
 
 
-Detecting Changes in Water
+Detecting Changes in Water [GLOBAL RATIO OF AREA COVERED BY WATER]
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 In the last part of this exercise, we will assess how the values change globally in the study area over a period of 10 months. From January to October 2005.
@@ -317,7 +336,6 @@ Therefore, the *total percentage of area covered by water* in a band :math:`T_{w
 
 
 Where :math:`A`  is the total number of pixels in a band, and :math:`B` is the sum of the pixel values in that same band. The constant :math:`100` converts the values to percentage.
-
 
 This analysis requires apply the equation above :math:`10` times (one for each month in the analysis), according to the table below.
 
@@ -336,9 +354,7 @@ Band (water layer)      Date (Y-M-D)         Date (M-Y)
 23	                     05-10-01            Oct-05
 ===================    ================     ================
 
-Instead of repeting the procedure to compute :math:`T_{water}` ten time, you will use predefined QGIS model which automate such a task.
-
-[UP TO THIS POINT THE SECTIONS AND TASKS SEEMS DESCONNECTED, AND THE OVERAL OBJECTIVE OF THE analysis IS DOUBTFUL]
+Instead of repeting the procedure to compute :math:`T_{water}` ten times, you will use predefined QGIS model which automate such a task.
 
 Task 12
    Go to :guilabel:`Processing Toolbox` > :guilabel:`Models` >  :guilabel:`Add Model to Toolbox..`. See :numref:`fig-load-model` . Select the model ``quantifying_change.model3``.
@@ -361,7 +377,7 @@ Task 13
    The model 'quantifying changes' in the Processing Toolbox
 
 Task 14
-   Use the **Temporal/Spectral Profile** plugin to inspect the values of the band stack created by the model, :numref:`fig-profile-quantifying-change`  Refere to Task  8 if you need to.
+   Use the **Temporal/Spectral Profile** plugin to inspect the values of the band stack created by the model, :numref:`fig-profile-quantifying-change`  Refere to **Task 8** if you need to.
 
 .. _fig-profile-quantifying-change:
 .. figure:: _static/img/profile-quantifying-change.png
@@ -395,6 +411,6 @@ Task 14
    Look at the line plot in the **Temporal/Spectral Profile**  tool. What does the profile curve show? How do we interprete the values?
 
 Task 15
-   Repeat Tasks 13 and 14 using another variable, for example *vegetation*. Plot the profile curves in the **Temporal/Spectral Profile** plugin. Write down your observations and take them to the virtual classroom.
+   Repeat **Tasks 13** and **14** using another variable, for example *vegetation*. Plot the profile curves in the **Temporal/Spectral Profile** plugin. Write down your observations and take them to the virtual classroom.
 
 
