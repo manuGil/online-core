@@ -25,7 +25,7 @@ sys.path.append(os.path.abspath("./_ext"))
 
 project = 'core-online'
 copyright = '2020, University of Twente'
-author = 'Manuel G. Garcia, Andre Mano, OTHER, OTHER, OTHER, OTHER, OTHER, OTHER, OTHER, OTHER, '
+author = 'The Online Core Team'
 
 # The full version, including alpha/beta/rc tags
 release = '4.0.0'
