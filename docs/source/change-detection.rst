@@ -25,18 +25,16 @@ The lowest parts of the basin are covered by wetlands, known as *Hamoun wetlands
    **Reflection.**
    Read the report `Monitoring Environmental Change in the Sistan Basin <sistan-report_>`_. This is an optional actrivity, but it will give you a broader scope of the Sistan basin, and more a better context for this exercise.
 
-   The Sistan basis is a large and complex ecosystem. In this exercise, we will only focus on the geographic area occupied by the **Hamoun wetlands**.
+   The Sistan basis is a large and complex ecosystem. In this exercise, we will only focus on the geographic area occupied by the **Hamoun wetlands**. Specifically, we aim to answer the question **How the presence of water and vegetation changes over time in the Hamoun wetlands?**
+
+   To answer such a question, we will perform a data analysis consisting of four major steps:
+
+      #. Determine where the overall presence of water, wet soil, dry soil and vegetation concentrate.
+      #. Identify and compare seasonal changes in the presence of water, wet soil, dry soil and vegetation.
+      #. Quantify the differences in the presence of water between specific dates.
+      #. Quantify seasonal changes in the overall presence of water and vegetation.
 
 
-Questions:
-
-Where do high an low values of the presences of wather, ... concentrate on jan 2005?
-Where do values for the variables concentrate along the time seties?
-What changes occurred during the time series and how they relate to each other?
-
-How the presence of water and vegation changes during the time series? (main questions, it encompases all tasks)
-[from document] 
-   Where did the presence of water and vegation concentrate during jan 2005
 
 .. important:: 
    **Resources.**
@@ -83,8 +81,8 @@ Task 2
 -----------------------------
 
 
-Inspecting the Data
---------------------
+Undestading the Data
+-----------------------
 
 A first step in every data analysis is build enough understanding of  the data involved. In this exercise, we will start by looking at the dates for the *change detection analysis*. 
 
@@ -114,8 +112,11 @@ Task 3
 
 By now, you should an idea of where  the index-values for a particular variable are higher or lower for  *02/Jan/2020*. However,  we should also build understanding on where the index-values are high or low during the total lenght of the time series. This is where such values reach global maximuns and maximuns. 
 
+----------------------------
 
-[DETERMINE WHERE GLOBAL MINIMUM AND MAXIMUM OCCURRE]
+Overall Concentration of Environmental Variables
+-------------------------------------------------
+
 
 To know where the presence of water, vegetation, dry and wet soil tend to concentrate during the time series; we will aggregate the values of all :math:`37`  bands.
 
@@ -202,9 +203,7 @@ Task 5
    
    The styles you applied are only to facilitate a visual analysis. *All the layers are divided into* :math:`5`   *classes but only the highest* :math:`20 \%` *of values are visible.* Such values identify areas where the presence of each index (variable) accumulates over period depicted in the time series.
    
-   
-
-   [THE STYLE FILE GAVE ME SOMETHING STRANGE. CHECK?] Andre will check
+.. TODO: [THE STYLE FILE GAVE ME SOMETHING STRANGE. CHECK?] Andre will check
 
 .. _fig-load-style:
 .. figure:: _static/img/load-style.png
@@ -226,8 +225,8 @@ Task 6
 
 --------------------------
 
-Plotting time series [HOW THE presence OF WATER AND VEGETATION CHANGE OVER TIME]
---------------------
+Identification and Comparison of Seasonal Changes
+---------------------------------------------------
 
 Now that you have an overview on the range and spatial distribution of value for each of the *'index'* image. We will take a look at how the values change over time.
 
@@ -258,19 +257,13 @@ Task 8
    .. image:: _static/img/change-plot-b.png 
       :align: center
 
+
 -------------------------
 
+Quantifying Differences in the Presence of Water
+--------------------------------------------------
 
-Quantifying differences [QUANTIFY THE CHANGES IN presence OF WATER]
-------------------------
-
-You have now a better understanding of the data in this exercise, i.e., what it represents and its ranges and limits. In this part, we will conduct an analysis to quantify the changes in each *'index'* layer.
-
-
-Increase and Decrease in Water [DIFFERENCES IN THE presence OF WATER]
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-In this part of the exercise, we will look at how  the water values increase or decrease between dates. This variable is very important because its behaviour influence the other three variables.
+In this section, we will conduct an analysis to quantify the changes in the presence of water. Specifically, we will look at how  the  values of the *presence of water* increase or decrease between dates. This variable is very important because its behaviour influence the other three variables.
 
 Task 9
    From the :guilabel:`Processing Toolbox`, :guilabel:`Right-click` on the tool **Raster calculator** > :guilabel:`Edit Rendering Styles for Outputs...`. See :numref:`fig-edit-rendering-styles` :guilabel:`Click` the elipses (``...``) > select the ``Difference_style.qml`` file > :guilabel:`Open` > :guilabel:`OK`.
@@ -321,9 +314,10 @@ Task 11
    **Question.**
    Look closely at difference maps from the previous tasks. **What changes occurred between the 21st of April and the 12th of September of 2005?**
 
+-------------------------
 
-Detecting Changes in Water [GLOBAL RATIO OF AREA COVERED BY WATER]
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Quantifying Changes in Water and Vegetation
+---------------------------------------------
 
 In the last part of this exercise, we will assess how the values change globally in the study area over a period of 10 months. From January to October 2005.
 For this analysis, *we consider the percentage of the total area of the basin covered by water*. Earlier in the exercise, we explained that the *index* (:math:`0 \ to \ 1`) 
@@ -375,6 +369,8 @@ Task 13
    :figclass: align-center
 
    The model 'quantifying changes' in the Processing Toolbox
+
+[Explain model output: every pixel in band has the same  value]
 
 Task 14
    Use the **Temporal/Spectral Profile** plugin to inspect the values of the band stack created by the model, :numref:`fig-profile-quantifying-change`  Refere to **Task 8** if you need to.
