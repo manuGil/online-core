@@ -410,3 +410,6 @@ Task 14
 
 Task 15
    Repeat **Tasks 13** and **14** using another variable, for example, *vegetation*. Plot the profile curves in the **Temporal/Spectral Profile** plugin. Write down your observations and take them to the virtual classroom.
+
+
+.. sectionauthor:: Zoltán Vekerdy, André Mano & Manuel Garcia Alvarez
