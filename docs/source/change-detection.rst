@@ -92,7 +92,6 @@ The datasets: ``vegetation.img``, ``wet_soil.img``, ``dry_soil.img`` and ``water
 
 
 Task 3
-
    Open the QGIS project ``change_detection.qgis`` and make sure you have the **Value Tool** plugin visible and active.
 
    You will see the band :math:`1` of each time series dataset displayed as pseudocolours. Band :math:`1` contains values for January 2 of 2005; the starting date of the time series. 
@@ -120,7 +119,7 @@ Overall Concentration of Environmental Variables
 To know where the presence of water, vegetation, dry and wet soil tend to concentrate during the time series; we will aggregate the values of all :math:`37`  bands.
 
 Task 4
-   Go to :guilabel:`Raster` > :guilabel:`Raster Calculator...` and **add** the :math:`37` bands of each *index image*. Construct an *Expression* for the **Raster Calculator** using the formula below. Give meaningful names for each output file,  for example *vegetation_sum, water_sum, etc.* See :numref:`fig-vegetation-sum` 
+   Go to :guilabel:`Raster` > :guilabel:`Raster Calculator...` and **add** the :math:`37` bands of each *time series*. Construct an *Expression* for the **Raster Calculator** using the formula below. Give meaningful names for each output file,  for example *vegetation_sum, water_sum, etc.* See :numref:`fig-vegetation-sum` 
 
 .. code-block:: python
 
@@ -138,7 +137,7 @@ Task 4
    **QGIS.**
    For convenience, you can copy the expressions listed below to the :guilabel:`Raster Calculator Expression`.
 
-   + *'vegetation'* image:
+   + *'vegetation'* time series:
 
    .. code-block:: python
    
@@ -151,7 +150,7 @@ Task 4
       "vegetation@31"+"vegetation@32"+"vegetation@33"+"vegetation@34"+"vegetation@35"+
       "vegetation@36"+"vegetation@37"
 
-   + *'wet_soil'* image:
+   + *'wet_soil'* time series:
 
    .. code-block:: python
 
@@ -163,7 +162,7 @@ Task 4
       "wet_soil@31"+"wet_soil@32"+"wet_soil@33"+"wet_soil@34"+"wet_soil@35"+"wet_soil@36"+
       "wet_soil@37"
 
-   + *'dry_soil'* image:
+   + *'dry_soil'* time series:
 
    .. code-block:: python
 
@@ -175,7 +174,7 @@ Task 4
       "dry_soil@31"+"dry_soil@32"+"dry_soil@33"+"dry_soil@34"+"dry_soil@35"+"dry_soil@36"+
       "dry_soil@37"
 
-   + *'water'* image:
+   + *'water'* time series:
 
    .. code-block:: python
 
@@ -407,7 +406,7 @@ Task 14
 
 .. attention:: 
    **Question.**
-   Look at the line plot in the **Temporal/Spectral Profile**  tool. What does the profile curve show? How do we interpret the values?
+   Look at the line plot  of the values of :math:`T_{water}` in the **Temporal/Spectral Profile**  tool. **What does the profile curve show? How do we interpret the values?**
 
 Task 15
    Repeat **Tasks 13** and **14** using another variable, for example, *vegetation*. Plot the profile curves in the **Temporal/Spectral Profile** plugin. Write down your observations and take them to the virtual classroom.
