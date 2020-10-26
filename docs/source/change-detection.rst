@@ -112,7 +112,7 @@ Task 3
    .. image:: _static/img/valuetool-choosing-bands.png 
       :align: center
 
-By now, you should have an idea of where the values for a particular variable are higher or lower on  *02/Jan/2020*. In the next step,  we will build an understanding of where the values are high or low during the total length of the time series. This is, **we will identify where such values reach global maximums and maximums.** 
+By now, you should have an idea of where the values for a particular variable are higher or lower on  *02/Jan/2005*. In the next step,  we will build an understanding of where the values are high or low during the total length of the time series. This is, **we will identify where such values reach global maximums and maximums.**
 
 ----------------------------
 
