@@ -16,16 +16,19 @@ In this exercise, you will work with spatial data from the Sistan basin; a wetla
    :alt: The Sistan basin in Afghanistan and Iran
    :figclass: align-center
 
-   The Sistan basin in Afghanistan and Iran
+   The Sistan basin in Afghanistan and Iran [WC2010]_
 
 
 The lowest parts of the basin are covered by wetlands, known as *Hamoun wetlands*. The wetlands cover about :math:`4500 \ Km^2`, they are located in one of the driest regions in the world, such an area suffers from prolonged droughts. The droughts endanger the livelihood of about half a million inhabitants, including fishers, farmers, and others. Therefore,  the monitoring of the water and vegetation is of prime importance for that ecosystem [WC2020]_.
 
+.. [WC2010] Kmusser. (2010, May 13). Map showing the Helmand River drainage basin. In Wikipedia, The Free Encyclopedia. Retrieved 12:08, October 5, 2020, from https://upload.wikimedia.org/wikipedia/commons/4/48/Helmandrivermap.png
+
 .. [WC2020] Wikipedia contributors. (2020, September 14). Sistan Basin. In Wikipedia, The Free Encyclopedia. Retrieved 12:08, October 5, 2020, from https://en.wikipedia.org/w/index.php?title=Sistan_Basin&oldid=978368838
+
 
 .. note:: 
    **Reflection.**
-   Read the report `Monitoring Environmental Change in the Sistan Basin <sistan-report_>`_. It is an optional activity, but it will give you a broader scope of the Sistan basin, and more a better context for this exercise.
+   Read the report `Monitoring Environmental Change in the Sistan Basin <sistan-report_>`_. It is an optional activity, but it will give you a broader context about the Sistan basin in this exercise.
 
    The Sistan basis is a large and complex ecosystem. In this exercise, we will only focus on the geographic area occupied by the **Hamoun wetlands**. Specifically, we aim to answer the question **How the presence of water and vegetation changes over time in the Hamoun wetlands?**
 
@@ -130,7 +133,7 @@ Task 4
    :alt: adding index values raster calculator
    :figclass: align-center
 
-   Aggregation of values using the 'Racter Calculator'
+   Aggregation of values using the 'Raster Calculator'
 
 
 .. note:: 
