@@ -23,7 +23,7 @@ sys.path.append(os.path.abspath("./_ext"))
 
 # -- Project information -----------------------------------------------------
 
-project = 'Principles of Geographic Information Systems and Remote Sensing'
+project = 'Principles of GIS and Remote Sensing'
 copyright = '2020, University of Twente'
 author = 'The Course Team'
 
