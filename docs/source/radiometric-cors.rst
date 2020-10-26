@@ -10,7 +10,7 @@ The procedures described in this section fall within the group of “pre-process
 As shown in :numref:`fig-corrections-wkf`, *radiometric correction* techniques are applied to Remote Sensing data before any *geometric correction*, and before performing the main *data analysis*. Radiometric corrections fall within three groups: |ltb| `Imperfect sensor correction <Correction of imperfections of a sensor_>`_, |ltb| `Sun angle correction`_ and |ltb| `Atmospheric correction`_. A common technique for atmospheric correction is |ltb| `Haze correction`_.
 
 .. _fig-corrections-wkf:
-.. figure:: _static/img/corrections-wkf.png
+.. figure:: _static/img/corrections-workflow.png
    :scale: 50% 
    :alt: corrections workflow
    :figclass: align-center
