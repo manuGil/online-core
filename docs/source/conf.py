@@ -23,9 +23,9 @@ sys.path.append(os.path.abspath("./_ext"))
 
 # -- Project information -----------------------------------------------------
 
-project = 'core-online'
+project = 'Principles of Geographic Information Systems and Remote Sensing'
 copyright = '2020, University of Twente'
-author = 'The Online Core Team'
+author = 'The Course Team'
 
 # The full version, including alpha/beta/rc tags
 release = '4.0.0'
