@@ -11,7 +11,7 @@ As shown in :numref:`fig-corrections-wkf`, *radiometric correction* techniques a
 Atmospheric corrections are needed to “clean” the images from disturbances produced by water vapor, aerosols and gases in the atmosphere, and retrieve pure radiances from a target on the ground. A common technique for atmospheric correction is |ltb| `Haze correction`_.
 
 .. _fig-corrections-wkf:
-.. figure:: _static/img/corrections-workflow.png
+.. figure:: _static/img/corrections-workflow2.png
    :scale: 50% 
    :alt: corrections workflow
    :figclass: align-center
