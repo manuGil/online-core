@@ -2,13 +2,13 @@
 
 Learning material for the course 'Principles of GIS and Remote Sensing'.
 
-# Relevant Points Regarding the Hosting
+## Relevant Points Regarding the Hosting
 
 * The public link hooked to Canvas will expired on the **01-12-2020.**
 * The burget approved for the www.readthedocs.com will last **until 16 December, 2020.**
 * Inform students in the course that they should download a copy in PDF if they wish to consult the content later.
 
-# Relevant Points Open Education
+## Relevant Points Open Education
 
 If approve by the relevant authorities, several changes and improvement need to be made to the lastest version of the exercises in order to attract the attention of potential users/students. Here as some of them.
 
