@@ -8,7 +8,7 @@ Learning material for the course 'Principles of GIS and Remote Sensing'.
 * The burget approved for the www.readthedocs.com will last **until 16 December, 2020.**
 * Inform students in the course that they should download a copy in PDF if they wish to consult the content later.
 
-# Relevant Point Regarding the Option for Open Education
+# Relevant Points Open Education
 
 If approve by the relevant authorities, several changes and improvement need to be made to the lastest version of the exercises in order to attract the attention of potential users/students. Here as some of them.
 
