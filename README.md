@@ -19,4 +19,6 @@ If approved by the relevant authorities, several changes and improvement need to
 5. Decide on dependency on the Living Textbook.
 6. Host datasets outside Canvas.
 
+Updated: 11-09-2020.
+
 
